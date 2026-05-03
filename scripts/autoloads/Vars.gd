@@ -92,7 +92,7 @@ func download_update_check_file():
 	update_check_request.download_file = "user://online_local/updates.txt"
 	update_check_request.request_completed.connect(update_check_done)
 	add_child(update_check_request)
-	#update_check_request.request( "/updates.txt") NEEDS ADRESS!!!
+	update_check_request.request("https://oliver-lobig.github.io/BaguetteFrench/updates.txt")
 
 func update_check_done(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray):
 	var file = FileAccess.open("user://online_local/updates.txt",FileAccess.READ)
@@ -109,7 +109,7 @@ func update_word_data():
 	new_word_request.download_file = "user://online_local/words.json"
 	new_word_request.request_completed.connect(new_words_downloaded)
 	add_child(new_word_request)
-	#new_word_request.request("/words.json")  NEEDS ADRESS!!!
+	new_word_request.request("https://oliver-lobig.github.io/BaguetteFrench/words.json")
 
 func new_words_downloaded(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray):
 	JsonSerializer.load_words("user://online_local/words.json")
