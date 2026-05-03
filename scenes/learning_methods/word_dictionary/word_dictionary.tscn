@@ -1,0 +1,182 @@
+[gd_scene load_steps=15 format=3 uid="uid://cxn5yqj007xss"]
+
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="1_asr7q"]
+[ext_resource type="Script" uid="uid://bijy2lnsvfgbm" path="res://scenes/learning_methods/word_dictionary/word_dictionary.gd" id="1_d0uat"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_smmn2"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="2_d0uat"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="5_e5kt3"]
+[ext_resource type="Script" uid="uid://bg81mre3ur8o" path="res://scenes/custom_nodes/text_line_edit.gd" id="6_akjm2"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="6_smmn2"]
+[ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="7_akjm2"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="8_vahrm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edssh"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.18594494, 0.5863813, 0.3784512, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0uat"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.976471, 0.984314, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[sub_resource type="Animation" id="Animation_smmn2"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Loading:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.22352941, 0.7019608, 0.45490196, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mxcn3"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Loading:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.9764706, 0.9843137, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e5kt3"]
+_data = {
+&"learn_scene_theme": SubResource("Animation_smmn2"),
+&"spring_theme": SubResource("Animation_mxcn3")
+}
+
+[node name="WordDictionary" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_smmn2")
+script = ExtResource("1_d0uat")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_asr7q")]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_d0uat")
+texture_pressed = ExtResource("2_d0uat")
+texture_hover = ExtResource("2_d0uat")
+texture_disabled = ExtResource("2_d0uat")
+texture_focused = ExtResource("2_d0uat")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Search" type="LineEdit" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("5_e5kt3")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_edssh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d0uat")
+placeholder_text = "SEARCH_WORD"
+script = ExtResource("6_akjm2")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+vertical_scroll_mode = 3
+
+[node name="Words" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Loading" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+theme_override_fonts/font = ExtResource("7_akjm2")
+theme_override_font_sizes/font_size = 32
+text = "LOADING"
+script = ExtResource("8_vahrm")
+font_type = 4
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_asr7q")]
+layout_mode = 2
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("6_smmn2")]
+overwrite_theme = ExtResource("1_smmn2")
+
+[node name="AnimationPlayer" parent="ThemeSwitcher" index="0"]
+libraries = {
+&"theme_animations": SubResource("AnimationLibrary_e5kt3")
+}
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/TopBar/Search" to="." method="_on_search_text_changed"]
+
+[editable path="ThemeSwitcher"]

@@ -1,0 +1,216 @@
+[gd_scene load_steps=21 format=3 uid="uid://b6st4t8y4gcnr"]
+
+[ext_resource type="Script" uid="uid://by4d3c8kkbrcj" path="res://scenes/learning_path/extra_points.gd" id="1_twoit"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="2_ipsgn"]
+[ext_resource type="PackedScene" uid="uid://b38kst8ee4bux" path="res://scenes/point_counter.tscn" id="3_bpr53"]
+[ext_resource type="Texture2D" uid="uid://c8ae58nqu46m5" path="res://assets/scenes/learning_path/icons/gems/gem.svg" id="4_0q6s7"]
+[ext_resource type="Texture2D" uid="uid://l8eg706wlrq6" path="res://assets/scenes/learning_path/icons/gems/gem_cracked_1.svg" id="5_rol8q"]
+[ext_resource type="Texture2D" uid="uid://cs0tx7h5eq4xw" path="res://assets/scenes/learning_path/icons/gems/gem_cracked_2.svg" id="6_dr6rv"]
+[ext_resource type="Texture2D" uid="uid://by7tqfk5spwyp" path="res://assets/scenes/learning_path/icons/gems/gem_cracked_3.svg" id="7_nrj06"]
+[ext_resource type="FontFile" uid="uid://diie3pd236cwv" path="res://assets/fonts/Josefin_Sans/static/JosefinSans-Medium.ttf" id="8_dr6rv"]
+[ext_resource type="Texture2D" uid="uid://bykgg2jnyq7ev" path="res://assets/scenes/learning_path/icons/gems/gem_part.svg" id="9_0q6s7"]
+[ext_resource type="FontFile" uid="uid://oh3tedpekcxr" path="res://assets/fonts/Josefin_Sans/static/JosefinSans-Bold.ttf" id="9_nrj06"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipsgn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2pig"]
+bg_color = Color(0.996078, 0.972549, 0.980392, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.882353, 0.882353, 0.882353, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dfhy"]
+bg_color = Color(0.996078, 0.972549, 0.980392, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.882353, 0.882353, 0.882353, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bp5dp"]
+bg_color = Color(0.996078, 0.972549, 0.980392, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.882353, 0.882353, 0.882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4u2f"]
+bg_color = Color(0.223529, 0.698039, 0.45098, 1)
+
+[sub_resource type="Theme" id="Theme_txmq2"]
+default_base_scale = 32.0
+default_font = ExtResource("8_dr6rv")
+Button/colors/font_color = Color(0.145098, 0.14902, 0.152941, 1)
+Button/colors/font_focus_color = Color(0.145098, 0.14902, 0.152941, 1)
+Button/colors/font_hover_color = Color(0.145098, 0.14902, 0.152941, 1)
+Button/colors/font_hover_pressed_color = Color(0.145098, 0.14902, 0.152941, 1)
+Button/colors/font_pressed_color = Color(0.145098, 0.14902, 0.152941, 1)
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxFlat_k2pig")
+Button/styles/normal = SubResource("StyleBoxFlat_3dfhy")
+Button/styles/pressed = SubResource("StyleBoxFlat_bp5dp")
+Panel/styles/panel = SubResource("StyleBoxFlat_q4u2f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4nmd"]
+
+[sub_resource type="Curve" id="Curve_rol8q"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.722892, 1), 0.0, 0.0, 0, 0, Vector2(0.975904, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_dr6rv"]
+curve = SubResource("Curve_rol8q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nrj06"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+spread = 180.0
+initial_velocity_max = 695.83
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_dr6rv")
+
+[node name="ExtraPoints" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_twoit")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.223529, 0.701961, 0.454902, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_ipsgn")]
+layout_mode = 2
+
+[node name="PointCounter" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_bpr53")]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Gems" type="Control" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Gem0" type="TextureRect" parent="MarginContainer/VBoxContainer/Gems"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_0q6s7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Gem1" type="TextureRect" parent="MarginContainer/VBoxContainer/Gems"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_rol8q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Gem2" type="TextureRect" parent="MarginContainer/VBoxContainer/Gems"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_dr6rv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Gem3" type="TextureRect" parent="MarginContainer/VBoxContainer/Gems"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_nrj06")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Gems"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ipsgn")
+flat = true
+
+[node name="Done" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_txmq2")
+theme_override_fonts/font = ExtResource("9_nrj06")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u4nmd")
+text = "DONE_BUTTON"
+
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_ipsgn")]
+layout_mode = 2
+
+[node name="Mine" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Break" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Particles" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+emitting = false
+amount = 128
+texture = ExtResource("9_0q6s7")
+process_material = SubResource("ParticleProcessMaterial_nrj06")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Gems/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Done" to="." method="_on_done_pressed"]

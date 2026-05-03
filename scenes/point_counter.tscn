@@ -1,0 +1,132 @@
+[gd_scene load_steps=11 format=3 uid="uid://b38kst8ee4bux"]
+
+[ext_resource type="Script" uid="uid://7tcotbce7jq" path="res://scenes/point_counter.gd" id="1_64cxr"]
+[ext_resource type="FontFile" uid="uid://c28jmi38h5xj7" path="res://assets/fonts/DynaPuff/static/DynaPuff-Regular.ttf" id="2_jqko0"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="3_b3whh"]
+[ext_resource type="Texture2D" uid="uid://ckcartdq582rw" path="res://assets/scenes/learning_path/icons/gem.svg" id="3_g8bdb"]
+[ext_resource type="Texture2D" uid="uid://cg8e07n0b0rsy" path="res://assets/scenes/learning_path/gem_white.svg" id="4_g8bdb"]
+[ext_resource type="PackedScene" uid="uid://bx7g0fdvvolgg" path="res://scenes/gems/done_challenge_overlay.tscn" id="5_1b0f4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djr0a"]
+bg_color = Color(1, 0.976471, 0.984314, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8bdb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b0f4"]
+bg_color = Color(0.025840001, 0.74125385, 0.8782205, 0.5)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1b0f4"]
+random_pitch = 1.2
+random_volume_offset_db = 1.0
+streams_count = 1
+
+[node name="PointCounter" type="Control"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_64cxr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_djr0a")
+
+[node name="TaskProgressBar" type="ProgressBar" parent="MarginContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_g8bdb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1b0f4")
+max_value = 576.0
+value = 64.0
+show_percentage = false
+
+[node name="Count" type="Label" parent="MarginContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.027451, 0.745098, 0.882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.38054475, 0.4548104, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_jqko0")
+theme_override_font_sizes/font_size = 48
+text = "137"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_b3whh")
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_g8bdb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WhiteGem" type="TextureRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(138, 138)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -69.0
+offset_right = 5.0
+offset_bottom = 69.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_g8bdb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Collect" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_1b0f4")
+volume_db = 5.0
+max_polyphony = 3
+bus = &"PointParticle"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="DoneChallengeOverlay" parent="CanvasLayer" instance=ExtResource("5_1b0f4")]
+unique_name_in_owner = true
+visible = false
+
+[editable path="CanvasLayer/DoneChallengeOverlay"]

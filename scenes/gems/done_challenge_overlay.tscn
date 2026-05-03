@@ -1,0 +1,178 @@
+[gd_scene load_steps=12 format=3 uid="uid://bx7g0fdvvolgg"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_auu21"]
+[ext_resource type="Script" uid="uid://cxb3r2jrbco4v" path="res://scenes/gems/done_challenge_overlay.gd" id="2_5eo38"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_dqjbn"]
+[ext_resource type="Texture2D" uid="uid://ds0pdthm3fbtv" path="res://assets/scenes/gems/reward.svg" id="3_dqjbn"]
+[ext_resource type="FontFile" uid="uid://c7wkhl5muf5n1" path="res://assets/fonts/Josefin_Sans/static/JosefinSans-LightItalic.ttf" id="3_q0sj0"]
+[ext_resource type="Texture2D" uid="uid://lr2u1bso8454" path="res://assets/scenes/learning_path/icons/sentence.png" id="5_5eo38"]
+[ext_resource type="Texture2D" uid="uid://tynq8kfgjw6e" path="res://assets/scenes/learning_path/icons/match.png" id="6_yquke"]
+[ext_resource type="Texture2D" uid="uid://ne0ye3sidvcf" path="res://assets/scenes/learning_path/icons/single_vocab.png" id="7_asvfb"]
+[ext_resource type="Texture2D" uid="uid://cgy8062kcq244" path="res://assets/scenes/learning_path/icons/hear.png" id="8_ej4g3"]
+[ext_resource type="Texture2D" uid="uid://dy8tc5344xgkt" path="res://assets/scenes/learning_path/icons/repeat.png" id="9_shy88"]
+[ext_resource type="Texture2D" uid="uid://c4pae02qgv34i" path="res://assets/scenes/learning_path/icons/verbs.png" id="10_kj5cg"]
+
+[node name="DoneChallengeOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_auu21")
+script = ExtResource("2_5eo38")
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("2_dqjbn")]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_font_sizes/font_size = 40
+text = "CHALLENGE_COMPLETE"
+horizontal_alignment = 1
+
+[node name="ChallengeDescription" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_fonts/font = ExtResource("3_q0sj0")
+theme_override_font_sizes/font_size = 32
+text = "Challengebeschreibung"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 512)
+layout_mode = 2
+texture = ExtResource("3_dqjbn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sentence" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.7490196, 0.7490196, 0.7490196, 1)
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 0
+offset_left = 190.0
+offset_top = 209.0
+offset_right = 382.0
+offset_bottom = 401.0
+texture = ExtResource("5_5eo38")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Match" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.7490196, 0.7490196, 0.7490196, 1)
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 0
+offset_left = 190.0
+offset_top = 209.0
+offset_right = 382.0
+offset_bottom = 401.0
+texture = ExtResource("6_yquke")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SingleVocab" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.7490196, 0.7490196, 0.7490196, 1)
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 0
+offset_left = 190.0
+offset_top = 209.0
+offset_right = 382.0
+offset_bottom = 401.0
+texture = ExtResource("7_asvfb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hearing" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.7490196, 0.7490196, 0.7490196, 1)
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 0
+offset_left = 190.0
+offset_top = 209.0
+offset_right = 382.0
+offset_bottom = 401.0
+texture = ExtResource("8_ej4g3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Repeat" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.7490196, 0.7490196, 0.7490196, 1)
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 0
+offset_left = 190.0
+offset_top = 209.0
+offset_right = 382.0
+offset_bottom = 401.0
+texture = ExtResource("9_shy88")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Verbs" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.7490196, 0.7490196, 0.7490196, 1)
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 0
+offset_left = 190.0
+offset_top = 209.0
+offset_right = 382.0
+offset_bottom = 401.0
+texture = ExtResource("10_kj5cg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Reward" type="Label" parent="MarginContainer/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 198.0
+offset_top = 422.0
+offset_right = 377.0
+offset_bottom = 467.0
+theme_override_colors/font_color = Color(0.023529412, 0.74509805, 0.88235295, 1)
+theme_override_font_sizes/font_size = 32
+text = "231"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "COLLECT_REWARD"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

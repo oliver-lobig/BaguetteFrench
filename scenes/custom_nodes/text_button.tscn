@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsm8nba0e2jy4"]
+
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="1_oefbv"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="1_tyfxq"]
+
+[node name="TextButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("1_tyfxq")
+script = ExtResource("1_oefbv")

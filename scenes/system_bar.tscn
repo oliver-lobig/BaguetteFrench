@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://mjh32gwx5cl6"]
+
+[ext_resource type="Script" uid="uid://doektb3htkt0h" path="res://scenes/system_bar.gd" id="1_utfu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqovu"]
+
+[node name="SystemBarSpacer" type="HSeparator"]
+theme_override_constants/separation = 64
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tqovu")
+script = ExtResource("1_utfu6")

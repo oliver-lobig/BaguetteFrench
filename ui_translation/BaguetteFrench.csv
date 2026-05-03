@@ -1,0 +1,125 @@
+key;de;fr
+SETTINGS_TITLE;Einstellungen;Paramètres
+SETTINGS_LEARN;Lern-Einstellungen;Paramètres pour apprendre
+SETTINGS_LEARN_WAY;Deutsch -> Französisch;Allemand -> Français
+SETTINGS_VISUAL;Erscheinungsbild-Einstellungen;Paramètres d'apparence
+SETTINGS_THEME;App-Thema:;Thème de l'application :
+SETTINGS_THEME_FOREST;Zauberwald;Forêt enchantée
+SETTINGS_THEME_SPRING;Frühling;Printemps
+SETTINGS_PARTICLES;Partikel-Einstellungen;Paramètres des particules
+SETTINGS_PARTICLES_USE;Partikel verwenden;Utiliser des particules
+SETTINGS_PARTICLES_SIZE;Partikelgröße:;Taille des particules :
+SETTINGS_PARTICLES_VOLUME;Lautstärke:;Volume:
+SETTINGS_LANGUAGE;Sprache;Langue
+SETTINGS_LANGUAGE_GERMAN;Deutsch (Allemand);Allemand (Deutsch)
+SETTINGS_LANGUAGE_FRENCH;Französisch (Français);Français (Französisch)
+SEARCH_WORD;Suche ein Wort...;Chercher un mot…
+ALL_SELECTED;(Alle ausgewählten Wörter ->);(Tous les mots sélectionnés ->)
+ALL_LEARN_CARDS;Vokabelkarten;Fiches de vocabulaire
+ALL_LEARN_LISTEN;Anhören;Écouter
+ALL_LEARN_WRITE_SINGLE;Schreiben (Einzeln);Écriture (individuelle)
+ALL_LEARN_WRITE_SENTENCE;Schreiben (Sätze);Écriture (phrases)
+ALL_LEARN_REPEAT;Wiederholen;Répéter
+ALL_LEARN_CONNECT;Verbinden;Connecter
+SELECT_WORDS;Wörter auswählen;Sélectionner des mots
+SELECTED_ZERO;0 Wörter ausgewählt!;0 mots sélectionnés!
+SELECTED_WORDS; Wörter ausgewählt!; mots sélectionnés!
+ONLY_SELECTED;Nur makierte Wörter verwenden;Utiliser uniquement les mots marqués
+ALL_UNTIL_NOW;Alle bisher gelernten;Tout ce que tu as appris jusqu'à présent
+LOADING;Lädt…;Chargement…
+SHOW;[Aufdecken];[Dévoiler]
+TRANSLATION;Übersetzung;Traduction
+SHOW_BUTTON;Aufdecken;Dévoiler
+DONE_BUTTON;Fertig;Fini
+CORRECT_BUTTON;Richtig;Correct
+NEXT_BUTTON;Weiter;Continuer
+WRONG_BUTTON;Falsch ;Faux
+SHOP_HATS; Hüte ; Chapeaux 
+SHOP_SHIRTS; Oberteile ; Hauts 
+SHOP_PANTS; Hosen ; Pantalons 
+SHOP_FACES; Grimassen ; Grimaces 
+SHOP_PRICE;Preis: ;Prix: 
+SHOP_OUTFIT_BUY;Outfit kaufen;Acheter la tenue
+SHOP_OUTFIT_CHOOSE;Outfit auswählen;Mettre la tenue
+ALL_LEARN_DICTIONARY;Wörterbuch;Dictionnaire
+ALL_LEARN_DICTIONARY_CHECKBOX;Wörterbuch aus Auswahl;Dictionnaire de sélection
+ADD_CATEGORY;Kategorie hinzufügen;Ajouter une catégorie
+CATEGORY_PLACEHOLDER;Name der Kategorie;Nom de la catégorie
+NEW_CONTENT;Es gibt neue Inhalte!;Il y a du nouveau contenu !
+REALLY_DELETE;Wirklich löschen?;Vraiment supprimer ?
+YES;Ja;Oui
+NO;Nein;Non
+ADD_WORD;Wort hinzufügen;Ajouter un mot
+WORD_GERMAN;Deutsch;Allemand
+WORD_FRENCH;Französisch;Français
+WORD_DESCRIPTION;Beschreibung;Description
+WORD_SELECT_GENDER;Geschlecht ausgewählen;Sélectionner le genre
+WORD_MALE;Männlich;Mâle
+WORD_FEMALE;Weiblich;Femme
+WORD_NONE;Keins;Aucun
+WORD_SELECT_CATEGORY;Kategorie auswählen;Choisir une catégorie
+EDIT_WORD;Wort bearbeiten;Modifier un mot
+IMPORT_WORDS;Wörter importieren;Importer des mots
+LOAD_CSV;CSV-Datei laden;Charger le fichier CSV
+SKIP_FIRST_LINE;Erste Zeile überspringen;Sauter la première ligne
+FRENCH_ROW_ID;Spalte Französisch (0, 1, 2…);Colonne Français (0, 1, 2...)
+GERMAN_ROW_ID;Spalte Deutsch (0, 1, 2…);Colonne Allemand (0, 1, 2...)
+DESCRIPTION_ROW_ID;Spalte Beschreibung (0, 1, 2…);Colonne Description (0, 1, 2...)
+GRAMMATICAL_GENDER_ROW_ID;Spalte Geschlecht (0, 1, 2…);colonne genre (0, 1, 2...)
+SETTINGS_LEARN_FLIP;Nach der Hälfte Sprache wechseln;Changer de langue après la moitié
+WORD_ADD_HELP;"Verwende '; ', um mehrere Varianten zu trennen.
+Das grammatikalische Geschlecht ist das im Französischen.";"Utilise ' ; ' pour séparer plusieurs variantes.
+Le genre grammatical est celui du français."
+OWN_WORDS;Eigene Kategorien;Catégories personnalisées
+ALL_LEARN_VERBS;Verben üben;Pratiquer les verbes
+ADD_VERB;Verb hinzufügen;Ajouter un verbe
+INFINITIVE_FR;Infinitiv (fr);Infinitif (fr)
+INFINITIVE_DE;Infinitiv (de);Infinitif (de)
+OPTION_S1_FR;1. Form Singular (fr);1. Forme singulière (fr)
+OPTION_S2_FR;2. Form Singular (fr);2. Forme singulière (fr)
+OPTION_S3_FR;3. Form Singular (fr);3. Forme singulière (fr)
+OPTION_S1_DE;1. Form Singular (de);1. Forme singulière (de)
+OPTION_S2_DE;2. Form Singular (de);2. Forme singulière (de)
+OPTION_S3_DE;3. Form Singular (de);3. Forme singulière (de)
+OPTION_P1_FR;1. Form Plural (fr);1. Forme singulière (fr)
+OPTION_P2_FR;2. Form Plural (fr);2. Forme singulière (fr)
+OPTION_P3_FR;3. Form Plural (fr);3. Forme singulière (fr)
+OPTION_P1_DE;1. Form Plural (de);1. Forme singulière (de)
+OPTION_P2_DE;2. Form Plural (de);2. Forme singulière (de)
+OPTION_P3_DE;3. Form Plural (de);3. Forme singulière (de)
+OPTION_PC_FR;1. Form Singular, Perfekt (fr);1. Forme singulière, parfait (fr)
+OPTION_PC_DE;1. Form Singular, Perfekt (de);1. Forme singulière, parfait (de)
+OPTION_SUFFIX_FR;Suffixe (fr);Suffixes (fr)
+OPTION_SUFFIX_DE;Suffixe (de);Suffixes (de)
+EDIT_VERB;Verb bearbeiten;Modifier le verbe
+FOUND_DUPLICATE;Mögliches Duplikat gefunden;Duplicata possible trouvé
+DONT_ADD;Nicht hinzufügen;Ne pas ajouter
+ADD_ANYWAY;Trotzdem hinzufügen;Ajouter quand même
+STOP;Abbrechen;Annuler
+SENTENCE_CHALLENGE;%s Sätze schreiben;Écrire %s phrases
+WRITE_CHALLENGE;%s Wörter übersetzen;Traduire %s mots
+HEAR_CHALLENGE;%s Wörter anhören;Écouter %s mots
+MATCH_CHALLENGE;%s Wörter verbinden;%s mots à relier
+REVIEW_CHALLENGE;%s Wörter wiederholen;Répéter %s mots
+VERB_CHALLENGE;%s Verben übersetzen;Traduire les verbes %s
+CHALLENGE_COMPLETE;Challenge absolviert;Défi relevé
+COLLECT_REWARD;Belohnung einsammeln;Recueillir la récompense
+COMING_SOON;Kommt bald!;À venir bientôt !
+USE_CAMERA_SHAKE;Bildschirmwackeln verwenden;Utiliser le tremblement de l'écran
+CREDITS;Credits;Crédits
+CREDITS_PATH;Lernpfad-Hintergrund;Fonds d'écran
+MADE_BY;"Diese App wurde von Olli mit
+hilfe der Godot Engine entwickelt.
+BaguetteFrench ist ein Hobbyprojekt 
+und wurde zum Lernen entwickelt.
+Es steht unter der GNU Public-Lizenz.
+";"Cette application a été développée par Olli à
+l'aide du Godot Engine.
+BaguetteFrench s'agit d'un projet amateur 
+réalisé à des fins d'apprentissage.
+Il est distribuée sous licence publique GNU.
+"
+LICENCE;Lizenz;Licence
+CREDITS_PATH_CONTENT;Flagge hangezeichnet. Bild von Paris mit Kanal:  [url]https://pixabay.com/photos/channel-saint-martin-paris-3582081/[/url] Kuchen: [url]https://pixabay.com/photos/cake-birthday-birthday-cake-916253/[/url] Freunde: [url]https://pixabay.com/photos/friendship-friends-children-4273865/[/url] Klettern: [url]https://pixabay.com/photos/climbing-man-adventure-2609319/[/url] Theater: [url]https://pixabay.com/photos/wells-theatre-norfolk-virginian-210914/[/url] Weihnachten: [url]https://pixabay.com/photos/christmas-background-christmas-1869902/[/url] Schule: [url]https://pixabay.com/photos/books-library-room-school-study-2596809/[/url] Kalendar: [url]https://pixabay.com/photos/calendar-dates-schedule-days-1990453/[/url] Familie: [url]https://pixabay.com/photos/family-holding-hands-parents-child-1866868/[/url] Ferien: [url]https://pixabay.com/photos/beach-summer-holidays-3891939/[/url] Farben: [url]https://pixabay.com/photos/color-pencils-crayons-colorful-8127500/[/url] Nochmal Schule: [url]https://pixabay.com/photos/timetable-plan-time-school-3665089/[/url] Untergrund: [url]https://pixabay.com/photos/people-man-lonely-sad-alone-8386051/[/url] Familie Draußen: [url]https://pixabay.com/photos/family-love-together-outdoors-6639676/[/url] Baguette: [url]https://pixabay.com/photos/baguette-bread-herb-baguette-fresh-1378049/[/url] Bretagne: [url]https://pixabay.com/photos/bretagne-france-pontrieux-2507358/[/url];Drapeau dessiné à la main. Photo de Paris avec un canal : [url]https://pixabay.com/photos/channel-saint-martin-paris-3582081/[/url] Gâteau : [url]https://pixabay.com/photos/cake-birthday-birthday-cake-916253/[/url] Amis : [url]https://pixabay.com/photos/friendship-friends-children-4273865/[/url] Escalade : [url]https://pixabay.com/photos/climbing-man-adventure-2609319/[/url] Théâtre : [url]https://pixabay.com/photos/wells-theatre-norfolk-virginian-210914/[/url] Noël : [url]https://pixabay.com/photos/christmas-background-christmas-1869902/[/url] École : [url]https://pixabay.com/photos/books-library-room-school-study-2596809/[/url] Calendrier : [url]https://pixabay.com/photos/calendar-dates-schedule-days-1990453/[/url] Famille : [url]https://pixabay.com/photos/family-holding-hands-parents-child-1866868/[/url] Vacances : [url]https://pixabay.com/photos/beach-summer-holidays-3891939/[/url] Couleurs : [url]https://pixabay.com/photos/color-pencils-crayons-colorful-8127500/[/url] Encore l'école : [url]https://pixabay.com/photos/timetable-plan-time-school-3665089/[/url] Arrière-plan : [url]https://pixabay.com/photos/people-man-lonely-sad-alone-8386051/[/url] Famille en plein air : [url]https://pixabay.com/photos/family-love-together-outdoors-6639676/[/url] Baguette : [url]https://pixabay.com/photos/baguette-bread-herb-baguette-fresh-1378049/[/url] Bretagne : [url]https://pixabay.com/photos/bretagne-france-pontrieux-2507358/[/url] 
+CUSTOM_WORDS_WORDS;Wörter;Mots
+CUSTOM_WORDS_VERBS;Verben;Verbes

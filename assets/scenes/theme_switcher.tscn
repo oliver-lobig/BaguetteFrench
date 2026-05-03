@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://0xbpf5stixh3"]
+
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="1_xkod2"]
+
+[sub_resource type="Animation" id="Animation_xkod2"]
+
+[sub_resource type="Animation" id="Animation_jmaci"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivwi5"]
+_data = {
+&"learn_scene_theme": SubResource("Animation_xkod2"),
+&"spring_theme": SubResource("Animation_jmaci")
+}
+
+[node name="ThemeSwitcher" type="Node"]
+script = ExtResource("1_xkod2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"theme_animations": SubResource("AnimationLibrary_ivwi5")
+}

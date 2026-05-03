@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://di13h8seq3mwj"]
+
+[ext_resource type="Texture2D" uid="uid://c38bb8jrp6tfg" path="res://assets/prototype/2DLineart/baguette.svg" id="1_ou4q8"]
+
+[node name="Baguette" type="Node2D"]
+
+[node name="Baguette" type="Sprite2D" parent="."]
+texture = ExtResource("1_ou4q8")

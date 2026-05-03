@@ -1,0 +1,308 @@
+[gd_scene load_steps=17 format=3 uid="uid://bhhshb3e1exm6"]
+
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="1_3exv3"]
+[ext_resource type="Script" uid="uid://dcb22n2uy7nds" path="res://scenes/match_learn.gd" id="1_ndpad"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_yeer6"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="2_ndpad"]
+[ext_resource type="PackedScene" uid="uid://dvpmkvm5ti56p" path="res://scenes/screen_progress_bar.tscn" id="4_3exv3"]
+[ext_resource type="PackedScene" uid="uid://b38kst8ee4bux" path="res://scenes/point_counter.tscn" id="4_ndpad"]
+[ext_resource type="PackedScene" uid="uid://bbc17ib76bxsw" path="res://scenes/learning_methods/matching/vocab_match_card.tscn" id="4_ubu4y"]
+[ext_resource type="Texture2D" uid="uid://crj4jrrrvvipa" path="res://assets/general_ui/translate_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="6_36wn2"]
+[ext_resource type="PackedScene" uid="uid://dqc5by7x3fmr0" path="res://scenes/baguette_shop/bread_render.tscn" id="7_3kkll"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="9_uwvwc"]
+[ext_resource type="PackedScene" uid="uid://cg7ned4axk53h" path="res://scenes/flip.tscn" id="11_b5g2w"]
+[ext_resource type="PackedScene" uid="uid://rvmbdi0xqbp0" path="res://scenes/camera_shake.tscn" id="12_e6cxv"]
+
+[sub_resource type="Animation" id="Animation_uwvwc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BreadRender:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(315, 146.095)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BreadRender:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.4922565]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/BreadRender:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yeer6"]
+resource_name = "jump"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BreadRender:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-77, 16), Vector2(315.00003, -435), Vector2(315.00003, -435), Vector2(863, 187)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BreadRender:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.30543262, 0.0, 0.0, 1.6632987]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/BreadRender:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 1, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.385, 1.385), Vector2(1.531, 1.531), Vector2(1.385, 1.385), Vector2(0.8, 0.8)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/BreadRender:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_3kkll"]
+resource_name = "rotate"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BreadRender:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-106, 154.00002), Vector2(315, -245.99998), Vector2(339.918, -279.151), Vector2(315, -245.99998), Vector2(734, 139)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BreadRender:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.553343, 0.0, 0.0, 0.0, 1.579523]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/BreadRender:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.70000005, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.195, 1.195), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_36wn2"]
+_data = {
+&"RESET": SubResource("Animation_uwvwc"),
+&"jump": SubResource("Animation_yeer6"),
+&"rotate": SubResource("Animation_3kkll")
+}
+
+[node name="MatchLearn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yeer6")
+script = ExtResource("1_ndpad")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Control" type="Control" parent="Background"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yeer6")
+
+[node name="ThemeSwitcher" type="Node" parent="Background/Control"]
+script = ExtResource("9_uwvwc")
+overwrite_theme = ExtResource("1_yeer6")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="Panel" type="Panel" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_3exv3")]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_ndpad")
+texture_pressed = ExtResource("2_ndpad")
+texture_hover = ExtResource("2_ndpad")
+texture_disabled = ExtResource("2_ndpad")
+texture_focused = ExtResource("2_ndpad")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PointCounter" parent="MarginContainer/VBoxContainer/TopBar" instance=ExtResource("4_ndpad")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+challenge_type = 4
+
+[node name="FlipButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("6_36wn2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ScreenProgressBar" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_3exv3")]
+unique_name_in_owner = true
+layout_mode = 2
+subtract_one = false
+
+[node name="Cards" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="FromWord" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Cards"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 32
+
+[node name="ToWord" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Cards"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_3exv3")]
+layout_mode = 2
+
+[node name="MoveCard" parent="." instance=ExtResource("4_ubu4y")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = -340.0
+offset_bottom = -1144.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_36wn2")
+}
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="BreadRender" parent="Control" instance=ExtResource("7_3kkll")]
+unique_name_in_owner = true
+position = Vector2(315, 146.095)
+rotation = -1.4922565
+
+[node name="ThemeSwitcher" type="Node" parent="."]
+script = ExtResource("9_uwvwc")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="Flip" parent="." instance=ExtResource("11_b5g2w")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="CameraShake" parent="." instance=ExtResource("12_e6cxv")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/FlipButton" to="." method="_on_flip_button_pressed"]

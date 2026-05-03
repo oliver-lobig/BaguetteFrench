@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbvrcv5wsfgxs"]
+
+[ext_resource type="Script" uid="uid://cjwaryoqms3xf" path="res://scripts/utils/swipe_checker.gd" id="1_ber2j"]
+
+[node name="SwipeChecker" type="Node2D"]
+script = ExtResource("1_ber2j")

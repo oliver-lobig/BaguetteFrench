@@ -1,0 +1,333 @@
+[gd_scene load_steps=20 format=3 uid="uid://blyeha473cyxr"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_v1bb1"]
+[ext_resource type="Script" uid="uid://0iphdeyj0p8j" path="res://scenes/own_words/add_custom_word.gd" id="2_8s7nm"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_ohonb"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="3_36nqs"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="4_ume0e"]
+[ext_resource type="FontFile" uid="uid://fxxd4654wo5e" path="res://assets/fonts/DynaPuff/static/DynaPuff-Bold.ttf" id="6_8i2hv"]
+[ext_resource type="Texture2D" uid="uid://dkus1actnatf8" path="res://assets/general_ui/skip_next_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="6_djua1"]
+[ext_resource type="Texture2D" uid="uid://dt67g8oi8ccgp" path="res://assets/general_ui/animation_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="6_gvajh"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="7_e7507"]
+[ext_resource type="PackedScene" uid="uid://bvqedwx4b8b3f" path="res://scenes/system_bar_spacer_keyboard.tscn" id="8_gvajh"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="9_xtcn8"]
+[ext_resource type="Script" uid="uid://bg81mre3ur8o" path="res://scenes/custom_nodes/text_line_edit.gd" id="10_b2rwu"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="10_i88c5"]
+[ext_resource type="Script" uid="uid://c1kyqmfeobas5" path="res://scenes/custom_nodes/text_option_button.gd" id="11_rr6uq"]
+[ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="12_8ov21"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="13_xtcn8"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="14_b2rwu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djua1"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.18594494, 0.5863813, 0.3784512, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1x0x"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.976471, 0.984314, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[node name="AddCustomWord" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v1bb1")
+script = ExtResource("2_8s7nm")
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("2_ohonb")]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_ume0e")]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_36nqs")
+texture_pressed = ExtResource("3_36nqs")
+texture_hover = ExtResource("3_36nqs")
+texture_disabled = ExtResource("3_36nqs")
+texture_focused = ExtResource("3_36nqs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ViewTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_fonts/font = ExtResource("6_8i2hv")
+theme_override_font_sizes/font_size = 40
+text = "ADD_WORD"
+vertical_alignment = 1
+script = ExtResource("7_e7507")
+font_type = 3
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="VerbButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture_normal = ExtResource("6_gvajh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Properties" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="French" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("9_xtcn8")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_djua1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o1x0x")
+placeholder_text = "WORD_FRENCH"
+script = ExtResource("10_b2rwu")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="German" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("9_xtcn8")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_djua1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o1x0x")
+placeholder_text = "WORD_GERMAN"
+script = ExtResource("10_b2rwu")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="Description" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("9_xtcn8")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_djua1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o1x0x")
+placeholder_text = "WORD_DESCRIPTION"
+script = ExtResource("10_b2rwu")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="SelectGender" type="OptionButton" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_xtcn8")
+selected = 0
+item_count = 4
+popup/item_0/text = "WORD_SELECT_GENDER"
+popup/item_0/id = 0
+popup/item_1/text = "WORD_MALE"
+popup/item_1/id = 1
+popup/item_2/text = "WORD_FEMALE"
+popup/item_2/id = 2
+popup/item_3/text = "WORD_NONE"
+popup/item_3/id = 3
+script = ExtResource("11_rr6uq")
+metadata/_custom_type_script = "uid://c1kyqmfeobas5"
+
+[node name="SelectCategory" type="OptionButton" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_xtcn8")
+selected = 0
+item_count = 1
+popup/item_0/text = "WORD_SELECT_CATEGORY"
+popup/item_0/id = 0
+script = ExtResource("11_rr6uq")
+metadata/_custom_type_script = "uid://c1kyqmfeobas5"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Properties"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+theme_override_fonts/font = ExtResource("12_8ov21")
+theme_override_font_sizes/font_size = 24
+text = "WORD_ADD_HELP"
+autowrap_mode = 3
+script = ExtResource("7_e7507")
+font_type = 4
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Properties"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Error" type="Label" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95686275, 0.35686275, 0.4117647, 1)
+theme_override_font_sizes/font_size = 32
+text = "Error"
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Properties"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="ActionButton" type="Button" parent="MarginContainer/VBoxContainer/Properties/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("13_xtcn8")
+theme_override_font_sizes/font_size = 32
+text = "ADD_WORD"
+script = ExtResource("14_b2rwu")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="Next" type="TextureButton" parent="MarginContainer/VBoxContainer/Properties/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("6_djua1")
+texture_pressed = ExtResource("6_djua1")
+texture_hover = ExtResource("6_djua1")
+texture_disabled = ExtResource("6_djua1")
+texture_focused = ExtResource("6_djua1")
+stretch_mode = 5
+
+[node name="SystemBarSpacerKeyboard" parent="MarginContainer/VBoxContainer" instance=ExtResource("8_gvajh")]
+layout_mode = 2
+standard_size = 48.0
+
+[node name="FoundDuplicate" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v1bb1")
+
+[node name="MarginContainer" type="MarginContainer" parent="FoundDuplicate"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FoundDuplicate/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Title" type="Label" parent="FoundDuplicate/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "FOUND_DUPLICATE"
+autowrap_mode = 3
+
+[node name="DuplicateDescription" type="Label" parent="FoundDuplicate/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+autowrap_mode = 3
+
+[node name="Control" type="Control" parent="FoundDuplicate/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DontDelete" type="Button" parent="FoundDuplicate/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "DONT_ADD"
+
+[node name="Delete" type="Button" parent="FoundDuplicate/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ADD_ANYWAY"
+
+[node name="Stop" type="Button" parent="FoundDuplicate/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "STOP"
+
+[node name="ThemeSwitcher" type="Node" parent="FoundDuplicate"]
+script = ExtResource("10_i88c5")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VerbButton" to="." method="_on_verb_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Properties/HBoxContainer/ActionButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Properties/HBoxContainer/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="FoundDuplicate/MarginContainer/VBoxContainer/DontDelete" to="." method="_on_dont_delete_pressed"]
+[connection signal="pressed" from="FoundDuplicate/MarginContainer/VBoxContainer/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="FoundDuplicate/MarginContainer/VBoxContainer/Stop" to="." method="_on_stop_pressed"]

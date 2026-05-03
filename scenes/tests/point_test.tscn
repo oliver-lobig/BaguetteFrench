@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://dnl22akejhvcf"]
+
+[ext_resource type="PackedScene" uid="uid://b38kst8ee4bux" path="res://scenes/point_counter.tscn" id="1_dejr4"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_lsi7y"]
+[ext_resource type="Script" uid="uid://ch7bsf0o6cjlm" path="res://scenes/tests/point_test.gd" id="2_oi7vu"]
+[ext_resource type="Texture2D" uid="uid://bp6tl2r5681f" path="res://assets/scenes/learning_path/button_up.png" id="3_oi7vu"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="3_ta7pa"]
+[ext_resource type="Texture2D" uid="uid://blfqjj1cs23se" path="res://assets/scenes/learning_path/button_down.png" id="4_27gmk"]
+[ext_resource type="Texture2D" uid="uid://cvhhtf4hpvefs" path="res://assets/scenes/learning_path/button_hover.png" id="5_xpqtj"]
+[ext_resource type="Texture2D" uid="uid://bjewjkq01ux0l" path="res://assets/scenes/learning_path/button_disabled.png" id="6_wirsa"]
+[ext_resource type="PackedScene" uid="uid://rvmbdi0xqbp0" path="res://scenes/camera_shake.tscn" id="9_27gmk"]
+
+[node name="PointTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lsi7y")
+script = ExtResource("2_oi7vu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lsi7y")
+
+[node name="ThemeSwitcher" parent="CanvasLayer/Control" instance=ExtResource("3_ta7pa")]
+overwrite_theme = ExtResource("1_lsi7y")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PointCounter" parent="VBoxContainer" instance=ExtResource("1_dejr4")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="VBoxContainer/Control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_oi7vu")
+texture_pressed = ExtResource("4_27gmk")
+texture_hover = ExtResource("5_xpqtj")
+texture_disabled = ExtResource("6_wirsa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CameraShake" parent="." instance=ExtResource("9_27gmk")]
+
+[connection signal="pressed" from="VBoxContainer/Control/Button" to="." method="_on_button_pressed"]

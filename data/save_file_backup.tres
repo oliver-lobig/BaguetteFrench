@@ -1,0 +1,6312 @@
+[gd_resource type="Resource" script_class="SaveFile" load_steps=862 format=3 uid="uid://31xbivw2nns1"]
+
+[ext_resource type="Script" uid="uid://clq38n6xvisaj" path="res://scripts/classes/save_file.gd" id="1_k03cq"]
+[ext_resource type="Script" uid="uid://w0wjxxguk81" path="res://scripts/classes/BaguetteShopAssortment.gd" id="1_r3v76"]
+[ext_resource type="Script" uid="uid://4e87itwmg7qh" path="res://scripts/classes/BaguetteStyleData.gd" id="2_aswl4"]
+[ext_resource type="Script" uid="uid://syxseune0p3t" path="res://scripts/classes/word.gd" id="2_fs01k"]
+
+[sub_resource type="Resource" id="Resource_xcy0i"]
+script = ExtResource("1_r3v76")
+metadata/_custom_type_script = "uid://w0wjxxguk81"
+
+[sub_resource type="Resource" id="Resource_507oa"]
+script = ExtResource("2_aswl4")
+metadata/_custom_type_script = "uid://4e87itwmg7qh"
+
+[sub_resource type="Resource" id="Resource_r10cu"]
+script = ExtResource("2_fs01k")
+id = 787
+german = ["Es geht mir gut."]
+french = ["Ça va bien."]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_q15ji"]
+script = ExtResource("2_fs01k")
+id = 853
+german = ["eine Antwort"]
+french = ["une réponse"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_np7h0"]
+script = ExtResource("2_fs01k")
+id = 844
+german = ["ein Bruder"]
+french = ["un frère"]
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_j1n8m"]
+script = ExtResource("2_fs01k")
+id = 784
+german = ["Danke!"]
+french = ["Merci."]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_krnde"]
+script = ExtResource("2_fs01k")
+id = 828
+german = ["Los!"]
+french = ["Allez!"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_qbpwf"]
+script = ExtResource("2_fs01k")
+id = 814
+german = ["nett", "toll"]
+french = ["sympa"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ub00s"]
+script = ExtResource("2_fs01k")
+id = 779
+german = ["wie"]
+french = ["comment"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_826ji"]
+script = ExtResource("2_fs01k")
+id = 775
+german = ["das ist"]
+french = ["c'est"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_08cva"]
+script = ExtResource("2_fs01k")
+id = 795
+german = ["ein Café"]
+french = ["un café"]
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_fbe1h"]
+script = ExtResource("2_fs01k")
+id = 776
+german = ["Hallo!"]
+french = ["Salut!"]
+description = "ugs."
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_0enkp"]
+script = ExtResource("2_fs01k")
+id = 850
+german = ["schon"]
+french = ["déjà"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ag04v"]
+script = ExtResource("2_fs01k")
+id = 836
+german = ["Was ist das?", "Was ist denn das?"]
+french = ["C'est quoi, ça?"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_5lmel"]
+script = ExtResource("2_fs01k")
+id = 88
+german = ["Entschuldigung"]
+french = ["pardon"]
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_fs01k"]
+script = ExtResource("2_fs01k")
+german = ["die Videospiele"]
+french = ["les jeux vidéo"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_wns8f"]
+script = ExtResource("2_fs01k")
+id = 1
+german = ["dort"]
+french = ["là bas"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_iuejj"]
+script = ExtResource("2_fs01k")
+id = 2
+german = ["noch"]
+french = ["encore"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_tjdow"]
+script = ExtResource("2_fs01k")
+id = 3
+german = ["Rucksack"]
+french = ["le sac à dos"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_fo1a1"]
+script = ExtResource("2_fs01k")
+id = 4
+german = ["das Tor, Ziel"]
+french = ["le but"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_c8qwu"]
+script = ExtResource("2_fs01k")
+id = 5
+german = ["das Ringen"]
+french = ["la lutte"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_eai0y"]
+script = ExtResource("2_fs01k")
+id = 6
+german = ["Donnerstag"]
+french = ["jeudi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_c5l0g"]
+script = ExtResource("2_fs01k")
+id = 7
+german = ["ein Team"]
+french = ["une équipe"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_7oy75"]
+script = ExtResource("2_fs01k")
+id = 8
+german = ["Mama"]
+french = ["maman"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_k3jls"]
+script = ExtResource("2_fs01k")
+id = 9
+german = ["Lieder"]
+french = ["les chansons"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_bvfla"]
+script = ExtResource("2_fs01k")
+id = 10
+german = ["Opa"]
+french = ["papy, papi"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_nc35x"]
+script = ExtResource("2_fs01k")
+id = 11
+german = ["Wir sind da"]
+french = ["On est là"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_j6tuc"]
+script = ExtResource("2_fs01k")
+id = 12
+german = ["einverstanden"]
+french = ["d'accord"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_igbnp"]
+script = ExtResource("2_fs01k")
+id = 13
+german = ["eine Katze"]
+french = ["un chat"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_avr1w"]
+script = ExtResource("2_fs01k")
+id = 14
+german = ["aber"]
+french = ["mais"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_ajmdy"]
+script = ExtResource("2_fs01k")
+id = 15
+german = ["Freitag"]
+french = ["vendredi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_nb1do"]
+script = ExtResource("2_fs01k")
+id = 16
+german = ["super"]
+french = ["super"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_hxrn0"]
+script = ExtResource("2_fs01k")
+id = 17
+german = ["Sonntag"]
+french = ["dimanche"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_3smlc"]
+script = ExtResource("2_fs01k")
+id = 18
+german = ["in,im"]
+french = ["dans"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_faj7b"]
+script = ExtResource("2_fs01k")
+id = 19
+german = ["Wochentag"]
+french = ["les jours de la semaine"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_c8ats"]
+script = ExtResource("2_fs01k")
+id = 20
+german = ["Rock-Musik"]
+french = ["le rock, le rap"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_gdvjr"]
+script = ExtResource("2_fs01k")
+id = 21
+german = ["Stadtviertel"]
+french = ["un quartier"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_3ccr2"]
+script = ExtResource("2_fs01k")
+id = 22
+german = ["Ich bin"]
+french = ["je suis"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_d1w3s"]
+script = ExtResource("2_fs01k")
+id = 23
+german = ["Achtung"]
+french = ["attention"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_4r84m"]
+script = ExtResource("2_fs01k")
+id = 24
+german = ["Ball"]
+french = ["le ballon"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_pd00l"]
+script = ExtResource("2_fs01k")
+id = 25
+german = ["Tisch"]
+french = ["la table"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_pfh5f"]
+script = ExtResource("2_fs01k")
+id = 26
+german = ["Papagei"]
+french = ["la perroquet"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_apdsq"]
+script = ExtResource("2_fs01k")
+id = 27
+german = ["Wo ist Max"]
+french = ["Où est Max?"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_s13ok"]
+script = ExtResource("2_fs01k")
+id = 28
+german = ["da bist du"]
+french = ["tu es là"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_nu1l0"]
+script = ExtResource("2_fs01k")
+id = 29
+german = ["Musik"]
+french = ["la musique"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_60lsv"]
+script = ExtResource("2_fs01k")
+id = 30
+german = ["Bücher"]
+french = ["les livres"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_an2cq"]
+script = ExtResource("2_fs01k")
+id = 31
+german = ["zusammen"]
+french = ["ensemble"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_u8uvk"]
+script = ExtResource("2_fs01k")
+id = 32
+german = ["Bruder"]
+french = ["le frère"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_75kc3"]
+script = ExtResource("2_fs01k")
+id = 33
+german = ["geht es gut?"]
+french = ["Ça va bien?"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_1516f"]
+script = ExtResource("2_fs01k")
+id = 34
+german = ["Hier ist es schön, Hier ist es gut"]
+french = ["c'est bien ici"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_y07vt"]
+script = ExtResource("2_fs01k")
+id = 35
+german = ["na sowas,schau an"]
+french = ["tiens"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_xjnhs"]
+script = ExtResource("2_fs01k")
+id = 36
+german = ["Segeln"]
+french = ["la voile"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_6kvcq"]
+script = ExtResource("2_fs01k")
+id = 37
+german = ["bis bald"]
+french = ["à bientôt"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_2tyft"]
+script = ExtResource("2_fs01k")
+id = 38
+german = ["Spiel"]
+french = ["le match"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_j65aw"]
+script = ExtResource("2_fs01k")
+id = 39
+german = ["schlecht"]
+french = ["nul"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_fs8bg"]
+script = ExtResource("2_fs01k")
+id = 40
+german = ["Mannschaft,Team"]
+french = ["l'équipe"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_spirs"]
+script = ExtResource("2_fs01k")
+id = 41
+german = ["hockey"]
+french = ["hockey"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_pkoox"]
+script = ExtResource("2_fs01k")
+id = 42
+german = ["sie bewundern"]
+french = ["ils adorent"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_jsckx"]
+script = ExtResource("2_fs01k")
+id = 43
+german = ["Er ist nett"]
+french = ["Il est sympa"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_uqv6f"]
+script = ExtResource("2_fs01k")
+id = 44
+german = ["du liebst,du magst"]
+french = ["tu aimes"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_5lyoi"]
+script = ExtResource("2_fs01k")
+id = 45
+german = ["Tischtennis"]
+french = ["le ping-pong"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_dqjud"]
+script = ExtResource("2_fs01k")
+id = 46
+german = ["Montag"]
+french = ["lundi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_6vhfh"]
+script = ExtResource("2_fs01k")
+id = 47
+german = ["spät"]
+french = ["tard"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_4af8j"]
+script = ExtResource("2_fs01k")
+id = 48
+german = ["bei"]
+french = ["chez"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_g6alo"]
+script = ExtResource("2_fs01k")
+id = 49
+german = ["Fittnestraining"]
+french = ["la musculation"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_og8fw"]
+script = ExtResource("2_fs01k")
+id = 50
+german = ["Theater"]
+french = ["le théâtre"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_u7jtl"]
+script = ExtResource("2_fs01k")
+id = 51
+german = ["also"]
+french = ["alors"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_oxkvl"]
+script = ExtResource("2_fs01k")
+id = 52
+german = ["tennis"]
+french = ["le tennis"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_vak2a"]
+script = ExtResource("2_fs01k")
+id = 53
+german = ["Reiten"]
+french = ["l'equitation"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_5o0eq"]
+script = ExtResource("2_fs01k")
+id = 54
+german = ["Plakat"]
+french = ["une affiche"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_o8dva"]
+script = ExtResource("2_fs01k")
+id = 55
+german = ["Wer ist das?"]
+french = ["C'est qui?"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_t5kw7"]
+script = ExtResource("2_fs01k")
+id = 56
+german = ["Schüler"]
+french = ["une élève"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_lw2uo"]
+script = ExtResource("2_fs01k")
+id = 57
+german = ["arbeiten"]
+french = ["travailler"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_pnlgb"]
+script = ExtResource("2_fs01k")
+id = 58
+german = ["in Ruhe"]
+french = ["en silence"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_brirk"]
+script = ExtResource("2_fs01k")
+id = 59
+german = ["Zimmer"]
+french = ["la chambre"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_tuswg"]
+script = ExtResource("2_fs01k")
+id = 60
+german = ["Was?"]
+french = ["quoi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_ht427"]
+script = ExtResource("2_fs01k")
+id = 61
+german = ["eintreten"]
+french = ["entrer"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_ye2hd"]
+script = ExtResource("2_fs01k")
+id = 62
+german = ["spielen"]
+french = ["jouer"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_4ddes"]
+script = ExtResource("2_fs01k")
+id = 63
+german = ["los"]
+french = ["allez"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_5uunr"]
+script = ExtResource("2_fs01k")
+id = 64
+german = ["später"]
+french = ["plus tard"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_ut1vb"]
+script = ExtResource("2_fs01k")
+id = 65
+german = ["Ruhe"]
+french = ["le silence"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_doifj"]
+script = ExtResource("2_fs01k")
+id = 66
+german = ["zuhören"]
+french = ["écouter"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_1ly4w"]
+script = ExtResource("2_fs01k")
+id = 67
+german = ["Bitte"]
+french = ["s'il te plaît"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_repp8"]
+script = ExtResource("2_fs01k")
+id = 68
+german = ["Bitte"]
+french = ["s'il vous plaît"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_28ouj"]
+script = ExtResource("2_fs01k")
+id = 69
+german = ["tanzen"]
+french = ["danser"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_0gp8e"]
+script = ExtResource("2_fs01k")
+id = 70
+german = ["das Tanzen"]
+french = ["la danse"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_vi7hh"]
+script = ExtResource("2_fs01k")
+id = 71
+german = ["Was gibt es in der Schule?"]
+french = ["Qu'est-ce qu'il y a au collège"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_tuhmv"]
+script = ExtResource("2_fs01k")
+id = 72
+german = ["Hof"]
+french = ["la cour"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_wnohx"]
+script = ExtResource("2_fs01k")
+id = 73
+german = ["Kugelschreiber"]
+french = ["le stylo"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_mcs0h"]
+script = ExtResource("2_fs01k")
+id = 74
+german = ["Tasche"]
+french = ["le sac"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_8ouhf"]
+script = ExtResource("2_fs01k")
+id = 75
+german = ["für"]
+french = ["pour"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_br2xy"]
+script = ExtResource("2_fs01k")
+id = 76
+german = ["bis später"]
+french = ["a plus"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_88pcp"]
+script = ExtResource("2_fs01k")
+id = 77
+german = ["Kino"]
+french = ["le cinéma"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_xhgfc"]
+script = ExtResource("2_fs01k")
+id = 78
+german = ["Heft"]
+french = ["la cahier"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_qrt0g"]
+script = ExtResource("2_fs01k")
+id = 79
+german = ["Omi"]
+french = ["mamie"]
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ejyr7"]
+script = ExtResource("2_fs01k")
+id = 80
+german = ["hier ist"]
+french = ["voilà"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_f0r48"]
+script = ExtResource("2_fs01k")
+id = 81
+german = ["auch"]
+french = ["aussi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_xtfb0"]
+script = ExtResource("2_fs01k")
+id = 82
+german = ["Mutter"]
+french = ["une mère"]
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_0x55n"]
+script = ExtResource("2_fs01k")
+id = 83
+german = ["Leichtathletik"]
+french = ["l'athlétisme"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_bja3y"]
+script = ExtResource("2_fs01k")
+id = 84
+german = ["Kopfhörer,Helm"]
+french = ["le casque"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_mklv0"]
+script = ExtResource("2_fs01k")
+id = 85
+german = ["bis später"]
+french = ["à plus"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_yn78l"]
+script = ExtResource("2_fs01k")
+id = 86
+german = ["Komm"]
+french = ["viens"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_2rjrs"]
+script = ExtResource("2_fs01k")
+id = 87
+german = ["sport"]
+french = ["le sport"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_03y2q"]
+script = ExtResource("2_fs01k")
+id = 89
+german = ["cool"]
+french = ["cool"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_hlqnb"]
+script = ExtResource("2_fs01k")
+id = 90
+german = ["ja"]
+french = ["oui"]
+learn_score = 10.0
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_14mfv"]
+script = ExtResource("2_fs01k")
+id = 91
+german = ["nein"]
+french = ["non"]
+learn_score = 10.0
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_4s6q8"]
+script = ExtResource("2_fs01k")
+id = 92
+german = ["ein Nachbar"]
+french = ["un voisin"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_6utm3"]
+script = ExtResource("2_fs01k")
+id = 93
+german = ["eine Nachberin"]
+french = ["une voisine"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_ujbrx"]
+script = ExtResource("2_fs01k")
+id = 94
+german = ["schon"]
+french = ["déjà"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_0tamj"]
+script = ExtResource("2_fs01k")
+id = 95
+german = ["eine Freundin"]
+french = ["une amie"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_1b4aj"]
+script = ExtResource("2_fs01k")
+id = 96
+german = ["Handy,Smartphone"]
+french = ["la portable"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_enn6y"]
+script = ExtResource("2_fs01k")
+id = 97
+german = ["Was ist das?"]
+french = ["c'est quoi, ça?"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_jw5ba"]
+script = ExtResource("2_fs01k")
+id = 98
+german = ["eine Straße"]
+french = ["une rue"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_wnopv"]
+script = ExtResource("2_fs01k")
+id = 99
+german = ["Fußball"]
+french = ["le foot"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_77hxp"]
+script = ExtResource("2_fs01k")
+id = 100
+german = ["Guten Tag Freunde"]
+french = ["bonjour les amis"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_6imqh"]
+script = ExtResource("2_fs01k")
+id = 101
+german = ["mit"]
+french = ["avec"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_gb240"]
+script = ExtResource("2_fs01k")
+id = 102
+german = ["Wo bist du Merlin?"]
+french = ["Tu es où, Merlin"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_0wp6n"]
+script = ExtResource("2_fs01k")
+id = 103
+german = ["Drehen wir eine Runde"]
+french = ["On fait un tour?"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_ir27v"]
+script = ExtResource("2_fs01k")
+id = 104
+german = ["das ist"]
+french = ["C'est"]
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_naiv4"]
+script = ExtResource("2_fs01k")
+id = 105
+german = ["Dienstag"]
+french = ["mardi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_8yevw"]
+script = ExtResource("2_fs01k")
+id = 106
+german = ["Schwester"]
+french = ["la soeur"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_r4fa8"]
+script = ExtResource("2_fs01k")
+id = 107
+german = ["Einzelkind"]
+french = ["enfant cinque"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_nposg"]
+script = ExtResource("2_fs01k")
+id = 108
+german = ["Mittwoch"]
+french = ["mercredi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_3wdqq"]
+script = ExtResource("2_fs01k")
+id = 109
+german = ["Schwimmen"]
+french = ["la natation"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_vew4n"]
+script = ExtResource("2_fs01k")
+id = 110
+german = ["Pop-Musik"]
+french = ["la pop"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_v8654"]
+script = ExtResource("2_fs01k")
+id = 111
+german = ["Samstag"]
+french = ["samedi"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_6616i"]
+script = ExtResource("2_fs01k")
+id = 112
+german = ["schau"]
+french = ["regarde"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_vqsk1"]
+script = ExtResource("2_fs01k")
+id = 113
+german = ["von,aus"]
+french = ["de"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_sry8h"]
+script = ExtResource("2_fs01k")
+id = 114
+german = ["Ich bin elf Jahre alt."]
+french = ["J'ai onze ans"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_qk0wu"]
+script = ExtResource("2_fs01k")
+id = 115
+german = ["ihr mögt nicht"]
+french = ["vous détestez"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_63h36"]
+script = ExtResource("2_fs01k")
+id = 116
+german = ["Lehrer"]
+french = ["le professeur"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_xk4np"]
+script = ExtResource("2_fs01k")
+id = 117
+german = ["Lehrerin"]
+french = ["la professeure"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_hikkn"]
+script = ExtResource("2_fs01k")
+id = 118
+german = ["vorbereiten"]
+french = ["préparer"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_bs1v8"]
+script = ExtResource("2_fs01k")
+id = 119
+german = ["Was machst du?"]
+french = ["Qu'est-ce que tu fais?"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_xcoml"]
+script = ExtResource("2_fs01k")
+id = 120
+german = ["Szene"]
+french = ["la scène"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_ldx5r"]
+script = ExtResource("2_fs01k")
+id = 121
+german = ["ein Theaterstück"]
+french = ["la pièce de théâtre"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_e1f2r"]
+script = ExtResource("2_fs01k")
+id = 122
+german = ["Comic"]
+french = ["la BD"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_a67kb"]
+script = ExtResource("2_fs01k")
+id = 123
+german = ["es tut mir leid"]
+french = ["désolé"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_66sr8"]
+script = ExtResource("2_fs01k")
+id = 124
+german = ["zu spät"]
+french = ["trop tard"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_shk5s"]
+script = ExtResource("2_fs01k")
+id = 125
+german = ["weil"]
+french = ["parce que"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_dx68k"]
+script = ExtResource("2_fs01k")
+id = 126
+german = ["warum"]
+french = ["pourquoi"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_yy4bl"]
+script = ExtResource("2_fs01k")
+id = 127
+german = ["Was macht Jules"]
+french = ["Que fait Jules"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_gk3e0"]
+script = ExtResource("2_fs01k")
+id = 128
+german = ["ein Stern"]
+french = ["une étoile"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_ks1b7"]
+script = ExtResource("2_fs01k")
+id = 129
+german = ["Süßigkeiten"]
+french = ["des bonbons"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_13byk"]
+script = ExtResource("2_fs01k")
+id = 130
+german = ["Weihnachtsbaum"]
+french = ["le sapin"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_5sdpr"]
+script = ExtResource("2_fs01k")
+id = 131
+german = ["Kugel"]
+french = ["boule"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_7csrj"]
+script = ExtResource("2_fs01k")
+id = 132
+german = ["Schneemann"]
+french = ["Bonhomme de neige"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_mraf5"]
+script = ExtResource("2_fs01k")
+id = 133
+german = ["Kerze"]
+french = ["une bougie"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_wnx07"]
+script = ExtResource("2_fs01k")
+id = 134
+german = ["Engel"]
+french = ["un ange"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_84xhy"]
+script = ExtResource("2_fs01k")
+id = 135
+german = ["eine Idee"]
+french = ["une idée"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_3l3ee"]
+script = ExtResource("2_fs01k")
+id = 136
+german = ["wiederfinden, treffen"]
+french = ["retrouver"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_wlvl4"]
+script = ExtResource("2_fs01k")
+id = 137
+german = ["die Anderen"]
+french = ["les autres"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_6eqgq"]
+script = ExtResource("2_fs01k")
+id = 138
+german = ["andere"]
+french = ["autre"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_sb1bw"]
+script = ExtResource("2_fs01k")
+id = 139
+german = ["als"]
+french = ["Comme"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_6x41f"]
+script = ExtResource("2_fs01k")
+id = 140
+german = ["Poster,Plakat"]
+french = ["une affiche"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_2bbq3"]
+script = ExtResource("2_fs01k")
+id = 141
+german = ["ankommen"]
+french = ["arriver"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_k674u"]
+script = ExtResource("2_fs01k")
+id = 142
+german = ["Ich weiß nicht"]
+french = ["Je ne sais pas"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_1l53g"]
+script = ExtResource("2_fs01k")
+id = 143
+german = ["Geschenk"]
+french = ["un petit paquet"]
+description = "An Weihnachten"
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_4i7kw"]
+script = ExtResource("2_fs01k")
+id = 144
+german = ["Weihnachtsmann"]
+french = ["le Père Noël"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_ynjjv"]
+script = ExtResource("2_fs01k")
+id = 145
+german = ["eine Girlande"]
+french = ["une quirlande"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_fyniv"]
+script = ExtResource("2_fs01k")
+id = 146
+german = ["eine Glocke"]
+french = ["une cloche"]
+unit_id = 7
+
+[sub_resource type="Resource" id="Resource_12dcr"]
+script = ExtResource("2_fs01k")
+id = 147
+german = ["Monate"]
+french = ["le mois de l'année"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_k6a85"]
+script = ExtResource("2_fs01k")
+id = 148
+german = ["der Januar"]
+french = ["un janvier"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_ka0ye"]
+script = ExtResource("2_fs01k")
+id = 149
+german = ["der Februar"]
+french = ["un février"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_xf42c"]
+script = ExtResource("2_fs01k")
+id = 150
+german = ["der März"]
+french = ["un mars"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_wndrb"]
+script = ExtResource("2_fs01k")
+id = 151
+german = ["der April"]
+french = ["un avril"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_bvbm0"]
+script = ExtResource("2_fs01k")
+id = 152
+german = ["der Mai"]
+french = ["un mai"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_hqjec"]
+script = ExtResource("2_fs01k")
+id = 153
+german = ["der Juni"]
+french = ["un juin"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_p3dss"]
+script = ExtResource("2_fs01k")
+id = 154
+german = ["der Juli"]
+french = ["un juillet"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_a82yx"]
+script = ExtResource("2_fs01k")
+id = 155
+german = ["der August"]
+french = ["un août"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_updmh"]
+script = ExtResource("2_fs01k")
+id = 156
+german = ["der September"]
+french = ["un septembre"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_w2fnv"]
+script = ExtResource("2_fs01k")
+id = 157
+german = ["der Oktober"]
+french = ["un octobre"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_b2peo"]
+script = ExtResource("2_fs01k")
+id = 158
+german = ["der November"]
+french = ["un novembre"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_5rj0c"]
+script = ExtResource("2_fs01k")
+id = 159
+german = ["der Dezember"]
+french = ["un décembre"]
+unit_id = 9
+
+[sub_resource type="Resource" id="Resource_o21ww"]
+script = ExtResource("2_fs01k")
+id = 160
+german = ["Sohn"]
+french = ["un fils"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_rlslk"]
+script = ExtResource("2_fs01k")
+id = 161
+german = ["Tochter"]
+french = ["une fille"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_kwoj3"]
+script = ExtResource("2_fs01k")
+id = 162
+german = ["Großeltern"]
+french = ["les grands parents"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_q003j"]
+script = ExtResource("2_fs01k")
+id = 163
+german = ["oma"]
+french = ["la grand mère"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_dcgtn"]
+script = ExtResource("2_fs01k")
+id = 164
+german = ["Opa"]
+french = ["le grand père"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_xo5gg"]
+script = ExtResource("2_fs01k")
+id = 165
+german = ["Enkel"]
+french = ["le petits enfants"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_gi2y3"]
+script = ExtResource("2_fs01k")
+id = 166
+german = ["der Enkel"]
+french = ["le petit fils"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_68bu4"]
+script = ExtResource("2_fs01k")
+id = 167
+german = ["die Enkelin"]
+french = ["la petit fille"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_smjda"]
+script = ExtResource("2_fs01k")
+id = 168
+german = ["Tante"]
+french = ["la tante"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_sphxg"]
+script = ExtResource("2_fs01k")
+id = 169
+german = ["Onkel"]
+french = ["l'oncle"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_rr8vn"]
+script = ExtResource("2_fs01k")
+id = 170
+german = ["Cousine"]
+french = ["la cousine"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_6uous"]
+script = ExtResource("2_fs01k")
+id = 171
+german = ["Cousin"]
+french = ["le cousin"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_5j75f"]
+script = ExtResource("2_fs01k")
+id = 172
+german = ["halb Schwester"]
+french = ["une demi sœur"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_5y2k0"]
+script = ExtResource("2_fs01k")
+id = 173
+german = ["halb Bruder"]
+french = ["un demi-frère"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_iu8ev"]
+script = ExtResource("2_fs01k")
+id = 174
+german = ["Stiefschwester"]
+french = ["une belle-sœur"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_1btto"]
+script = ExtResource("2_fs01k")
+id = 175
+german = ["Stiefbruder"]
+french = ["un beau-frère"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_2ivav"]
+script = ExtResource("2_fs01k")
+id = 176
+german = ["Stiefmutter"]
+french = ["la belle-mère"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_1i7cl"]
+script = ExtResource("2_fs01k")
+id = 177
+german = ["Stiefvater"]
+french = ["le beau-père"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_gpxn6"]
+script = ExtResource("2_fs01k")
+id = 178
+german = ["Neffe"]
+french = ["le neveu"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_6llp1"]
+script = ExtResource("2_fs01k")
+id = 179
+german = ["Nichte"]
+french = ["la nièce"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_oxrht"]
+script = ExtResource("2_fs01k")
+id = 180
+german = ["Einzelkind(Mädchen)"]
+french = ["fill unique"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_qeuoj"]
+script = ExtResource("2_fs01k")
+id = 181
+german = ["Einzelkind(Junge)"]
+french = ["fils unique"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_alw27"]
+script = ExtResource("2_fs01k")
+id = 182
+german = ["siebzig"]
+french = ["soixante-dix"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_1klhg"]
+script = ExtResource("2_fs01k")
+id = 183
+german = ["achtzig"]
+french = ["quatre-vingts"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_fl1tf"]
+script = ExtResource("2_fs01k")
+id = 184
+german = ["neunzig"]
+french = ["quatre-vingt-dix"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_ikvss"]
+script = ExtResource("2_fs01k")
+id = 185
+german = ["hundert"]
+french = ["cent"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_prgd5"]
+script = ExtResource("2_fs01k")
+id = 186
+german = ["wohnen"]
+french = ["habiter"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_n2vww"]
+script = ExtResource("2_fs01k")
+id = 187
+german = ["Das Geschenk"]
+french = ["le cadeau"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_lb71u"]
+script = ExtResource("2_fs01k")
+id = 188
+german = ["Der Kuchen"]
+french = ["le gâteau"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_4yws4"]
+script = ExtResource("2_fs01k")
+id = 189
+german = ["Die Feier"]
+french = ["la fête"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_npeal"]
+script = ExtResource("2_fs01k")
+id = 190
+german = ["feiern"]
+french = ["fêter"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_xjnfb"]
+script = ExtResource("2_fs01k")
+id = 191
+german = ["Gäste"]
+french = ["les invités"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_7cif3"]
+script = ExtResource("2_fs01k")
+id = 192
+german = ["einladen"]
+french = ["inviter"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_liqr4"]
+script = ExtResource("2_fs01k")
+id = 193
+german = ["ein Photo"]
+french = ["une photo"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_bvv1h"]
+script = ExtResource("2_fs01k")
+id = 194
+german = ["Feiertag"]
+french = ["le jour férié"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_lhk3e"]
+script = ExtResource("2_fs01k")
+id = 195
+german = ["Bahnhof"]
+french = ["la gare"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_x21tq"]
+script = ExtResource("2_fs01k")
+id = 196
+german = ["Zug"]
+french = ["le train"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_fjsva"]
+script = ExtResource("2_fs01k")
+id = 197
+german = ["Nachricht"]
+french = ["le message"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_68yxq"]
+script = ExtResource("2_fs01k")
+id = 198
+german = ["auf"]
+french = ["sur"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_cdrvu"]
+script = ExtResource("2_fs01k")
+id = 199
+german = ["Glück"]
+french = ["la chance"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_x4ch0"]
+script = ExtResource("2_fs01k")
+id = 200
+german = ["genial"]
+french = ["génial"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_fkkuv"]
+script = ExtResource("2_fs01k")
+id = 201
+german = ["Felsen"]
+french = ["le rocher"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_likem"]
+script = ExtResource("2_fs01k")
+id = 202
+german = ["mehr, auserdem"]
+french = ["en plus"]
+unit_id = 4
+
+[sub_resource type="Resource" id="Resource_7mi2x"]
+script = ExtResource("2_fs01k")
+id = 203
+german = ["jetzt"]
+french = ["maintenant"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_jsnjx"]
+script = ExtResource("2_fs01k")
+id = 204
+german = ["Haus"]
+french = ["la maison"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ljrtf"]
+script = ExtResource("2_fs01k")
+id = 205
+german = ["der Horror"]
+french = ["l'horreur"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_o1x50"]
+script = ExtResource("2_fs01k")
+id = 206
+german = ["heute"]
+french = ["aujourd'hui"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_5scg2"]
+script = ExtResource("2_fs01k")
+id = 207
+german = ["Ich habe"]
+french = ["j'ai"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_ft144"]
+script = ExtResource("2_fs01k")
+id = 208
+german = ["Du hast"]
+french = ["tu as"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_fukyw"]
+script = ExtResource("2_fs01k")
+id = 209
+german = ["Er/Sie/Es hat"]
+french = ["il a"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_ib37f"]
+script = ExtResource("2_fs01k")
+id = 210
+german = ["Wir haben"]
+french = ["nous avons"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_0u2cg"]
+script = ExtResource("2_fs01k")
+id = 211
+german = ["Ihr habt"]
+french = ["vous avez"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_f7rnp"]
+script = ExtResource("2_fs01k")
+id = 212
+german = ["Sie haben"]
+french = ["ils ont"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_rnlsg"]
+script = ExtResource("2_fs01k")
+id = 213
+german = ["dann"]
+french = ["Puis"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_kn8tp"]
+script = ExtResource("2_fs01k")
+id = 214
+german = ["zählen"]
+french = ["compte"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_ncue7"]
+script = ExtResource("2_fs01k")
+id = 215
+german = ["ein Basecap"]
+french = ["une casquette"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_g4rjl"]
+script = ExtResource("2_fs01k")
+id = 216
+german = ["Klettergurt"]
+french = ["une baudrier"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_e0o2h"]
+script = ExtResource("2_fs01k")
+id = 217
+german = ["küssen,umarmen"]
+french = ["embrasser"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_6o7hf"]
+script = ExtResource("2_fs01k")
+id = 218
+german = ["eine Sache"]
+french = ["une affaire"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_k8tbo"]
+script = ExtResource("2_fs01k")
+id = 219
+german = ["Vielleicht"]
+french = ["peut-être"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_qyxh1"]
+script = ExtResource("2_fs01k")
+id = 220
+german = ["ein Garten"]
+french = ["un jardin"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_d7pwc"]
+script = ExtResource("2_fs01k")
+id = 221
+german = ["Ein Baum"]
+french = ["un l'arbre"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_546qe"]
+script = ExtResource("2_fs01k")
+id = 222
+german = ["Angst"]
+french = ["peur"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_awrgw"]
+script = ExtResource("2_fs01k")
+id = 223
+german = ["Ich möchte gerne"]
+french = ["je voudrais"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_lroy6"]
+script = ExtResource("2_fs01k")
+id = 224
+german = ["hochklettern"]
+french = ["monte"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_xi6lm"]
+script = ExtResource("2_fs01k")
+id = 225
+german = ["das geht so"]
+french = ["ça va comme ça"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_0wemc"]
+script = ExtResource("2_fs01k")
+id = 226
+german = ["rate mal"]
+french = ["Devine"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_u5te8"]
+script = ExtResource("2_fs01k")
+id = 227
+german = ["Klassenarbeit"]
+french = ["l'interrogation écrite"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_hcrbm"]
+script = ExtResource("2_fs01k")
+id = 228
+german = ["Pause"]
+french = ["le récréation"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_7ty78"]
+script = ExtResource("2_fs01k")
+id = 229
+german = ["Unterricht haben"]
+french = ["avoir cours"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_631vs"]
+script = ExtResource("2_fs01k")
+id = 230
+german = ["Hunger haben"]
+french = ["avoir faim"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_ohgai"]
+script = ExtResource("2_fs01k")
+id = 231
+german = ["Cantine"]
+french = ["cantine"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_sxh47"]
+script = ExtResource("2_fs01k")
+id = 232
+german = ["verlassen"]
+french = ["quitter"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_unne2"]
+script = ExtResource("2_fs01k")
+id = 233
+german = ["Toiletten"]
+french = ["toilettes"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_taupy"]
+script = ExtResource("2_fs01k")
+id = 234
+german = ["Psst"]
+french = ["chut"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_f0btr"]
+script = ExtResource("2_fs01k")
+id = 235
+german = ["Bibliothek/Mediathek"]
+french = ["le CDI"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_mefpe"]
+script = ExtResource("2_fs01k")
+id = 236
+german = ["vervollständigen"]
+french = ["compléter"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_uhvp2"]
+script = ExtResource("2_fs01k")
+id = 237
+german = ["erzählen"]
+french = ["raconter"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_atohn"]
+script = ExtResource("2_fs01k")
+id = 238
+german = ["markieren"]
+french = ["surligner"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_7pku2"]
+script = ExtResource("2_fs01k")
+id = 239
+german = ["unterstreichen"]
+french = ["sourligner"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_chuak"]
+script = ExtResource("2_fs01k")
+id = 240
+german = ["ankreuzen"]
+french = ["cocher"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_gyxfq"]
+script = ExtResource("2_fs01k")
+id = 241
+german = ["notieren"]
+french = ["noter"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_sd3cj"]
+script = ExtResource("2_fs01k")
+id = 242
+german = ["nach Hause gehen"]
+french = ["rentrer"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_8hkyc"]
+script = ExtResource("2_fs01k")
+id = 243
+german = ["ein Graffiti-Künstler"]
+french = ["un graffeur"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_eve1s"]
+script = ExtResource("2_fs01k")
+id = 244
+german = ["ein Event"]
+french = ["un évènement"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_6h4iw"]
+script = ExtResource("2_fs01k")
+id = 245
+german = ["ein Graffiti"]
+french = ["un graffiti"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_slt87"]
+script = ExtResource("2_fs01k")
+id = 246
+german = ["das Konzert"]
+french = ["le concert"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_gdkgy"]
+script = ExtResource("2_fs01k")
+id = 247
+german = ["ohne"]
+french = ["sans"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_1qqud"]
+script = ExtResource("2_fs01k")
+id = 248
+german = ["ein Polizist"]
+french = ["un policier"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_ytfml"]
+script = ExtResource("2_fs01k")
+id = 249
+german = ["immer"]
+french = ["toujours"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_8pcv4"]
+script = ExtResource("2_fs01k")
+id = 250
+german = ["Geschäft"]
+french = ["le magasin"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_j56tx"]
+script = ExtResource("2_fs01k")
+id = 251
+german = ["zuerst"]
+french = ["d'abord"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_12eyw"]
+script = ExtResource("2_fs01k")
+id = 252
+german = ["los geht's"]
+french = ["On y va"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_jdokb"]
+script = ExtResource("2_fs01k")
+id = 253
+german = ["einsteigen"]
+french = ["monter"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_8n70b"]
+script = ExtResource("2_fs01k")
+id = 254
+german = ["plötzlich"]
+french = ["tout à coup"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_e8hn6"]
+script = ExtResource("2_fs01k")
+id = 255
+german = ["ein Schock"]
+french = ["le choc"]
+
+[sub_resource type="Resource" id="Resource_sfw44"]
+script = ExtResource("2_fs01k")
+id = 256
+german = ["bleiben"]
+french = ["rester"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_1ko7l"]
+script = ExtResource("2_fs01k")
+id = 257
+german = ["gibt es jemand"]
+french = ["quelqu'un"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_g5qhq"]
+script = ExtResource("2_fs01k")
+id = 258
+german = ["etwas"]
+french = ["quelque"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_vqgvi"]
+script = ExtResource("2_fs01k")
+id = 259
+german = ["Bad"]
+french = ["la salle de bain"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_o4t05"]
+script = ExtResource("2_fs01k")
+id = 260
+german = ["das Kino"]
+french = ["le cinéma"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_jujnb"]
+script = ExtResource("2_fs01k")
+id = 261
+german = ["ja"]
+french = ["si"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_wefd2"]
+script = ExtResource("2_fs01k")
+id = 262
+german = ["gehen/fahren"]
+french = ["aller"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_rf1dj"]
+script = ExtResource("2_fs01k")
+id = 263
+german = ["ich gehe/fahre"]
+french = ["je vais"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_5ughv"]
+script = ExtResource("2_fs01k")
+id = 264
+german = ["du gehst/fährst"]
+french = ["tu vas"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_ntuxx"]
+script = ExtResource("2_fs01k")
+id = 265
+german = ["er/sie/es geht/fährt"]
+french = ["il va"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_2y4cy"]
+script = ExtResource("2_fs01k")
+id = 266
+german = ["wir gehen/fahren"]
+french = ["nous allons"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_mokdd"]
+script = ExtResource("2_fs01k")
+id = 267
+german = ["ihr geht/fahrt"]
+french = ["vous allez"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_u351o"]
+script = ExtResource("2_fs01k")
+id = 268
+german = ["sie gehen/fahren"]
+french = ["ils vont"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_pggrf"]
+script = ExtResource("2_fs01k")
+id = 269
+german = ["Das ist verboten"]
+french = ["c'est interdit"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_sdfde"]
+script = ExtResource("2_fs01k")
+id = 270
+german = ["Man kann nicht "]
+french = ["On ne peut pas"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_cxb3o"]
+script = ExtResource("2_fs01k")
+id = 271
+german = ["endlich/schließlich "]
+french = ["enfin"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ulxya"]
+script = ExtResource("2_fs01k")
+id = 272
+german = ["zeichnen"]
+french = ["dessiner"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_2v4um"]
+script = ExtResource("2_fs01k")
+id = 273
+german = ["eine Zeichnung"]
+french = ["le dessin"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_6rmkf"]
+script = ExtResource("2_fs01k")
+id = 274
+german = ["Das ist nicht schlecht"]
+french = ["C'est pas mal"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_rff5o"]
+script = ExtResource("2_fs01k")
+id = 275
+german = ["eine Sache (Umgangssprache)"]
+french = ["le truc"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_15brg"]
+script = ExtResource("2_fs01k")
+id = 276
+german = ["der Rhythmus"]
+french = ["le rythme"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_vf20t"]
+script = ExtResource("2_fs01k")
+id = 277
+german = ["Lust auf etwas haben"]
+french = ["avoir envie de"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_l4t6w"]
+script = ExtResource("2_fs01k")
+id = 278
+german = ["Büchlein/Notizbuch"]
+french = ["le carnet"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_4whdi"]
+script = ExtResource("2_fs01k")
+id = 279
+german = ["eine Telefonnummer "]
+french = ["un numéro de téléphone"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_1xr6k"]
+script = ExtResource("2_fs01k")
+id = 280
+german = ["der Stil"]
+french = ["le style"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_n106d"]
+script = ExtResource("2_fs01k")
+id = 281
+german = ["was sollen wir denn jetzt machen?"]
+french = ["Qu'est ce qu'on fait?"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_i0n0l"]
+script = ExtResource("2_fs01k")
+id = 282
+german = ["schnell"]
+french = ["vite"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_t8jr3"]
+script = ExtResource("2_fs01k")
+id = 283
+german = ["nicht wie de anderen"]
+french = ["pas comme les autres"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_vnpvy"]
+script = ExtResource("2_fs01k")
+id = 284
+german = ["Das ist zu viel"]
+french = ["C'est trop bien"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_lceu0"]
+script = ExtResource("2_fs01k")
+id = 285
+german = ["machen"]
+french = ["faire"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_ux1b7"]
+script = ExtResource("2_fs01k")
+id = 286
+german = ["ich mache"]
+french = ["je fais"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_lwe5a"]
+script = ExtResource("2_fs01k")
+id = 287
+german = ["du machst"]
+french = ["tu fais"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_h2mwi"]
+script = ExtResource("2_fs01k")
+id = 288
+german = ["er macht"]
+french = ["il fait"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_apo1w"]
+script = ExtResource("2_fs01k")
+id = 289
+german = ["wir machen"]
+french = ["nous faisons"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_oyg6s"]
+script = ExtResource("2_fs01k")
+id = 290
+german = ["ihr macht"]
+french = ["vous faites"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_hm7nn"]
+script = ExtResource("2_fs01k")
+id = 291
+german = ["sie machen"]
+french = ["ils font"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_h3o22"]
+script = ExtResource("2_fs01k")
+id = 292
+german = ["Schauspieler"]
+french = ["un acteur"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_4pare"]
+script = ExtResource("2_fs01k")
+id = 293
+german = ["eine Schauspielerin"]
+french = ["une actrice"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_q1xmg"]
+script = ExtResource("2_fs01k")
+id = 294
+german = ["Diskutieren "]
+french = ["discuter"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_cypni"]
+script = ExtResource("2_fs01k")
+id = 295
+german = ["das Programm"]
+french = ["le programme"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_bm6gj"]
+script = ExtResource("2_fs01k")
+id = 296
+german = ["heute Abend"]
+french = ["ce soir"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_j8k5k"]
+script = ExtResource("2_fs01k")
+id = 297
+german = ["morgen"]
+french = ["demain"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_wcoyc"]
+script = ExtResource("2_fs01k")
+id = 298
+german = ["Zuschauer"]
+french = ["le spectateur"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_hjbuv"]
+script = ExtResource("2_fs01k")
+id = 299
+german = ["das Radio "]
+french = ["la radio"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_7ppfa"]
+script = ExtResource("2_fs01k")
+id = 300
+german = ["der Radioklub"]
+french = ["le club radio"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_08a48"]
+script = ExtResource("2_fs01k")
+id = 301
+german = ["ein Interview"]
+french = ["une interview"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_hbc2n"]
+script = ExtResource("2_fs01k")
+id = 302
+german = ["film "]
+french = ["film"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_guk04"]
+script = ExtResource("2_fs01k")
+id = 303
+german = ["eine Kamera "]
+french = ["une caméra"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_bcmp6"]
+script = ExtResource("2_fs01k")
+id = 304
+german = ["filmen"]
+french = ["filmer"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_hbejs"]
+script = ExtResource("2_fs01k")
+id = 305
+german = ["eine Probe"]
+french = ["une répétition"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_k66v6"]
+script = ExtResource("2_fs01k")
+id = 306
+german = ["eine Buchhandlung"]
+french = ["la librairie"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_c66iw"]
+script = ExtResource("2_fs01k")
+id = 307
+german = ["die Stimme"]
+french = ["la voix "]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_rudko"]
+script = ExtResource("2_fs01k")
+id = 308
+german = ["nicht/mehr"]
+french = ["ne.... plus"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_areoj"]
+script = ExtResource("2_fs01k")
+id = 309
+german = ["etwas erzählen "]
+french = ["raconter qc."]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_w6tx5"]
+script = ExtResource("2_fs01k")
+id = 310
+german = ["das Ende"]
+french = ["la fin"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_wex5t"]
+script = ExtResource("2_fs01k")
+id = 311
+german = ["Eintrittskarte"]
+french = ["le billet d'entrée"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_4hnuo"]
+script = ExtResource("2_fs01k")
+id = 312
+german = ["Recht haben"]
+french = ["avoir raison"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_p4l1u"]
+script = ExtResource("2_fs01k")
+id = 313
+german = ["die Antwort "]
+french = ["la réponse"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_hhg8f"]
+script = ExtResource("2_fs01k")
+id = 314
+german = ["krank"]
+french = ["être malade"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_5t2dp"]
+script = ExtResource("2_fs01k")
+id = 315
+german = ["Komisch, seltsam"]
+french = ["bizarre"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_87yst"]
+script = ExtResource("2_fs01k")
+id = 316
+german = ["wirklich"]
+french = ["vraiment"]
+learn_score = 10.0
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_qwp04"]
+script = ExtResource("2_fs01k")
+id = 317
+german = ["das Problem"]
+french = ["le problème"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_yfo4h"]
+script = ExtResource("2_fs01k")
+id = 318
+german = ["die Rolle"]
+french = ["le rôle"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_080kh"]
+script = ExtResource("2_fs01k")
+id = 319
+german = ["pünktlich"]
+french = ["être à l'heure"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_laynn"]
+script = ExtResource("2_fs01k")
+id = 320
+german = ["rufen (anrufen)"]
+french = ["appeler"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_0cxgr"]
+script = ExtResource("2_fs01k")
+id = 321
+german = ["futsch, im Eimer"]
+french = ["c'est foutu"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_sbo6c"]
+script = ExtResource("2_fs01k")
+id = 322
+german = ["eine Lösung"]
+french = ["un solution"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_uqs01"]
+script = ExtResource("2_fs01k")
+id = 323
+german = ["ein Saal"]
+french = ["une salle"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_gk8sy"]
+script = ExtResource("2_fs01k")
+id = 324
+german = ["hinter"]
+french = ["derrière"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_tt737"]
+script = ExtResource("2_fs01k")
+id = 325
+german = ["eine Übung"]
+french = ["un exercice"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_8m832"]
+script = ExtResource("2_fs01k")
+id = 326
+german = ["gegen"]
+french = ["contre"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_dumxk"]
+script = ExtResource("2_fs01k")
+id = 327
+german = ["der Stress"]
+french = ["le stress"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_m4b50"]
+script = ExtResource("2_fs01k")
+id = 328
+german = ["eine Jugendlicher"]
+french = ["un adolescent"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_4ot6f"]
+script = ExtResource("2_fs01k")
+id = 329
+german = ["eine Jugendliche"]
+french = ["une adolescente"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_53u0j"]
+script = ExtResource("2_fs01k")
+id = 330
+german = ["ein Kopf"]
+french = ["une tête"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_to3p4"]
+script = ExtResource("2_fs01k")
+id = 331
+german = ["nicken"]
+french = ["faire oui de la tête"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_p3lmi"]
+script = ExtResource("2_fs01k")
+id = 332
+german = ["etwas nehmen"]
+french = ["prendre qc."]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_yywhj"]
+script = ExtResource("2_fs01k")
+id = 333
+german = ["etwas vergessen"]
+french = ["oublier qc."]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_cicm0"]
+script = ExtResource("2_fs01k")
+id = 334
+german = ["etwas verstehen"]
+french = ["comprendre qc."]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_a0drb"]
+script = ExtResource("2_fs01k")
+id = 335
+german = ["ich nehme "]
+french = ["je prends"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_4unra"]
+script = ExtResource("2_fs01k")
+id = 336
+german = ["du nimmst"]
+french = ["tu prends "]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_klm2e"]
+script = ExtResource("2_fs01k")
+id = 337
+german = ["sie nimmt"]
+french = ["elle prend"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_jnyft"]
+script = ExtResource("2_fs01k")
+id = 338
+german = ["wir nehmen"]
+french = ["nous prenons"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_mlv0w"]
+script = ExtResource("2_fs01k")
+id = 339
+german = ["ihr nehmt"]
+french = ["vous prenez"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_3r5e3"]
+script = ExtResource("2_fs01k")
+id = 340
+german = ["sie nehmen"]
+french = ["ils prennent"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_koxwu"]
+script = ExtResource("2_fs01k")
+id = 341
+german = ["Scheiße!"]
+french = ["Merde!"]
+description = "(Viel Glück beim Theater)"
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_27os0"]
+script = ExtResource("2_fs01k")
+id = 342
+german = ["alle"]
+french = ["tout le monde"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_ifwle"]
+script = ExtResource("2_fs01k")
+id = 343
+german = ["vor"]
+french = ["devant"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_q22oo"]
+script = ExtResource("2_fs01k")
+id = 344
+german = ["etwas erfinden"]
+french = ["inventer qc."]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_twitf"]
+script = ExtResource("2_fs01k")
+id = 345
+german = ["etwas nachahmen"]
+french = ["mimer qc."]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_g4601"]
+script = ExtResource("2_fs01k")
+id = 346
+german = ["die Leute"]
+french = ["les gens"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_3tovq"]
+script = ExtResource("2_fs01k")
+id = 347
+german = ["ein Erfolg"]
+french = ["un succès"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_x4knu"]
+script = ExtResource("2_fs01k")
+id = 348
+german = ["ein Star"]
+french = ["une star"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_8rpup"]
+script = ExtResource("2_fs01k")
+id = 349
+german = ["ein Tier"]
+french = ["une bête"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_hyfbx"]
+script = ExtResource("2_fs01k")
+id = 350
+german = ["ein Getränkestand"]
+french = ["une buvette"]
+description = "falscher Freund!"
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_s4kyu"]
+script = ExtResource("2_fs01k")
+id = 351
+german = ["Durst haben"]
+french = ["avoir soif"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_u82j8"]
+script = ExtResource("2_fs01k")
+id = 352
+german = ["eine Stimmung", "eine Atmosphäre"]
+french = ["une ambiance"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_qboih"]
+script = ExtResource("2_fs01k")
+id = 353
+german = ["etw. kaufen"]
+french = ["achter qc"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_xkams"]
+script = ExtResource("2_fs01k")
+id = 354
+german = ["Was kaufen wir am Getränkestand?"]
+french = ["Qu'est-ce qu'on achète à la buvette?"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_u5kv5"]
+script = ExtResource("2_fs01k")
+id = 355
+german = ["eine Crêpe"]
+french = ["une crêpe"]
+description = "ein dünner, französischer Pfannkuchen"
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_m5g2x"]
+script = ExtResource("2_fs01k")
+id = 356
+german = ["eine Frucht"]
+french = ["un fruit"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_5227a"]
+script = ExtResource("2_fs01k")
+id = 357
+german = ["ein Fruchtsaft"]
+french = ["un jus de fruits"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_aa3xt"]
+script = ExtResource("2_fs01k")
+id = 358
+german = ["ein Getränk"]
+french = ["une boisson"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_afo5s"]
+script = ExtResource("2_fs01k")
+id = 359
+german = ["das Wasser"]
+french = ["l'eau"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_lwvdq"]
+script = ExtResource("2_fs01k")
+id = 360
+german = ["ein Preis"]
+french = ["un prix"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_n3ixv"]
+script = ExtResource("2_fs01k")
+id = 361
+german = ["kosten"]
+french = ["coûter"]
+description = "Geld"
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_8bekt"]
+script = ExtResource("2_fs01k")
+id = 362
+german = ["ein Euro"]
+french = ["un euro"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_jw8ac"]
+script = ExtResource("2_fs01k")
+id = 363
+german = ["ein Cent"]
+french = ["un centime"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_thv3f"]
+script = ExtResource("2_fs01k")
+id = 364
+german = ["Das macht ..."]
+french = ["Ça fait ..."]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_8xgfe"]
+script = ExtResource("2_fs01k")
+id = 365
+german = ["wie viel"]
+french = ["combien"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_n7sim"]
+script = ExtResource("2_fs01k")
+id = 366
+german = ["der Kaffee"]
+french = ["le café"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_82ipt"]
+script = ExtResource("2_fs01k")
+id = 367
+german = ["ein Mineralwasser"]
+french = ["une eau minérale"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_n1egv"]
+script = ExtResource("2_fs01k")
+id = 368
+german = ["eine Cola"]
+french = ["un coca"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_oy3vq"]
+script = ExtResource("2_fs01k")
+id = 369
+german = ["eine Orangenlimonade", "eine Orangina"]
+french = ["un orangina"]
+description = "Eigenname"
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_jy04k"]
+script = ExtResource("2_fs01k")
+id = 370
+german = ["eine Waffel"]
+french = ["une gaufre"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_bf6hb"]
+script = ExtResource("2_fs01k")
+id = 371
+german = ["ein Sandwich"]
+french = ["un sandwich"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_862fr"]
+script = ExtResource("2_fs01k")
+id = 372
+german = ["ein Eis"]
+french = ["une glace"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_yosfr"]
+script = ExtResource("2_fs01k")
+id = 373
+german = ["ein Verkäufer"]
+french = ["un vendeur"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_7vkes"]
+script = ExtResource("2_fs01k")
+id = 374
+german = ["eine Verkäuferin"]
+french = ["une vendeuse"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_0s6er"]
+script = ExtResource("2_fs01k")
+id = 375
+german = ["etw. wünschen"]
+french = ["désirer qc"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_p7k1b"]
+script = ExtResource("2_fs01k")
+id = 376
+german = ["Sonst noch etwas?", "Und außerdem?"]
+french = ["Et avec ça?"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_axwgt"]
+script = ExtResource("2_fs01k")
+id = 377
+german = ["viel"]
+french = ["beaucoup"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_xrptb"]
+script = ExtResource("2_fs01k")
+id = 378
+german = ["Vielen Dank!"]
+french = ["Merci beaucoup !"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_j5wh6"]
+script = ExtResource("2_fs01k")
+id = 379
+german = ["eine Stadt"]
+french = ["une ville"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_xjbxl"]
+script = ExtResource("2_fs01k")
+id = 380
+german = ["zwischen"]
+french = ["entre"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_0jctd"]
+script = ExtResource("2_fs01k")
+id = 381
+german = ["das Meer"]
+french = ["la mer"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_icr6n"]
+script = ExtResource("2_fs01k")
+id = 382
+german = ["das Mittelmeer"]
+french = ["la Méditerranée"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ng3rb"]
+script = ExtResource("2_fs01k")
+id = 383
+german = ["ein Gebirge"]
+french = ["une montagne"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_pbo10"]
+script = ExtResource("2_fs01k")
+id = 384
+german = ["mit jdm. in Verbindung treten", "jdm. kontaktieren"]
+french = ["contacter qn"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_avp7c"]
+script = ExtResource("2_fs01k")
+id = 385
+german = ["der Urlaub", "die Ferien"]
+french = ["les vacances"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_yib8r"]
+script = ExtResource("2_fs01k")
+id = 386
+german = ["etwas verbringen"]
+french = ["passer qc"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ps0fn"]
+script = ExtResource("2_fs01k")
+id = 387
+german = ["ein Praktikum", "ein Kurs"]
+french = ["un stage"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_754ak"]
+script = ExtResource("2_fs01k")
+id = 388
+german = ["eine Rettung", "eine Rettungsaktion"]
+french = ["un sauvetage"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_g2p63"]
+script = ExtResource("2_fs01k")
+id = 389
+german = ["ein Ausgang", "ein Ausflug"]
+french = ["une sortie"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_2wsxg"]
+script = ExtResource("2_fs01k")
+id = 390
+german = ["ein Boot", "ein Schiff"]
+french = ["un bateau"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_20rw2"]
+script = ExtResource("2_fs01k")
+id = 391
+german = ["Boote", "Schiffe"]
+french = ["des bateaux"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_oheki"]
+script = ExtResource("2_fs01k")
+id = 392
+german = ["etw. besichtigen"]
+french = ["visiter qc"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_kexqq"]
+script = ExtResource("2_fs01k")
+id = 393
+german = ["das Wetter"]
+french = ["le temps"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_sf1pv"]
+script = ExtResource("2_fs01k")
+id = 394
+german = ["Wie ist das Wetter?"]
+french = ["Il fait quel temps?"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_5lo33"]
+script = ExtResource("2_fs01k")
+id = 395
+german = ["Es ist schönes Wetter."]
+french = ["Il fait beau."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_aswaf"]
+script = ExtResource("2_fs01k")
+id = 396
+german = ["die Sonne"]
+french = ["le soleil"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ciuuj"]
+script = ExtResource("2_fs01k")
+id = 397
+german = ["Es regnet."]
+french = ["Il pleut"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_6sr54"]
+script = ExtResource("2_fs01k")
+id = 398
+german = ["die Wettervorhersage"]
+french = ["la météo"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_iuidr"]
+script = ExtResource("2_fs01k")
+id = 399
+german = ["der Wind"]
+french = ["le vent"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_sf4vy"]
+script = ExtResource("2_fs01k")
+id = 400
+german = ["Es ist sonnig."]
+french = ["Il fait soleil."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_t2yhq"]
+script = ExtResource("2_fs01k")
+id = 401
+german = ["Es ist heiß."]
+french = ["Il fait chaud."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_yv4r7"]
+script = ExtResource("2_fs01k")
+id = 402
+german = ["Es ist kalt."]
+french = ["Il fait froide."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_5fdu7"]
+script = ExtResource("2_fs01k")
+id = 403
+german = ["Es ist bewölkt."]
+french = ["Il fait mauvaise."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_on7ud"]
+script = ExtResource("2_fs01k")
+id = 404
+german = ["Es ist windig."]
+french = ["Il y a du vent."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_mqdje"]
+script = ExtResource("2_fs01k")
+id = 405
+german = ["Es schneit."]
+french = ["Il neige."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ycrb8"]
+script = ExtResource("2_fs01k")
+id = 406
+german = ["Es ist ein Gewitter."]
+french = ["Il y a un orage."]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_v7g7l"]
+script = ExtResource("2_fs01k")
+id = 407
+german = ["eine Information"]
+french = ["une information"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_1wuj4"]
+script = ExtResource("2_fs01k")
+id = 408
+german = ["ein Ort"]
+french = ["un endroit"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_qskrq"]
+script = ExtResource("2_fs01k")
+id = 409
+german = ["ein Strand"]
+french = ["une plage"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_uu0p3"]
+script = ExtResource("2_fs01k")
+id = 410
+german = ["eine Besonderheit", "eine Spezialität"]
+french = ["Une spécialité"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_lgkx6"]
+script = ExtResource("2_fs01k")
+id = 411
+german = ["die Altstadt"]
+french = ["la vielle ville"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ocot5"]
+script = ExtResource("2_fs01k")
+id = 412
+german = ["ein Hügel"]
+french = ["une colline"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_yjbua"]
+script = ExtResource("2_fs01k")
+id = 413
+german = ["ein Schloss"]
+french = ["un château"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_4jiq3"]
+script = ExtResource("2_fs01k")
+id = 414
+german = ["Schlösser"]
+french = ["des châteaux"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_15gdr"]
+script = ExtResource("2_fs01k")
+id = 415
+german = ["ein Restaurant"]
+french = ["un Restaurant"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_lns1l"]
+script = ExtResource("2_fs01k")
+id = 416
+german = ["jdm. etw. zeigen"]
+french = ["montrer qc à qn"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_h5u3s"]
+script = ExtResource("2_fs01k")
+id = 417
+german = ["vorbeigehen", "vorübergehen"]
+french = ["passer"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_b1ti6"]
+script = ExtResource("2_fs01k")
+id = 418
+german = ["ein Bauwerk", "ein Gebäude"]
+french = ["un bâtiment"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_6ck61"]
+script = ExtResource("2_fs01k")
+id = 419
+german = ["modern"]
+french = ["moderne"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_0lcrh"]
+script = ExtResource("2_fs01k")
+id = 420
+german = ["ein Eis"]
+french = ["une glace"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_d3alr"]
+script = ExtResource("2_fs01k")
+id = 421
+german = ["jdn. etw. fragen", "jdn. um etwas bitten"]
+french = ["demander qc à qn"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_eq1xk"]
+script = ExtResource("2_fs01k")
+id = 422
+german = ["jdm. etw. geben"]
+french = ["donner qc à qn"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_aeaa3"]
+script = ExtResource("2_fs01k")
+id = 423
+german = ["springen"]
+french = ["sauter"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_w7fj6"]
+script = ExtResource("2_fs01k")
+id = 424
+german = ["etw. legen: etw. stellen", "etw. setzen"]
+french = ["poser qc"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_idu1m"]
+script = ExtResource("2_fs01k")
+id = 425
+german = ["ein Fuß"]
+french = ["un pied"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_vou03"]
+script = ExtResource("2_fs01k")
+id = 426
+german = ["jdm. helfen"]
+french = ["aider qn"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_08vu0"]
+script = ExtResource("2_fs01k")
+id = 427
+german = ["Schmerzen haben"]
+french = ["avoir mal"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_v35om"]
+script = ExtResource("2_fs01k")
+id = 428
+german = ["jdm. etw. vorschlagen"]
+french = ["proposer qc à qn"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_khp8w"]
+script = ExtResource("2_fs01k")
+id = 429
+german = ["ein Besuch"]
+french = ["une visite"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_felyb"]
+script = ExtResource("2_fs01k")
+id = 430
+german = ["lachen"]
+french = ["rigoler"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_s8iuc"]
+script = ExtResource("2_fs01k")
+id = 431
+german = ["eine Treppe"]
+french = ["un escalier"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_ia4gw"]
+script = ExtResource("2_fs01k")
+id = 432
+german = ["ein Aufzug", "ein Fahrstuhl"]
+french = ["un ascenseur"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_xgcqv"]
+script = ExtResource("2_fs01k")
+id = 433
+german = ["lustig"]
+french = ["drôle"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_j5xn3"]
+script = ExtResource("2_fs01k")
+id = 434
+german = ["eine Aussicht"]
+french = ["une vue"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_idubs"]
+script = ExtResource("2_fs01k")
+id = 435
+german = ["ein Tourist"]
+french = ["un touriste"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_n8cms"]
+script = ExtResource("2_fs01k")
+id = 436
+german = ["eine Touristin"]
+french = ["une touriste"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_c3d1j"]
+script = ExtResource("2_fs01k")
+id = 437
+german = ["die Abfahrt", "der Aufbruch"]
+french = ["le départ"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_273t6"]
+script = ExtResource("2_fs01k")
+id = 438
+german = ["interessant"]
+french = ["intéressant"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_aqgm4"]
+script = ExtResource("2_fs01k")
+id = 439
+german = ["groß"]
+french = ["grand"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_mugtr"]
+script = ExtResource("2_fs01k")
+id = 440
+german = ["groß"]
+french = ["grande"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_g1g7d"]
+script = ExtResource("2_fs01k")
+id = 441
+german = ["hübsch"]
+french = ["joli"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_1iy1f"]
+script = ExtResource("2_fs01k")
+id = 442
+german = ["hübsch"]
+french = ["jolie"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_j5bn4"]
+script = ExtResource("2_fs01k")
+id = 443
+german = ["klein"]
+french = ["petit"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_sfas3"]
+script = ExtResource("2_fs01k")
+id = 444
+german = ["klein"]
+french = ["petite"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_4ch64"]
+script = ExtResource("2_fs01k")
+id = 445
+german = ["zufrieden", "froh"]
+french = ["content"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_urle6"]
+script = ExtResource("2_fs01k")
+id = 446
+german = ["zufrieden", "froh"]
+french = ["contente"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_psjir"]
+script = ExtResource("2_fs01k")
+id = 447
+german = ["kostenlos"]
+french = ["gratuit"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_54b4i"]
+script = ExtResource("2_fs01k")
+id = 448
+german = ["kostenlos"]
+french = ["gratuite"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_fid2a"]
+script = ExtResource("2_fs01k")
+id = 449
+german = ["blau"]
+french = ["bleu"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_eyudl"]
+script = ExtResource("2_fs01k")
+id = 450
+german = ["blau"]
+french = ["bleue"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_8vcmo"]
+script = ExtResource("2_fs01k")
+id = 451
+german = ["Mittelmeer"]
+french = ["la grande bleue"]
+description = "Spezieller Name"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_md8q3"]
+script = ExtResource("2_fs01k")
+id = 452
+german = ["etw. sehen"]
+french = ["voir qc"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_jbnbj"]
+script = ExtResource("2_fs01k")
+id = 453
+german = ["ein Delphin"]
+french = ["un dauphin"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_rv5ru"]
+script = ExtResource("2_fs01k")
+id = 454
+german = ["ein wenig"]
+french = ["un peu"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_1oulx"]
+script = ExtResource("2_fs01k")
+id = 455
+german = ["lang"]
+french = ["long"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_o5a18"]
+script = ExtResource("2_fs01k")
+id = 456
+german = ["lang"]
+french = ["longe"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_68nio"]
+script = ExtResource("2_fs01k")
+id = 457
+german = ["ein Betreuer"]
+french = ["un moniteur"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_fomej"]
+script = ExtResource("2_fs01k")
+id = 458
+german = ["eine Betreuerin"]
+french = ["une monitrice"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_0ldsv"]
+script = ExtResource("2_fs01k")
+id = 459
+german = ["schwarz"]
+french = ["noir"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_tfbxv"]
+script = ExtResource("2_fs01k")
+id = 460
+german = ["schwarz"]
+french = ["noire"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_iuhkq"]
+script = ExtResource("2_fs01k")
+id = 461
+german = ["rot"]
+french = ["rouge"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_ft2nt"]
+script = ExtResource("2_fs01k")
+id = 462
+german = ["rot"]
+french = ["rouge"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_2hv0t"]
+script = ExtResource("2_fs01k")
+id = 463
+german = ["jdm. etw. erklären"]
+french = ["expliquer qc à qn"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_c4anu"]
+script = ExtResource("2_fs01k")
+id = 464
+german = ["schwimmen"]
+french = ["nager"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_c71i5"]
+script = ExtResource("2_fs01k")
+id = 465
+german = ["eine Rückkehr", "Rückfahrt"]
+french = ["un retour"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_hpj88"]
+script = ExtResource("2_fs01k")
+id = 466
+german = ["ein Jugendlicher"]
+french = ["un jeune"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_sfvgk"]
+script = ExtResource("2_fs01k")
+id = 467
+german = ["eine Jugendliche"]
+french = ["une jeune"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_dbmnk"]
+script = ExtResource("2_fs01k")
+id = 468
+german = ["müde"]
+french = ["fatigué"]
+description = "männlich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_f3bjl"]
+script = ExtResource("2_fs01k")
+id = 469
+german = ["müde"]
+french = ["fatiguée"]
+description = "weiblich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_n837v"]
+script = ExtResource("2_fs01k")
+id = 470
+german = ["ein Mal", "einmal"]
+french = ["une fois"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_k8dc2"]
+script = ExtResource("2_fs01k")
+id = 471
+german = ["gut"]
+french = ["bon"]
+description = "männlich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_pgity"]
+script = ExtResource("2_fs01k")
+id = 472
+german = ["gut"]
+french = ["bonne"]
+description = "weiblich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_73bwr"]
+script = ExtResource("2_fs01k")
+id = 473
+german = ["eine Palme"]
+french = ["un palmier"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_rxava"]
+script = ExtResource("2_fs01k")
+id = 474
+german = ["nahe bei jdm./etw.", "neben jdm./etw."]
+french = ["près de qn/qc"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_yothi"]
+script = ExtResource("2_fs01k")
+id = 475
+german = ["ein Witz", "ein Scherz"]
+french = ["une blague"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_4abpl"]
+script = ExtResource("2_fs01k")
+id = 476
+german = ["eine Farbe"]
+french = ["une couleur"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_rnrvd"]
+script = ExtResource("2_fs01k")
+id = 477
+german = ["grau"]
+french = ["gris"]
+description = "männlich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_bl3k2"]
+script = ExtResource("2_fs01k")
+id = 478
+german = ["grau"]
+french = ["grise"]
+description = "weiblich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_730mh"]
+script = ExtResource("2_fs01k")
+id = 479
+german = ["gelb"]
+french = ["jaune"]
+description = "männlich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_yfy3c"]
+script = ExtResource("2_fs01k")
+id = 480
+german = ["gelb"]
+french = ["jaune"]
+description = "weiblich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_0q3c1"]
+script = ExtResource("2_fs01k")
+id = 481
+german = ["weiß"]
+french = ["blanc"]
+description = "männlich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_pft2s"]
+script = ExtResource("2_fs01k")
+id = 482
+german = ["weiß"]
+french = ["blanche"]
+description = "weiblich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_25k4l"]
+script = ExtResource("2_fs01k")
+id = 483
+german = ["grün"]
+french = ["vert"]
+description = "männlich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_jt8ro"]
+script = ExtResource("2_fs01k")
+id = 484
+german = ["grün"]
+french = ["verte"]
+description = "weiblich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_0k4sm"]
+script = ExtResource("2_fs01k")
+id = 485
+german = ["unter"]
+french = ["sous"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_bq0xs"]
+script = ExtResource("2_fs01k")
+id = 486
+german = ["neben"]
+french = ["a côté de"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ryic8"]
+script = ExtResource("2_fs01k")
+id = 487
+german = ["rechts von"]
+french = ["à droite de"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_1yp8c"]
+script = ExtResource("2_fs01k")
+id = 488
+german = ["links von"]
+french = ["à gauche de"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_yj5fk"]
+script = ExtResource("2_fs01k")
+id = 489
+german = ["der Schuljahresbeginn"]
+french = ["la rentrée"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_wth2r"]
+script = ExtResource("2_fs01k")
+id = 490
+german = ["beendet", "zuende"]
+french = ["fini"]
+description = "männlich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_w3e7k"]
+script = ExtResource("2_fs01k")
+id = 491
+german = ["beendet", "zu Ende"]
+french = ["finie"]
+description = "weiblich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_bhqiq"]
+script = ExtResource("2_fs01k")
+id = 492
+german = ["zurückkehren"]
+french = ["retourner"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_vn6m4"]
+script = ExtResource("2_fs01k")
+id = 493
+german = ["ein Klassenraum"]
+french = ["une salle de cours"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_l42e1"]
+script = ExtResource("2_fs01k")
+id = 494
+german = ["Sport"]
+french = ["l'E.P.S."]
+description = "Schulfach"
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_0awk7"]
+script = ExtResource("2_fs01k")
+id = 495
+german = ["eine Turnhalle"]
+french = ["un gymnase"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_1dsfi"]
+script = ExtResource("2_fs01k")
+id = 496
+german = ["ein Essen", "eine Mahlzeit"]
+french = ["un repas"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_x4msa"]
+script = ExtResource("2_fs01k")
+id = 497
+german = ["die Natur"]
+french = ["la nature"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ctkj3"]
+script = ExtResource("2_fs01k")
+id = 498
+german = ["ein Gespräch", "eine Unterhaltung"]
+french = ["une conversation"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_5bdml"]
+script = ExtResource("2_fs01k")
+id = 499
+german = ["die sechste Klasse"]
+french = ["la sixième"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_8i3oh"]
+script = ExtResource("2_fs01k")
+id = 500
+german = ["an jdn./etw. denken"]
+french = ["penser à qn/qc"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_ov8nj"]
+script = ExtResource("2_fs01k")
+id = 501
+german = ["zum Beispiel"]
+french = ["par exemple"]
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_v3np1"]
+script = ExtResource("2_fs01k")
+id = 502
+german = ["ein Neuer"]
+french = ["un neuveu"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_sno0h"]
+script = ExtResource("2_fs01k")
+id = 503
+german = ["eine Neue"]
+french = ["une nouvelle"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_4bdx0"]
+script = ExtResource("2_fs01k")
+id = 504
+german = ["neu"]
+french = ["nouveau"]
+description = "männlich ohne Vokal"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_mi6im"]
+script = ExtResource("2_fs01k")
+id = 505
+german = ["neu"]
+french = ["nouvel"]
+description = "männlich mit Vokal"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_vsa1o"]
+script = ExtResource("2_fs01k")
+id = 506
+german = ["neu"]
+french = ["nouvelle"]
+description = "weiblich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_661yh"]
+script = ExtResource("2_fs01k")
+id = 507
+german = ["ein Test"]
+french = ["un Test"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_ef6lm"]
+script = ExtResource("2_fs01k")
+id = 508
+german = ["ein Ergebnis"]
+french = ["un résultat"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_5t71b"]
+script = ExtResource("2_fs01k")
+id = 509
+german = ["fertig", "bereit"]
+french = ["prêt"]
+description = "männlich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_oaq0i"]
+script = ExtResource("2_fs01k")
+id = 510
+german = ["fertig", "bereit"]
+french = ["prête"]
+description = "weiblich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_k483a"]
+script = ExtResource("2_fs01k")
+id = 511
+german = ["letzter/letzte/letztes"]
+french = ["dernier"]
+description = "männlich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_acm5b"]
+script = ExtResource("2_fs01k")
+id = 512
+german = ["letzter/letzte/letztes"]
+french = ["dernière"]
+description = "weiblich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_f7mcs"]
+script = ExtResource("2_fs01k")
+id = 513
+german = ["wichtig"]
+french = ["important"]
+description = "männlich"
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_nujnw"]
+script = ExtResource("2_fs01k")
+id = 514
+german = ["wichtig"]
+french = ["importante"]
+description = "weiblich"
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_fsu2s"]
+script = ExtResource("2_fs01k")
+id = 515
+german = ["kein/keine"]
+french = ["ne ... pas de"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_214me"]
+script = ExtResource("2_fs01k")
+id = 516
+german = ["etw. lernen", "etw. erfahren"]
+french = ["apprendre qc"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_w1qyc"]
+script = ExtResource("2_fs01k")
+id = 517
+german = ["viel von etwas"]
+french = ["beaucoup de"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_ipq5i"]
+script = ExtResource("2_fs01k")
+id = 518
+german = ["eine Hausaufgabe"]
+french = ["un devoir"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_7tpyi"]
+script = ExtResource("2_fs01k")
+id = 519
+german = ["wenig (von etwas)"]
+french = ["peu de"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_54vvj"]
+script = ExtResource("2_fs01k")
+id = 520
+german = ["kein/keine mehr"]
+french = ["ne ... plus de"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_cbt6a"]
+script = ExtResource("2_fs01k")
+id = 521
+german = ["ein Stundenplan"]
+french = ["un emploi du temps"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_qmou4"]
+script = ExtResource("2_fs01k")
+id = 522
+german = ["ein Tipp"]
+french = ["un tuyau"]
+description = "ugs."
+unit_id = 2
+
+[sub_resource type="Resource" id="Resource_ju13l"]
+script = ExtResource("2_fs01k")
+id = 523
+german = ["ein Kleidungsstück"]
+french = ["Un vêtement"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_s1xr0"]
+script = ExtResource("2_fs01k")
+id = 524
+german = ["schick"]
+french = ["chic"]
+description = "männlich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_rchyi"]
+script = ExtResource("2_fs01k")
+id = 525
+german = ["schick"]
+french = ["chic"]
+description = "weiblich"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_huke8"]
+script = ExtResource("2_fs01k")
+id = 526
+german = ["zu spät kommen"]
+french = ["arriver en retard"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_gp5n5"]
+script = ExtResource("2_fs01k")
+id = 527
+german = ["bevorzugt", "Lieblings-"]
+french = ["préféré"]
+description = "männlich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_hhl1m"]
+script = ExtResource("2_fs01k")
+id = 528
+german = ["bevorzugt", "Lieblings-"]
+french = ["préférée"]
+description = "weiblich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_bkvox"]
+script = ExtResource("2_fs01k")
+id = 529
+german = ["eine Gruppe"]
+french = ["un groupe"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_g6nkv"]
+script = ExtResource("2_fs01k")
+id = 530
+german = ["eine Lektion"]
+french = ["une leçon"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_07o80"]
+script = ExtResource("2_fs01k")
+id = 531
+german = ["ein Notizbuch"]
+french = ["Un carnet de correspondance"]
+description = "... zum Austausch von Informationen zwischen Eltern und Lehrern"
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_npywj"]
+script = ExtResource("2_fs01k")
+id = 532
+german = ["digital"]
+french = ["numérique"]
+description = "männlich"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_s5e3g"]
+script = ExtResource("2_fs01k")
+id = 533
+german = ["digital"]
+french = ["numérique"]
+description = "weiblich"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_oc8u8"]
+script = ExtResource("2_fs01k")
+id = 534
+german = ["online"]
+french = ["en ligne"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_wptbr"]
+script = ExtResource("2_fs01k")
+id = 535
+german = ["ein Cousin"]
+french = ["un cousin"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_7v6nq"]
+script = ExtResource("2_fs01k")
+id = 536
+german = ["eine Cousine"]
+french = ["une cousine"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_xutk6"]
+script = ExtResource("2_fs01k")
+id = 537
+german = ["das Wellenreiten"]
+french = ["le surf"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_kn3yp"]
+script = ExtResource("2_fs01k")
+id = 538
+german = ["hoffen"]
+french = ["espérer"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_gwnte"]
+script = ExtResource("2_fs01k")
+id = 539
+german = ["dass"]
+french = ["que"]
+description = "Konjunktion"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_kom3k"]
+script = ExtResource("2_fs01k")
+id = 540
+german = ["in Form sein", "fit sein"]
+french = ["être en forme"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_6pb4g"]
+script = ExtResource("2_fs01k")
+id = 541
+german = ["finden, dass"]
+french = ["trouver que"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_apktd"]
+script = ExtResource("2_fs01k")
+id = 542
+german = ["Aussehen"]
+french = ["avoir l'air"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_qyh2k"]
+script = ExtResource("2_fs01k")
+id = 543
+german = ["können"]
+french = ["pourvoir"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_xtqpo"]
+script = ExtResource("2_fs01k")
+id = 544
+german = ["das Fleisch"]
+french = ["la viande"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_l7gwm"]
+script = ExtResource("2_fs01k")
+id = 545
+german = ["wollen"]
+french = ["vouloir"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_5c43g"]
+script = ExtResource("2_fs01k")
+id = 546
+german = ["wenn, falls"]
+french = ["si"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_1vvpq"]
+script = ExtResource("2_fs01k")
+id = 547
+german = ["schrecklich", "grauenhaft"]
+french = ["horrible"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_1adb5"]
+script = ExtResource("2_fs01k")
+id = 548
+german = ["schrecklich", "grauenhaft"]
+french = ["horrible"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_osctr"]
+script = ExtResource("2_fs01k")
+id = 549
+german = ["ein Tier"]
+french = ["un animal"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_xh0x6"]
+script = ExtResource("2_fs01k")
+id = 550
+german = ["Tiere"]
+french = ["des animaux"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_oob17"]
+script = ExtResource("2_fs01k")
+id = 551
+german = ["traurig"]
+french = ["triste"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_ggmyc"]
+script = ExtResource("2_fs01k")
+id = 552
+german = ["traurig"]
+french = ["triste"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_uxcqp"]
+script = ExtResource("2_fs01k")
+id = 553
+german = ["der Zorn", "die Wut"]
+french = ["la colère"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_jt36m"]
+script = ExtResource("2_fs01k")
+id = 554
+german = ["wütend sein"]
+french = ["être en colère"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_02y82"]
+script = ExtResource("2_fs01k")
+id = 555
+german = ["ein Outfit"]
+french = ["un look"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_f38ex"]
+script = ExtResource("2_fs01k")
+id = 556
+german = ["vor allem"]
+french = ["surtout"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_50k7k"]
+script = ExtResource("2_fs01k")
+id = 557
+german = ["ein Schuh"]
+french = ["une chaussure"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_2ftop"]
+script = ExtResource("2_fs01k")
+id = 558
+german = ["schön"]
+french = ["beau"]
+description = "männlich ohne Vokal"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_q74sk"]
+script = ExtResource("2_fs01k")
+id = 559
+german = ["schön"]
+french = ["bel"]
+description = "männlich mit Vokal"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_h78uy"]
+script = ExtResource("2_fs01k")
+id = 560
+german = ["schön"]
+french = ["belle"]
+description = "weiblich"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_khywn"]
+script = ExtResource("2_fs01k")
+id = 561
+german = ["top"]
+french = ["top"]
+description = "ugs."
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_rhwox"]
+script = ExtResource("2_fs01k")
+id = 562
+german = ["eine Arbeit"]
+french = ["un travail"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_dcvql"]
+script = ExtResource("2_fs01k")
+id = 563
+german = ["Arbeiten"]
+french = ["des travaux"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_a3cq6"]
+script = ExtResource("2_fs01k")
+id = 564
+german = ["ein Toningenieur"]
+french = ["un ingénieur du son"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_lqo2b"]
+script = ExtResource("2_fs01k")
+id = 565
+german = ["eine Toningenieurin"]
+french = ["une ingénieure du son"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_netsa"]
+script = ExtResource("2_fs01k")
+id = 566
+german = ["ein Gefühl"]
+french = ["un sentiment"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_rp3g7"]
+script = ExtResource("2_fs01k")
+id = 567
+german = ["schade"]
+french = ["dommage"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_hejom"]
+script = ExtResource("2_fs01k")
+id = 568
+german = ["etw. vorziehen", "etw lieber mögen"]
+french = ["préférer"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_bjtpf"]
+script = ExtResource("2_fs01k")
+id = 569
+german = ["Geschichte und Erdkunde"]
+french = ["l'histoire-géo"]
+description = "zusammen als Schulfach"
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_jbyuk"]
+script = ExtResource("2_fs01k")
+id = 570
+german = ["der/die/dass"]
+french = ["qui"]
+description = "Relativpronomen"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_f4amu"]
+script = ExtResource("2_fs01k")
+id = 571
+german = ["jung"]
+french = ["jeune"]
+description = "männlich"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_f6api"]
+script = ExtResource("2_fs01k")
+id = 572
+german = ["jung"]
+french = ["jeune"]
+description = "weiblich"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_pmorn"]
+script = ExtResource("2_fs01k")
+id = 573
+german = ["ein Haar"]
+french = ["un cheveu"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_10hpa"]
+script = ExtResource("2_fs01k")
+id = 574
+german = ["Haare"]
+french = ["des cheveux"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_dem5c"]
+script = ExtResource("2_fs01k")
+id = 575
+german = ["eine Brille"]
+french = ["des lunettes"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_hj0vx"]
+script = ExtResource("2_fs01k")
+id = 576
+german = ["orange"]
+french = ["orange"]
+description = "männlich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_qtffa"]
+script = ExtResource("2_fs01k")
+id = 577
+german = ["orange"]
+french = ["orange"]
+description = "weiblich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_7jmtx"]
+script = ExtResource("2_fs01k")
+id = 578
+german = ["eine Hose"]
+french = ["un pantalon"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_evie8"]
+script = ExtResource("2_fs01k")
+id = 579
+german = ["ein Schulfach"]
+french = ["une matière"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_1eel5"]
+script = ExtResource("2_fs01k")
+id = 580
+german = ["den/die/das"]
+french = ["que/qu'"]
+description = "Relativpronomen"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_akl3y"]
+script = ExtResource("2_fs01k")
+id = 581
+german = ["wo"]
+french = ["où"]
+description = "Relativpronomen"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_4avxr"]
+script = ExtResource("2_fs01k")
+id = 582
+german = ["viele Leute"]
+french = ["beaucoup de monde"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_bnygu"]
+script = ExtResource("2_fs01k")
+id = 583
+german = ["offen/geöffnet"]
+french = ["ouvert"]
+description = "männlich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_0csxc"]
+script = ExtResource("2_fs01k")
+id = 584
+german = ["offen/geöffnet"]
+french = ["ouverture"]
+description = "weiblich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_othje"]
+script = ExtResource("2_fs01k")
+id = 585
+german = ["todschick;stylish"]
+french = ["stylé"]
+description = "ugs."
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ih2fs"]
+script = ExtResource("2_fs01k")
+id = 586
+german = ["der Mund"]
+french = ["la bouche"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_t8y0d"]
+script = ExtResource("2_fs01k")
+id = 587
+german = ["etw. schreiben"]
+french = ["écrire qc."]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_x412h"]
+script = ExtResource("2_fs01k")
+id = 588
+german = ["etw. lesen"]
+french = ["lire qc."]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_7cau4"]
+script = ExtResource("2_fs01k")
+id = 589
+german = ["etw. mit jdm. teilen"]
+french = ["partager qc avec qn"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_ctjeg"]
+script = ExtResource("2_fs01k")
+id = 590
+german = ["etw. aufnehmen", "etw. aufzeichnen"]
+french = ["enregistrer qc"]
+unit_id = 17
+
+[sub_resource type="Resource" id="Resource_wan8d"]
+script = ExtResource("2_fs01k")
+id = 591
+german = ["ein Videoclip"]
+french = ["un clip"]
+unit_id = 17
+
+[sub_resource type="Resource" id="Resource_2yvln"]
+script = ExtResource("2_fs01k")
+id = 592
+german = ["ein Mann"]
+french = ["un homme"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_grprq"]
+script = ExtResource("2_fs01k")
+id = 593
+german = ["das Lächeln"]
+french = ["le sourire"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ucng6"]
+script = ExtResource("2_fs01k")
+id = 594
+german = ["jdn./etw. beschreiben"]
+french = ["décrire qn/qc"]
+description = "wie écrire konjugiert"
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_krc4y"]
+script = ExtResource("2_fs01k")
+id = 595
+german = ["eine Figur", "eine Persönlichkeit"]
+french = ["un personnage"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_844if"]
+script = ExtResource("2_fs01k")
+id = 596
+german = ["eine Frau"]
+french = ["une femme"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_yyrnr"]
+script = ExtResource("2_fs01k")
+id = 597
+german = ["kurz"]
+french = ["court"]
+description = "männlich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_4kuv8"]
+script = ExtResource("2_fs01k")
+id = 598
+german = ["kurz"]
+french = ["courte"]
+description = "weiblich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_uyf56"]
+script = ExtResource("2_fs01k")
+id = 599
+german = ["braun"]
+french = ["brun"]
+description = "männlich (b)"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_82f2d"]
+script = ExtResource("2_fs01k")
+id = 600
+german = ["braun"]
+french = ["brune"]
+description = "weiblich (b)"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_ujcvu"]
+script = ExtResource("2_fs01k")
+id = 601
+german = ["blond"]
+french = ["blond"]
+description = "männlich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_yvqnm"]
+script = ExtResource("2_fs01k")
+id = 602
+german = ["blond"]
+french = ["blonde"]
+description = "weiblich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_grmeq"]
+script = ExtResource("2_fs01k")
+id = 603
+german = ["rothaarig"]
+french = ["roux"]
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_q1rwl"]
+script = ExtResource("2_fs01k")
+id = 604
+german = ["rothaarig"]
+french = ["rousse"]
+description = "weiblich"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_mjvhl"]
+script = ExtResource("2_fs01k")
+id = 605
+german = ["ein Auge"]
+french = ["un œil"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_vaf8n"]
+script = ExtResource("2_fs01k")
+id = 606
+german = ["Augen"]
+french = ["des yeux"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_bi05g"]
+script = ExtResource("2_fs01k")
+id = 607
+german = ["braun"]
+french = ["marron"]
+description = "männlich (m)"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_ngskt"]
+script = ExtResource("2_fs01k")
+id = 608
+german = ["braun"]
+french = ["marron"]
+description = "weiblich (m)"
+unit_id = 18
+
+[sub_resource type="Resource" id="Resource_07pol"]
+script = ExtResource("2_fs01k")
+id = 609
+german = ["etwas tragen"]
+french = ["porter qc"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_mo0ah"]
+script = ExtResource("2_fs01k")
+id = 610
+german = ["ein Rock"]
+french = ["une jupe"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_n24oi"]
+script = ExtResource("2_fs01k")
+id = 611
+german = ["eine Bluse"]
+french = ["un chemisier"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_gl4bp"]
+script = ExtResource("2_fs01k")
+id = 612
+german = ["ein Hemd"]
+french = ["une chemise"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_brlsp"]
+script = ExtResource("2_fs01k")
+id = 613
+german = ["ein Pulli"]
+french = ["un pull"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_mpt2i"]
+script = ExtResource("2_fs01k")
+id = 614
+german = ["eine Jacke"]
+french = ["une veste"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_rpiyr"]
+script = ExtResource("2_fs01k")
+id = 615
+german = ["ein Kleid"]
+french = ["une robe"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_6km3a"]
+script = ExtResource("2_fs01k")
+id = 616
+german = ["eine Jeans"]
+french = ["un jean"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_4tkx3"]
+script = ExtResource("2_fs01k")
+id = 617
+german = ["ein Anorak"]
+french = ["un anorak"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_5yjvd"]
+script = ExtResource("2_fs01k")
+id = 618
+german = ["eine Maske"]
+french = ["un masque"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_saws4"]
+script = ExtResource("2_fs01k")
+id = 619
+german = ["ein Blog"]
+french = ["un blog"]
+description = "Tagebuch/Journal im Internet"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_inpjh"]
+script = ExtResource("2_fs01k")
+id = 620
+german = ["ein Abenteuer"]
+french = ["une aventure"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_18bf2"]
+script = ExtResource("2_fs01k")
+id = 621
+german = ["die Tage des Kulturerbes"]
+french = ["les journées du patrimoine"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_3v70e"]
+script = ExtResource("2_fs01k")
+id = 622
+german = ["geheimnisvoll", "seltsam"]
+french = ["mystérieux"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_pyijx"]
+script = ExtResource("2_fs01k")
+id = 623
+german = ["geheimnisvoll", "seltsam"]
+french = ["mystérieuse"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_f5vo8"]
+script = ExtResource("2_fs01k")
+id = 624
+german = ["an etw. teilnehmen"]
+french = ["participer à qc"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_lbhs8"]
+script = ExtResource("2_fs01k")
+id = 625
+german = ["ein Wettbewerb"]
+french = ["un concours"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_xcis0"]
+script = ExtResource("2_fs01k")
+id = 626
+german = ["drehen", "abbiegen"]
+french = ["tourner"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_6vr8v"]
+script = ExtResource("2_fs01k")
+id = 627
+german = ["eine Reportage"]
+french = ["un reportage"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_uy4dy"]
+script = ExtResource("2_fs01k")
+id = 628
+german = ["ein Thema"]
+french = ["un thème"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_1oth3"]
+script = ExtResource("2_fs01k")
+id = 629
+german = ["etwas gewinnen"]
+french = ["gagner qc"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_7gu76"]
+script = ExtResource("2_fs01k")
+id = 630
+german = ["die Katakomben"]
+french = ["les catacombes"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_cthtu"]
+script = ExtResource("2_fs01k")
+id = 631
+german = ["ein Geist", "ein Gespenst", "ein Phantom"]
+french = ["un fantôme"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_ne3pj"]
+script = ExtResource("2_fs01k")
+id = 632
+german = ["geschlossen", "verschlossen"]
+french = ["fermé"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_auwxc"]
+script = ExtResource("2_fs01k")
+id = 633
+german = ["geschlossen", "verschlossen"]
+french = ["fermée"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_47gkn"]
+script = ExtResource("2_fs01k")
+id = 634
+german = ["ein unterirdischer Gang", "ein unterirdischer Raum"]
+french = ["un souterrain"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_hlqmk"]
+script = ExtResource("2_fs01k")
+id = 635
+german = ["unterirdisch"]
+french = ["souterrain"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_j7tfo"]
+script = ExtResource("2_fs01k")
+id = 636
+german = ["unterirdisch"]
+french = ["souterraine"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_82hoi"]
+script = ExtResource("2_fs01k")
+id = 637
+german = ["oft"]
+french = ["souvent"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_nyy4f"]
+script = ExtResource("2_fs01k")
+id = 638
+german = ["ein Tunnel"]
+french = ["un tunnel"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_u6gdx"]
+script = ExtResource("2_fs01k")
+id = 639
+german = ["Dunkel"]
+french = ["sombre"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_gtcsx"]
+script = ExtResource("2_fs01k")
+id = 640
+german = ["Dunkel"]
+french = ["sombre"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_f84d4"]
+script = ExtResource("2_fs01k")
+id = 641
+german = ["eine Tür"]
+french = ["une porte"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_bkuai"]
+script = ExtResource("2_fs01k")
+id = 642
+german = ["geheim"]
+french = ["secret"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_y7xso"]
+script = ExtResource("2_fs01k")
+id = 643
+german = ["geheim"]
+french = ["secrète"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_u5dk1"]
+script = ExtResource("2_fs01k")
+id = 644
+german = ["das Geräusch", "der Lärm"]
+french = ["le bruit"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_n03ms"]
+script = ExtResource("2_fs01k")
+id = 645
+german = ["neugierig", "merkwürdig"]
+french = ["curieux"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_ibr1x"]
+script = ExtResource("2_fs01k")
+id = 646
+german = ["neugierig", "merkwürdig"]
+french = ["curieuse"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_eiele"]
+script = ExtResource("2_fs01k")
+id = 647
+german = ["mutig"]
+french = ["courageux"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_lttoh"]
+script = ExtResource("2_fs01k")
+id = 648
+german = ["mutig"]
+french = ["courageuse"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_s2xrl"]
+script = ExtResource("2_fs01k")
+id = 649
+german = ["gefährlich"]
+french = ["dangereux"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_bed4g"]
+script = ExtResource("2_fs01k")
+id = 650
+german = ["gefährlich"]
+french = ["dangereuse"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_17jq8"]
+script = ExtResource("2_fs01k")
+id = 651
+german = ["gestern"]
+french = ["hier"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_d370e"]
+script = ExtResource("2_fs01k")
+id = 652
+german = ["beschließen etw. zu tun", "entscheiden etw. zu tun"]
+french = ["décider de faire qc"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_ruky4"]
+script = ExtResource("2_fs01k")
+id = 653
+german = ["durch", "von"]
+french = ["par"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_4sbsx"]
+script = ExtResource("2_fs01k")
+id = 654
+german = ["keine Panik"]
+french = ["t'inquiète"]
+description = "ugs."
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_jb0xl"]
+script = ExtResource("2_fs01k")
+id = 655
+german = ["gehen", "laufen"]
+french = ["marcher"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_j3em6"]
+script = ExtResource("2_fs01k")
+id = 656
+german = ["wechseln", "ändern"]
+french = ["changer"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_0dym0"]
+script = ExtResource("2_fs01k")
+id = 657
+german = ["etw. wechseln"]
+french = ["changer de qc"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_gi1n4"]
+script = ExtResource("2_fs01k")
+id = 658
+german = ["seit"]
+french = ["depuis"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_k4v3d"]
+script = ExtResource("2_fs01k")
+id = 659
+german = ["tausend"]
+french = ["mille"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_l7fvd"]
+script = ExtResource("2_fs01k")
+id = 660
+german = ["1939"]
+french = ["mille-neuf-cent-trente-neuf"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_aq2ge"]
+script = ExtResource("2_fs01k")
+id = 661
+german = ["alles"]
+french = ["tout"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_cg7fo"]
+script = ExtResource("2_fs01k")
+id = 662
+german = ["ein U-Bahn-Zug"]
+french = ["une rame"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_xfgku"]
+script = ExtResource("2_fs01k")
+id = 663
+german = ["ein Führer"]
+french = ["un guide"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_xi1ir"]
+script = ExtResource("2_fs01k")
+id = 664
+german = ["eine Führerin"]
+french = ["une guide"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_q5ich"]
+script = ExtResource("2_fs01k")
+id = 665
+german = ["weitermachen", "fortfahren"]
+french = ["continuer"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_6cruv"]
+script = ExtResource("2_fs01k")
+id = 666
+german = ["ernst", "ernsthaft", "ernst gemeint"]
+french = ["sérieux"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_r1rxc"]
+script = ExtResource("2_fs01k")
+id = 667
+german = ["ernst", "ernsthaft", "ernst gemeint"]
+french = ["sérieuse"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_qjv3c"]
+script = ExtResource("2_fs01k")
+id = 668
+german = ["genug", "genügend"]
+french = ["assez"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_y36rm"]
+script = ExtResource("2_fs01k")
+id = 669
+german = ["allein", "einzig"]
+french = ["seul"]
+description = "männlich"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_r27ia"]
+script = ExtResource("2_fs01k")
+id = 670
+german = ["allein", "einzig"]
+french = ["seule"]
+description = "weiblich"
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_v6j51"]
+script = ExtResource("2_fs01k")
+id = 671
+german = ["sich bewegen"]
+french = ["bouger"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_luoa6"]
+script = ExtResource("2_fs01k")
+id = 672
+german = ["ein Netz"]
+french = ["un réseau"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_xfh5m"]
+script = ExtResource("2_fs01k")
+id = 673
+german = ["eine Ratte"]
+french = ["un rat"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_rmejl"]
+script = ExtResource("2_fs01k")
+id = 674
+german = ["etw. einschalten", "etw. anzünden"]
+french = ["allumer qc"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_flkd8"]
+script = ExtResource("2_fs01k")
+id = 675
+german = ["eine Lampe"]
+french = ["une lampe"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_nef82"]
+script = ExtResource("2_fs01k")
+id = 676
+german = ["Igitt!"]
+french = ["Beurk!"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_8tckt"]
+script = ExtResource("2_fs01k")
+id = 677
+german = ["eine Begegnung"]
+french = ["une rencontre"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_q05cd"]
+script = ExtResource("2_fs01k")
+id = 678
+german = ["auf etw./jdn. warten", "etw./jdn. erwarten"]
+french = ["attendre qc/qn"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_kbuxm"]
+script = ExtResource("2_fs01k")
+id = 679
+german = ["etw. hören"]
+french = ["entendre qc"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_rs4nd"]
+script = ExtResource("2_fs01k")
+id = 680
+german = ["etwas anderes"]
+french = ["autre chose"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_l2j8c"]
+script = ExtResource("2_fs01k")
+id = 681
+german = ["jdm. antworten"]
+french = ["répondre à qn"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_kih21"]
+script = ExtResource("2_fs01k")
+id = 682
+german = ["sofort"]
+french = ["tout de suite"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_6uu07"]
+script = ExtResource("2_fs01k")
+id = 683
+german = ["das Licht"]
+french = ["la lumière"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_bwmo7"]
+script = ExtResource("2_fs01k")
+id = 684
+german = ["ein Weg"]
+french = ["un chemin"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_favvo"]
+script = ExtResource("2_fs01k")
+id = 685
+german = ["etw. verlieren"]
+french = ["perdre qc"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_jtswb"]
+script = ExtResource("2_fs01k")
+id = 686
+german = ["die Erde", "der Boden"]
+french = ["la terre"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_4u6es"]
+script = ExtResource("2_fs01k")
+id = 687
+german = ["bis"]
+french = ["jusque"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_kdyqb"]
+script = ExtResource("2_fs01k")
+id = 688
+german = ["oben", "nach oben;"]
+french = ["en haut"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_yowgr"]
+script = ExtResource("2_fs01k")
+id = 689
+german = ["ein Graffiti"]
+french = ["un Tag"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_rjbsd"]
+script = ExtResource("2_fs01k")
+id = 690
+german = ["überall"]
+french = ["partout"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_g4agv"]
+script = ExtResource("2_fs01k")
+id = 691
+german = ["die Kunst"]
+french = ["l'art"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_gid7u"]
+script = ExtResource("2_fs01k")
+id = 692
+german = ["ein Werk"]
+french = ["une œuvre"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_jenxx"]
+script = ExtResource("2_fs01k")
+id = 693
+german = ["ein Künstler"]
+french = ["un artiste"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_dldfs"]
+script = ExtResource("2_fs01k")
+id = 694
+german = ["eine Künstler"]
+french = ["une artiste"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_8de2p"]
+script = ExtResource("2_fs01k")
+id = 695
+german = ["ein Bediensteter"]
+french = ["un agent"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_skms1"]
+script = ExtResource("2_fs01k")
+id = 696
+german = ["eine Bedienstete"]
+french = ["une agente"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_edn47"]
+script = ExtResource("2_fs01k")
+id = 697
+german = ["überhaupt nicht"]
+french = ["ne ... pas du tout"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_gkod1"]
+script = ExtResource("2_fs01k")
+id = 698
+german = ["etw. anhalten", "etw. beenden", "mit etw. aufhören"]
+french = ["arrêter qc"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_vjppj"]
+script = ExtResource("2_fs01k")
+id = 699
+german = ["jdn. verhaften", "jdn. festnehmen"]
+french = ["arrêter qn"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_fd6dn"]
+script = ExtResource("2_fs01k")
+id = 700
+german = ["hier: hier entlang", "hier in der Gegend"]
+french = ["par ici"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_bfd2t"]
+script = ExtResource("2_fs01k")
+id = 701
+german = ["sicher"]
+french = ["sûr"]
+description = "männlich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_pxkoh"]
+script = ExtResource("2_fs01k")
+id = 702
+german = ["sicher"]
+french = ["sûre"]
+description = "weiblich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_empqg"]
+script = ExtResource("2_fs01k")
+id = 703
+german = ["ein Fehler"]
+french = ["une faute"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_bc0io"]
+script = ExtResource("2_fs01k")
+id = 704
+german = ["Das ist seine/ihre Schuld."]
+french = ["C'est (de) sa faut."]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_2foed"]
+script = ExtResource("2_fs01k")
+id = 705
+german = ["ein Plan", "ein Stadtplan"]
+french = ["un plan"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_u0bc6"]
+script = ExtResource("2_fs01k")
+id = 706
+german = ["eine Mauer/ eine Wand"]
+french = ["un mur"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_0ciw1"]
+script = ExtResource("2_fs01k")
+id = 707
+german = ["weit"]
+french = ["loin"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_r471j"]
+script = ExtResource("2_fs01k")
+id = 708
+german = ["an jenem Abend"]
+french = ["ce soir-là"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_2fm2d"]
+script = ExtResource("2_fs01k")
+id = 709
+german = ["trotzdem", "doch"]
+french = ["quand même"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_ca6ty"]
+script = ExtResource("2_fs01k")
+id = 710
+german = ["eine Vignette", "ein Bild in einem Comic"]
+french = ["une vignette"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_vjblw"]
+script = ExtResource("2_fs01k")
+id = 711
+german = ["eine Meinung"]
+french = ["un avis"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_owdo3"]
+script = ExtResource("2_fs01k")
+id = 712
+german = ["eine Handlung"]
+french = ["une action"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_pdvj4"]
+script = ExtResource("2_fs01k")
+id = 713
+german = ["ein Bild"]
+french = ["une image"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_rfo5l"]
+script = ExtResource("2_fs01k")
+id = 714
+german = ["spannend", "fesselnd"]
+french = ["passionnant"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_80dyh"]
+script = ExtResource("2_fs01k")
+id = 715
+german = ["spannend", "fesselnd"]
+french = ["passionnante"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_nminp"]
+script = ExtResource("2_fs01k")
+id = 716
+german = ["langweilig"]
+french = ["ennuyeux"]
+description = "männlich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_g7mwd"]
+script = ExtResource("2_fs01k")
+id = 717
+german = ["langweilig"]
+french = ["ennuyeuse"]
+description = "weiblich"
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_r1ln3"]
+script = ExtResource("2_fs01k")
+id = 718
+german = ["jdn./etw. achten", "jdn./etw. respektieren"]
+french = ["respecter qn/qc"]
+unit_id = 6
+
+[sub_resource type="Resource" id="Resource_qcly0"]
+script = ExtResource("2_fs01k")
+id = 719
+german = ["ein Eigentum", "ein Besitz"]
+french = ["une propriété"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_dstsd"]
+script = ExtResource("2_fs01k")
+id = 720
+german = ["eine Tat"]
+french = ["un acte"]
+unit_id = 5
+
+[sub_resource type="Resource" id="Resource_ev8hi"]
+script = ExtResource("2_fs01k")
+id = 721
+german = ["der Vandalismus", "die Zerstörungswut"]
+french = ["le vandalisme"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_ryfeb"]
+script = ExtResource("2_fs01k")
+id = 722
+german = ["erlaubt", "zulässig"]
+french = ["autorisé"]
+description = "männlich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_jw7la"]
+script = ExtResource("2_fs01k")
+id = 723
+german = ["erlaubt", "zulässig"]
+french = ["autorisée"]
+description = "weiblich"
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_61br7"]
+script = ExtResource("2_fs01k")
+id = 724
+german = ["ein Eigentümer"]
+french = ["un propriétaire"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_wy8fi"]
+script = ExtResource("2_fs01k")
+id = 725
+german = ["eine Eigentümerin"]
+french = ["une propriétaire"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_2nufc"]
+script = ExtResource("2_fs01k")
+id = 726
+german = ["ein Artikel"]
+french = ["un article"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_86wpc"]
+script = ExtResource("2_fs01k")
+id = 727
+german = ["eine Zeitung", "ein Tagebuch"]
+french = ["un journal"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_12hbd"]
+script = ExtResource("2_fs01k")
+id = 728
+german = ["Zeitungen", "Tagebücher"]
+french = ["des journaux"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_iqmso"]
+script = ExtResource("2_fs01k")
+id = 729
+german = ["ein Denkmal", "ein Monument"]
+french = ["un monument"]
+unit_id = 11
+
+[sub_resource type="Resource" id="Resource_sob4b"]
+script = ExtResource("2_fs01k")
+id = 730
+german = ["ein Körper"]
+french = ["un corps"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_ri8cg"]
+script = ExtResource("2_fs01k")
+id = 731
+german = ["tot", "gestorben"]
+french = ["mort"]
+description = "männlich"
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_nyidb"]
+script = ExtResource("2_fs01k")
+id = 732
+german = ["tot", "gestorben"]
+french = ["morte"]
+description = "weiblich"
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_ytk5m"]
+script = ExtResource("2_fs01k")
+id = 733
+german = ["frz. Stadt am Rande der Alpen"]
+french = ["Grenoble"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_rnwgs"]
+script = ExtResource("2_fs01k")
+id = 734
+german = ["die Seilbahn"]
+french = ["le téléphérique"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_prm1c"]
+script = ExtResource("2_fs01k")
+id = 735
+german = ["ein Brief", "ein Buchstabe"]
+french = ["une lettre"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_x8jg5"]
+script = ExtResource("2_fs01k")
+id = 736
+german = ["ein Prospekt"]
+french = ["un prospectus"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_1tb3a"]
+script = ExtResource("2_fs01k")
+id = 737
+german = ["etw. entdecken"]
+french = ["découvrir qc"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_tqggs"]
+script = ExtResource("2_fs01k")
+id = 738
+german = ["ich entdecke"]
+french = ["je découvre"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_08mww"]
+script = ExtResource("2_fs01k")
+id = 739
+german = ["du entdeckst"]
+french = ["tu découvres"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_4d5ok"]
+script = ExtResource("2_fs01k")
+id = 740
+german = ["er/sie/es entdeckt"]
+french = ["il découvre"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_r83nv"]
+script = ExtResource("2_fs01k")
+id = 741
+german = ["jemanden treffen", "jemanden begegnen"]
+french = ["rencontre qn"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_4vclu"]
+script = ExtResource("2_fs01k")
+id = 742
+german = ["ein Onkel"]
+french = ["un oncle"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_xtmh7"]
+script = ExtResource("2_fs01k")
+id = 743
+german = ["eine Tante"]
+french = ["une tante"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_glnrx"]
+script = ExtResource("2_fs01k")
+id = 744
+german = ["ein Cousin"]
+french = ["un cousin "]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_7j30e"]
+script = ExtResource("2_fs01k")
+id = 745
+german = ["eine Cousine"]
+french = ["une cousine"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_ppi41"]
+script = ExtResource("2_fs01k")
+id = 746
+german = ["ein Name"]
+french = ["un nom"]
+unit_id = 10
+
+[sub_resource type="Resource" id="Resource_8n5oa"]
+script = ExtResource("2_fs01k")
+id = 747
+german = ["etw. tun müssen"]
+french = ["devoir faire qc"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_bt5tl"]
+script = ExtResource("2_fs01k")
+id = 748
+german = ["eine Wohnung"]
+french = ["un appartement"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_o8pek"]
+script = ExtResource("2_fs01k")
+id = 749
+german = ["Wissen"]
+french = ["savoir"]
+unit_id = 3
+
+[sub_resource type="Resource" id="Resource_qldtu"]
+script = ExtResource("2_fs01k")
+id = 750
+german = ["Ich muss etwas tun"]
+french = ["je dois"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_q23iy"]
+script = ExtResource("2_fs01k")
+id = 751
+german = ["du musst etwas tun"]
+french = ["tu dois"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_m4boo"]
+script = ExtResource("2_fs01k")
+id = 752
+german = ["er/sie/es muss etwas tun"]
+french = ["il doit"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_l68n0"]
+script = ExtResource("2_fs01k")
+id = 753
+german = ["wir müssen etwas tun"]
+french = ["nous devons"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_yo2y2"]
+script = ExtResource("2_fs01k")
+id = 754
+german = ["ihr müsst etwas tun"]
+french = ["vous devez"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_vxnsn"]
+script = ExtResource("2_fs01k")
+id = 755
+german = ["sie müssen etwas tun"]
+french = ["ils/elles doivent"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_c2cxn"]
+script = ExtResource("2_fs01k")
+id = 756
+german = ["Ich musste etwas tun"]
+french = ["j'ai dû"]
+unit_id = 12
+
+[sub_resource type="Resource" id="Resource_726gl"]
+script = ExtResource("2_fs01k")
+id = 757
+german = ["etwas tun können(wissen, wie etwas geht)"]
+french = ["savoir faire qc"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_k882m"]
+script = ExtResource("2_fs01k")
+id = 758
+german = ["der Ski", "das Skifahren"]
+french = ["le ski"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_l0myp"]
+script = ExtResource("2_fs01k")
+id = 759
+german = ["ein Wochenende"]
+french = ["un week-end"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_0xngr"]
+script = ExtResource("2_fs01k")
+id = 760
+german = ["eine Person"]
+french = ["une personne"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_q85re"]
+script = ExtResource("2_fs01k")
+id = 761
+german = ["derselbe/ dieselbe/ dasselbe"]
+french = ["le même"]
+description = "le"
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_y0aev"]
+script = ExtResource("2_fs01k")
+id = 762
+german = ["derselbe/dieselbe/dasselbe"]
+french = ["la même"]
+description = "la"
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_tfqwf"]
+script = ExtResource("2_fs01k")
+id = 763
+german = ["etw. hohlen", "etw. abhohlen"]
+french = ["aller chercher qc"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_vyet1"]
+script = ExtResource("2_fs01k")
+id = 764
+german = ["eine Matratze"]
+french = ["un matelas"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_5csu5"]
+script = ExtResource("2_fs01k")
+id = 765
+german = ["ein Stuhl"]
+french = ["une chaise"]
+unit_id = 8
+
+[sub_resource type="Resource" id="Resource_b8me2"]
+script = ExtResource("2_fs01k")
+id = 766
+german = ["ein Esszimmer"]
+french = ["une salle à manger"]
+unit_id = 15
+
+[sub_resource type="Resource" id="Resource_4fkaf"]
+script = ExtResource("2_fs01k")
+id = 767
+german = ["etwas aufräumen"]
+french = ["ranger qc"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_xyiyg"]
+script = ExtResource("2_fs01k")
+id = 768
+german = ["eine Küche"]
+french = ["une cuisine"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_ek4iy"]
+script = ExtResource("2_fs01k")
+id = 769
+german = ["ein Bad", "ein Badezimmer"]
+french = ["une salle de bains"]
+unit_id = 14
+
+[sub_resource type="Resource" id="Resource_ewi5f"]
+script = ExtResource("2_fs01k")
+id = 770
+german = ["ein Klettersteig"]
+french = ["une vie ferrata"]
+unit_id = 13
+
+[sub_resource type="Resource" id="Resource_k03cq"]
+script = ExtResource("2_fs01k")
+id = 771
+german = ["Willkommen!"]
+french = ["Bienvenue!"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_diuyi"]
+script = ExtResource("2_fs01k")
+id = 772
+german = ["Guten Tag!"]
+french = ["Bonjour."]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_3rd0e"]
+script = ExtResource("2_fs01k")
+id = 773
+german = ["Ich heiße"]
+french = ["Je m'appelle"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_w05py"]
+script = ExtResource("2_fs01k")
+id = 774
+german = ["ich"]
+french = ["moi"]
+description = "(betont)"
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_0lkex"]
+script = ExtResource("2_fs01k")
+id = 777
+german = ["und"]
+french = ["et"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_hpgje"]
+script = ExtResource("2_fs01k")
+id = 778
+german = ["du"]
+french = ["toi"]
+description = "(betont)"
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_6hrp5"]
+script = ExtResource("2_fs01k")
+id = 780
+german = ["Wie heißt du?"]
+french = ["Tu t'appelles comment?"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_nla75"]
+script = ExtResource("2_fs01k")
+id = 781
+german = ["Wie geht's?"]
+french = ["Ça va?"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_vynfd"]
+script = ExtResource("2_fs01k")
+id = 782
+german = ["Ja."]
+french = ["Oui."]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_1d0g7"]
+script = ExtResource("2_fs01k")
+id = 783
+german = ["Nein."]
+french = ["Non."]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_yaj3r"]
+script = ExtResource("2_fs01k")
+id = 785
+german = ["Bis später!"]
+french = ["À plus!"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_d5kxy"]
+script = ExtResource("2_fs01k")
+id = 786
+german = ["gut"]
+french = ["bien"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_cpj4e"]
+script = ExtResource("2_fs01k")
+id = 788
+german = ["Auf Wiedersehen!"]
+french = ["Au revoir!"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_e8ohw"]
+script = ExtResource("2_fs01k")
+id = 789
+german = ["Guten Tag, Freunde!"]
+french = ["Bonjour les amis!"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_xscen"]
+script = ExtResource("2_fs01k")
+id = 790
+german = ["ein Platz"]
+french = ["une place"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_xk8fx"]
+script = ExtResource("2_fs01k")
+id = 791
+german = ["ein Park"]
+french = ["un parc"]
+learn_score = 10.0
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_llejb"]
+script = ExtResource("2_fs01k")
+id = 792
+german = ["eine Station", "eine Haltestelle"]
+french = ["une station"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_438xi"]
+script = ExtResource("2_fs01k")
+id = 793
+german = ["die Metro", "die U-Bahn"]
+french = ["le métro"]
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_dh2k5"]
+script = ExtResource("2_fs01k")
+id = 794
+german = ["eine Straße"]
+french = ["une rue"]
+learn_score = 10.0
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_v8igw"]
+script = ExtResource("2_fs01k")
+id = 796
+german = ["ein Stadtviertel"]
+french = ["un quartier"]
+learn_score = 10.0
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_v5k5i"]
+script = ExtResource("2_fs01k")
+id = 797
+german = ["cool"]
+french = ["cool"]
+description = "ugs."
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_aqogf"]
+script = ExtResource("2_fs01k")
+id = 798
+german = ["Wo ist ...?"]
+french = ["Où est ...?"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_n611r"]
+script = ExtResource("2_fs01k")
+id = 799
+german = ["man ist", "wir sind"]
+french = ["on est"]
+description = "ugs."
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_hewwp"]
+script = ExtResource("2_fs01k")
+id = 800
+german = ["da", "dort"]
+french = ["là"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_5mq5l"]
+script = ExtResource("2_fs01k")
+id = 801
+german = ["Mama", "Mutti"]
+french = ["maman"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ess75"]
+script = ExtResource("2_fs01k")
+id = 802
+german = ["Frau ..."]
+french = ["madame ..."]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_tuom3"]
+script = ExtResource("2_fs01k")
+id = 803
+german = ["Achtung", "Vorsicht!"]
+french = ["Attention!"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_pquro"]
+script = ExtResource("2_fs01k")
+id = 804
+german = ["Verzeihung", "Entschuldigung."]
+french = ["Pardon."]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_fbyqd"]
+script = ExtResource("2_fs01k")
+id = 805
+german = ["ich bin"]
+french = ["je suis"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_syfry"]
+script = ExtResource("2_fs01k")
+id = 806
+german = ["ein Freund"]
+french = ["un ami"]
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_fery8"]
+script = ExtResource("2_fs01k")
+id = 807
+german = ["eine Freundin"]
+french = ["une amie"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_jdatr"]
+script = ExtResource("2_fs01k")
+id = 808
+german = ["aus", "von"]
+french = ["de", "d'"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_qs7ll"]
+script = ExtResource("2_fs01k")
+id = 809
+german = ["ein Nachbar"]
+french = ["un voisin"]
+learn_score = 10.0
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_vta64"]
+script = ExtResource("2_fs01k")
+id = 810
+german = ["eine Nachbarin"]
+french = ["une voisine"]
+learn_score = 10.0
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_bbokq"]
+script = ExtResource("2_fs01k")
+id = 811
+german = ["du bist"]
+french = ["tu es"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ej7cs"]
+script = ExtResource("2_fs01k")
+id = 812
+german = ["eine Katze"]
+french = ["un chat"]
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_p8453"]
+script = ExtResource("2_fs01k")
+id = 813
+german = ["er ist"]
+french = ["il est"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_8j24v"]
+script = ExtResource("2_fs01k")
+id = 815
+german = ["wir drehen eine Runde"]
+french = ["on fait un tour"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_75j8v"]
+script = ExtResource("2_fs01k")
+id = 816
+german = ["Komm!"]
+french = ["Viens!"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_pclb7"]
+script = ExtResource("2_fs01k")
+id = 817
+german = ["einverstanden", "ok"]
+french = ["d'accord"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_36spn"]
+script = ExtResource("2_fs01k")
+id = 818
+german = ["Papa"]
+french = ["papa"]
+grammatical_gender = 3
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_qk2b1"]
+script = ExtResource("2_fs01k")
+id = 819
+german = ["Schau!"]
+french = ["Regarde!"]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_bc2ws"]
+script = ExtResource("2_fs01k")
+id = 820
+german = ["hier", "hierher"]
+french = ["ici"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ioked"]
+script = ExtResource("2_fs01k")
+id = 821
+german = ["eine Frage"]
+french = ["une question"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_d07j5"]
+script = ExtResource("2_fs01k")
+id = 822
+german = ["ein Mädchen", "eine Tochter"]
+french = ["une fille"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_1gkvt"]
+script = ExtResource("2_fs01k")
+id = 823
+german = ["ein Freund"]
+french = ["un copain"]
+learn_score = 10.0
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_7n3ea"]
+script = ExtResource("2_fs01k")
+id = 824
+german = ["eine Freundin"]
+french = ["une copine"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ymb6i"]
+script = ExtResource("2_fs01k")
+id = 825
+german = ["eine Dame", "eine Frau"]
+french = ["une dame"]
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_1cn1d"]
+script = ExtResource("2_fs01k")
+id = 826
+german = ["ein Herr", "ein Mann"]
+french = ["un monsieur"]
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_4b34t"]
+script = ExtResource("2_fs01k")
+id = 827
+german = ["ein Junge"]
+french = ["un garçon"]
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_41g20"]
+script = ExtResource("2_fs01k")
+id = 829
+german = ["er"]
+french = ["il"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_rh8kg"]
+script = ExtResource("2_fs01k")
+id = 830
+german = ["sie"]
+french = ["elle"]
+learn_score = 180.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_fq5fs"]
+script = ExtResource("2_fs01k")
+id = 831
+german = ["ein Papagei"]
+french = ["un perroquet"]
+learn_score = 10.0
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_gic2k"]
+script = ExtResource("2_fs01k")
+id = 832
+german = ["sein"]
+french = ["être"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_ynbpo"]
+script = ExtResource("2_fs01k")
+id = 833
+german = ["mit"]
+french = ["avec"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_v5ca5"]
+script = ExtResource("2_fs01k")
+id = 834
+german = ["in"]
+french = ["dans"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_j6ey7"]
+script = ExtResource("2_fs01k")
+id = 835
+german = ["Sieh mal da!"]
+french = ["Tiens!"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_yrrtq"]
+script = ExtResource("2_fs01k")
+id = 837
+german = ["das"]
+french = ["ça"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_vibte"]
+script = ExtResource("2_fs01k")
+id = 838
+german = ["ein Handy", "ein Mobiltelefon"]
+french = ["un portable"]
+learn_score = 10.0
+grammatical_gender = 2
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_5mo7m"]
+script = ExtResource("2_fs01k")
+id = 839
+german = ["aber"]
+french = ["mais"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_dkdvf"]
+script = ExtResource("2_fs01k")
+id = 840
+german = ["Wer ist das?"]
+french = ["C'est qui?"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_c3kf8"]
+script = ExtResource("2_fs01k")
+id = 841
+german = ["Omi"]
+french = ["mamie"]
+description = "ugs."
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_7jpid"]
+script = ExtResource("2_fs01k")
+id = 842
+german = ["toll"]
+french = ["super"]
+description = "ugs."
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_qs2c2"]
+script = ExtResource("2_fs01k")
+id = 843
+german = ["Ich bin zwölf Jahre alt."]
+french = ["J'ai douze ans."]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_un1hm"]
+script = ExtResource("2_fs01k")
+id = 845
+german = ["eine Schwester"]
+french = ["une sœur"]
+learn_score = 10.0
+grammatical_gender = 1
+sentence_type = 3
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_2ochw"]
+script = ExtResource("2_fs01k")
+id = 846
+german = ["Er ist 11 Jahre alt."]
+french = ["Il a onze ans."]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_5iefl"]
+script = ExtResource("2_fs01k")
+id = 847
+german = ["Sie ist 11 Jahre alt."]
+french = ["Elle a onze ans."]
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_rrbx0"]
+script = ExtResource("2_fs01k")
+id = 848
+german = ["auch"]
+french = ["aussi"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_jxawi"]
+script = ExtResource("2_fs01k")
+id = 849
+german = ["nun", "jetzt", "dann"]
+french = ["alors"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_wsrwt"]
+script = ExtResource("2_fs01k")
+id = 851
+german = ["für"]
+french = ["pour"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_18txi"]
+script = ExtResource("2_fs01k")
+id = 852
+german = ["das sind"]
+french = ["ce sont"]
+grammatical_gender = 3
+sentence_type = 5
+unit_id = 1
+
+[sub_resource type="Resource" id="Resource_x18ty"]
+script = ExtResource("2_fs01k")
+id = 854
+german = ["Kuckuck!", "Hallo!"]
+french = ["Coucou!"]
+learn_score = 10.0
+grammatical_gender = 3
+sentence_type = 6
+unit_id = 1
+
+[resource]
+script = ExtResource("1_k03cq")
+baguette_style_data = SubResource("Resource_507oa")
+baguette_shop_assortment = SubResource("Resource_xcy0i")
+words = [SubResource("Resource_fs01k"), SubResource("Resource_wns8f"), SubResource("Resource_iuejj"), SubResource("Resource_tjdow"), SubResource("Resource_fo1a1"), SubResource("Resource_c8qwu"), SubResource("Resource_eai0y"), SubResource("Resource_c5l0g"), SubResource("Resource_7oy75"), SubResource("Resource_k3jls"), SubResource("Resource_bvfla"), SubResource("Resource_nc35x"), SubResource("Resource_j6tuc"), SubResource("Resource_igbnp"), SubResource("Resource_avr1w"), SubResource("Resource_ajmdy"), SubResource("Resource_nb1do"), SubResource("Resource_hxrn0"), SubResource("Resource_3smlc"), SubResource("Resource_faj7b"), SubResource("Resource_c8ats"), SubResource("Resource_gdvjr"), SubResource("Resource_3ccr2"), SubResource("Resource_d1w3s"), SubResource("Resource_4r84m"), SubResource("Resource_pd00l"), SubResource("Resource_pfh5f"), SubResource("Resource_apdsq"), SubResource("Resource_s13ok"), SubResource("Resource_nu1l0"), SubResource("Resource_60lsv"), SubResource("Resource_an2cq"), SubResource("Resource_u8uvk"), SubResource("Resource_75kc3"), SubResource("Resource_1516f"), SubResource("Resource_y07vt"), SubResource("Resource_xjnhs"), SubResource("Resource_6kvcq"), SubResource("Resource_2tyft"), SubResource("Resource_j65aw"), SubResource("Resource_fs8bg"), SubResource("Resource_spirs"), SubResource("Resource_pkoox"), SubResource("Resource_jsckx"), SubResource("Resource_uqv6f"), SubResource("Resource_5lyoi"), SubResource("Resource_dqjud"), SubResource("Resource_6vhfh"), SubResource("Resource_4af8j"), SubResource("Resource_g6alo"), SubResource("Resource_og8fw"), SubResource("Resource_u7jtl"), SubResource("Resource_oxkvl"), SubResource("Resource_vak2a"), SubResource("Resource_5o0eq"), SubResource("Resource_o8dva"), SubResource("Resource_t5kw7"), SubResource("Resource_lw2uo"), SubResource("Resource_pnlgb"), SubResource("Resource_brirk"), SubResource("Resource_tuswg"), SubResource("Resource_ht427"), SubResource("Resource_ye2hd"), SubResource("Resource_4ddes"), SubResource("Resource_5uunr"), SubResource("Resource_ut1vb"), SubResource("Resource_doifj"), SubResource("Resource_1ly4w"), SubResource("Resource_repp8"), SubResource("Resource_28ouj"), SubResource("Resource_0gp8e"), SubResource("Resource_vi7hh"), SubResource("Resource_tuhmv"), SubResource("Resource_wnohx"), SubResource("Resource_mcs0h"), SubResource("Resource_8ouhf"), SubResource("Resource_br2xy"), SubResource("Resource_88pcp"), SubResource("Resource_xhgfc"), SubResource("Resource_qrt0g"), SubResource("Resource_ejyr7"), SubResource("Resource_f0r48"), SubResource("Resource_xtfb0"), SubResource("Resource_0x55n"), SubResource("Resource_bja3y"), SubResource("Resource_mklv0"), SubResource("Resource_yn78l"), SubResource("Resource_2rjrs"), SubResource("Resource_5lmel"), SubResource("Resource_03y2q"), SubResource("Resource_hlqnb"), SubResource("Resource_14mfv"), SubResource("Resource_4s6q8"), SubResource("Resource_6utm3"), SubResource("Resource_ujbrx"), SubResource("Resource_0tamj"), SubResource("Resource_1b4aj"), SubResource("Resource_enn6y"), SubResource("Resource_jw5ba"), SubResource("Resource_wnopv"), SubResource("Resource_77hxp"), SubResource("Resource_6imqh"), SubResource("Resource_gb240"), SubResource("Resource_0wp6n"), SubResource("Resource_ir27v"), SubResource("Resource_naiv4"), SubResource("Resource_8yevw"), SubResource("Resource_r4fa8"), SubResource("Resource_nposg"), SubResource("Resource_3wdqq"), SubResource("Resource_vew4n"), SubResource("Resource_v8654"), SubResource("Resource_6616i"), SubResource("Resource_vqsk1"), SubResource("Resource_sry8h"), SubResource("Resource_qk0wu"), SubResource("Resource_63h36"), SubResource("Resource_xk4np"), SubResource("Resource_hikkn"), SubResource("Resource_bs1v8"), SubResource("Resource_xcoml"), SubResource("Resource_ldx5r"), SubResource("Resource_e1f2r"), SubResource("Resource_a67kb"), SubResource("Resource_66sr8"), SubResource("Resource_shk5s"), SubResource("Resource_dx68k"), SubResource("Resource_yy4bl"), SubResource("Resource_gk3e0"), SubResource("Resource_ks1b7"), SubResource("Resource_13byk"), SubResource("Resource_5sdpr"), SubResource("Resource_7csrj"), SubResource("Resource_mraf5"), SubResource("Resource_wnx07"), SubResource("Resource_84xhy"), SubResource("Resource_3l3ee"), SubResource("Resource_wlvl4"), SubResource("Resource_6eqgq"), SubResource("Resource_sb1bw"), SubResource("Resource_6x41f"), SubResource("Resource_2bbq3"), SubResource("Resource_k674u"), SubResource("Resource_1l53g"), SubResource("Resource_4i7kw"), SubResource("Resource_ynjjv"), SubResource("Resource_fyniv"), SubResource("Resource_12dcr"), SubResource("Resource_k6a85"), SubResource("Resource_ka0ye"), SubResource("Resource_xf42c"), SubResource("Resource_wndrb"), SubResource("Resource_bvbm0"), SubResource("Resource_hqjec"), SubResource("Resource_p3dss"), SubResource("Resource_a82yx"), SubResource("Resource_updmh"), SubResource("Resource_w2fnv"), SubResource("Resource_b2peo"), SubResource("Resource_5rj0c"), SubResource("Resource_o21ww"), SubResource("Resource_rlslk"), SubResource("Resource_kwoj3"), SubResource("Resource_q003j"), SubResource("Resource_dcgtn"), SubResource("Resource_xo5gg"), SubResource("Resource_gi2y3"), SubResource("Resource_68bu4"), SubResource("Resource_smjda"), SubResource("Resource_sphxg"), SubResource("Resource_rr8vn"), SubResource("Resource_6uous"), SubResource("Resource_5j75f"), SubResource("Resource_5y2k0"), SubResource("Resource_iu8ev"), SubResource("Resource_1btto"), SubResource("Resource_2ivav"), SubResource("Resource_1i7cl"), SubResource("Resource_gpxn6"), SubResource("Resource_6llp1"), SubResource("Resource_oxrht"), SubResource("Resource_qeuoj"), SubResource("Resource_alw27"), SubResource("Resource_1klhg"), SubResource("Resource_fl1tf"), SubResource("Resource_ikvss"), SubResource("Resource_prgd5"), SubResource("Resource_n2vww"), SubResource("Resource_lb71u"), SubResource("Resource_4yws4"), SubResource("Resource_npeal"), SubResource("Resource_xjnfb"), SubResource("Resource_7cif3"), SubResource("Resource_liqr4"), SubResource("Resource_bvv1h"), SubResource("Resource_lhk3e"), SubResource("Resource_x21tq"), SubResource("Resource_fjsva"), SubResource("Resource_68yxq"), SubResource("Resource_cdrvu"), SubResource("Resource_x4ch0"), SubResource("Resource_fkkuv"), SubResource("Resource_likem"), SubResource("Resource_7mi2x"), SubResource("Resource_jsnjx"), SubResource("Resource_ljrtf"), SubResource("Resource_o1x50"), SubResource("Resource_5scg2"), SubResource("Resource_ft144"), SubResource("Resource_fukyw"), SubResource("Resource_ib37f"), SubResource("Resource_0u2cg"), SubResource("Resource_f7rnp"), SubResource("Resource_rnlsg"), SubResource("Resource_kn8tp"), SubResource("Resource_ncue7"), SubResource("Resource_g4rjl"), SubResource("Resource_e0o2h"), SubResource("Resource_6o7hf"), SubResource("Resource_k8tbo"), SubResource("Resource_qyxh1"), SubResource("Resource_d7pwc"), SubResource("Resource_546qe"), SubResource("Resource_awrgw"), SubResource("Resource_lroy6"), SubResource("Resource_xi6lm"), SubResource("Resource_0wemc"), SubResource("Resource_u5te8"), SubResource("Resource_hcrbm"), SubResource("Resource_7ty78"), SubResource("Resource_631vs"), SubResource("Resource_ohgai"), SubResource("Resource_sxh47"), SubResource("Resource_unne2"), SubResource("Resource_taupy"), SubResource("Resource_f0btr"), SubResource("Resource_mefpe"), SubResource("Resource_uhvp2"), SubResource("Resource_atohn"), SubResource("Resource_7pku2"), SubResource("Resource_chuak"), SubResource("Resource_gyxfq"), SubResource("Resource_sd3cj"), SubResource("Resource_8hkyc"), SubResource("Resource_eve1s"), SubResource("Resource_6h4iw"), SubResource("Resource_slt87"), SubResource("Resource_gdkgy"), SubResource("Resource_1qqud"), SubResource("Resource_ytfml"), SubResource("Resource_8pcv4"), SubResource("Resource_j56tx"), SubResource("Resource_12eyw"), SubResource("Resource_jdokb"), SubResource("Resource_8n70b"), SubResource("Resource_e8hn6"), SubResource("Resource_sfw44"), SubResource("Resource_1ko7l"), SubResource("Resource_g5qhq"), SubResource("Resource_vqgvi"), SubResource("Resource_o4t05"), SubResource("Resource_jujnb"), SubResource("Resource_wefd2"), SubResource("Resource_rf1dj"), SubResource("Resource_5ughv"), SubResource("Resource_ntuxx"), SubResource("Resource_2y4cy"), SubResource("Resource_mokdd"), SubResource("Resource_u351o"), SubResource("Resource_pggrf"), SubResource("Resource_sdfde"), SubResource("Resource_cxb3o"), SubResource("Resource_ulxya"), SubResource("Resource_2v4um"), SubResource("Resource_6rmkf"), SubResource("Resource_rff5o"), SubResource("Resource_15brg"), SubResource("Resource_vf20t"), SubResource("Resource_l4t6w"), SubResource("Resource_4whdi"), SubResource("Resource_1xr6k"), SubResource("Resource_n106d"), SubResource("Resource_i0n0l"), SubResource("Resource_t8jr3"), SubResource("Resource_vnpvy"), SubResource("Resource_lceu0"), SubResource("Resource_ux1b7"), SubResource("Resource_lwe5a"), SubResource("Resource_h2mwi"), SubResource("Resource_apo1w"), SubResource("Resource_oyg6s"), SubResource("Resource_hm7nn"), SubResource("Resource_h3o22"), SubResource("Resource_4pare"), SubResource("Resource_q1xmg"), SubResource("Resource_cypni"), SubResource("Resource_bm6gj"), SubResource("Resource_j8k5k"), SubResource("Resource_wcoyc"), SubResource("Resource_hjbuv"), SubResource("Resource_7ppfa"), SubResource("Resource_08a48"), SubResource("Resource_hbc2n"), SubResource("Resource_guk04"), SubResource("Resource_bcmp6"), SubResource("Resource_hbejs"), SubResource("Resource_k66v6"), SubResource("Resource_c66iw"), SubResource("Resource_rudko"), SubResource("Resource_areoj"), SubResource("Resource_w6tx5"), SubResource("Resource_wex5t"), SubResource("Resource_4hnuo"), SubResource("Resource_p4l1u"), SubResource("Resource_hhg8f"), SubResource("Resource_5t2dp"), SubResource("Resource_87yst"), SubResource("Resource_qwp04"), SubResource("Resource_yfo4h"), SubResource("Resource_080kh"), SubResource("Resource_laynn"), SubResource("Resource_0cxgr"), SubResource("Resource_sbo6c"), SubResource("Resource_uqs01"), SubResource("Resource_gk8sy"), SubResource("Resource_tt737"), SubResource("Resource_8m832"), SubResource("Resource_dumxk"), SubResource("Resource_m4b50"), SubResource("Resource_4ot6f"), SubResource("Resource_53u0j"), SubResource("Resource_to3p4"), SubResource("Resource_p3lmi"), SubResource("Resource_yywhj"), SubResource("Resource_cicm0"), SubResource("Resource_a0drb"), SubResource("Resource_4unra"), SubResource("Resource_klm2e"), SubResource("Resource_jnyft"), SubResource("Resource_mlv0w"), SubResource("Resource_3r5e3"), SubResource("Resource_koxwu"), SubResource("Resource_27os0"), SubResource("Resource_ifwle"), SubResource("Resource_q22oo"), SubResource("Resource_twitf"), SubResource("Resource_g4601"), SubResource("Resource_3tovq"), SubResource("Resource_x4knu"), SubResource("Resource_8rpup"), SubResource("Resource_hyfbx"), SubResource("Resource_s4kyu"), SubResource("Resource_u82j8"), SubResource("Resource_qboih"), SubResource("Resource_xkams"), SubResource("Resource_u5kv5"), SubResource("Resource_m5g2x"), SubResource("Resource_5227a"), SubResource("Resource_aa3xt"), SubResource("Resource_afo5s"), SubResource("Resource_lwvdq"), SubResource("Resource_n3ixv"), SubResource("Resource_8bekt"), SubResource("Resource_jw8ac"), SubResource("Resource_thv3f"), SubResource("Resource_8xgfe"), SubResource("Resource_n7sim"), SubResource("Resource_82ipt"), SubResource("Resource_n1egv"), SubResource("Resource_oy3vq"), SubResource("Resource_jy04k"), SubResource("Resource_bf6hb"), SubResource("Resource_862fr"), SubResource("Resource_yosfr"), SubResource("Resource_7vkes"), SubResource("Resource_0s6er"), SubResource("Resource_p7k1b"), SubResource("Resource_axwgt"), SubResource("Resource_xrptb"), SubResource("Resource_j5wh6"), SubResource("Resource_xjbxl"), SubResource("Resource_0jctd"), SubResource("Resource_icr6n"), SubResource("Resource_ng3rb"), SubResource("Resource_pbo10"), SubResource("Resource_avp7c"), SubResource("Resource_yib8r"), SubResource("Resource_ps0fn"), SubResource("Resource_754ak"), SubResource("Resource_g2p63"), SubResource("Resource_2wsxg"), SubResource("Resource_20rw2"), SubResource("Resource_oheki"), SubResource("Resource_kexqq"), SubResource("Resource_sf1pv"), SubResource("Resource_5lo33"), SubResource("Resource_aswaf"), SubResource("Resource_ciuuj"), SubResource("Resource_6sr54"), SubResource("Resource_iuidr"), SubResource("Resource_sf4vy"), SubResource("Resource_t2yhq"), SubResource("Resource_yv4r7"), SubResource("Resource_5fdu7"), SubResource("Resource_on7ud"), SubResource("Resource_mqdje"), SubResource("Resource_ycrb8"), SubResource("Resource_v7g7l"), SubResource("Resource_1wuj4"), SubResource("Resource_qskrq"), SubResource("Resource_uu0p3"), SubResource("Resource_lgkx6"), SubResource("Resource_ocot5"), SubResource("Resource_yjbua"), SubResource("Resource_4jiq3"), SubResource("Resource_15gdr"), SubResource("Resource_lns1l"), SubResource("Resource_h5u3s"), SubResource("Resource_b1ti6"), SubResource("Resource_6ck61"), SubResource("Resource_0lcrh"), SubResource("Resource_d3alr"), SubResource("Resource_eq1xk"), SubResource("Resource_aeaa3"), SubResource("Resource_w7fj6"), SubResource("Resource_idu1m"), SubResource("Resource_vou03"), SubResource("Resource_08vu0"), SubResource("Resource_v35om"), SubResource("Resource_khp8w"), SubResource("Resource_felyb"), SubResource("Resource_s8iuc"), SubResource("Resource_ia4gw"), SubResource("Resource_xgcqv"), SubResource("Resource_j5xn3"), SubResource("Resource_idubs"), SubResource("Resource_n8cms"), SubResource("Resource_c3d1j"), SubResource("Resource_273t6"), SubResource("Resource_aqgm4"), SubResource("Resource_mugtr"), SubResource("Resource_g1g7d"), SubResource("Resource_1iy1f"), SubResource("Resource_j5bn4"), SubResource("Resource_sfas3"), SubResource("Resource_4ch64"), SubResource("Resource_urle6"), SubResource("Resource_psjir"), SubResource("Resource_54b4i"), SubResource("Resource_fid2a"), SubResource("Resource_eyudl"), SubResource("Resource_8vcmo"), SubResource("Resource_md8q3"), SubResource("Resource_jbnbj"), SubResource("Resource_rv5ru"), SubResource("Resource_1oulx"), SubResource("Resource_o5a18"), SubResource("Resource_68nio"), SubResource("Resource_fomej"), SubResource("Resource_0ldsv"), SubResource("Resource_tfbxv"), SubResource("Resource_iuhkq"), SubResource("Resource_ft2nt"), SubResource("Resource_2hv0t"), SubResource("Resource_c4anu"), SubResource("Resource_c71i5"), SubResource("Resource_hpj88"), SubResource("Resource_sfvgk"), SubResource("Resource_dbmnk"), SubResource("Resource_f3bjl"), SubResource("Resource_n837v"), SubResource("Resource_k8dc2"), SubResource("Resource_pgity"), SubResource("Resource_73bwr"), SubResource("Resource_rxava"), SubResource("Resource_yothi"), SubResource("Resource_4abpl"), SubResource("Resource_rnrvd"), SubResource("Resource_bl3k2"), SubResource("Resource_730mh"), SubResource("Resource_yfy3c"), SubResource("Resource_0q3c1"), SubResource("Resource_pft2s"), SubResource("Resource_25k4l"), SubResource("Resource_jt8ro"), SubResource("Resource_0k4sm"), SubResource("Resource_bq0xs"), SubResource("Resource_ryic8"), SubResource("Resource_1yp8c"), SubResource("Resource_yj5fk"), SubResource("Resource_wth2r"), SubResource("Resource_w3e7k"), SubResource("Resource_bhqiq"), SubResource("Resource_vn6m4"), SubResource("Resource_l42e1"), SubResource("Resource_0awk7"), SubResource("Resource_1dsfi"), SubResource("Resource_x4msa"), SubResource("Resource_ctkj3"), SubResource("Resource_5bdml"), SubResource("Resource_8i3oh"), SubResource("Resource_ov8nj"), SubResource("Resource_v3np1"), SubResource("Resource_sno0h"), SubResource("Resource_4bdx0"), SubResource("Resource_mi6im"), SubResource("Resource_vsa1o"), SubResource("Resource_661yh"), SubResource("Resource_ef6lm"), SubResource("Resource_5t71b"), SubResource("Resource_oaq0i"), SubResource("Resource_k483a"), SubResource("Resource_acm5b"), SubResource("Resource_f7mcs"), SubResource("Resource_nujnw"), SubResource("Resource_fsu2s"), SubResource("Resource_214me"), SubResource("Resource_w1qyc"), SubResource("Resource_ipq5i"), SubResource("Resource_7tpyi"), SubResource("Resource_54vvj"), SubResource("Resource_cbt6a"), SubResource("Resource_qmou4"), SubResource("Resource_ju13l"), SubResource("Resource_s1xr0"), SubResource("Resource_rchyi"), SubResource("Resource_huke8"), SubResource("Resource_gp5n5"), SubResource("Resource_hhl1m"), SubResource("Resource_bkvox"), SubResource("Resource_g6nkv"), SubResource("Resource_07o80"), SubResource("Resource_npywj"), SubResource("Resource_s5e3g"), SubResource("Resource_oc8u8"), SubResource("Resource_wptbr"), SubResource("Resource_7v6nq"), SubResource("Resource_xutk6"), SubResource("Resource_kn3yp"), SubResource("Resource_gwnte"), SubResource("Resource_kom3k"), SubResource("Resource_6pb4g"), SubResource("Resource_apktd"), SubResource("Resource_qyh2k"), SubResource("Resource_xtqpo"), SubResource("Resource_l7gwm"), SubResource("Resource_5c43g"), SubResource("Resource_1vvpq"), SubResource("Resource_1adb5"), SubResource("Resource_osctr"), SubResource("Resource_xh0x6"), SubResource("Resource_oob17"), SubResource("Resource_ggmyc"), SubResource("Resource_uxcqp"), SubResource("Resource_jt36m"), SubResource("Resource_02y82"), SubResource("Resource_f38ex"), SubResource("Resource_50k7k"), SubResource("Resource_2ftop"), SubResource("Resource_q74sk"), SubResource("Resource_h78uy"), SubResource("Resource_khywn"), SubResource("Resource_rhwox"), SubResource("Resource_dcvql"), SubResource("Resource_a3cq6"), SubResource("Resource_lqo2b"), SubResource("Resource_netsa"), SubResource("Resource_rp3g7"), SubResource("Resource_hejom"), SubResource("Resource_bjtpf"), SubResource("Resource_jbyuk"), SubResource("Resource_f4amu"), SubResource("Resource_f6api"), SubResource("Resource_pmorn"), SubResource("Resource_10hpa"), SubResource("Resource_dem5c"), SubResource("Resource_hj0vx"), SubResource("Resource_qtffa"), SubResource("Resource_7jmtx"), SubResource("Resource_evie8"), SubResource("Resource_1eel5"), SubResource("Resource_akl3y"), SubResource("Resource_4avxr"), SubResource("Resource_bnygu"), SubResource("Resource_0csxc"), SubResource("Resource_othje"), SubResource("Resource_ih2fs"), SubResource("Resource_t8y0d"), SubResource("Resource_x412h"), SubResource("Resource_7cau4"), SubResource("Resource_ctjeg"), SubResource("Resource_wan8d"), SubResource("Resource_2yvln"), SubResource("Resource_grprq"), SubResource("Resource_ucng6"), SubResource("Resource_krc4y"), SubResource("Resource_844if"), SubResource("Resource_yyrnr"), SubResource("Resource_4kuv8"), SubResource("Resource_uyf56"), SubResource("Resource_82f2d"), SubResource("Resource_ujcvu"), SubResource("Resource_yvqnm"), SubResource("Resource_grmeq"), SubResource("Resource_q1rwl"), SubResource("Resource_mjvhl"), SubResource("Resource_vaf8n"), SubResource("Resource_bi05g"), SubResource("Resource_ngskt"), SubResource("Resource_07pol"), SubResource("Resource_mo0ah"), SubResource("Resource_n24oi"), SubResource("Resource_gl4bp"), SubResource("Resource_brlsp"), SubResource("Resource_mpt2i"), SubResource("Resource_rpiyr"), SubResource("Resource_6km3a"), SubResource("Resource_4tkx3"), SubResource("Resource_5yjvd"), SubResource("Resource_saws4"), SubResource("Resource_inpjh"), SubResource("Resource_18bf2"), SubResource("Resource_3v70e"), SubResource("Resource_pyijx"), SubResource("Resource_f5vo8"), SubResource("Resource_lbhs8"), SubResource("Resource_xcis0"), SubResource("Resource_6vr8v"), SubResource("Resource_uy4dy"), SubResource("Resource_1oth3"), SubResource("Resource_7gu76"), SubResource("Resource_cthtu"), SubResource("Resource_ne3pj"), SubResource("Resource_auwxc"), SubResource("Resource_47gkn"), SubResource("Resource_hlqmk"), SubResource("Resource_j7tfo"), SubResource("Resource_82hoi"), SubResource("Resource_nyy4f"), SubResource("Resource_u6gdx"), SubResource("Resource_gtcsx"), SubResource("Resource_f84d4"), SubResource("Resource_bkuai"), SubResource("Resource_y7xso"), SubResource("Resource_u5dk1"), SubResource("Resource_n03ms"), SubResource("Resource_ibr1x"), SubResource("Resource_eiele"), SubResource("Resource_lttoh"), SubResource("Resource_s2xrl"), SubResource("Resource_bed4g"), SubResource("Resource_17jq8"), SubResource("Resource_d370e"), SubResource("Resource_ruky4"), SubResource("Resource_4sbsx"), SubResource("Resource_jb0xl"), SubResource("Resource_j3em6"), SubResource("Resource_0dym0"), SubResource("Resource_gi1n4"), SubResource("Resource_k4v3d"), SubResource("Resource_l7fvd"), SubResource("Resource_aq2ge"), SubResource("Resource_cg7fo"), SubResource("Resource_xfgku"), SubResource("Resource_xi1ir"), SubResource("Resource_q5ich"), SubResource("Resource_6cruv"), SubResource("Resource_r1rxc"), SubResource("Resource_qjv3c"), SubResource("Resource_y36rm"), SubResource("Resource_r27ia"), SubResource("Resource_v6j51"), SubResource("Resource_luoa6"), SubResource("Resource_xfh5m"), SubResource("Resource_rmejl"), SubResource("Resource_flkd8"), SubResource("Resource_nef82"), SubResource("Resource_8tckt"), SubResource("Resource_q05cd"), SubResource("Resource_kbuxm"), SubResource("Resource_rs4nd"), SubResource("Resource_l2j8c"), SubResource("Resource_kih21"), SubResource("Resource_6uu07"), SubResource("Resource_bwmo7"), SubResource("Resource_favvo"), SubResource("Resource_jtswb"), SubResource("Resource_4u6es"), SubResource("Resource_kdyqb"), SubResource("Resource_yowgr"), SubResource("Resource_rjbsd"), SubResource("Resource_g4agv"), SubResource("Resource_gid7u"), SubResource("Resource_jenxx"), SubResource("Resource_dldfs"), SubResource("Resource_8de2p"), SubResource("Resource_skms1"), SubResource("Resource_edn47"), SubResource("Resource_gkod1"), SubResource("Resource_vjppj"), SubResource("Resource_fd6dn"), SubResource("Resource_bfd2t"), SubResource("Resource_pxkoh"), SubResource("Resource_empqg"), SubResource("Resource_bc0io"), SubResource("Resource_2foed"), SubResource("Resource_u0bc6"), SubResource("Resource_0ciw1"), SubResource("Resource_r471j"), SubResource("Resource_2fm2d"), SubResource("Resource_ca6ty"), SubResource("Resource_vjblw"), SubResource("Resource_owdo3"), SubResource("Resource_pdvj4"), SubResource("Resource_rfo5l"), SubResource("Resource_80dyh"), SubResource("Resource_nminp"), SubResource("Resource_g7mwd"), SubResource("Resource_r1ln3"), SubResource("Resource_qcly0"), SubResource("Resource_dstsd"), SubResource("Resource_ev8hi"), SubResource("Resource_ryfeb"), SubResource("Resource_jw7la"), SubResource("Resource_61br7"), SubResource("Resource_wy8fi"), SubResource("Resource_2nufc"), SubResource("Resource_86wpc"), SubResource("Resource_12hbd"), SubResource("Resource_iqmso"), SubResource("Resource_sob4b"), SubResource("Resource_ri8cg"), SubResource("Resource_nyidb"), SubResource("Resource_ytk5m"), SubResource("Resource_rnwgs"), SubResource("Resource_prm1c"), SubResource("Resource_x8jg5"), SubResource("Resource_1tb3a"), SubResource("Resource_tqggs"), SubResource("Resource_08mww"), SubResource("Resource_4d5ok"), SubResource("Resource_r83nv"), SubResource("Resource_4vclu"), SubResource("Resource_xtmh7"), SubResource("Resource_glnrx"), SubResource("Resource_7j30e"), SubResource("Resource_ppi41"), SubResource("Resource_8n5oa"), SubResource("Resource_bt5tl"), SubResource("Resource_o8pek"), SubResource("Resource_qldtu"), SubResource("Resource_q23iy"), SubResource("Resource_m4boo"), SubResource("Resource_l68n0"), SubResource("Resource_yo2y2"), SubResource("Resource_vxnsn"), SubResource("Resource_c2cxn"), SubResource("Resource_726gl"), SubResource("Resource_k882m"), SubResource("Resource_l0myp"), SubResource("Resource_0xngr"), SubResource("Resource_q85re"), SubResource("Resource_y0aev"), SubResource("Resource_tfqwf"), SubResource("Resource_vyet1"), SubResource("Resource_5csu5"), SubResource("Resource_b8me2"), SubResource("Resource_4fkaf"), SubResource("Resource_xyiyg"), SubResource("Resource_ek4iy"), SubResource("Resource_ewi5f"), SubResource("Resource_k03cq"), SubResource("Resource_diuyi"), SubResource("Resource_3rd0e"), SubResource("Resource_w05py"), SubResource("Resource_826ji"), SubResource("Resource_fbe1h"), SubResource("Resource_0lkex"), SubResource("Resource_hpgje"), SubResource("Resource_ub00s"), SubResource("Resource_6hrp5"), SubResource("Resource_nla75"), SubResource("Resource_vynfd"), SubResource("Resource_1d0g7"), SubResource("Resource_j1n8m"), SubResource("Resource_yaj3r"), SubResource("Resource_d5kxy"), SubResource("Resource_r10cu"), SubResource("Resource_cpj4e"), SubResource("Resource_e8ohw"), SubResource("Resource_xscen"), SubResource("Resource_xk8fx"), SubResource("Resource_llejb"), SubResource("Resource_438xi"), SubResource("Resource_dh2k5"), SubResource("Resource_08cva"), SubResource("Resource_v8igw"), SubResource("Resource_v5k5i"), SubResource("Resource_aqogf"), SubResource("Resource_n611r"), SubResource("Resource_hewwp"), SubResource("Resource_5mq5l"), SubResource("Resource_ess75"), SubResource("Resource_tuom3"), SubResource("Resource_pquro"), SubResource("Resource_fbyqd"), SubResource("Resource_syfry"), SubResource("Resource_fery8"), SubResource("Resource_jdatr"), SubResource("Resource_qs7ll"), SubResource("Resource_vta64"), SubResource("Resource_bbokq"), SubResource("Resource_ej7cs"), SubResource("Resource_p8453"), SubResource("Resource_qbpwf"), SubResource("Resource_8j24v"), SubResource("Resource_75j8v"), SubResource("Resource_pclb7"), SubResource("Resource_36spn"), SubResource("Resource_qk2b1"), SubResource("Resource_bc2ws"), SubResource("Resource_ioked"), SubResource("Resource_d07j5"), SubResource("Resource_1gkvt"), SubResource("Resource_7n3ea"), SubResource("Resource_ymb6i"), SubResource("Resource_1cn1d"), SubResource("Resource_4b34t"), SubResource("Resource_krnde"), SubResource("Resource_41g20"), SubResource("Resource_rh8kg"), SubResource("Resource_fq5fs"), SubResource("Resource_gic2k"), SubResource("Resource_ynbpo"), SubResource("Resource_v5ca5"), SubResource("Resource_j6ey7"), SubResource("Resource_ag04v"), SubResource("Resource_yrrtq"), SubResource("Resource_vibte"), SubResource("Resource_5mo7m"), SubResource("Resource_dkdvf"), SubResource("Resource_c3kf8"), SubResource("Resource_7jpid"), SubResource("Resource_qs2c2"), SubResource("Resource_np7h0"), SubResource("Resource_un1hm"), SubResource("Resource_2ochw"), SubResource("Resource_5iefl"), SubResource("Resource_rrbx0"), SubResource("Resource_jxawi"), SubResource("Resource_0enkp"), SubResource("Resource_wsrwt"), SubResource("Resource_18txi"), SubResource("Resource_q15ji"), SubResource("Resource_x18ty")]
+marked_words = [SubResource("Resource_r10cu"), SubResource("Resource_q15ji"), SubResource("Resource_np7h0"), SubResource("Resource_j1n8m"), SubResource("Resource_krnde"), SubResource("Resource_qbpwf"), SubResource("Resource_ub00s"), SubResource("Resource_826ji"), SubResource("Resource_08cva"), SubResource("Resource_fbe1h"), SubResource("Resource_0enkp"), SubResource("Resource_ag04v"), SubResource("Resource_5lmel")]

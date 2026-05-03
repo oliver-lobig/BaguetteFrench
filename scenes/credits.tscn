@@ -1,0 +1,161 @@
+[gd_scene load_steps=13 format=3 uid="uid://cc0nm7m4tro7q"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_2ckv8"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_0ctdu"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="2_8gwij"]
+[ext_resource type="Script" uid="uid://4e34hnd08mbk" path="res://scenes/credits.gd" id="2_kyhnv"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="2_mah5v"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="4_kyhnv"]
+[ext_resource type="FontFile" uid="uid://fxxd4654wo5e" path="res://assets/fonts/DynaPuff/static/DynaPuff-Bold.ttf" id="5_ooihk"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="6_ih6pn"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="8_c6kru"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="9_qbfqv"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="10_x5q3x"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kyhnv"]
+color = Color(0.1490196, 0.30980396, 0.2235294, 1)
+thickness = 4
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2ckv8")
+script = ExtResource("2_kyhnv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_mah5v")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_8gwij")
+texture_pressed = ExtResource("2_8gwij")
+texture_hover = ExtResource("2_8gwij")
+texture_disabled = ExtResource("2_8gwij")
+texture_focused = ExtResource("2_8gwij")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" groups=["FontColorSwitch"]]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme = ExtResource("1_2ckv8")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("5_ooihk")
+theme_override_font_sizes/font_size = 64
+text = "CREDITS"
+horizontal_alignment = 1
+script = ExtResource("6_ih6pn")
+font_type = 3
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="ThemeSwitcher" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/Title"]
+script = ExtResource("4_kyhnv")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_kyhnv")
+
+[node name="CreditsPath" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_c6kru")
+theme_override_font_sizes/font_size = 32
+text = "CREDITS_PATH"
+script = ExtResource("9_qbfqv")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_colors/font_outline_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("10_x5q3x")
+theme_override_font_sizes/font_size = 28
+text = "MADE_BY"
+horizontal_alignment = 1
+script = ExtResource("6_ih6pn")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Licence" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_c6kru")
+theme_override_font_sizes/font_size = 32
+text = "LICENCE"
+script = ExtResource("9_qbfqv")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="ItchIo" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_c6kru")
+theme_override_font_sizes/font_size = 32
+text = "Itch.io"
+script = ExtResource("9_qbfqv")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="GitHub" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_c6kru")
+theme_override_font_sizes/font_size = 32
+text = "GitHub"
+script = ExtResource("9_qbfqv")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.39215687)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_colors/font_outline_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("10_x5q3x")
+theme_override_font_sizes/font_size = 28
+text = "BaguetteFrench Copyright © 2026 Olli"
+horizontal_alignment = 1
+script = ExtResource("6_ih6pn")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("2_0ctdu")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CreditsPath" to="." method="_on_credits_path_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Licence" to="." method="_on_licence_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ItchIo" to="." method="_on_itch_io_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GitHub" to="." method="_on_git_hub_pressed"]

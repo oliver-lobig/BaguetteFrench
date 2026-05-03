@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cru7nlfqnf7ry"]
+
+[ext_resource type="Script" uid="uid://fxrnt5gpomry" path="res://assets/scenes/learning_path/learning_bg.gd" id="1_u66hd"]
+
+[node name="LearningBG" type="VBoxContainer"]
+offset_right = 391.0
+offset_bottom = 379.0
+theme_override_constants/separation = 0
+script = ExtResource("1_u66hd")

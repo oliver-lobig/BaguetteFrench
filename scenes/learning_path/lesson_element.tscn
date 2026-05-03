@@ -1,0 +1,162 @@
+[gd_scene load_steps=16 format=3 uid="uid://bvgcr76gkxqt6"]
+
+[ext_resource type="Script" uid="uid://8i0uulr4uaiu" path="res://scenes/learning_path/lesson_element.gd" id="1_0ycf5"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="2_56yel"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="3_kycrq"]
+[ext_resource type="Texture2D" uid="uid://ddl6nwqergexv" path="res://assets/scenes/learning_path/red/button_up.png" id="4_6eu6o"]
+[ext_resource type="Texture2D" uid="uid://blfqjj1cs23se" path="res://assets/scenes/learning_path/button_down.png" id="5_060f1"]
+[ext_resource type="Texture2D" uid="uid://cvhhtf4hpvefs" path="res://assets/scenes/learning_path/button_hover.png" id="6_lsgvg"]
+[ext_resource type="Texture2D" uid="uid://bjewjkq01ux0l" path="res://assets/scenes/learning_path/button_disabled.png" id="7_kglty"]
+[ext_resource type="Texture2D" uid="uid://dilguk5farg7i" path="res://assets/scenes/learning_path/button_focus.png" id="8_m37fi"]
+[ext_resource type="Texture2D" uid="uid://lr2u1bso8454" path="res://assets/scenes/learning_path/icons/sentence.png" id="9_4p1mt"]
+[ext_resource type="Texture2D" uid="uid://tynq8kfgjw6e" path="res://assets/scenes/learning_path/icons/match.png" id="10_f0fj6"]
+[ext_resource type="Texture2D" uid="uid://ne0ye3sidvcf" path="res://assets/scenes/learning_path/icons/single_vocab.png" id="11_knjut"]
+[ext_resource type="Texture2D" uid="uid://cgy8062kcq244" path="res://assets/scenes/learning_path/icons/hear.png" id="12_wqth1"]
+[ext_resource type="Texture2D" uid="uid://dy8tc5344xgkt" path="res://assets/scenes/learning_path/icons/repeat.png" id="13_j66v6"]
+[ext_resource type="Texture2D" uid="uid://dyn1dgcphe480" path="res://assets/scenes/learning_path/icons/learning.png" id="14_2u1d5"]
+[ext_resource type="Texture2D" uid="uid://c4pae02qgv34i" path="res://assets/scenes/learning_path/icons/verbs.png" id="15_116xk"]
+
+[node name="LessonElement" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 160)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+alignment = 1
+script = ExtResource("1_0ycf5")
+time = 279.056
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(0, 97)
+points = PackedVector2Array(-1000, 0, 2000, 0)
+default_color = Color(0.251, 0.976, 0.608, 0.5)
+
+[node name="Control" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.6658688
+theme_override_colors/font_shadow_color = Color(0.14902, 0.14902, 0.14902, 1)
+theme_override_colors/font_outline_color = Color(0.147672, 0.147672, 0.147672, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_56yel")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("3_kycrq")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Button" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("4_6eu6o")
+texture_pressed = ExtResource("5_060f1")
+texture_hover = ExtResource("6_lsgvg")
+texture_disabled = ExtResource("7_kglty")
+texture_focused = ExtResource("8_m37fi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Button"]
+position = Vector2(63, 83)
+scale = Vector2(5.05, 5.65)
+
+[node name="Sentence" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_4p1mt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Match" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_f0fj6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SingleVocab" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_knjut")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hearing" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_wqth1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Repeat" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_j66v6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Learning" type="TextureRect" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_2u1d5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Verbs" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_116xk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

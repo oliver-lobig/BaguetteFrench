@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://pldxyoyvd0md"]
+
+[ext_resource type="Texture2D" uid="uid://br6tcjh4fiu4h" path="res://assets/general_ui/arrow_drop_down_24dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="1_f4ct7"]
+
+[resource]
+OptionButton/icons/arrow = ExtResource("1_f4ct7")

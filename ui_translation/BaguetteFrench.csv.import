@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://crll670cwt2lg"
+
+[deps]
+
+files=["res://ui_translation/BaguetteFrench.de.translation", "res://ui_translation/BaguetteFrench.fr.translation"]
+
+source_file="res://ui_translation/BaguetteFrench.csv"
+dest_files=["res://ui_translation/BaguetteFrench.de.translation", "res://ui_translation/BaguetteFrench.fr.translation"]
+
+[params]
+
+compress=true
+delimiter=1

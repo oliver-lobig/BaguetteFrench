@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciq0v7eq4ti8t"]
+
+[ext_resource type="PackedScene" uid="uid://rvmbdi0xqbp0" path="res://scenes/camera_shake.tscn" id="1_w72t5"]
+[ext_resource type="Texture2D" uid="uid://coyremstgfwat" path="res://assets/scenes/learning_path/bg_slices/bg_cropped_0.png" id="2_hb5gp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CameraShake" parent="." instance=ExtResource("1_w72t5")]
+ignore_rotation = false
+
+[node name="BgCropped0" type="Sprite2D" parent="."]
+position = Vector2(295, 718.00006)
+scale = Vector2(1.4375, 1.1469727)
+texture = ExtResource("2_hb5gp")

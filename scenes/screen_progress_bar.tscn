@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvpmkvm5ti56p"]
+
+[ext_resource type="Script" uid="uid://drnpxiqiah7mc" path="res://scenes/learning_methods/progress_bar.gd" id="1_1edcf"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_w5c5r"]
+[ext_resource type="StyleBox" uid="uid://br1ji1i364885" path="res://assets/extra_themes/standard/screen_progress_bar_fill.tres" id="2_7e8uu"]
+[ext_resource type="Texture2D" uid="uid://cxa4od5axduuq" path="res://assets/general_ui/fast_forward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="3_0gvug"]
+[ext_resource type="StyleBox" uid="uid://b700c2gtifwc5" path="res://assets/extra_themes/standard/screen_progress_bar_bg.tres" id="3_w5c5r"]
+[ext_resource type="FontFile" uid="uid://c28jmi38h5xj7" path="res://assets/fonts/DynaPuff/static/DynaPuff-Regular.ttf" id="5_7e8uu"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="6_28nlo"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="7_044cd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ur5pd"]
+
+[node name="ScreenProgressBar" type="ProgressBar" groups=["ScreenProgressBar"]]
+custom_minimum_size = Vector2(0, 64)
+offset_right = 308.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("1_w5c5r")
+theme_override_styles/background = ExtResource("2_7e8uu")
+theme_override_styles/fill = ExtResource("3_w5c5r")
+value = 50.0
+rounded = true
+show_percentage = false
+script = ExtResource("1_1edcf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Done" type="Label" parent="HBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.66587
+theme_override_colors/font_color = Color(1, 0.9764706, 0.9843137, 1)
+theme_override_colors/font_shadow_color = Color(0.89, 0.89, 0.89, 1)
+theme_override_colors/font_outline_color = Color(0.89, 0.89, 0.89, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("5_7e8uu")
+theme_override_font_sizes/font_size = 32
+text = "DONE_BUTTON"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("6_28nlo")
+font_type = 4
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Button" type="Button" parent="HBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ur5pd")
+flat = true
+
+[node name="Skip" type="TextureButton" parent="HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_0gvug")
+texture_pressed = ExtResource("3_0gvug")
+texture_hover = ExtResource("3_0gvug")
+texture_disabled = ExtResource("3_0gvug")
+texture_focused = ExtResource("3_0gvug")
+stretch_mode = 5
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("7_044cd")]
+overwrite_theme = ExtResource("1_w5c5r")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]
+[connection signal="pressed" from="HBoxContainer/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Skip" to="." method="_on_skip_pressed"]

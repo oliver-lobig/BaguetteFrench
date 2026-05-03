@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://mrad4q2dfbsr"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_51jaa"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_n4qmw"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="3_n4qmw"]
+[ext_resource type="PackedScene" uid="uid://b38kst8ee4bux" path="res://scenes/point_counter.tscn" id="4_rsehb"]
+[ext_resource type="PackedScene" uid="uid://qy5jbx7spki7" path="res://scenes/gems/daily_challenge.tscn" id="5_vit5n"]
+[ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="5_w60fy"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="6_0qb2i"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="8_cmmja"]
+
+[node name="GemsView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_51jaa")
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("2_n4qmw")]
+overwrite_theme = ExtResource("1_51jaa")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_n4qmw")]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="PointCounter" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_rsehb")]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+count_up = true
+
+[node name="DailyChallenges" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9764706, 0.9843137, 1)
+theme_override_fonts/font = ExtResource("5_w60fy")
+theme_override_font_sizes/font_size = 32
+text = "Tägliche Aufgaben"
+script = ExtResource("6_0qb2i")
+font_type = 2
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PanelContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("5_vit5n")]
+layout_mode = 2
+
+[node name="PanelContainer2" parent="MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("5_vit5n")]
+layout_mode = 2
+id = 1
+
+[node name="PanelContainer3" parent="MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("5_vit5n")]
+layout_mode = 2
+id = 2
+
+[node name="Milestones" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9764706, 0.9843137, 1)
+theme_override_fonts/font = ExtResource("5_w60fy")
+theme_override_font_sizes/font_size = 32
+text = "Meilensteine"
+script = ExtResource("6_0qb2i")
+font_type = 2
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Milestones2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9764706, 0.9843137, 1)
+theme_override_fonts/font = ExtResource("8_cmmja")
+theme_override_font_sizes/font_size = 24
+text = "COMING_SOON"
+script = ExtResource("6_0qb2i")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16

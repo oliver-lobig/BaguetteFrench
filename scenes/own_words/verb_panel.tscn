@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=3 uid="uid://lnj5aot88m0l"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_3h413"]
+[ext_resource type="Script" uid="uid://liw1eop8twup" path="res://scenes/own_words/verb_panel.gd" id="1_olket"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="3_vjbtc"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="4_5kmnd"]
+[ext_resource type="Script" uid="uid://bg81mre3ur8o" path="res://scenes/custom_nodes/text_line_edit.gd" id="5_1dass"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjbtc"]
+bg_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dass"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.18594494, 0.5863813, 0.3784512, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6vcm"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.976471, 0.984314, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[node name="Control" type="PanelContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 132.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme = ExtResource("1_3h413")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjbtc")
+script = ExtResource("1_olket")
+
+[node name="ThemeSwitcher" type="Node" parent="."]
+script = ExtResource("3_vjbtc")
+overwrite_theme = ExtResource("1_3h413")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="French" type="LineEdit" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("4_5kmnd")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_1dass")
+theme_override_styles/focus = SubResource("StyleBoxFlat_v6vcm")
+placeholder_text = "TEST FR"
+script = ExtResource("5_1dass")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="German" type="LineEdit" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("4_5kmnd")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_1dass")
+theme_override_styles/focus = SubResource("StyleBoxFlat_v6vcm")
+placeholder_text = "TEST DE"
+script = ExtResource("5_1dass")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/French" to="." method="_on_french_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/German" to="." method="_on_german_text_changed"]

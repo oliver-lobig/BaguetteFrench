@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1mfublyw3ueb"]
+
+[ext_resource type="Script" uid="uid://clea1ptnx37wd" path="res://scenes/custom_nodes/text_check_button.gd" id="1_34776"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="1_amn51"]
+
+[node name="TextCheckButton" type="CheckButton"]
+offset_right = 44.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("1_amn51")
+script = ExtResource("1_34776")

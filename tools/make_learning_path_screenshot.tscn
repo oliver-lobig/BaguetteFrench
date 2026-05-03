@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyv48gegsc7xo"]
+
+[ext_resource type="Script" uid="uid://b5nl7g7yawqwt" path="res://tools/make_learning_path_screenshot.gd" id="1_ppp0t"]
+[ext_resource type="PackedScene" uid="uid://t0evgt0qora8" path="res://scenes/learning_path.tscn" id="2_hrmsv"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ppp0t"]
+viewport_path = NodePath("SubViewport")
+
+[node name="MakeLearningPathScreenshot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ppp0t")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(64, 532)
+
+[node name="LearningPath" parent="SubViewport" instance=ExtResource("2_hrmsv")]
+offset_right = -64.0
+offset_bottom = -532.0
+
+[node name="TextureRect" parent="SubViewport/LearningPath" index="0"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ViewportTexture_ppp0t")
+expand_mode = 1
+stretch_mode = 5
+
+[editable path="SubViewport/LearningPath"]

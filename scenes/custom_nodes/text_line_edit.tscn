@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpm1qiv3mtf3b"]
+
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="1_lnitf"]
+[ext_resource type="Script" uid="uid://bg81mre3ur8o" path="res://scenes/custom_nodes/text_line_edit.gd" id="1_r4maa"]
+
+[node name="TextLineEdit" type="LineEdit"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_lnitf")
+script = ExtResource("1_r4maa")

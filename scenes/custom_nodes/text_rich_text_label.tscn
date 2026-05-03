@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci4qnuciesh5u"]
+
+[ext_resource type="Script" uid="uid://cwtcts3ifl3vf" path="res://scenes/custom_nodes/text_rich_text_label.gd" id="1_fomni"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="1_nd1tb"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="2_leqr1"]
+[ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="3_kpxj0"]
+
+[node name="TextRichTextLabel" type="RichTextLabel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_nd1tb")
+theme_override_fonts/bold_font = ExtResource("2_leqr1")
+theme_override_fonts/bold_italics_font = ExtResource("2_leqr1")
+theme_override_fonts/italics_font = ExtResource("3_kpxj0")
+theme_override_fonts/mono_font = ExtResource("1_nd1tb")
+script = ExtResource("1_fomni")

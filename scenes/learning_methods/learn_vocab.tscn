@@ -1,0 +1,376 @@
+[gd_scene load_steps=22 format=3 uid="uid://urxko13k0awk"]
+
+[ext_resource type="Script" uid="uid://e4stkb6thw5v" path="res://scenes/learning_methods/learn_vocab.gd" id="1_dcrbw"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_fgs78"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="1_j3jw8"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="2_8hmlu"]
+[ext_resource type="Texture2D" uid="uid://c8ip7l300fa55" path="res://assets/general_ui/bookmark_add_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="3_kd5e6"]
+[ext_resource type="Texture2D" uid="uid://b7lr0optd6p0l" path="res://assets/general_ui/dictionary_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="4_kd5e6"]
+[ext_resource type="Texture2D" uid="uid://dtc3it8txr7hd" path="res://assets/general_ui/bookmark_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="4_yxhtm"]
+[ext_resource type="Texture2D" uid="uid://crj4jrrrvvipa" path="res://assets/general_ui/translate_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="5_ib7os"]
+[ext_resource type="PackedScene" uid="uid://dvpmkvm5ti56p" path="res://scenes/screen_progress_bar.tscn" id="8_ipdvf"]
+[ext_resource type="PackedScene" uid="uid://bbvrcv5wsfgxs" path="res://scenes/swipe_checker.tscn" id="9_8hmlu"]
+[ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="10_d53e4"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="11_e0n6u"]
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="12_cx43m"]
+[ext_resource type="PackedScene" uid="uid://dqc5by7x3fmr0" path="res://scenes/baguette_shop/bread_render.tscn" id="12_ipdvf"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="13_p1cjf"]
+[ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="14_3jbam"]
+[ext_resource type="PackedScene" uid="uid://cg7ned4axk53h" path="res://scenes/flip.tscn" id="16_1evyv"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="16_fgs78"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ib7os"]
+
+[sub_resource type="Animation" id="Animation_ipdvf"]
+resource_name = "down"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BreadRender:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(6.015, 1.295)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BreadRender:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.09599311, -0.29670596]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/BreadRender:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.08, 1.08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/BreadRender:skew")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.017453292]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7y4py"]
+_data = {
+&"down": SubResource("Animation_ipdvf")
+}
+
+[node name="LearnVocab" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fgs78")
+script = ExtResource("1_dcrbw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_j3jw8")]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_8hmlu")
+texture_pressed = ExtResource("2_8hmlu")
+texture_hover = ExtResource("2_8hmlu")
+texture_disabled = ExtResource("2_8hmlu")
+texture_focused = ExtResource("2_8hmlu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FlipButtonSetting" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("5_ib7os")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_constants/separation = 8
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ib7os")
+
+[node name="Dictionary" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_kd5e6")
+texture_pressed = ExtResource("4_kd5e6")
+texture_hover = ExtResource("4_kd5e6")
+texture_disabled = ExtResource("4_kd5e6")
+texture_focused = ExtResource("4_kd5e6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarkButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_kd5e6")
+texture_pressed = ExtResource("3_kd5e6")
+texture_hover = ExtResource("3_kd5e6")
+texture_disabled = ExtResource("3_kd5e6")
+texture_focused = ExtResource("3_kd5e6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarkedButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_yxhtm")
+texture_pressed = ExtResource("4_yxhtm")
+texture_hover = ExtResource("4_yxhtm")
+texture_disabled = ExtResource("4_yxhtm")
+texture_focused = ExtResource("4_yxhtm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ScreenProgressBar" parent="MarginContainer/VBoxContainer" instance=ExtResource("8_ipdvf")]
+unique_name_in_owner = true
+layout_mode = 2
+subtract_one = false
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SwipeContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="Vocab" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WordContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-298, 300)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VocabOriginal" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.145098, 0.14902, 0.152941, 1)
+theme_override_fonts/font = ExtResource("10_d53e4")
+theme_override_font_sizes/font_size = 64
+text = "On na pa peur non?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 2
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="VocabDescription" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_colors/font_color = Color(0.1425, 0.14625, 0.15, 0.443137)
+theme_override_fonts/font = ExtResource("12_cx43m")
+theme_override_font_sizes/font_size = 32
+text = "[Descriptions can be very, very, very long!]"
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Controls" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TranslationContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-298, 300)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Translation" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_p1cjf")
+theme_override_font_sizes/font_size = 64
+text = "Translation"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 3
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Flip" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.1425, 0.14625, 0.15, 0.25098)
+theme_override_fonts/font = ExtResource("14_3jbam")
+theme_override_font_sizes/font_size = 64
+text = "SHOW"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 4
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="FlipButton" type="Button" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer/Flip"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_j3jw8")]
+layout_mode = 2
+
+[node name="SwipeCheckerRight" parent="." instance=ExtResource("9_8hmlu")]
+length = 200.0
+max_time = 1.5
+swipe_min = 0.2
+
+[node name="SwipeCheckerLeft" parent="." instance=ExtResource("9_8hmlu")]
+direction = Vector2(-1, 0)
+max_time = 1.5
+swipe_min = 0.2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="BreadRender" parent="Control" instance=ExtResource("12_ipdvf")]
+unique_name_in_owner = true
+rotation = -0.09599311
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_7y4py")
+}
+
+[node name="ThemeSwitcher" type="Node" parent="."]
+script = ExtResource("16_fgs78")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="FlipButtonSetting" parent="." instance=ExtResource("16_1evyv")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/FlipButtonSetting" to="." method="_on_flip_button_setting_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/Dictionary" to="." method="_on_dictionary_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/MarkButton" to="." method="_on_mark_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/MarkedButton" to="." method="_on_marked_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer/Flip/FlipButton" to="." method="_on_flip_button_pressed"]
+[connection signal="swipe_step" from="SwipeCheckerRight" to="." method="_on_swipe_checker_right_swipe_step"]
+[connection signal="swipe_stopped" from="SwipeCheckerRight" to="." method="_on_swipe_checker_right_swipe_stopped"]
+[connection signal="swiped" from="SwipeCheckerRight" to="." method="_on_swipe_checker_right_swiped"]
+[connection signal="swipe_step" from="SwipeCheckerLeft" to="." method="_on_swipe_checker_left_swipe_step"]
+[connection signal="swipe_stopped" from="SwipeCheckerLeft" to="." method="_on_swipe_checker_left_swipe_stopped"]
+[connection signal="swiped" from="SwipeCheckerLeft" to="." method="_on_swipe_checker_left_swiped"]

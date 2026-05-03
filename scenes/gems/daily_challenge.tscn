@@ -1,0 +1,269 @@
+[gd_scene load_steps=25 format=3 uid="uid://qy5jbx7spki7"]
+
+[ext_resource type="Script" uid="uid://b8f1c2fhdeioj" path="res://scenes/gems/daily_challenge.gd" id="1_4yd4a"]
+[ext_resource type="Texture2D" uid="uid://brceyo7hk4kv6" path="res://assets/scenes/learning_path/green/button_up.png" id="1_gupi3"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_hgdam"]
+[ext_resource type="Texture2D" uid="uid://lr2u1bso8454" path="res://assets/scenes/learning_path/icons/sentence.png" id="2_4yd4a"]
+[ext_resource type="Texture2D" uid="uid://tynq8kfgjw6e" path="res://assets/scenes/learning_path/icons/match.png" id="3_om02y"]
+[ext_resource type="Texture2D" uid="uid://ne0ye3sidvcf" path="res://assets/scenes/learning_path/icons/single_vocab.png" id="4_hgdam"]
+[ext_resource type="Texture2D" uid="uid://cgy8062kcq244" path="res://assets/scenes/learning_path/icons/hear.png" id="5_o4wdt"]
+[ext_resource type="Texture2D" uid="uid://dy8tc5344xgkt" path="res://assets/scenes/learning_path/icons/repeat.png" id="6_h25mg"]
+[ext_resource type="Texture2D" uid="uid://c4pae02qgv34i" path="res://assets/scenes/learning_path/icons/verbs.png" id="8_qundk"]
+[ext_resource type="Texture2D" uid="uid://b27betfiom51m" path="res://assets/general_ui/check_24dp_FFF9FB_FILL0_wght300_GRAD200_opsz24.svg" id="10_o4wdt"]
+[ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="11_h25mg"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="11_qundk"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="12_1faqs"]
+[ext_resource type="Script" uid="uid://cwtcts3ifl3vf" path="res://scenes/custom_nodes/text_rich_text_label.gd" id="12_44bq7"]
+[ext_resource type="FontFile" uid="uid://c28jmi38h5xj7" path="res://assets/fonts/DynaPuff/static/DynaPuff-Regular.ttf" id="12_h25mg"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="13_h25mg"]
+[ext_resource type="Texture2D" uid="uid://m1j6b8alr38j" path="res://assets/general_ui/add_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="13_hgdam"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="13_tbfgr"]
+[ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="13_tmgh8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7iugb"]
+bg_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+border_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ugru"]
+bg_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yd4a"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d7anx"]
+load_path = "res://.godot/imported/gem.svg-b9ec1a0dfa23763aa236410b3f9100a0.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qhkp"]
+atlas = SubResource("CompressedTexture2D_d7anx")
+region = Rect2(134.5, 59.0256, 209, 341.478)
+
+[node name="PanelContainer" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 128)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 68.0
+grow_horizontal = 2
+mouse_filter = 1
+theme = ExtResource("1_hgdam")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7iugb")
+script = ExtResource("1_4yd4a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ButtonBG" type="PanelContainer" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ugru")
+
+[node name="ButtonVisual" type="TextureRect" parent="HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture = ExtResource("1_gupi3")
+expand_mode = 1
+
+[node name="Sentence" type="TextureRect" parent="HBoxContainer/MarginContainer/ButtonVisual"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4yd4a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Match" type="TextureRect" parent="HBoxContainer/MarginContainer/ButtonVisual"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_om02y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SingleVocab" type="TextureRect" parent="HBoxContainer/MarginContainer/ButtonVisual"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hgdam")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hearing" type="TextureRect" parent="HBoxContainer/MarginContainer/ButtonVisual"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_o4wdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Repeat" type="TextureRect" parent="HBoxContainer/MarginContainer/ButtonVisual"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_h25mg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Verbs" type="TextureRect" parent="HBoxContainer/MarginContainer/ButtonVisual"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_qundk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4yd4a")
+flat = true
+
+[node name="Completed" type="TextureRect" parent="HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("10_o4wdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Title" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("11_qundk")
+theme_override_fonts/bold_font = ExtResource("12_1faqs")
+theme_override_fonts/bold_italics_font = ExtResource("12_1faqs")
+theme_override_fonts/italics_font = ExtResource("13_tmgh8")
+theme_override_fonts/mono_font = ExtResource("11_qundk")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=orange]20[/color] Sätze Schreiben"
+script = ExtResource("12_44bq7")
+metadata/_custom_type_script = "uid://cwtcts3ifl3vf"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Completage" type="Label" parent="HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_h25mg")
+theme_override_font_sizes/font_size = 32
+text = "20/20"
+script = ExtResource("13_tbfgr")
+font_type = 2
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Reward" type="Label" parent="HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.023529412, 0.74509805, 0.88235295, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.38039216, 0.45490196, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("12_h25mg")
+theme_override_font_sizes/font_size = 32
+text = "120"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("13_tbfgr")
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(48.18, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_6qhkp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ThemeSwitcher" type="Node" parent="."]
+script = ExtResource("13_h25mg")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+
+[node name="AcceptTask" type="Button" parent="MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 48)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 1
+icon = ExtResource("13_hgdam")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/AcceptTask" to="." method="_on_accept_task_pressed"]

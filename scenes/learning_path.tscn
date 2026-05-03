@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://t0evgt0qora8"]
+
+[ext_resource type="Script" uid="uid://e63kavnn2aom" path="res://scenes/learning_path.gd" id="1_4nyo5"]
+[ext_resource type="PackedScene" uid="uid://cru7nlfqnf7ry" path="res://assets/scenes/learning_path/learning_bg.tscn" id="2_2gi40"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="2_cyju5"]
+[ext_resource type="Script" uid="uid://biyy7pkge5n74" path="res://scenes/lines.gd" id="3_gwfkj"]
+
+[node name="LearningPath" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4nyo5")
+
+[node name="TextureRect" parent="." instance=ExtResource("2_2gi40")]
+layout_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.224, 0.7, 0.454067, 1)
+
+[node name="Lines" type="Node2D" parent="."]
+script = ExtResource("3_gwfkj")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SystemBarSpacer" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_cyju5")]
+layout_mode = 2
+mouse_filter = 1
+
+[connection signal="scroll_ended" from="ScrollContainer" to="." method="_on_scroll_container_scroll_ended"]

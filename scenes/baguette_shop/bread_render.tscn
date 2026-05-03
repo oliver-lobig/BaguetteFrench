@@ -1,0 +1,153 @@
+[gd_scene load_steps=23 format=3 uid="uid://dqc5by7x3fmr0"]
+
+[ext_resource type="Texture2D" uid="uid://cnrhnrnqw7qry" path="res://assets/baguette/baguette.svg" id="1_30uci"]
+[ext_resource type="Script" uid="uid://1em7lspkdyrb" path="res://scenes/baguette_shop/bread_render.gd" id="1_xkpv3"]
+[ext_resource type="Shader" uid="uid://6g3lewrrqh4w" path="res://scenes/baguette_shop/flat_color.tres" id="2_i6l6f"]
+[ext_resource type="Shader" uid="uid://bbdjljwpyobqg" path="res://scenes/baguette_shop/highlight_direction.tres" id="4_nhgsn"]
+[ext_resource type="Texture2D" uid="uid://cbfy0d1ppiwtt" path="res://assets/baguette/outline.png" id="4_r4pqa"]
+[ext_resource type="Texture2D" uid="uid://compyjb0u2uj8" path="res://assets/baguette/baguettestyles/faces/standard/eyes.png" id="6_643t2"]
+[ext_resource type="Texture2D" uid="uid://d8e6t78y5rgk" path="res://assets/baguette/baguettestyles/faces/standard/pupil.png" id="7_0ra2a"]
+[ext_resource type="Texture2D" uid="uid://dyhx160pvjnag" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/A.svg" id="8_nmtdy"]
+[ext_resource type="Texture2D" uid="uid://ooe2m3hgi3sr" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/E.svg" id="9_0155l"]
+[ext_resource type="Texture2D" uid="uid://dj7bpkqlibkmk" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/L.svg" id="10_86ecx"]
+[ext_resource type="Texture2D" uid="uid://cuahnt70lnikt" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/M.svg" id="11_en3nn"]
+[ext_resource type="Texture2D" uid="uid://bw0qpo0r5heco" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/NEUTRAL.svg" id="12_juul0"]
+[ext_resource type="Texture2D" uid="uid://bnl42iehsq8p8" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/O.svg" id="13_6ocwr"]
+[ext_resource type="Texture2D" uid="uid://bph8bb6v60oj0" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/OO.svg" id="14_1bbsf"]
+[ext_resource type="Texture2D" uid="uid://dcg7ntdqlm6gd" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/T.svg" id="15_ojxl1"]
+[ext_resource type="Texture2D" uid="uid://cvd6fhkdisoav" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/TH.svg" id="16_sofvq"]
+[ext_resource type="Texture2D" uid="uid://dngilgyd56gen" path="res://assets/baguette/baguettestyles/faces/standard/mouth/phonetics/V.svg" id="17_jdux7"]
+[ext_resource type="Texture2D" uid="uid://dbcafvn1yndep" path="res://assets/baguette/baguettestyles/shirts/olli.svg" id="18_0ra2a"]
+[ext_resource type="Texture2D" uid="uid://dbpto46ate282" path="res://assets/baguette/baguettestyles/hats/zylinder.svg" id="19_nmtdy"]
+[ext_resource type="Texture2D" uid="uid://cjnqsdwq8olaw" path="res://assets/baguette/baguettestyles/pants/dunkle_jeans.svg" id="20_0155l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkpv3"]
+shader = ExtResource("2_i6l6f")
+shader_parameter/Color = Color(0.340466, 0.256484, 0.143364, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nhgsn"]
+shader = ExtResource("4_nhgsn")
+shader_parameter/ColorParameter = Color(0.981995, 0.924914, 0.868796, 1)
+shader_parameter/Direction = Color(0.22507915, 0, 0, 1)
+
+[node name="BreadRender" type="Node2D"]
+script = ExtResource("1_xkpv3")
+light_direction = Vector2(0.707107, 0.707107)
+
+[node name="Baguette" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="BaguetteSprite" type="Sprite2D" parent="Baguette"]
+unique_name_in_owner = true
+texture = ExtResource("1_30uci")
+
+[node name="Shadow" type="Sprite2D" parent="Baguette/BaguetteSprite"]
+unique_name_in_owner = true
+show_behind_parent = true
+material = SubResource("ShaderMaterial_xkpv3")
+position = Vector2(14.14214, 14.14214)
+texture = ExtResource("1_30uci")
+
+[node name="Highlight" type="Sprite2D" parent="Baguette/BaguetteSprite"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_nhgsn")
+texture = ExtResource("4_r4pqa")
+
+[node name="Eyes" type="Node2D" parent="Baguette"]
+position = Vector2(0, -96)
+
+[node name="Eyes" type="Sprite2D" parent="Baguette/Eyes"]
+unique_name_in_owner = true
+texture = ExtResource("6_643t2")
+
+[node name="Pupils" type="Sprite2D" parent="Baguette/Eyes"]
+unique_name_in_owner = true
+position = Vector2(2, 0)
+texture = ExtResource("7_0ra2a")
+
+[node name="Mouth" type="Node2D" parent="Baguette"]
+unique_name_in_owner = true
+position = Vector2(0, -49.32)
+
+[node name="A" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("8_nmtdy")
+
+[node name="E" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("9_0155l")
+
+[node name="L" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("10_86ecx")
+
+[node name="M" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("11_en3nn")
+
+[node name="Neutral" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("12_juul0")
+
+[node name="O" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("13_6ocwr")
+
+[node name="Oo" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("14_1bbsf")
+
+[node name="T" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("15_ojxl1")
+
+[node name="Th" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("16_sofvq")
+
+[node name="V" type="Sprite2D" parent="Baguette/Mouth"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 2.32)
+texture = ExtResource("17_jdux7")
+
+[node name="Shirt" type="Node2D" parent="Baguette"]
+
+[node name="Shirt" type="Sprite2D" parent="Baguette/Shirt"]
+unique_name_in_owner = true
+position = Vector2(7, 20)
+texture = ExtResource("18_0ra2a")
+
+[node name="Hat" type="Node2D" parent="Baguette"]
+position = Vector2(0, -153.8)
+
+[node name="Hat" type="Sprite2D" parent="Baguette/Hat"]
+unique_name_in_owner = true
+position = Vector2(0, -27)
+texture = ExtResource("19_nmtdy")
+
+[node name="Pants" type="Node2D" parent="Baguette"]
+position = Vector2(0, 90)
+
+[node name="Pants" type="Sprite2D" parent="Baguette/Pants"]
+unique_name_in_owner = true
+position = Vector2(4, 94)
+texture = ExtResource("20_0155l")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdn3cu60qtlwe"]
+
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="1_1gora"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="1_arl6q"]
+
+[node name="TextElement" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_1gora")
+text = "Hallo"
+script = ExtResource("1_arl6q")
+font_type = 1

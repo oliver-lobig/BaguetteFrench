@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://h8xy43358equ"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_2vwfw"]
+[ext_resource type="Script" uid="uid://lcrug8s4rx3f" path="res://scenes/own_words.gd" id="2_kpfun"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_mt3ks"]
+[ext_resource type="Texture2D" uid="uid://b0g7ljpdi1e3d" path="res://assets/general_ui/add_circle_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="3_hrpi5"]
+[ext_resource type="Texture2D" uid="uid://cvbueokddxbgn" path="res://assets/general_ui/add_notes_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="4_kpfun"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="4_t5gi6"]
+[ext_resource type="Texture2D" uid="uid://b7iibb0v2n0sm" path="res://assets/general_ui/upload_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="5_t5gi6"]
+
+[node name="OwnWords" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2vwfw")
+script = ExtResource("2_kpfun")
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("2_mt3ks")]
+overwrite_theme = ExtResource("1_2vwfw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_t5gi6")]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+
+[node name="AddWords" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+icon = ExtResource("3_hrpi5")
+icon_alignment = 1
+
+[node name="AddCategory" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+icon = ExtResource("4_kpfun")
+icon_alignment = 1
+
+[node name="ImportWords" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+icon = ExtResource("5_t5gi6")
+icon_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Categorys" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/AddWords" to="." method="_on_add_words_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/AddCategory" to="." method="_on_add_category_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ImportWords" to="." method="_on_import_words_pressed"]

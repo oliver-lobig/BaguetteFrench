@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d3ktkcs6cbxeb"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Credits:
+Pfad-Hintergrund:
+Bild von Paris mit Kanal:  https://pixabay.com/photos/channel-saint-martin-paris-3582081/
+Kuchen: https://pixabay.com/photos/cake-birthday-birthday-cake-916253/
+Freunde: https://pixabay.com/photos/friendship-friends-children-4273865/
+Klettern: https://pixabay.com/photos/climbing-man-adventure-2609319/
+Theater: https://pixabay.com/photos/wells-theatre-norfolk-virginian-210914/
+Weihnachten: https://pixabay.com/photos/christmas-background-christmas-1869902/
+Schule: https://pixabay.com/photos/books-library-room-school-study-2596809/
+Kalendar: https://pixabay.com/photos/calendar-dates-schedule-days-1990453/
+Familie: https://pixabay.com/photos/family-holding-hands-parents-child-1866868/
+Ferien: https://pixabay.com/photos/beach-summer-holidays-3891939/
+Farben: https://pixabay.com/photos/color-pencils-crayons-colorful-8127500/
+Nochmal Schule: https://pixabay.com/photos/timetable-plan-time-school-3665089/
+Untergrund: https://pixabay.com/photos/people-man-lonely-sad-alone-8386051/
+Familie Draußen: https://pixabay.com/photos/family-love-together-outdoors-6639676/
+
+SFX:
+jsfxr"

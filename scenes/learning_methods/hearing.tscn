@@ -1,0 +1,524 @@
+[gd_scene load_steps=31 format=3 uid="uid://cvi5u7gu00k4j"]
+
+[ext_resource type="Theme" uid="uid://c5ruyrdwaufgu" path="res://assets/extra_themes/spring_theme.tres" id="1_3cu4m"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_5y8p7"]
+[ext_resource type="Script" uid="uid://dorbec04xrxxx" path="res://scenes/learning_methods/hearing.gd" id="1_yxdic"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="2_eq3dd"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="3_ebfuh"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="3_f11ii"]
+[ext_resource type="Texture2D" uid="uid://c8ip7l300fa55" path="res://assets/general_ui/bookmark_add_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="4_ip2sc"]
+[ext_resource type="PackedScene" uid="uid://b38kst8ee4bux" path="res://scenes/point_counter.tscn" id="4_p6bjf"]
+[ext_resource type="Texture2D" uid="uid://dtc3it8txr7hd" path="res://assets/general_ui/bookmark_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="5_4uvnm"]
+[ext_resource type="PackedScene" uid="uid://dvpmkvm5ti56p" path="res://scenes/screen_progress_bar.tscn" id="6_1v54s"]
+[ext_resource type="Texture2D" uid="uid://c0vrkfipw5gug" path="res://assets/general_ui/radio_button_unchecked_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="9_ebfuh"]
+[ext_resource type="Texture2D" uid="uid://b6lmqx16ic6i6" path="res://assets/general_ui/blur_medium_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="9_ip2sc"]
+[ext_resource type="PackedScene" uid="uid://dqc5by7x3fmr0" path="res://scenes/baguette_shop/bread_render.tscn" id="10_3cu4m"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="10_82tsc"]
+[ext_resource type="Texture2D" uid="uid://smh4x43w4d6l" path="res://assets/general_ui/radio_button_checked_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="10_ip2sc"]
+[ext_resource type="Texture2D" uid="uid://crj4jrrrvvipa" path="res://assets/general_ui/translate_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="10_kv38a"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="11_1vsnl"]
+[ext_resource type="Texture2D" uid="uid://bxc0lmljttn61" path="res://assets/general_ui/space_bar_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="12_4uvnm"]
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="12_dt1x6"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="15_5y8p7"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="17_1vsnl"]
+[ext_resource type="PackedScene" uid="uid://cg7ned4axk53h" path="res://scenes/flip.tscn" id="18_bb8s5"]
+[ext_resource type="PackedScene" uid="uid://rvmbdi0xqbp0" path="res://scenes/camera_shake.tscn" id="20_s5pk1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4uvnm"]
+bg_color = Color(0.223529, 0.701961, 0.454902, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.223529, 0.701961, 0.454902, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1v54s"]
+bg_color = Color(0.254902, 0.976471, 0.607843, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.254902, 0.976471, 0.607843, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="Animation" id="Animation_3cu4m"]
+resource_name = "down"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/BreadRender:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-31, -13.935), Vector2(-12.875, 21.6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/BreadRender:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.122173056, -0.21816616]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/BreadRender:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.835, 0.835)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/BreadRender:skew")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kv38a"]
+_data = {
+&"down": SubResource("Animation_3cu4m")
+}
+
+[sub_resource type="Animation" id="Animation_kv38a"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%SpeakSpeedLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.8862745, 0.8862745, 0.8862745, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%IntervalTimeLabel:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.8862745, 0.8862745, 0.8862745, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bb8s5"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%SpeakSpeedLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.8862745, 0.8862745, 0.8862745, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%IntervalTimeLabel:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.8862745, 0.8862745, 0.8862745, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vrq5f"]
+_data = {
+&"learn_scene_theme": SubResource("Animation_kv38a"),
+&"spring_theme": SubResource("Animation_bb8s5")
+}
+
+[node name="Hearing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5y8p7")
+script = ExtResource("1_yxdic")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Control" type="Control" parent="Background"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5y8p7")
+
+[node name="ThemeSwitcher" type="Node" parent="Background/Control"]
+script = ExtResource("3_f11ii")
+overwrite_theme = ExtResource("1_5y8p7")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="Panel" type="Panel" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_eq3dd")]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_ebfuh")
+texture_pressed = ExtResource("3_ebfuh")
+texture_hover = ExtResource("3_ebfuh")
+texture_disabled = ExtResource("3_ebfuh")
+texture_focused = ExtResource("3_ebfuh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PointCounter" parent="MarginContainer/VBoxContainer/TopBar" instance=ExtResource("4_p6bjf")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+challenge_type = 3
+
+[node name="Collect" parent="MarginContainer/VBoxContainer/TopBar/PointCounter" index="3"]
+volume_db = -30.0
+
+[node name="MarkButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_ip2sc")
+texture_pressed = ExtResource("4_ip2sc")
+texture_hover = ExtResource("4_ip2sc")
+texture_disabled = ExtResource("4_ip2sc")
+texture_focused = ExtResource("4_ip2sc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarkedButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture_normal = ExtResource("5_4uvnm")
+texture_pressed = ExtResource("5_4uvnm")
+texture_hover = ExtResource("5_4uvnm")
+texture_disabled = ExtResource("5_4uvnm")
+texture_focused = ExtResource("5_4uvnm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ScreenProgressBar" parent="MarginContainer/VBoxContainer" instance=ExtResource("6_1v54s")]
+unique_name_in_owner = true
+layout_mode = 2
+subtract_one = false
+can_skip = true
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SwipeContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="Vocab" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WordContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-298, 300)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VocabOriginal" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("10_82tsc")
+theme_override_font_sizes/font_size = 64
+text = "On na pa peur non?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("11_1vsnl")
+font_type = 3
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="VocabDescription" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_colors/font_color = Color(0.1425, 0.14625, 0.15, 0.443137)
+theme_override_fonts/font = ExtResource("12_dt1x6")
+theme_override_font_sizes/font_size = 32
+text = "[Descriptions can be very, very, very long!]"
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("11_1vsnl")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Controls" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TranslationContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-298, 300)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Translation" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("12_dt1x6")
+theme_override_font_sizes/font_size = 64
+text = "Translation"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("11_1vsnl")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="FlipButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("10_kv38a")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SpeakSpeed" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SpeakSpeed"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("9_ip2sc")
+
+[node name="SpeakSpeedSlider" type="HSlider" parent="MarginContainer/VBoxContainer/SpeakSpeed"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_icons/grabber = ExtResource("9_ebfuh")
+theme_override_icons/grabber_highlight = ExtResource("10_ip2sc")
+theme_override_icons/grabber_disabled = ExtResource("9_ebfuh")
+theme_override_styles/slider = SubResource("StyleBoxFlat_4uvnm")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1v54s")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1v54s")
+min_value = 0.5
+max_value = 3.0
+step = 0.1
+value = 1.0
+exp_edit = true
+
+[node name="SpeakSpeedLabel" type="Label" parent="MarginContainer/VBoxContainer/SpeakSpeed"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_fonts/font = ExtResource("17_1vsnl")
+theme_override_font_sizes/font_size = 32
+text = "1.0x"
+horizontal_alignment = 1
+script = ExtResource("11_1vsnl")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="IntervalTime" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/IntervalTime"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("12_4uvnm")
+
+[node name="IntervalTimerSlider" type="HSlider" parent="MarginContainer/VBoxContainer/IntervalTime"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_icons/grabber = ExtResource("9_ebfuh")
+theme_override_icons/grabber_highlight = ExtResource("10_ip2sc")
+theme_override_icons/grabber_disabled = ExtResource("9_ebfuh")
+theme_override_styles/slider = SubResource("StyleBoxFlat_4uvnm")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1v54s")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1v54s")
+min_value = 0.5
+max_value = 10.0
+step = 0.1
+value = 3.0
+
+[node name="IntervalTimeLabel" type="Label" parent="MarginContainer/VBoxContainer/IntervalTime"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_fonts/font = ExtResource("17_1vsnl")
+theme_override_font_sizes/font_size = 32
+text = "3.0s"
+horizontal_alignment = 1
+script = ExtResource("11_1vsnl")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_eq3dd")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="BreadRender" parent="Control" instance=ExtResource("10_3cu4m")]
+unique_name_in_owner = true
+position = Vector2(-31, -13.935)
+rotation = 0.122173056
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_kv38a")
+}
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("15_5y8p7")]
+overwrite_theme = ExtResource("1_3cu4m")
+
+[node name="AnimationPlayer" parent="ThemeSwitcher" index="0"]
+libraries = {
+&"theme_animations": SubResource("AnimationLibrary_vrq5f")
+}
+
+[node name="Flip" parent="." instance=ExtResource("18_bb8s5")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="CameraShake" parent="." instance=ExtResource("20_s5pk1")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/MarkButton" to="." method="_on_mark_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/MarkedButton" to="." method="_on_marked_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer/FlipButton" to="." method="_on_flip_button_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/SpeakSpeed/SpeakSpeedSlider" to="." method="_on_speak_speed_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/IntervalTime/IntervalTimerSlider" to="." method="_on_interval_timer_slider_value_changed"]
+
+[editable path="MarginContainer/VBoxContainer/TopBar/PointCounter"]
+[editable path="MarginContainer/VBoxContainer/TopBar/PointCounter/CanvasLayer/DoneChallengeOverlay"]
+[editable path="ThemeSwitcher"]

@@ -1,0 +1,268 @@
+[gd_scene load_steps=18 format=3 uid="uid://bnku84egchlgf"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_mt3sl"]
+[ext_resource type="Script" uid="uid://v0k5xflo5dyy" path="res://scenes/own_words/import_csv.gd" id="2_8vivl"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_hb81l"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="3_a6c7d"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="4_hb81l"]
+[ext_resource type="FontFile" uid="uid://fxxd4654wo5e" path="res://assets/fonts/DynaPuff/static/DynaPuff-Bold.ttf" id="6_2qvrx"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="7_6e70f"]
+[ext_resource type="PackedScene" uid="uid://bvqedwx4b8b3f" path="res://scenes/system_bar_spacer_keyboard.tscn" id="7_a6c7d"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="8_pnp1w"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="9_ad2c8"]
+[ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="10_4u1wq"]
+[ext_resource type="Script" uid="uid://bv0od7iu1ywhn" path="res://scenes/custom_nodes/text_check_box.gd" id="11_04vjw"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="12_4x1kq"]
+[ext_resource type="Script" uid="uid://bg81mre3ur8o" path="res://scenes/custom_nodes/text_line_edit.gd" id="13_7lwi2"]
+[ext_resource type="Script" uid="uid://c1kyqmfeobas5" path="res://scenes/custom_nodes/text_option_button.gd" id="14_uxln6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt3sl"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.18594494, 0.5863813, 0.3784512, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hb81l"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.976471, 0.984314, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[node name="ImportCSV" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mt3sl")
+script = ExtResource("2_8vivl")
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("2_hb81l")]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_hb81l")]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_a6c7d")
+texture_pressed = ExtResource("3_a6c7d")
+texture_hover = ExtResource("3_a6c7d")
+texture_disabled = ExtResource("3_a6c7d")
+texture_focused = ExtResource("3_a6c7d")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ViewTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_fonts/font = ExtResource("6_2qvrx")
+theme_override_font_sizes/font_size = 40
+text = "IMPORT_WORDS"
+script = ExtResource("7_6e70f")
+font_type = 3
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Properties" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="LoadCSV" type="Button" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("8_pnp1w")
+theme_override_font_sizes/font_size = 32
+text = "LOAD_CSV"
+script = ExtResource("9_ad2c8")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="SkipFirstLine" type="CheckBox" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_4u1wq")
+button_pressed = true
+text = "SKIP_FIRST_LINE"
+script = ExtResource("11_04vjw")
+font_type = 2
+metadata/_custom_type_script = "uid://bv0od7iu1ywhn"
+
+[node name="French" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("12_4x1kq")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_mt3sl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hb81l")
+placeholder_text = "FRENCH_ROW_ID"
+script = ExtResource("13_7lwi2")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="German" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("12_4x1kq")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_mt3sl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hb81l")
+placeholder_text = "GERMAN_ROW_ID"
+script = ExtResource("13_7lwi2")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="Description" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("12_4x1kq")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_mt3sl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hb81l")
+placeholder_text = "DESCRIPTION_ROW_ID"
+script = ExtResource("13_7lwi2")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="GrammaticalGender" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/font_selected_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/caret_color = Color(1, 0.976471, 0.984314, 1)
+theme_override_colors/selection_color = Color(0.223529, 0.701961, 0.454902, 1)
+theme_override_constants/caret_width = 4
+theme_override_fonts/font = ExtResource("12_4x1kq")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_mt3sl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hb81l")
+placeholder_text = "GRAMMATICAL_GENDER_ROW_ID"
+script = ExtResource("13_7lwi2")
+metadata/_custom_type_script = "uid://bg81mre3ur8o"
+
+[node name="SelectCategory" type="OptionButton" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_4u1wq")
+selected = 0
+item_count = 1
+popup/item_0/text = "WORD_SELECT_CATEGORY"
+popup/item_0/id = 0
+script = ExtResource("14_uxln6")
+font_type = 2
+metadata/_custom_type_script = "uid://c1kyqmfeobas5"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Properties"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Error" type="Label" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95686275, 0.35686275, 0.4117647, 1)
+theme_override_font_sizes/font_size = 32
+text = "Error"
+autowrap_mode = 3
+
+[node name="ActionButton" type="Button" parent="MarginContainer/VBoxContainer/Properties"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("8_pnp1w")
+theme_override_font_sizes/font_size = 32
+text = "IMPORT_WORDS"
+script = ExtResource("9_ad2c8")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="SystemBarSpacerKeyboard" parent="MarginContainer/VBoxContainer" instance=ExtResource("7_a6c7d")]
+layout_mode = 2
+height_offset = 16.0
+standard_size = 32.0
+
+[node name="FileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+title = "Open a File"
+dialog_hide_on_ok = true
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("*.CSV", "*.csv")
+use_native_dialog = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Properties/LoadCSV" to="." method="_on_load_csv_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Properties/ActionButton" to="." method="_on_action_button_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

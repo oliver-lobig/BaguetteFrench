@@ -1,0 +1,666 @@
+[gd_scene load_steps=31 format=3 uid="uid://c8hk3dlxjyuu0"]
+
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://berhmq7n84xcx" path="res://scenes/settings.gd" id="1_gis3k"]
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_uhhto"]
+[ext_resource type="FontFile" uid="uid://fxxd4654wo5e" path="res://assets/fonts/DynaPuff/static/DynaPuff-Bold.ttf" id="4_4ppmf"]
+[ext_resource type="Texture2D" uid="uid://smh4x43w4d6l" path="res://assets/general_ui/radio_button_checked_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="4_gis3k"]
+[ext_resource type="Texture2D" uid="uid://c0vrkfipw5gug" path="res://assets/general_ui/radio_button_unchecked_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="5_83j8s"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="5_uhhto"]
+[ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="7_1g033"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="7_01roj"]
+[ext_resource type="Texture2D" uid="uid://duvi5llkegfn7" path="res://assets/scenes/learning_path/icons/gem.png" id="7_83j8s"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="8_oe2nd"]
+[ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="8_wqwn7"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="9_1g033"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="10_4ppmf"]
+[ext_resource type="Script" uid="uid://bv0od7iu1ywhn" path="res://scenes/custom_nodes/text_check_box.gd" id="11_oe2nd"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="12_01roj"]
+[ext_resource type="Script" uid="uid://c1kyqmfeobas5" path="res://scenes/custom_nodes/text_option_button.gd" id="16_ql1j0"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6wm04"]
+color = Color(1, 0.9764706, 0.9843137, 1)
+thickness = 4
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_gjs24"]
+color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+grow_end = -50.0
+thickness = 4
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am25x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_es4n0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhhto"]
+bg_color = Color(0.14117648, 0.4627451, 0.29411766, 1)
+draw_center = false
+border_width_top = 4
+border_width_bottom = 4
+border_color = Color(0.14117648, 0.4627451, 0.29411766, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjs24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g033"]
+bg_color = Color(0, 0, 0, 1)
+draw_center = false
+border_width_top = 4
+border_width_bottom = 4
+border_color = Color(0.14117648, 0.4627451, 0.29411766, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gis3k"]
+
+[sub_resource type="Animation" id="Animation_01roj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HSeparator:theme_override_styles/separator:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.9764706, 0.9843137, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider:theme_override_styles/slider:border_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14117648, 0.4627451, 0.29411766, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/SizeSlider:theme_override_styles/slider:bg_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14117648, 0.4627451, 0.29411766, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wqwn7"]
+_data = {
+&"RESET": SubResource("Animation_01roj")
+}
+
+[sub_resource type="Animation" id="Animation_oe2nd"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HSeparator:theme_override_styles/separator:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14901961, 0.30980393, 0.22352941, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HSeparator3:theme_override_styles/separator:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14901961, 0.30980393, 0.22352941, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HSeparator2:theme_override_styles/separator:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14901961, 0.30980393, 0.22352941, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HSeparator4:theme_override_styles/separator:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14901961, 0.30980393, 0.22352941, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/SizeSlider:theme_override_styles/slider:bg_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider:theme_override_styles/slider:bg_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_7kvyq"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HSeparator:theme_override_styles/separator:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.2509804, 0.9764706, 0.60784316, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HSeparator3:theme_override_styles/separator:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.2509804, 0.9764706, 0.60784316, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/SizeSlider:theme_override_styles/slider:border_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14117648, 0.4627451, 0.29411766, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider:theme_override_styles/slider:bg_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14117648, 0.4627451, 0.29411766, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider:theme_override_styles/slider:border_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14117648, 0.4627451, 0.29411766, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/SizeSlider:theme_override_styles/slider:bg_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14117648, 0.4627451, 0.29411766, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ql1j0"]
+_data = {
+&"learn_scene_theme": SubResource("Animation_oe2nd"),
+&"spring_theme": SubResource("Animation_7kvyq")
+}
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_uhhto")
+script = ExtResource("1_gis3k")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_5p8wc")]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" groups=["FontColorSwitch"]]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_uhhto")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("4_4ppmf")
+theme_override_font_sizes/font_size = 64
+text = "SETTINGS_TITLE"
+script = ExtResource("5_uhhto")
+font_type = 3
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="ThemeSwitcher" type="Node" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Title"]
+script = ExtResource("10_4ppmf")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_6wm04")
+
+[node name="Learntitle2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("7_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_LANGUAGE"
+script = ExtResource("5_uhhto")
+font_type = 3
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_gjs24")
+
+[node name="LearnSettings2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LanguageGerman" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("7_01roj")
+text = "SETTINGS_LANGUAGE_GERMAN"
+script = ExtResource("8_oe2nd")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="LanguageFrench" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("7_01roj")
+text = "SETTINGS_LANGUAGE_FRENCH"
+script = ExtResource("8_oe2nd")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="HSep" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_am25x")
+
+[node name="Learntitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("7_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_LEARN"
+script = ExtResource("5_uhhto")
+font_type = 3
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_gjs24")
+
+[node name="LearnSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ToFrench" type="CheckBox" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings" groups=["FontColorSwitch"]]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_uhhto")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_focus_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_pressed_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_hover_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_disabled_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("8_wqwn7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_es4n0")
+theme_override_icons/checked = ExtResource("4_gis3k")
+theme_override_icons/unchecked = ExtResource("5_83j8s")
+button_pressed = true
+text = "SETTINGS_LEARN_WAY"
+flat = true
+script = ExtResource("11_oe2nd")
+font_type = 4
+metadata/_custom_type_script = "uid://bv0od7iu1ywhn"
+
+[node name="ThemeSwitcher" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings/ToFrench" instance=ExtResource("9_1g033")]
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings"]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_am25x")
+
+[node name="VisualTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("7_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_VISUAL"
+script = ExtResource("5_uhhto")
+font_type = 3
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_gjs24")
+
+[node name="VisualSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Size" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings" groups=["FontColorSwitch"]]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_uhhto")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("12_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_THEME"
+script = ExtResource("5_uhhto")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="ThemeSwitcher" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings/Size" instance=ExtResource("9_1g033")]
+
+[node name="ThemeOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("7_1g033")
+selected = 0
+item_count = 2
+popup/item_0/text = "SETTINGS_THEME_FOREST"
+popup/item_0/id = 0
+popup/item_1/text = "SETTINGS_THEME_SPRING"
+popup/item_1/id = 1
+script = ExtResource("16_ql1j0")
+font_type = 2
+metadata/_custom_type_script = "uid://c1kyqmfeobas5"
+
+[node name="UseShake" type="CheckBox" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings" groups=["FontColorSwitch"]]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_uhhto")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_focus_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_pressed_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_hover_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_disabled_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("8_wqwn7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_es4n0")
+theme_override_icons/checked = ExtResource("4_gis3k")
+theme_override_icons/unchecked = ExtResource("5_83j8s")
+button_pressed = true
+text = "USE_CAMERA_SHAKE"
+flat = true
+script = ExtResource("11_oe2nd")
+font_type = 4
+metadata/_custom_type_script = "uid://bv0od7iu1ywhn"
+
+[node name="ThemeSwitcher" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings/UseShake" instance=ExtResource("9_1g033")]
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_am25x")
+
+[node name="JewelTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("7_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_PARTICLES"
+script = ExtResource("5_uhhto")
+font_type = 3
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_gjs24")
+
+[node name="JewelSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Active" type="CheckBox" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings" groups=["FontColorSwitch"]]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_uhhto")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_focus_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_pressed_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_hover_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_colors/font_disabled_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("8_wqwn7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_es4n0")
+theme_override_icons/checked = ExtResource("4_gis3k")
+theme_override_icons/unchecked = ExtResource("5_83j8s")
+button_pressed = true
+text = "SETTINGS_PARTICLES_USE"
+flat = true
+script = ExtResource("11_oe2nd")
+font_type = 4
+metadata/_custom_type_script = "uid://bv0od7iu1ywhn"
+
+[node name="ThemeSwitcher" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/Active" instance=ExtResource("9_1g033")]
+
+[node name="Size" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings" groups=["FontColorSwitch"]]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_uhhto")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("12_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_PARTICLES_SIZE"
+script = ExtResource("5_uhhto")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="ThemeSwitcher" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/Size" instance=ExtResource("9_1g033")]
+
+[node name="SizeSlider" type="HSlider" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_icons/grabber = ExtResource("5_83j8s")
+theme_override_icons/grabber_highlight = ExtResource("4_gis3k")
+theme_override_icons/grabber_disabled = ExtResource("4_gis3k")
+theme_override_styles/slider = SubResource("StyleBoxFlat_uhhto")
+min_value = 0.1
+max_value = 1.5
+step = 0.1
+value = 1.1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_gjs24")
+
+[node name="TextureRect" type="Control" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="Gem" type="Sprite2D" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/TextureRect"]
+unique_name_in_owner = true
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_83j8s")
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_gjs24")
+
+[node name="Volume" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings" groups=["FontColorSwitch"]]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_uhhto")
+theme_override_colors/font_color = Color(0.886, 0.886, 0.886, 1)
+theme_override_fonts/font = ExtResource("12_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_PARTICLES_VOLUME"
+script = ExtResource("5_uhhto")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="ThemeSwitcher" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/Volume" instance=ExtResource("9_1g033")]
+
+[node name="VolumeSlider" type="HSlider" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_icons/grabber = ExtResource("5_83j8s")
+theme_override_icons/grabber_highlight = ExtResource("4_gis3k")
+theme_override_icons/grabber_disabled = ExtResource("4_gis3k")
+theme_override_styles/slider = SubResource("StyleBoxFlat_1g033")
+min_value = -40.0
+max_value = 10.0
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_01roj")
+text = "CREDITS"
+script = ExtResource("8_oe2nd")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="HSeparator6" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_am25x")
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 160
+theme_override_styles/separator = SubResource("StyleBoxEmpty_gis3k")
+
+[node name="GemSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"PointParticle"
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("9_1g033")]
+unique_name_in_owner = true
+overwrite_theme = ExtResource("1_uhhto")
+
+[node name="AnimationPlayer" parent="ThemeSwitcher" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_wqwn7"),
+&"theme_animations": SubResource("AnimationLibrary_ql1j0")
+}
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2/LanguageGerman" to="." method="_on_language_german_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2/LanguageFrench" to="." method="_on_language_french_pressed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings/ToFrench" to="." method="_on_to_french_toggled"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings/ThemeOptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings/UseShake" to="." method="_on_use_shake_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/Active" to="." method="_on_check_box_toggled"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/SizeSlider" to="." method="_on_h_slider_drag_ended"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/SizeSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider" to="." method="_on_volume_slider_2_drag_ended"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider" to="." method="_on_volume_slider_2_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+
+[editable path="ThemeSwitcher"]

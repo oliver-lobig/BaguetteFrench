@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbw8xgfc5m7f"]
+
+[ext_resource type="Script" uid="uid://d4i80sy4n5o5g" path="res://scenes/points/crystal_particle.gd" id="1_fxfr3"]
+[ext_resource type="Texture2D" uid="uid://bhqn2p0mn7fx3" path="res://assets/scenes/learning_path/button.svg" id="1_ng1su"]
+
+[node name="CrystalParticle" type="Node2D"]
+top_level = true
+script = ExtResource("1_fxfr3")
+start_point = Vector2(500, 500)
+end_point = Vector2(200, 300)
+radius = 100.0
+end_time = 3.0
+speed = 700.0
+
+[node name="Button" type="Sprite2D" parent="."]
+texture = ExtResource("1_ng1su")

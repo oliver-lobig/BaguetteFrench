@@ -1,0 +1,214 @@
+[gd_scene load_steps=12 format=3 uid="uid://duvn8fsitfxmv"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_5x862"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_6284t"]
+[ext_resource type="Script" uid="uid://bi30palqf2u1t" path="res://scenes/own_words/word_category.gd" id="2_wpqvi"]
+[ext_resource type="Texture2D" uid="uid://c5ucamc3wueyx" path="res://assets/general_ui/arrow_back_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="3_wpqvi"]
+[ext_resource type="Texture2D" uid="uid://562oyc3ityog" path="res://addons/baguettefrenchadmin/delete_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="4_6284t"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="4_iholk"]
+[ext_resource type="FontFile" uid="uid://fxxd4654wo5e" path="res://assets/fonts/DynaPuff/static/DynaPuff-Bold.ttf" id="6_pacys"]
+[ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="6_wpqvi"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="7_my345"]
+[ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="9_my345"]
+[ext_resource type="Texture2D" uid="uid://m1j6b8alr38j" path="res://assets/general_ui/add_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="10_c7bbh"]
+
+[node name="WordCategory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5x862")
+script = ExtResource("2_wpqvi")
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("2_6284t")]
+overwrite_theme = ExtResource("1_5x862")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_iholk")]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_wpqvi")
+texture_pressed = ExtResource("3_wpqvi")
+texture_hover = ExtResource("3_wpqvi")
+texture_disabled = ExtResource("3_wpqvi")
+texture_focused = ExtResource("3_wpqvi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_fonts/font = ExtResource("6_pacys")
+theme_override_font_sizes/font_size = 40
+text = "Test Kategorie"
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("7_my345")
+font_type = 3
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="DeleteButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_6284t")
+texture_pressed = ExtResource("4_6284t")
+texture_hover = ExtResource("4_6284t")
+texture_disabled = ExtResource("4_6284t")
+texture_focused = ExtResource("4_6284t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WordsTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_my345")
+theme_override_font_sizes/font_size = 32
+text = "CUSTOM_WORDS_WORDS"
+script = ExtResource("7_my345")
+font_type = 2
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="AddWord" type="TextureButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_c7bbh")
+
+[node name="Words" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VerbsTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_my345")
+theme_override_font_sizes/font_size = 32
+text = "CUSTOM_WORDS_VERBS"
+script = ExtResource("7_my345")
+font_type = 2
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="AddVerb" type="TextureButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("10_c7bbh")
+
+[node name="Verbs" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_iholk")]
+layout_mode = 2
+
+[node name="ReallyDelete" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5x862")
+
+[node name="MarginContainer" type="MarginContainer" parent="ReallyDelete"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReallyDelete/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Title" type="Label" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "REALLY_DELETE"
+autowrap_mode = 3
+
+[node name="Control" type="Control" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DontDelete" type="Button" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "NO"
+
+[node name="Delete" type="Button" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "YES"
+
+[node name="ThemeSwitcher" type="Node" parent="ReallyDelete"]
+script = ExtResource("6_wpqvi")
+metadata/_custom_type_script = "uid://ejjs0kfm782h"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer/AddWord" to="." method="_on_add_word_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2/AddVerb" to="." method="_on_add_verb_pressed"]
+[connection signal="pressed" from="ReallyDelete/MarginContainer/VBoxContainer/DontDelete" to="." method="_on_dont_delete_pressed"]
+[connection signal="pressed" from="ReallyDelete/MarginContainer/VBoxContainer/Delete" to="." method="_on_delete_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvqedwx4b8b3f"]
+
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="1_vh6c4"]
+[ext_resource type="Script" uid="uid://bsh210qg7bfo7" path="res://scripts/utils/system_bar_spacer_keyboard.gd" id="2_2y0qk"]
+
+[node name="SystemBarSpacerKeyboard" instance=ExtResource("1_vh6c4")]
+script = ExtResource("2_2y0qk")
+height_offset = 0.0
