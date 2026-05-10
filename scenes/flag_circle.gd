@@ -9,6 +9,9 @@ const FLAG_CIRCLE_2 = preload("uid://d3e8gs66okkgb")
 var last_country_code = ""
 
 func _ready() -> void:
+	if OS.get_name() == "Web":
+		hide()
+		return
 	var original_material = FLAG_CIRCLE if country_code != "fr" else FLAG_CIRCLE_2
 	var mat: ShaderMaterial = original_material.duplicate_deep(Resource.DEEP_DUPLICATE_ALL)
 	material = mat
