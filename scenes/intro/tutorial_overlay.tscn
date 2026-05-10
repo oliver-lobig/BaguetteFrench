@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxjn036juaoou"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_247ja"]
+[ext_resource type="Script" uid="uid://nrpl8fa5e0i" path="res://scenes/intro/tutorial_overlay.gd" id="1_n8vhb"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="2_v2hv8"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="3_1hdub"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="5_ryfqj"]
+[ext_resource type="PackedScene" uid="uid://ctn68u2gst1mo" path="res://scenes/intro/setup_progress.tscn" id="6_ryfqj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryfqj"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1v5v6"]
+bg_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="TutorialOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_247ja")
+script = ExtResource("1_n8vhb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12835406, 0.20285092, 0.17184411, 0.8)
+
+[node name="Slides" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slide1" type="Control" parent="Slides"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -97.0
+offset_right = 96.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_v2hv8")
+text = "NEXT_BUTTON"
+script = ExtResource("3_1hdub")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("5_ryfqj")]
+
+[node name="SetupProgress" parent="." instance=ExtResource("6_ryfqj")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 15.0
+offset_top = 14.0
+offset_right = -16.0
+offset_bottom = 45.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ryfqj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1v5v6")
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

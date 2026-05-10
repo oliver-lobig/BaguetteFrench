@@ -2,7 +2,9 @@
 extends Node
 
 @warning_ignore("unused_signal")
-signal search_dictionary
+signal search_dictionary()
+@warning_ignore("unused_signal")
+signal downloaded_new_words()
 
 var search_query: String = ""
 
@@ -57,6 +59,14 @@ var verbs: Dictionary = {}
 var challenge_progress: Dictionary = {
 	
 }
+
+# TUTORIAL
+
+var finished_tutorial_scenes: Array = []
+var skip_tutorial: bool = false
+var finished_intro: bool = false
+var in_tutorial_screen: bool = false
+
 # OWN WORDS
 
 var own_categorys = {}
@@ -65,6 +75,8 @@ var word_edit_mode = "add" # also "edit"
 var original_edit_word: Word = null
 var original_edit_verb: Verb = null
 var current_open_category: String = ""
+
+
 
 func _ready() -> void:
 	Vars.word_selection_type = "verbs"
@@ -105,6 +117,7 @@ func update_check_done(_result: int, _response_code: int, _headers: PackedString
 		update_word_data()
 
 func update_word_data():
+	new_word_request = HTTPRequest.new()
 	View.new_content.emit("Es gibt neue Wörter!")
 	new_word_request.download_file = "user://online_local/words.json"
 	new_word_request.request_completed.connect(new_words_downloaded)
@@ -113,6 +126,7 @@ func update_word_data():
 
 func new_words_downloaded(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray):
 	JsonSerializer.load_words("user://online_local/words.json")
+	downloaded_new_words.emit()
 
 func add_chapters():
 	if FileAccess.file_exists("user://data/save_file.tres"):
@@ -204,7 +218,9 @@ func load_saves():
 	for verb in verbs:
 		if !verb in read_only_save_file.verbs:
 			verbs.erase(verb)
-		
+	finished_tutorial_scenes = save_file.finished_tutorial_scenes
+	skip_tutorial = save_file.skip_tutorial
+	finished_intro = save_file.finished_intro
 	baguette_style_data = save_file.baguette_style_data
 	max_unit = save_file.max_unit
 	all_learn_words = save_file.all_learn_words
@@ -247,6 +263,9 @@ func save_saves(context: String = "none"):
 	save_file.field_progress = field_progress
 	save_file.words = words
 	save_file.marked_words = marked_words
+	save_file.finished_tutorial_scenes = finished_tutorial_scenes
+	save_file.skip_tutorial = skip_tutorial
+	save_file.finished_intro = finished_intro
 	var save_path = "user://data/save_file.tres" if !Engine.is_editor_hint() else "user://data/save_file_editor.tres"
 	var error = ResourceSaver.save(save_file,save_path)
 	if error != OK:

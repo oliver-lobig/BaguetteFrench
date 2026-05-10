@@ -33,6 +33,7 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	change_theme()
+	IntroHandler.update_theme.connect(change_theme)
 	if Engine.is_editor_hint():
 		if get_child_count() == 1:
 			if !$AnimationPlayer.has_animation_library("theme_animations"):

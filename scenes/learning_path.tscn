@@ -1,9 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://t0evgt0qora8"]
+[gd_scene load_steps=13 format=3 uid="uid://t0evgt0qora8"]
 
 [ext_resource type="Script" uid="uid://e63kavnn2aom" path="res://scenes/learning_path.gd" id="1_4nyo5"]
 [ext_resource type="PackedScene" uid="uid://cru7nlfqnf7ry" path="res://assets/scenes/learning_path/learning_bg.tscn" id="2_2gi40"]
 [ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="2_cyju5"]
 [ext_resource type="Script" uid="uid://biyy7pkge5n74" path="res://scenes/lines.gd" id="3_gwfkj"]
+[ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="5_ra161"]
+[ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="6_jfwkf"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="7_nxk4p"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="8_hpuur"]
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="9_40ahj"]
+[ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="10_yjx3u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ra161"]
+shader = ExtResource("10_yjx3u")
+shader_parameter/FloatParameter = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfwkf"]
+border_width_bottom = 128
+border_color = Color(1, 1, 1, 0)
+border_blend = true
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="LearningPath" type="Control"]
 layout_mode = 3
@@ -50,4 +67,77 @@ size_flags_horizontal = 3
 layout_mode = 2
 mouse_filter = 1
 
+[node name="TutorialOverlay" parent="." instance=ExtResource("5_ra161")]
+layout_mode = 1
+tutorial_scene_name = "path"
+
+[node name="TextElement" type="Label" parent="TutorialOverlay/Slides/Slide1" index="0"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -284.5
+offset_top = -686.0
+offset_right = 76.5
+offset_bottom = -600.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("7_nxk4p")
+theme_override_font_sizes/font_size = 48
+text = "TUTORIAL_PATH"
+script = ExtResource("8_hpuur")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="TextElement2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -282.5
+offset_top = -617.0
+offset_right = 282.5
+offset_bottom = -416.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("9_40ahj")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_PATH_DESCRIPTION"
+autowrap_mode = 3
+script = ExtResource("8_hpuur")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="2"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 0
+offset_left = 281.0
+offset_top = 579.0
+offset_right = 361.0
+offset_bottom = 659.0
+texture = ExtResource("6_jfwkf")
+flip_v = true
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+material = SubResource("ShaderMaterial_ra161")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 544.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jfwkf")
+
+[node name="NextButton" parent="TutorialOverlay" index="2"]
+offset_top = -401.0
+offset_bottom = -352.0
+
 [connection signal="scroll_ended" from="ScrollContainer" to="." method="_on_scroll_container_scroll_ended"]
+
+[editable path="TutorialOverlay"]

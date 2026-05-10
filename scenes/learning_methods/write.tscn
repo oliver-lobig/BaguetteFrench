@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ujc2rtdcuwaw"]
+[gd_scene load_steps=36 format=3 uid="uid://ujc2rtdcuwaw"]
 
 [ext_resource type="Script" uid="uid://c65u0ivtdwmwg" path="res://scenes/learning_methods/write.gd" id="1_qv2ud"]
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_skuuk"]
@@ -24,10 +24,15 @@
 [ext_resource type="Script" uid="uid://bimp11bbjxjlq" path="res://scenes/custom_nodes/text_text_edit.gd" id="19_hltkm"]
 [ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="19_poly4"]
 [ext_resource type="Script" uid="uid://cwtcts3ifl3vf" path="res://scenes/custom_nodes/text_rich_text_label.gd" id="20_hltkm"]
+[ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="25_hltkm"]
+[ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="26_2eah0"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="27_lsbc4"]
+[ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="28_rr20u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6wlv5"]
 shader = ExtResource("10_5rukw")
 shader_parameter/ShadowColor = Color(0.6337567, 0.6337569, 0.6337564, 1)
+shader_parameter/FloatParameter = 2.0
 shader_parameter/Texture2DParameter = ExtResource("11_g4r71")
 shader_parameter/ModulateTexture = Color(0.8862745, 0.8862745, 0.8862745, 1)
 
@@ -101,6 +106,23 @@ _data = {
 &"RESET": SubResource("Animation_fr6sp"),
 &"down": SubResource("Animation_skuuk")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7dhvp"]
+shader = ExtResource("28_rr20u")
+shader_parameter/FloatParameter = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbf1k"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="Write" type="Control"]
 layout_mode = 3
@@ -237,7 +259,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.145098, 0.14902, 0.152941, 1)
 theme_override_fonts/font = ExtResource("10_bl6og")
 theme_override_font_sizes/font_size = 64
-text = "On na pa peur non?"
+text = "TEST WORD"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -418,9 +440,203 @@ layout_mode = 1
 
 [node name="CameraShake" parent="." instance=ExtResource("17_il81o")]
 
+[node name="TutorialOverlay" parent="." instance=ExtResource("25_hltkm")]
+visible = false
+layout_mode = 1
+tutorial_scene_name = "write"
+
+[node name="ColorRect" parent="TutorialOverlay" index="0"]
+offset_top = -4.0
+offset_bottom = -4.0
+
+[node name="Slide1" parent="TutorialOverlay/Slides" index="0"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -227.0
+offset_top = 579.0
+offset_right = -147.0
+offset_bottom = 659.0
+grow_horizontal = 0
+texture = ExtResource("26_2eah0")
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 272.0
+offset_right = 602.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("27_lsbc4")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_WRITE"
+script = ExtResource("11_te68n")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 336.0
+offset_right = 625.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_ov60y")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_WRITE_DESCRIPTION"
+autowrap_mode = 3
+script = ExtResource("11_te68n")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+material = SubResource("ShaderMaterial_7dhvp")
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -628.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kbf1k")
+
+[node name="Slide2" type="Control" parent="TutorialOverlay/Slides" index="1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide2"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -546.0
+offset_top = 571.0
+offset_right = -466.0
+offset_bottom = 651.0
+grow_horizontal = 0
+texture = ExtResource("26_2eah0")
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 272.0
+offset_right = 602.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("27_lsbc4")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_WRITE"
+script = ExtResource("11_te68n")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 336.0
+offset_right = 625.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_ov60y")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_WRITE_DESCRIPTION_DUNNO"
+autowrap_mode = 3
+script = ExtResource("11_te68n")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide2/Label2"]
+material = SubResource("ShaderMaterial_7dhvp")
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = 245.0
+offset_right = -21.0
+offset_bottom = 873.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kbf1k")
+
+[node name="Slide3" type="Control" parent="TutorialOverlay/Slides" index="2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 272.0
+offset_right = 602.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("27_lsbc4")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_WRITE"
+script = ExtResource("11_te68n")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 336.0
+offset_right = 625.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_ov60y")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_WRITE_DESCRIPTION_CORRECT"
+autowrap_mode = 3
+script = ExtResource("11_te68n")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide3"]
+material = SubResource("ShaderMaterial_7dhvp")
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -628.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kbf1k")
+
+[node name="NextButton" parent="TutorialOverlay" index="2"]
+z_index = 115
+offset_left = -104.0
+offset_top = -777.0
+offset_right = 88.0
+offset_bottom = -728.0
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/MarkButton" to="." method="_on_mark_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/MarkedButton" to="." method="_on_marked_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/VBoxContainer/Buttons/ButtonA" to="." method="_on_button_a_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/VBoxContainer/Buttons/ButtonB" to="." method="_on_done_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/VBoxContainer/Buttons/FlipButton" to="." method="_on_flip_button_pressed"]
+
+[editable path="TutorialOverlay"]

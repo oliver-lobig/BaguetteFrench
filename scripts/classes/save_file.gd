@@ -33,3 +33,7 @@ class_name SaveFile
 @export var challenge_progress: Dictionary = {
 	
 }
+
+@export var finished_tutorial_scenes: Array = []
+@export var skip_tutorial: bool = false
+@export var finished_intro: bool = false

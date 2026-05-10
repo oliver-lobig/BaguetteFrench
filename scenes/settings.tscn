@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c8hk3dlxjyuu0"]
+[gd_scene load_steps=71 format=3 uid="uid://c8hk3dlxjyuu0"]
 
 [ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://berhmq7n84xcx" path="res://scenes/settings.gd" id="1_gis3k"]
@@ -13,10 +13,18 @@
 [ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="8_oe2nd"]
 [ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="8_wqwn7"]
 [ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="9_1g033"]
+[ext_resource type="PackedScene" uid="uid://nb0nlsan84pk" path="res://scripts/classes/flag_circle.tscn" id="9_k00b3"]
+[ext_resource type="Texture2D" uid="uid://bysy6hmfvqob6" path="res://assets/general_ui/flag-icons/flags/1x1/de.svg" id="10_3gwh8"]
 [ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="10_4ppmf"]
+[ext_resource type="Texture2D" uid="uid://lg2mx5q215jl" path="res://assets/general_ui/flag-icons/flags/1x1/fr.svg" id="11_f1e71"]
 [ext_resource type="Script" uid="uid://bv0od7iu1ywhn" path="res://scenes/custom_nodes/text_check_box.gd" id="11_oe2nd"]
 [ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="12_01roj"]
 [ext_resource type="Script" uid="uid://c1kyqmfeobas5" path="res://scenes/custom_nodes/text_option_button.gd" id="16_ql1j0"]
+[ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="21_3gwh8"]
+[ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="22_q4e06"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="23_w3ind"]
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="24_nilcw"]
+[ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="25_6dg6e"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6wm04"]
 color = Color(1, 0.9764706, 0.9843137, 1)
@@ -26,6 +34,304 @@ thickness = 4
 color = Color(0.14901961, 0.30980393, 0.22352941, 1)
 grow_end = -50.0
 thickness = 4
+
+[sub_resource type="VisualShaderNodeCompare" id="VisualShaderNodeCompare_q4e06"]
+default_input_values = [0, 0.0, 1, 0.0, 2, 0.1]
+
+[sub_resource type="VisualShaderNodeSwitch" id="VisualShaderNodeSwitch_w3ind"]
+default_input_values = [0, false, 1, Vector3(1, 1, 1), 2, Vector3(0, 0, 0)]
+op_type = 4
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_nilcw"]
+parameter_name = "ShadowColor"
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_6dg6e"]
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_g1x8m"]
+parameter_name = "ModulateTexture"
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_5tgmq"]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_bvmy7"]
+parameter_name = "FloatParameter"
+default_value_enabled = true
+default_value = 2.0
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_s1xtb"]
+parameter_name = "Texture2DParameter"
+texture_repeat = 1
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_slfok"]
+output_port_for_preview = 0
+source = 5
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_1hxbv"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_bfx0v"]
+default_input_values = [1, Vector2(2, 2), 2, Vector2(0, 0)]
+function = 1
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_st1ee"]
+operator = 2
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_3p4mg"]
+input_name = "color"
+
+[sub_resource type="VisualShader" id="VisualShader_8nnln"]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform vec4 ShadowColor : source_color;
+uniform float FloatParameter = 2.0;
+uniform sampler2D Texture2DParameter : repeat_enable;
+uniform vec4 ModulateTexture : source_color;
+
+
+
+void fragment() {
+// Input:9
+	vec4 n_out9p0 = COLOR;
+
+
+// Compare:10
+	float n_in10p1 = 0.00000;
+	float n_in10p2 = 0.10000;
+	bool n_out10p0 = (abs(n_out9p0.x - n_in10p1) < n_in10p2);
+
+// ColorParameter:12
+	vec4 n_out12p0 = ShadowColor;
+
+
+// Input:4
+	vec2 n_out4p0 = UV;
+
+
+// FloatParameter:16
+	float n_out16p0 = FloatParameter;
+
+
+// VectorCompose:15
+	vec2 n_out15p0 = vec2(n_out16p0, n_out16p0);
+
+
+// UVFunc:5
+	vec2 n_in5p2 = vec2(0.00000, 0.00000);
+	vec2 n_out5p0 = (n_out4p0 - n_in5p2) * n_out15p0 + n_in5p2;
+
+
+	vec4 n_out3p0;
+// Texture2D:3
+	n_out3p0 = texture(Texture2DParameter, n_out5p0);
+
+
+// ColorParameter:14
+	vec4 n_out14p0 = ModulateTexture;
+
+
+// VectorOp:13
+	vec3 n_out13p0 = vec3(n_out3p0.xyz) * vec3(n_out14p0.xyz);
+
+
+	vec3 n_out11p0;
+// Switch:11
+	n_out11p0 = mix(n_out13p0, vec3(n_out12p0.xyz), float(n_out10p0));
+
+
+// Output:0
+	COLOR.rgb = n_out11p0;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(1460, 380)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_s1xtb")
+nodes/fragment/2/position = Vector2(-500, 580)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_slfok")
+nodes/fragment/3/position = Vector2(140, 360)
+nodes/fragment/4/node = SubResource("VisualShaderNodeInput_1hxbv")
+nodes/fragment/4/position = Vector2(-620, 80)
+nodes/fragment/5/node = SubResource("VisualShaderNodeUVFunc_bfx0v")
+nodes/fragment/5/position = Vector2(-120, 100)
+nodes/fragment/6/node = SubResource("VisualShaderNodeVectorOp_st1ee")
+nodes/fragment/6/position = Vector2(340, -100)
+nodes/fragment/9/node = SubResource("VisualShaderNodeInput_3p4mg")
+nodes/fragment/9/position = Vector2(-100, 40)
+nodes/fragment/10/node = SubResource("VisualShaderNodeCompare_q4e06")
+nodes/fragment/10/position = Vector2(460, 20)
+nodes/fragment/11/node = SubResource("VisualShaderNodeSwitch_w3ind")
+nodes/fragment/11/position = Vector2(960, 160)
+nodes/fragment/12/node = SubResource("VisualShaderNodeColorParameter_nilcw")
+nodes/fragment/12/position = Vector2(760, 740)
+nodes/fragment/13/node = SubResource("VisualShaderNodeVectorOp_6dg6e")
+nodes/fragment/13/position = Vector2(660, 260)
+nodes/fragment/14/node = SubResource("VisualShaderNodeColorParameter_g1x8m")
+nodes/fragment/14/position = Vector2(380, 480)
+nodes/fragment/15/node = SubResource("VisualShaderNodeVectorCompose_5tgmq")
+nodes/fragment/15/position = Vector2(-520, 240)
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatParameter_bvmy7")
+nodes/fragment/16/position = Vector2(-820, 220)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 4, 0, 5, 0, 5, 0, 3, 0, 10, 0, 11, 0, 9, 0, 10, 0, 12, 0, 11, 1, 14, 0, 13, 1, 11, 0, 0, 0, 3, 0, 13, 0, 13, 0, 11, 2, 15, 0, 5, 1, 16, 0, 15, 0, 16, 0, 15, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8vrx8"]
+shader = SubResource("VisualShader_8nnln")
+shader_parameter/ShadowColor = Color(1, 1, 1, 1)
+shader_parameter/FloatParameter = 1.0
+shader_parameter/Texture2DParameter = ExtResource("10_3gwh8")
+shader_parameter/ModulateTexture = Color(1, 1, 1, 1)
+
+[sub_resource type="VisualShaderNodeCompare" id="VisualShaderNodeCompare_83xrp"]
+default_input_values = [0, 0.0, 1, 0.0, 2, 0.1]
+
+[sub_resource type="VisualShaderNodeSwitch" id="VisualShaderNodeSwitch_to4p8"]
+default_input_values = [0, false, 1, Vector3(1, 1, 1), 2, Vector3(0, 0, 0)]
+op_type = 4
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_3jqc1"]
+parameter_name = "ShadowColor"
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_giffp"]
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_3qb4m"]
+parameter_name = "ModulateTexture"
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_ynm0n"]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_81qdq"]
+parameter_name = "FloatParameter"
+default_value_enabled = true
+default_value = 2.0
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_2iuh5"]
+parameter_name = "Texture2DParameter"
+texture_repeat = 1
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_mctva"]
+output_port_for_preview = 0
+source = 5
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_d63bh"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_2pu5r"]
+default_input_values = [1, Vector2(2, 2), 2, Vector2(0, 0)]
+function = 1
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_wqg1u"]
+operator = 2
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_4f81e"]
+input_name = "color"
+
+[sub_resource type="VisualShader" id="VisualShader_8ejtp"]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform vec4 ShadowColor : source_color;
+uniform float FloatParameter = 2.0;
+uniform sampler2D Texture2DParameter : repeat_enable;
+uniform vec4 ModulateTexture : source_color;
+
+
+
+void fragment() {
+// Input:9
+	vec4 n_out9p0 = COLOR;
+
+
+// Compare:10
+	float n_in10p1 = 0.00000;
+	float n_in10p2 = 0.10000;
+	bool n_out10p0 = (abs(n_out9p0.x - n_in10p1) < n_in10p2);
+
+// ColorParameter:12
+	vec4 n_out12p0 = ShadowColor;
+
+
+// Input:4
+	vec2 n_out4p0 = UV;
+
+
+// FloatParameter:16
+	float n_out16p0 = FloatParameter;
+
+
+// VectorCompose:15
+	vec2 n_out15p0 = vec2(n_out16p0, n_out16p0);
+
+
+// UVFunc:5
+	vec2 n_in5p2 = vec2(0.00000, 0.00000);
+	vec2 n_out5p0 = (n_out4p0 - n_in5p2) * n_out15p0 + n_in5p2;
+
+
+	vec4 n_out3p0;
+// Texture2D:3
+	n_out3p0 = texture(Texture2DParameter, n_out5p0);
+
+
+// ColorParameter:14
+	vec4 n_out14p0 = ModulateTexture;
+
+
+// VectorOp:13
+	vec3 n_out13p0 = vec3(n_out3p0.xyz) * vec3(n_out14p0.xyz);
+
+
+	vec3 n_out11p0;
+// Switch:11
+	n_out11p0 = mix(n_out13p0, vec3(n_out12p0.xyz), float(n_out10p0));
+
+
+// Output:0
+	COLOR.rgb = n_out11p0;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(1460, 380)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_2iuh5")
+nodes/fragment/2/position = Vector2(-500, 580)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_mctva")
+nodes/fragment/3/position = Vector2(140, 360)
+nodes/fragment/4/node = SubResource("VisualShaderNodeInput_d63bh")
+nodes/fragment/4/position = Vector2(-620, 80)
+nodes/fragment/5/node = SubResource("VisualShaderNodeUVFunc_2pu5r")
+nodes/fragment/5/position = Vector2(-120, 100)
+nodes/fragment/6/node = SubResource("VisualShaderNodeVectorOp_wqg1u")
+nodes/fragment/6/position = Vector2(340, -100)
+nodes/fragment/9/node = SubResource("VisualShaderNodeInput_4f81e")
+nodes/fragment/9/position = Vector2(-100, 40)
+nodes/fragment/10/node = SubResource("VisualShaderNodeCompare_83xrp")
+nodes/fragment/10/position = Vector2(460, 20)
+nodes/fragment/11/node = SubResource("VisualShaderNodeSwitch_to4p8")
+nodes/fragment/11/position = Vector2(960, 160)
+nodes/fragment/12/node = SubResource("VisualShaderNodeColorParameter_3jqc1")
+nodes/fragment/12/position = Vector2(760, 740)
+nodes/fragment/13/node = SubResource("VisualShaderNodeVectorOp_giffp")
+nodes/fragment/13/position = Vector2(660, 260)
+nodes/fragment/14/node = SubResource("VisualShaderNodeColorParameter_3qb4m")
+nodes/fragment/14/position = Vector2(380, 480)
+nodes/fragment/15/node = SubResource("VisualShaderNodeVectorCompose_ynm0n")
+nodes/fragment/15/position = Vector2(-520, 240)
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatParameter_81qdq")
+nodes/fragment/16/position = Vector2(-820, 220)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 4, 0, 5, 0, 5, 0, 3, 0, 10, 0, 11, 0, 9, 0, 10, 0, 12, 0, 11, 1, 14, 0, 13, 1, 11, 0, 0, 0, 3, 0, 13, 0, 13, 0, 11, 2, 15, 0, 5, 1, 16, 0, 15, 0, 16, 0, 15, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qrxsy"]
+shader = SubResource("VisualShader_8ejtp")
+shader_parameter/ShadowColor = Color(1, 1, 1, 1)
+shader_parameter/FloatParameter = 1.0
+shader_parameter/Texture2DParameter = ExtResource("11_f1e71")
+shader_parameter/ModulateTexture = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am25x"]
 
@@ -255,6 +561,23 @@ _data = {
 &"spring_theme": SubResource("Animation_7kvyq")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sv5j0"]
+shader = ExtResource("25_6dg6e")
+shader_parameter/FloatParameter = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0elr4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
 [node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -355,6 +678,14 @@ text = "SETTINGS_LANGUAGE_GERMAN"
 script = ExtResource("8_oe2nd")
 metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
+[node name="FlagCircle" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2/LanguageGerman" instance=ExtResource("9_k00b3")]
+material = SubResource("ShaderMaterial_8vrx8")
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 44.0
+
 [node name="LanguageFrench" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -363,6 +694,15 @@ theme_override_fonts/font = ExtResource("7_01roj")
 text = "SETTINGS_LANGUAGE_FRENCH"
 script = ExtResource("8_oe2nd")
 metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="FlagCircle2" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2/LanguageFrench" instance=ExtResource("9_k00b3")]
+material = SubResource("ShaderMaterial_qrxsy")
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 44.0
+country_code = "fr"
 
 [node name="HSep" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2"]
 layout_mode = 2
@@ -417,6 +757,46 @@ metadata/_custom_type_script = "uid://bv0od7iu1ywhn"
 [node name="ThemeSwitcher" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings/ToFrench" instance=ExtResource("9_1g033")]
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings"]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_am25x")
+
+[node name="TutorialTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("7_01roj")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_TUTORIAL"
+script = ExtResource("5_uhhto")
+font_type = 3
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="HSeparator7" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_gjs24")
+
+[node name="TutorialSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RestartTutorial" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/TutorialSettings"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_01roj")
+text = "SETTINGS_TUTORIAL_RESTART"
+script = ExtResource("8_oe2nd")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="StopTutorial" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/TutorialSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_01roj")
+text = "SETTINGS_TUTORIAL_STOP"
+script = ExtResource("8_oe2nd")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/TutorialSettings"]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_am25x")
@@ -651,9 +1031,77 @@ libraries = {
 &"theme_animations": SubResource("AnimationLibrary_ql1j0")
 }
 
+[node name="TutorialOverlay" parent="." instance=ExtResource("21_3gwh8")]
+visible = false
+layout_mode = 1
+tutorial_scene_name = "settings"
+
+[node name="ColorRect" parent="TutorialOverlay" index="0"]
+offset_top = -4.0
+offset_bottom = -4.0
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -387.0
+offset_top = 641.0
+offset_right = -307.0
+offset_bottom = 721.0
+grow_horizontal = 0
+texture = ExtResource("22_q4e06")
+flip_v = true
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 728.0
+offset_right = 602.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("23_w3ind")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_SETTINGS"
+script = ExtResource("5_uhhto")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 792.0
+offset_right = 625.0
+offset_bottom = 883.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("24_nilcw")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_SETTINGS_DESCRIPTION"
+autowrap_mode = 3
+script = ExtResource("5_uhhto")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+material = SubResource("ShaderMaterial_sv5j0")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 713.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0elr4")
+
+[node name="NextButton" parent="TutorialOverlay" index="2"]
+offset_top = -417.0
+offset_bottom = -368.0
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2/LanguageGerman" to="." method="_on_language_german_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings2/LanguageFrench" to="." method="_on_language_french_pressed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/LearnSettings/ToFrench" to="." method="_on_to_french_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/TutorialSettings/RestartTutorial" to="." method="_on_restart_tutorial_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/TutorialSettings/StopTutorial" to="." method="_on_stop_tutorial_pressed"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings/ThemeOptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VisualSettings/UseShake" to="." method="_on_use_shake_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/Active" to="." method="_on_check_box_toggled"]
@@ -664,3 +1112,4 @@ libraries = {
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 
 [editable path="ThemeSwitcher"]
+[editable path="TutorialOverlay"]

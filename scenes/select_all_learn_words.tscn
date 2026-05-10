@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://buxqvq1bv0kfj"]
+[gd_scene load_steps=23 format=3 uid="uid://buxqvq1bv0kfj"]
 
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_m0qnr"]
 [ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="2_kakea"]
@@ -12,6 +12,11 @@
 [ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="9_wcets"]
 [ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="10_nqu1m"]
 [ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="11_8ferd"]
+[ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="13_wy7gi"]
+[ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="14_njbls"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="15_uitgc"]
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="16_w1a62"]
+[ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="17_1t5vj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8pi4"]
 
@@ -20,6 +25,23 @@ color = Color(0.14901961, 0.30980393, 0.22352941, 1)
 thickness = 4
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kakea"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2tl5l"]
+shader = ExtResource("17_1t5vj")
+shader_parameter/FloatParameter = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_av25x"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="SelectAllLearnWords" type="Control"]
 layout_mode = 3
@@ -177,6 +199,75 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_kakea")
 [node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_o8pi4")]
 layout_mode = 2
 
+[node name="TutorialOverlay" parent="." instance=ExtResource("13_wy7gi")]
+layout_mode = 1
+tutorial_scene_name = "select"
+
+[node name="ColorRect" parent="TutorialOverlay" index="0"]
+offset_top = -4.0
+offset_bottom = -4.0
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 24.0
+offset_right = -280.0
+offset_bottom = 104.0
+grow_horizontal = 0
+texture = ExtResource("14_njbls")
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 504.0
+offset_right = 602.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("15_uitgc")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_SELECT"
+script = ExtResource("7_5w3ow")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 568.0
+offset_right = 625.0
+offset_bottom = 887.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("16_w1a62")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_SELECT_DESCRIPTION"
+autowrap_mode = 3
+script = ExtResource("7_5w3ow")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+material = SubResource("ShaderMaterial_2tl5l")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 496.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_av25x")
+
+[node name="NextButton" parent="TutorialOverlay" index="2"]
+offset_top = -417.0
+offset_bottom = -368.0
+
+[node name="SetupProgress" parent="TutorialOverlay" index="4"]
+step = 1.0
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/OnlyMarked" to="." method="reload_selection"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CheckBox2" to="." method="_on_check_box_2_pressed"]
+
+[editable path="TutorialOverlay"]

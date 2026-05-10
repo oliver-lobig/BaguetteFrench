@@ -21,7 +21,8 @@ func _ready() -> void:
 	else:
 		%LanguageGerman.disabled = false
 		%LanguageFrench.disabled = true
-
+	if Vars.skip_tutorial == true:
+		%StopTutorial.disabled = true
 func _on_check_box_toggled(toggled_on: bool) -> void:
 	Vars.settings_data.activate_jewel_particles = toggled_on
 	Vars.save_saves("Active Particles toggeled")
@@ -96,3 +97,16 @@ func _on_use_shake_toggled(toggled_on: bool) -> void:
 
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")
+
+
+func _on_restart_tutorial_pressed() -> void:
+	Vars.skip_tutorial = false
+	%StopTutorial.disabled = false
+	Vars.finished_tutorial_scenes = []
+	Vars.save_saves()
+
+
+func _on_stop_tutorial_pressed() -> void:
+	%StopTutorial.disabled = true
+	Vars.skip_tutorial = true
+	Vars.save_saves()

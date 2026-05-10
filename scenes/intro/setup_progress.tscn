@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctn68u2gst1mo"]
+
+[ext_resource type="Script" uid="uid://dpojkp7504vl6" path="res://scenes/intro/setup_progress.gd" id="1_a8q7g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghrbm"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8q7g"]
+bg_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.14901961, 0.30980393, 0.22352941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="SetupProgress" type="ProgressBar"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_ghrbm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a8q7g")
+max_value = 5.0
+show_percentage = false
+script = ExtResource("1_a8q7g")

@@ -1,0 +1,150 @@
+[gd_scene load_steps=14 format=3 uid="uid://bxxwtqmync0k7"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_adcf4"]
+[ext_resource type="Script" uid="uid://clwq3iaof31rx" path="res://scenes/intro/load_words.gd" id="2_iy6gw"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="3_duvg1"]
+[ext_resource type="PackedScene" uid="uid://ctn68u2gst1mo" path="res://scenes/intro/setup_progress.tscn" id="4_p33ej"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="5_oqw5l"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="6_3r6dg"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="7_33i7i"]
+[ext_resource type="Texture2D" uid="uid://uc77nwmi1thb" path="res://assets/general_ui/download_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="8_jbesh"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="8_tuudd"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="10_bqpmw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7h48"]
+bg_color = Color(0.12941177, 0.20392157, 0.17254902, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3meiv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrpcw"]
+
+[node name="LoadWords" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_adcf4")
+script = ExtResource("2_iy6gw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7h48")
+
+[node name="Progression" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Progression"]
+layout_mode = 2
+
+[node name="SystemBarSpacer" parent="Progression/VBoxContainer2" instance=ExtResource("3_duvg1")]
+layout_mode = 2
+
+[node name="SetupProgress" parent="Progression/VBoxContainer2" instance=ExtResource("4_p33ej")]
+custom_minimum_size = Vector2(256, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+value = 3.0
+new_value = 4.0
+
+[node name="SystemBarSpacer2" parent="Progression/VBoxContainer2" instance=ExtResource("3_duvg1")]
+layout_mode = 2
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("5_oqw5l")]
+
+[node name="ContentAnchor" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="MarginContainer" parent="ContentAnchor"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ContentAnchor/Content"]
+layout_mode = 2
+
+[node name="SystemBarSpacer" parent="ContentAnchor/Content/VBoxContainer2" instance=ExtResource("3_duvg1")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="ContentAnchor/Content/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_3meiv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentAnchor/Content/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="ContentAnchor/Content/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("6_3r6dg")
+theme_override_font_sizes/font_size = 48
+text = "INTRO_LOAD_WORDS"
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("7_33i7i")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Spacing" type="Control" parent="ContentAnchor/Content/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="DownloadIcon" type="TextureRect" parent="ContentAnchor/Content/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+texture = ExtResource("8_jbesh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="ContentAnchor/Content/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+theme_override_styles/separator = SubResource("StyleBoxEmpty_yrpcw")
+
+[node name="ActionButton" type="Button" parent="ContentAnchor/Content/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_tuudd")
+text = "INTRO_DOWNLOAD"
+script = ExtResource("10_bqpmw")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="SystemBarSpacer2" parent="ContentAnchor/Content/VBoxContainer2" instance=ExtResource("3_duvg1")]
+layout_mode = 2
+
+[connection signal="pressed" from="ContentAnchor/Content/VBoxContainer2/VBoxContainer/ActionButton" to="." method="_on_text_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=12 format=3 uid="uid://exypy1m2iu15"]
+[gd_resource type="VisualShader" load_steps=14 format=3 uid="uid://exypy1m2iu15"]
 
 [sub_resource type="VisualShaderNodeCompare" id="VisualShaderNodeCompare_jxtp5"]
 default_input_values = [0, 0.0, 1, 0.0, 2, 0.1]
@@ -15,6 +15,14 @@ operator = 2
 
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_jxtp5"]
 parameter_name = "ModulateTexture"
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_jxtp5"]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_rg8rk"]
+parameter_name = "FloatParameter"
+default_value_enabled = true
+default_value = 2.0
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_jxtp5"]
 parameter_name = "Texture2DParameter"
@@ -42,6 +50,7 @@ code = "shader_type canvas_item;
 render_mode blend_mix;
 
 uniform vec4 ShadowColor : source_color;
+uniform float FloatParameter = 2.0;
 uniform sampler2D Texture2DParameter : repeat_enable;
 uniform vec4 ModulateTexture : source_color;
 
@@ -65,10 +74,17 @@ void fragment() {
 	vec2 n_out4p0 = UV;
 
 
+// FloatParameter:16
+	float n_out16p0 = FloatParameter;
+
+
+// VectorCompose:15
+	vec2 n_out15p0 = vec2(n_out16p0, n_out16p0);
+
+
 // UVFunc:5
-	vec2 n_in5p1 = vec2(2.00000, 2.00000);
 	vec2 n_in5p2 = vec2(0.00000, 0.00000);
-	vec2 n_out5p0 = (n_out4p0 - n_in5p2) * n_in5p1 + n_in5p2;
+	vec2 n_out5p0 = (n_out4p0 - n_in5p2) * n_out15p0 + n_in5p2;
 
 
 	vec4 n_out3p0;
@@ -120,4 +136,8 @@ nodes/fragment/13/node = SubResource("VisualShaderNodeVectorOp_jxtp5")
 nodes/fragment/13/position = Vector2(660, 260)
 nodes/fragment/14/node = SubResource("VisualShaderNodeColorParameter_jxtp5")
 nodes/fragment/14/position = Vector2(380, 480)
-nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 4, 0, 5, 0, 5, 0, 3, 0, 10, 0, 11, 0, 9, 0, 10, 0, 12, 0, 11, 1, 14, 0, 13, 1, 11, 0, 0, 0, 3, 0, 13, 0, 13, 0, 11, 2)
+nodes/fragment/15/node = SubResource("VisualShaderNodeVectorCompose_jxtp5")
+nodes/fragment/15/position = Vector2(-520, 240)
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatParameter_rg8rk")
+nodes/fragment/16/position = Vector2(-820, 220)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 4, 0, 5, 0, 5, 0, 3, 0, 10, 0, 11, 0, 9, 0, 10, 0, 12, 0, 11, 1, 14, 0, 13, 1, 11, 0, 0, 0, 3, 0, 13, 0, 13, 0, 11, 2, 15, 0, 5, 1, 16, 0, 15, 0, 16, 0, 15, 1)

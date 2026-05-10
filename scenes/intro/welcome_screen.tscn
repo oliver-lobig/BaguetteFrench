@@ -1,0 +1,146 @@
+[gd_scene load_steps=14 format=3 uid="uid://ceu57byqlq3bt"]
+
+[ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_0ehu0"]
+[ext_resource type="Texture2D" uid="uid://0yneq6ildywm" path="res://assets/icons/load_icon.png" id="1_8j7so"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="2_d1377"]
+[ext_resource type="Script" uid="uid://c7fgk5qcb2y7f" path="res://scenes/intro/welcome_screen.gd" id="2_eb4jp"]
+[ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="2_h7o12"]
+[ext_resource type="PackedScene" uid="uid://ctn68u2gst1mo" path="res://scenes/intro/setup_progress.tscn" id="2_prfjp"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="3_fi0wi"]
+[ext_resource type="FontFile" uid="uid://c28jmi38h5xj7" path="res://assets/fonts/DynaPuff/static/DynaPuff-Regular.ttf" id="4_d1377"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="6_prfjp"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="7_h7o12"]
+[ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="8_eb4jp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78wmo"]
+bg_color = Color(0.12941177, 0.20392157, 0.17254902, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eb4jp"]
+
+[node name="WelcomeScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0ehu0")
+script = ExtResource("2_eb4jp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_78wmo")
+
+[node name="Progression" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Progression"]
+layout_mode = 2
+
+[node name="SystemBarSpacer" parent="Progression/VBoxContainer2" instance=ExtResource("2_h7o12")]
+layout_mode = 2
+
+[node name="SetupProgress" parent="Progression/VBoxContainer2" instance=ExtResource("2_prfjp")]
+custom_minimum_size = Vector2(256, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+value = 1.0
+
+[node name="SystemBarSpacer2" parent="Progression/VBoxContainer2" instance=ExtResource("2_h7o12")]
+layout_mode = 2
+
+[node name="Content" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Content"]
+layout_mode = 2
+
+[node name="SystemBarSpacer" parent="Content/VBoxContainer2" instance=ExtResource("2_h7o12")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Content/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_eb4jp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="Content/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("2_d1377")
+theme_override_font_sizes/font_size = 64
+text = "Willkommen bei BaguetteFrench!"
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("3_fi0wi")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="TranslatedTitle" type="Label" parent="Content/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22352941, 0.7019608, 0.45490196, 1)
+theme_override_fonts/font = ExtResource("4_d1377")
+theme_override_font_sizes/font_size = 32
+text = "Bienvenue chez BaguetteFrench !"
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("3_fi0wi")
+font_type = 1
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="AppIcon" type="TextureRect" parent="Content/VBoxContainer2/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("1_8j7so")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spacing" type="Control" parent="Content/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Content/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_prfjp")
+text = "Loslegen | Commencer"
+script = ExtResource("7_h7o12")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
+[node name="SystemBarSpacer2" parent="Content/VBoxContainer2" instance=ExtResource("2_h7o12")]
+layout_mode = 2
+
+[node name="ThemeSwitcher" parent="." instance=ExtResource("8_eb4jp")]
+
+[connection signal="pressed" from="Content/VBoxContainer2/VBoxContainer/StartButton" to="." method="_on_text_button_pressed"]

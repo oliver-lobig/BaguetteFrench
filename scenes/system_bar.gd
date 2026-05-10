@@ -6,3 +6,7 @@ func _ready() -> void:
 		show()
 	else:
 		queue_free()
+
+
+func _on_use_tutorial_pressed() -> void:
+	pass # Replace with function body.

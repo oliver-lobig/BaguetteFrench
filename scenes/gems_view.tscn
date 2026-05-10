@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://mrad4q2dfbsr"]
+[gd_scene load_steps=16 format=3 uid="uid://mrad4q2dfbsr"]
 
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_51jaa"]
 [ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_n4qmw"]
@@ -8,6 +8,28 @@
 [ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="5_w60fy"]
 [ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="6_0qb2i"]
 [ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="8_cmmja"]
+[ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="9_obvyf"]
+[ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="10_6qhkp"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="11_1pyll"]
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="12_e4830"]
+[ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="13_7iugb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1fcqe"]
+shader = ExtResource("13_7iugb")
+shader_parameter/FloatParameter = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxj6w"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="GemsView" type="Control"]
 layout_mode = 3
@@ -102,3 +124,70 @@ metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 16
+
+[node name="TutorialOverlay" parent="." instance=ExtResource("9_obvyf")]
+layout_mode = 1
+tutorial_scene_name = "gems_view"
+
+[node name="ColorRect" parent="TutorialOverlay" index="0"]
+offset_top = -4.0
+offset_bottom = -4.0
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -364.0
+offset_top = 242.0
+offset_right = -284.0
+offset_bottom = 322.0
+grow_horizontal = 0
+texture = ExtResource("10_6qhkp")
+flip_v = true
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 728.0
+offset_right = 602.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("11_1pyll")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_GEMS_VIEW"
+script = ExtResource("6_0qb2i")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 792.0
+offset_right = 625.0
+offset_bottom = 883.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_e4830")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_GEMS_VIEW_DESCRIPTION"
+autowrap_mode = 3
+script = ExtResource("6_0qb2i")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+material = SubResource("ShaderMaterial_1fcqe")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 315.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vxj6w")
+
+[node name="NextButton" parent="TutorialOverlay" index="2"]
+offset_top = -273.0
+offset_bottom = -224.0
+
+[editable path="TutorialOverlay"]

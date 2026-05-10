@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://jo67k0bgpaii"]
+[gd_scene load_steps=44 format=3 uid="uid://jo67k0bgpaii"]
 
 [ext_resource type="Script" uid="uid://itvbbivsgo2f" path="res://scenes/baguette_shop/baguette_shop.gd" id="1_ixayd"]
 [ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="2_bkf8o"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dqc5by7x3fmr0" path="res://scenes/baguette_shop/bread_render.tscn" id="4_sy1md"]
 [ext_resource type="PackedScene" uid="uid://dtvbkomah4yyw" path="res://scenes/baguette_shop/shop_item_frame.tscn" id="5_6el8p"]
 [ext_resource type="Texture2D" uid="uid://c8ae58nqu46m5" path="res://assets/scenes/learning_path/icons/gems/gem.svg" id="5_dx5kn"]
+[ext_resource type="Texture2D" uid="uid://car7evihnxldj" path="res://assets/baguette/baguettestyles/empty.png" id="6_4m8r6"]
 [ext_resource type="Theme" uid="uid://daejdx8hcrxo" path="res://assets/bg.tres" id="6_u0xl0"]
 [ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="10_hft2w"]
 [ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="10_tpcxt"]
@@ -16,6 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://b38kst8ee4bux" path="res://scenes/point_counter.tscn" id="15_u8g3h"]
 [ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="16_04auu"]
 [ext_resource type="FontFile" uid="uid://c28jmi38h5xj7" path="res://assets/fonts/DynaPuff/static/DynaPuff-Regular.ttf" id="17_8yrur"]
+[ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="18_8yrur"]
+[ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="19_ms3kb"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="20_k3fig"]
+[ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="21_8h0t4"]
+[ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="22_fcr3w"]
 
 [sub_resource type="Animation" id="Animation_dx5kn"]
 length = 0.001
@@ -262,6 +268,23 @@ region = Rect2(134.5, 0, 209, 486)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cd3ua"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cd3ua"]
+shader = ExtResource("22_fcr3w")
+shader_parameter/FloatParameter = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urguy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
 [node name="BaguetteShop" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -342,6 +365,18 @@ unique_name_in_owner = true
 
 [node name="Baguette" parent="VBoxContainer/HBoxContainer/Preview/PreAnchor/Anchor/BreadRender" index="0"]
 position = Vector2(0, -20.095)
+
+[node name="Shirt" parent="VBoxContainer/HBoxContainer/Preview/PreAnchor/Anchor/BreadRender/Baguette/Shirt" index="0"]
+position = Vector2(0, 0)
+texture = ExtResource("6_4m8r6")
+
+[node name="Hat" parent="VBoxContainer/HBoxContainer/Preview/PreAnchor/Anchor/BreadRender/Baguette/Hat" index="0"]
+position = Vector2(0, 0)
+texture = ExtResource("6_4m8r6")
+
+[node name="Pants" parent="VBoxContainer/HBoxContainer/Preview/PreAnchor/Anchor/BreadRender/Baguette/Pants" index="0"]
+position = Vector2(0, 0)
+texture = ExtResource("6_4m8r6")
 
 [node name="BreadAnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer/Preview/PreAnchor/Anchor"]
 unique_name_in_owner = true
@@ -555,6 +590,70 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_cd3ua")
 [node name="ThemeSwitcher" parent="." instance=ExtResource("10_hft2w")]
 overwrite_theme = ExtResource("12_tv6n4")
 
+[node name="TutorialOverlay" parent="." instance=ExtResource("18_8yrur")]
+layout_mode = 1
+tutorial_scene_name = "baguette_shop"
+
+[node name="ColorRect" parent="TutorialOverlay" index="0"]
+offset_top = -4.0
+offset_bottom = -4.0
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 15.0
+offset_right = 40.0
+offset_bottom = 95.0
+grow_horizontal = 2
+texture = ExtResource("19_ms3kb")
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 728.0
+offset_right = 602.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("20_k3fig")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_SHOP"
+script = ExtResource("11_04auu")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 792.0
+offset_right = 625.0
+offset_bottom = 883.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("21_8h0t4")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_SHOP_DESCRIPTION"
+autowrap_mode = 3
+script = ExtResource("11_04auu")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+material = SubResource("ShaderMaterial_cd3ua")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 730.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_urguy")
+
+[node name="NextButton" parent="TutorialOverlay" index="2"]
+offset_top = -417.0
+offset_bottom = -368.0
+
 [connection signal="gui_input" from="VBoxContainer/HBoxContainer/Preview" to="." method="_on_preview_gui_input"]
 [connection signal="pressed" from="VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/Tabs/TabButton1" to="." method="_on_tab_button_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/Tabs/TabButton2" to="." method="_on_tab_button_2_pressed"]
@@ -563,3 +662,4 @@ overwrite_theme = ExtResource("12_tv6n4")
 [connection signal="pressed" from="VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Buy" to="." method="_on_buy_pressed"]
 
 [editable path="VBoxContainer/HBoxContainer/Preview/PreAnchor/Anchor/BreadRender"]
+[editable path="TutorialOverlay"]

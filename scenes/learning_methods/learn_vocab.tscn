@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://urxko13k0awk"]
+[gd_scene load_steps=28 format=3 uid="uid://urxko13k0awk"]
 
 [ext_resource type="Script" uid="uid://e4stkb6thw5v" path="res://scenes/learning_methods/learn_vocab.gd" id="1_dcrbw"]
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_fgs78"]
@@ -18,6 +18,10 @@
 [ext_resource type="FontFile" uid="uid://btnssh7pimwrb" path="res://assets/fonts/National_Park/static/NationalPark-Light.ttf" id="14_3jbam"]
 [ext_resource type="PackedScene" uid="uid://cg7ned4axk53h" path="res://scenes/flip.tscn" id="16_1evyv"]
 [ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="16_fgs78"]
+[ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="19_3jbam"]
+[ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="20_srfux"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="21_v3for"]
+[ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="22_jqvnx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ib7os"]
 
@@ -77,6 +81,23 @@ tracks/3/keys = {
 _data = {
 &"down": SubResource("Animation_ipdvf")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xm16x"]
+shader = ExtResource("22_jqvnx")
+shader_parameter/FloatParameter = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6che"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="LearnVocab" type="Control"]
 layout_mode = 3
@@ -362,6 +383,271 @@ metadata/_custom_type_script = "uid://ejjs0kfm782h"
 unique_name_in_owner = true
 layout_mode = 1
 
+[node name="TutorialOverlay" parent="." instance=ExtResource("19_3jbam")]
+layout_mode = 1
+tutorial_scene_name = "learn_vocab"
+
+[node name="ColorRect" parent="TutorialOverlay" index="0"]
+offset_top = -4.0
+offset_bottom = -4.0
+
+[node name="Slide1" parent="TutorialOverlay/Slides" index="0"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -351.0
+offset_top = 54.0
+offset_right = -271.0
+offset_bottom = 134.0
+grow_horizontal = 0
+texture = ExtResource("20_srfux")
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 728.0
+offset_right = 602.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("21_v3for")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_CARDS"
+script = ExtResource("11_e0n6u")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 792.0
+offset_right = 625.0
+offset_bottom = 881.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_cx43m")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_CARDS_DESCRIPTION"
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+material = SubResource("ShaderMaterial_xm16x")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 712.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6che")
+
+[node name="Slide2" type="Control" parent="TutorialOverlay/Slides" index="1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide2"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -312.0
+offset_top = 227.0
+offset_right = -232.0
+offset_bottom = 307.0
+grow_horizontal = 0
+texture = ExtResource("20_srfux")
+flip_v = true
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 728.0
+offset_right = 602.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("21_v3for")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_CARDS"
+script = ExtResource("11_e0n6u")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 792.0
+offset_right = 625.0
+offset_bottom = 881.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_cx43m")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_CARDS_DESCRIPTION_SWAP"
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide2"]
+material = SubResource("ShaderMaterial_xm16x")
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -343.0
+offset_top = 45.0
+offset_right = -209.0
+offset_bottom = 312.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6che")
+
+[node name="Slide3" type="Control" parent="TutorialOverlay/Slides" index="2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide3"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_top = 227.0
+offset_right = -144.0
+offset_bottom = 307.0
+grow_horizontal = 0
+texture = ExtResource("20_srfux")
+flip_v = true
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 728.0
+offset_right = 602.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("21_v3for")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_CARDS"
+script = ExtResource("11_e0n6u")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 792.0
+offset_right = 625.0
+offset_bottom = 881.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_cx43m")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_CARDS_DESCRIPTION_DICTIONARY"
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide3"]
+material = SubResource("ShaderMaterial_xm16x")
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -255.0
+offset_top = 45.0
+offset_right = -121.0
+offset_bottom = 312.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6che")
+
+[node name="Slide4" type="Control" parent="TutorialOverlay/Slides" index="3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide4"]
+modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 227.0
+offset_right = -40.0
+offset_bottom = 307.0
+grow_horizontal = 0
+texture = ExtResource("20_srfux")
+flip_v = true
+
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide4"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 728.0
+offset_right = 602.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("21_v3for")
+theme_override_font_sizes/font_size = 40
+text = "TUTORIAL_CARDS"
+script = ExtResource("11_e0n6u")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide4"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 792.0
+offset_right = 625.0
+offset_bottom = 881.0
+theme_override_colors/font_color = Color(0.2509804, 0.9764706, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("12_cx43m")
+theme_override_font_sizes/font_size = 32
+text = "TUTORIAL_CARDS_DESCRIPTION_MARK"
+autowrap_mode = 3
+script = ExtResource("11_e0n6u")
+font_type = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
+
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide4"]
+material = SubResource("ShaderMaterial_xm16x")
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 45.0
+offset_right = -17.0
+offset_bottom = 312.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6che")
+
+[node name="NextButton" parent="TutorialOverlay" index="2"]
+offset_top = -353.0
+offset_bottom = -304.0
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/FlipButtonSetting" to="." method="_on_flip_button_setting_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TopBar/Dictionary" to="." method="_on_dictionary_pressed"]
@@ -374,3 +660,5 @@ layout_mode = 1
 [connection signal="swipe_step" from="SwipeCheckerLeft" to="." method="_on_swipe_checker_left_swipe_step"]
 [connection signal="swipe_stopped" from="SwipeCheckerLeft" to="." method="_on_swipe_checker_left_swipe_stopped"]
 [connection signal="swiped" from="SwipeCheckerLeft" to="." method="_on_swipe_checker_left_swiped"]
+
+[editable path="TutorialOverlay"]

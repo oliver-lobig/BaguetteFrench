@@ -123,3 +123,49 @@ LICENCE;Lizenz;Licence
 CREDITS_PATH_CONTENT;Flagge hangezeichnet. Bild von Paris mit Kanal:  [url]https://pixabay.com/photos/channel-saint-martin-paris-3582081/[/url] Kuchen: [url]https://pixabay.com/photos/cake-birthday-birthday-cake-916253/[/url] Freunde: [url]https://pixabay.com/photos/friendship-friends-children-4273865/[/url] Klettern: [url]https://pixabay.com/photos/climbing-man-adventure-2609319/[/url] Theater: [url]https://pixabay.com/photos/wells-theatre-norfolk-virginian-210914/[/url] Weihnachten: [url]https://pixabay.com/photos/christmas-background-christmas-1869902/[/url] Schule: [url]https://pixabay.com/photos/books-library-room-school-study-2596809/[/url] Kalendar: [url]https://pixabay.com/photos/calendar-dates-schedule-days-1990453/[/url] Familie: [url]https://pixabay.com/photos/family-holding-hands-parents-child-1866868/[/url] Ferien: [url]https://pixabay.com/photos/beach-summer-holidays-3891939/[/url] Farben: [url]https://pixabay.com/photos/color-pencils-crayons-colorful-8127500/[/url] Nochmal Schule: [url]https://pixabay.com/photos/timetable-plan-time-school-3665089/[/url] Untergrund: [url]https://pixabay.com/photos/people-man-lonely-sad-alone-8386051/[/url] Familie Draußen: [url]https://pixabay.com/photos/family-love-together-outdoors-6639676/[/url] Baguette: [url]https://pixabay.com/photos/baguette-bread-herb-baguette-fresh-1378049/[/url] Bretagne: [url]https://pixabay.com/photos/bretagne-france-pontrieux-2507358/[/url];Drapeau dessiné à la main. Photo de Paris avec un canal : [url]https://pixabay.com/photos/channel-saint-martin-paris-3582081/[/url] Gâteau : [url]https://pixabay.com/photos/cake-birthday-birthday-cake-916253/[/url] Amis : [url]https://pixabay.com/photos/friendship-friends-children-4273865/[/url] Escalade : [url]https://pixabay.com/photos/climbing-man-adventure-2609319/[/url] Théâtre : [url]https://pixabay.com/photos/wells-theatre-norfolk-virginian-210914/[/url] Noël : [url]https://pixabay.com/photos/christmas-background-christmas-1869902/[/url] École : [url]https://pixabay.com/photos/books-library-room-school-study-2596809/[/url] Calendrier : [url]https://pixabay.com/photos/calendar-dates-schedule-days-1990453/[/url] Famille : [url]https://pixabay.com/photos/family-holding-hands-parents-child-1866868/[/url] Vacances : [url]https://pixabay.com/photos/beach-summer-holidays-3891939/[/url] Couleurs : [url]https://pixabay.com/photos/color-pencils-crayons-colorful-8127500/[/url] Encore l'école : [url]https://pixabay.com/photos/timetable-plan-time-school-3665089/[/url] Arrière-plan : [url]https://pixabay.com/photos/people-man-lonely-sad-alone-8386051/[/url] Famille en plein air : [url]https://pixabay.com/photos/family-love-together-outdoors-6639676/[/url] Baguette : [url]https://pixabay.com/photos/baguette-bread-herb-baguette-fresh-1378049/[/url] Bretagne : [url]https://pixabay.com/photos/bretagne-france-pontrieux-2507358/[/url] 
 CUSTOM_WORDS_WORDS;Wörter;Mots
 CUSTOM_WORDS_VERBS;Verben;Verbes
+INTRO_THEME_TITLE;Hell oder Dunkel?;Lumineux ou sombre ?
+INTRO_THEME_TITLE_LIGHT;Helles Erscheinungsbild;Aspect lumineux
+INTRO_THEME_TITLE_DARK;Dunkles Erscheinungsbild;Aspect sombre
+INTRO_LOAD_WORDS;Wörter laden;Télécharger des mots
+INTRO_DOWNLOAD;Herunterladen;Télécharger
+INTRO_TUTORIAL;Möchtest du eine Erklärung bekommen?;Tu veux une explication ?
+INTRO_TUTORIAL_YES;Erklärung erhalten;Recevoir une explication
+INTRO_TUTORIAL_NO;Erklärung überspringen;Ignorer l'explication
+INTRO_TUTORIAL_DESCRIPTION;Die Erklärung wird bei den jeweiligen Menüs angezeigt. Du kannst sie jederzeit in den Einstellungen neustarten oder abbrechen.;La déclaration s'affiche dans les menus correspondants. Tu peux la relancer ou l'annuler à tout moment dans les paramètres.
+TUTORIAL_TABS;Ansichts-Menü;Menu Affichage
+TUTORIAL_TABS_DESCRIPTION;Wechsele hier unten zwischen den verschiedenen Ansichten.;Vous pouvez passer d'un affichage à l'autre ci-dessous.
+TUTORIAL_PATH;Lern-Pfad;Parcours pédagogique
+TUTORIAL_PATH_DESCRIPTION;Dieser Pfad führt dich durch verschiedene Kapitel. Jeder Kreis ist eine Lektion. Klicke auf untersten Kreis, um die nächste Lektion zu starten.;Ce parcours te guide à travers différents chapitres. Chaque cercle correspond à une leçon. Clique sur le cercle du bas pour passer à la leçon suivante.
+TUTORIAL_ALL_LEARN;Benutzerdefiniertes Lernen;Apprentissage personnalisé
+TUTORIAL_ALL_LEARN_DESCRIPTION_SELECT;Wähle hier aus, welche Wörter du lernen möchtest.;Choisis ici les mots que tu souhaites apprendre.
+TUTORIAL_ALL_LEARN_DESCRIPTION_LEARN;Wähle mit den Knöpfen eine Lernmethode aus.;Sélectionne une méthode d'apprentissage à l'aide des boutons.
+TUTORIAL_OWN_WORDS;Eigene Vokabeln;Son propre vocabulaire
+TUTORIAL_OWN_WORDS_ADD;Verwende den linken Knopf, um eigene Vokabeln zu einer Kategorie hinzuzufügen.;Utilise le bouton de gauche pour ajouter tes propres mots de vocabulaire à une catégorie.
+TUTORIAL_OWN_WORDS_ADD_CATEGORY;Verwende den mittleren Knopf, um eine Wort-Kategorie (bzw. Gruppe) zu erstellen.;Utilise le bouton du milieu pour créer une catégorie (ou un groupe) de mots.
+TUTORIAL_OWN_WORDS_IMPORT_WORDS;Verwende den rechten Knopf, um Wörter aus einer Tabelle in eine Kategorie zu importieren.;Utilise le bouton de droite pour importer des mots d'un tableau vers une catégorie.
+TUTORIAL_GEMS_VIEW;Gems-Übersicht;Aperçu des gemmes
+TUTORIAL_GEMS_VIEW_DESCRIPTION;"Gems sind Belohnungspunkte, die du für das Lernen bekommst.
+In dieser Übersicht gibt es täglich drei Aufträge, für die du zusätzlich Gems bekommst.";"Les gemmes sont des points de récompense que tu gagnes en apprenant.
+Dans cet aperçu, tu ẃ chaque jour ẃ missions qui te permettront de gagner des gemmes supplémentaires."
+TUTORIAL_SHOP;Baguette-Shop;Baguette-Shop
+TUTORIAL_SHOP_DESCRIPTION;Kaufe hier mit den gesammelten Gems Kleidungsstücke für das Baguette.;Utilise ici les gemmes que tu as accumulées pour acheter des vêtements pour le Baguette.
+TUTORIAL_SETTINGS;Einstellungen;Paramètres
+TUTORIAL_SETTINGS_DESCRIPTION;Hier kannst du verschiedene Einstellungen verändern und die Credits anschauen.;Ici, tu peux modifier différents paramètres et consulter le générique.
+SETTINGS_TUTORIAL;Erklärung ;Explication
+SETTINGS_TUTORIAL_RESTART;Erklärung neustarten;Redémarrer l'explication
+SETTINGS_TUTORIAL_STOP;Erklärung abbrechen;Annuler la déclaration
+TUTORIAL_CARDS;Vokabelkarten;Fiches de vocabulaire
+TUTORIAL_CARDS_DESCRIPTION_SWAP;Wechsele hier mit einem Klick die Sprache.;
+TUTORIAL_CARDS_DESCRIPTION_DICTIONARY;Schaue dir ein Wörterbuch nur mit Wörtern aus dem Kapitel an.;Consulte un dictionnaire contenant uniquement les mots du chapitre.
+TUTORIAL_CARDS_DESCRIPTION_MARK;Markiere dir hier Wörter, die du besonders lernen möchtest. Du kannst sie gesondert zum Lernen auswählen.;Sélectionne ici les mots que tu souhaites particulièrement apprendre. Tu pourras ensuite les sélectionner séparément pour les réviser.
+TUTORIAL_CARDS_DESCRIPTION;Sieh dir die Originalversionen an und drehe dann mit einem Klick die Übersetzungskarte (unten) um. Wische für die nächsten Wörter nach rechts.;Consulte les versions originales, puis retourne la fiche de traduction (ci-dessous) d'un simple clic. Balaye vers la droite pour voir les mots suivants.
+TUTORIAL_HEARING;Anhören;Écouter
+TUTORIAL_HEARING_DESCRIPTION;Höre dir hier die Aussprache von den Wörtern an und versuche mitzusprechen. Falls du aktuell nicht die Lautsprecher verwenden willst, kannst du die Lektion mit den zwei Pfeilen in der Leiste oben überspringen.;Écoute ici la prononciation des mots et essaie de les répéter. Si tu ne souhaites pas utiliser les haut-parleurs pour le moment, tu peux passer cette leçon à l'aide des deux flèches situées dans la barre en haut.
+TUTORIAL_MATCH;Verbinden;Connecter
+TUTORIAL_MATCH_DESCRIPTION;Ziehe die Karten mit Übersetzung und Original aufeinander.;Aligne les cartes avec la traduction et l'original.
+TUTORIAL_WRITE;Schreiben;Écrire
+TUTORIAL_WRITE_DESCRIPTION;Schreibe die Übersetzung des Originalwortes oben unten auf die Karte. Klicke dann auf fertig.;
+TUTORIAL_WRITE_DESCRIPTION_DUNNO;Falls du ein Wort nicht kennst, tippe auf „Aufdecken“, um die Übersetzung anzusehen.;
+TUTORIAL_WRITE_DESCRIPTION_CORRECT;Falls die Richtigkeit der Übersetzung falsch erkannt wurde, kannst du mit den entsprechenden Knöpfen das Wort als richtig/falsch gelten lassen.;Si l'exactitude de la traduction a été mal identifiée, tu peux utiliser les boutons correspondants pour valider ou invalider le mot.
+TUTORIAL_SELECT;Wörter auswählen;Choisir des mots
+TUTORIAL_SELECT_DESCRIPTION;Wähle aus, welche Wörter bei den Lernmethoden verwendet werden. Du kannst für jedes Kapitel/jede Kategorie auswählen, ob die Wörter verwendet werden sollen. Oben kannst du entscheiden, ob nur von dir markierte Wörter genutzt werden sollen.;Sélectionne les mots à utiliser dans les méthodes d'apprentissage. Pour chaque chapitre ou catégorie, tu peux choisir si ces mots doivent être utilisés. En haut de la page, tu peux décider si seuls les mots que tu as marqués doivent être utilisés.

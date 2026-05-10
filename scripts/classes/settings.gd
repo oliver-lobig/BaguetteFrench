@@ -12,7 +12,7 @@ class_name SettingsData
 
 # Jewel Particles
 
-@export var activate_jewel_particles: bool = false
+@export var activate_jewel_particles: bool = true
 @export var jewel_size: float = 1.0
 @export var jewel_volume: float = 0.0
 
