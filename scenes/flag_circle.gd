@@ -3,13 +3,13 @@ extends Panel
 class_name FlagCirlce
 
 const FLAG_CIRCLE = preload("uid://bsdqcxyeqnvfe")
-
+const FLAG_CIRCLE_2 = preload("uid://d3e8gs66okkgb")
 @export var country_code = "de"
 
 var last_country_code = ""
 
 func _ready() -> void:
-	var original_material = FLAG_CIRCLE
+	var original_material = FLAG_CIRCLE if country_code != "fr" else FLAG_CIRCLE_2
 	var mat: ShaderMaterial = original_material.duplicate_deep(Resource.DEEP_DUPLICATE_ALL)
 	material = mat
 	load_flag()

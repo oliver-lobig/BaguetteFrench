@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://nb0nlsan84pk"]
+[gd_resource type="ShaderMaterial" load_steps=16 format=3 uid="uid://d3e8gs66okkgb"]
 
-[ext_resource type="Texture2D" uid="uid://bysy6hmfvqob6" path="res://assets/general_ui/flag-icons/flags/1x1/de.svg" id="1_7y0mx"]
-[ext_resource type="Script" uid="uid://b1vpts347vbvu" path="res://scenes/flag_circle.gd" id="1_35kbn"]
+[ext_resource type="Texture2D" uid="uid://bysy6hmfvqob6" path="res://assets/general_ui/flag-icons/flags/1x1/de.svg" id="1_o43iw"]
 
 [sub_resource type="VisualShaderNodeCompare" id="VisualShaderNodeCompare_7y0mx"]
 default_input_values = [0, 0.0, 1, 0.0, 2, 0.1]
@@ -145,22 +144,9 @@ nodes/fragment/16/node = SubResource("VisualShaderNodeFloatParameter_5a770")
 nodes/fragment/16/position = Vector2(-820, 220)
 nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 4, 0, 5, 0, 5, 0, 3, 0, 10, 0, 11, 0, 9, 0, 10, 0, 12, 0, 11, 1, 14, 0, 13, 1, 11, 0, 0, 0, 3, 0, 13, 0, 13, 0, 11, 2, 15, 0, 5, 1, 16, 0, 15, 0, 16, 0, 15, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6nt8r"]
+[resource]
 shader = SubResource("VisualShader_q1b54")
 shader_parameter/ShadowColor = Color(1, 1, 1, 1)
 shader_parameter/FloatParameter = 1.0
-shader_parameter/Texture2DParameter = ExtResource("1_7y0mx")
+shader_parameter/Texture2DParameter = ExtResource("1_o43iw")
 shader_parameter/ModulateTexture = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35kbn"]
-corner_radius_top_left = 128
-corner_radius_top_right = 128
-corner_radius_bottom_right = 128
-corner_radius_bottom_left = 128
-
-[node name="FlagCircle" type="Panel"]
-material = SubResource("ShaderMaterial_6nt8r")
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_35kbn")
-script = ExtResource("1_35kbn")
