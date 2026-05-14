@@ -110,3 +110,7 @@ func _on_stop_tutorial_pressed() -> void:
 	%StopTutorial.disabled = true
 	Vars.skip_tutorial = true
 	Vars.save_saves()
+
+
+func _on_debug_pressed() -> void:
+	DebugOverlay.open_debug()

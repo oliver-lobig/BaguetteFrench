@@ -1023,6 +1023,14 @@ script = ExtResource("8_oe2nd")
 quickchange_enabled = true
 metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
+[node name="Debug" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_01roj")
+text = "DEBUG_MENU"
+script = ExtResource("8_oe2nd")
+quickchange_enabled = true
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
+
 [node name="HSeparator6" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
@@ -1085,7 +1093,6 @@ text = "TUTORIAL_SETTINGS"
 script = ExtResource("5_uhhto")
 font_type = 2
 font_use = 1
-quickchange_enabled = null
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
 [node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
@@ -1101,7 +1108,6 @@ text = "TUTORIAL_SETTINGS_DESCRIPTION"
 autowrap_mode = 3
 script = ExtResource("5_uhhto")
 font_type = 1
-quickchange_enabled = null
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
 [node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
@@ -1130,6 +1136,7 @@ offset_bottom = -368.0
 [connection signal="drag_ended" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider" to="." method="_on_volume_slider_2_drag_ended"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/JewelSettings/VolumeSlider" to="." method="_on_volume_slider_2_value_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Debug" to="." method="_on_debug_pressed"]
 
 [editable path="ThemeSwitcher"]
 [editable path="TutorialOverlay"]

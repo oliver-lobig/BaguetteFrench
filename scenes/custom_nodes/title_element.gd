@@ -20,7 +20,8 @@ func _ready() -> void:
 	if quickchange_enabled:
 		last_language = BaguetteTranslationServer.selected_language
 		original_text = text
-		text = BaguetteTranslationServer.translate(original_text)
+		if !Engine.is_editor_hint():
+			text = BaguetteTranslationServer.translate(original_text)
 	update_font()
 
 func update_font():

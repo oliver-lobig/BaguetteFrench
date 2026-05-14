@@ -484,7 +484,6 @@ text = "Debugging"
 script = ExtResource("5_u6unt")
 font_type = 2
 font_use = 1
-quickchange_enabled = null
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
 [node name="Subtitle" type="Label" parent="Overlay/MarginContainer/VBoxContainer/HBoxContainer"]
@@ -494,7 +493,6 @@ theme_override_fonts/font = ExtResource("6_u6unt")
 theme_override_font_sizes/font_size = 24
 text = "yay."
 script = ExtResource("5_u6unt")
-quickchange_enabled = null
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
 [node name="Control" type="Control" parent="Overlay/MarginContainer/VBoxContainer/HBoxContainer"]
@@ -632,7 +630,6 @@ middle_mouse_paste_enabled = false
 wrap_mode = 1
 scroll_fit_content_height = true
 script = ExtResource("11_023em")
-quickchange_enabled = null
 metadata/_custom_type_script = "uid://bimp11bbjxjlq"
 
 [node name="SystemBarSpacer" parent="Overlay/MarginContainer/VBoxContainer" instance=ExtResource("4_3fq4b")]

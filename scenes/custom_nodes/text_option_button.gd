@@ -21,9 +21,11 @@ func _ready() -> void:
 	if quickchange_enabled:
 		last_language = BaguetteTranslationServer.selected_language
 		original_text = text
-		text = BaguetteTranslationServer.translate(original_text)
-	for item_id in range(item_count):
-		set_item_text(item_id,BaguetteTranslationServer.translate(get_item_text(item_id)))
+		if !Engine.is_editor_hint():
+			text = BaguetteTranslationServer.translate(original_text)
+	if !Engine.is_editor_hint():
+		for item_id in range(item_count):
+			set_item_text(item_id,BaguetteTranslationServer.translate(get_item_text(item_id)))
 	update_font()
 
 func update_font():

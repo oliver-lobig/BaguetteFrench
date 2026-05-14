@@ -170,3 +170,4 @@ TUTORIAL_WRITE_DESCRIPTION_CORRECT;Falls die Richtigkeit der Übersetzung falsch
 TUTORIAL_SELECT;Wörter auswählen;Choisir des mots
 TUTORIAL_SELECT_DESCRIPTION;Wähle aus, welche Wörter bei den Lernmethoden verwendet werden. Du kannst für jedes Kapitel/jede Kategorie auswählen, ob die Wörter verwendet werden sollen. Oben kannst du entscheiden, ob nur von dir markierte Wörter genutzt werden sollen.;Sélectionne les mots à utiliser dans les méthodes d'apprentissage. Pour chaque chapitre ou catégorie, tu peux choisir si ces mots doivent être utilisés. En haut de la page, tu peux décider si seuls les mots que tu as marqués doivent être utilisés.
 DEBUG_SAVE_FILE;Speicherdatei;fichier de sauvegarde
+DEBUG_MENU;Debug-Menü;Menu de débogage
