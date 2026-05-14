@@ -48,7 +48,7 @@ func reload_selection(_air: bool):
 	else:
 		all_selected_words = unit_words
 	all_selected_verbs = unit_verbs
-	%SelectedWords.text = str(all_selected_words.size()) + tr("SELECTED_WORDS") + " + " +str( all_selected_verbs.size())
+	%SelectedWords.text = str(all_selected_words.size()) + BaguetteTranslationServer.translate("SELECTED_WORDS") + " + " +str( all_selected_verbs.size())
 
 func word_in_units(word: Word):
 	return word.unit_id in selected_units

@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://blasl78kp4r7u"]
+[gd_scene load_steps=3 format=3 uid="uid://blasl78kp4r7u"]
 
 [ext_resource type="Script" uid="uid://c1kyqmfeobas5" path="res://scenes/custom_nodes/text_option_button.gd" id="1_qsln0"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="1_t0w0b"]
 
 [node name="TextOptionButton" type="OptionButton"]
 offset_right = 32.0
 offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("1_t0w0b")
 script = ExtResource("1_qsln0")
+quickchange_enabled = null

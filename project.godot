@@ -38,6 +38,8 @@ SentenceGenerator="*res://scripts/autoloads/SentenceGenerator.gd"
 JsonSerializer="*res://scripts/autoloads/JSONSerializer.gd"
 FontManager="*res://scripts/autoloads/FontManager.gd"
 IntroHandler="*res://scripts/autoloads/IntroHandler.gd"
+DebugOverlay="*res://scenes/debug_overlay.tscn"
+BaguetteTranslationServer="*res://scripts/autoloads/BaguetteTranslationServer.gd"
 
 [display]
 

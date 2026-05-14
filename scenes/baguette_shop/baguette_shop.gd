@@ -80,9 +80,9 @@ func update_can_buy():
 			if !object.id in Vars.baguette_style_data.possesed_items:
 				free = false
 	if free:
-		%Buy.text = tr("SHOP_OUTFIT_CHOOSE")
+		%Buy.text = BaguetteTranslationServer.translate("SHOP_OUTFIT_CHOOSE")
 	else:
-		%Buy.text = tr("SHOP_OUTFIT_BUY")
+		%Buy.text = BaguetteTranslationServer.translate("SHOP_OUTFIT_BUY")
 	if can_buy:
 		%Buy.disabled = false
 	else:

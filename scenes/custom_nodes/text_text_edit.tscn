@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://h7uosl0ahrys"]
+[gd_scene load_steps=3 format=3 uid="uid://h7uosl0ahrys"]
 
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="1_5vapy"]
 [ext_resource type="Script" uid="uid://bimp11bbjxjlq" path="res://scenes/custom_nodes/text_text_edit.gd" id="1_j0avt"]
 
 [node name="TextTextEdit" type="TextEdit"]
 offset_right = 8.0
 offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("1_5vapy")
 script = ExtResource("1_j0avt")

@@ -14,8 +14,8 @@ func _ready() -> void:
 	%SelectCategory.selected = selecting_id
 	if Vars.word_edit_mode == "edit":
 		%VerbButton.hide()
-		%ViewTitle.text = tr("EDIT_WORD")
-		%ActionButton.text = tr("EDIT_WORD")
+		%ViewTitle.text = BaguetteTranslationServer.translate("EDIT_WORD")
+		%ActionButton.text = BaguetteTranslationServer.translate("EDIT_WORD")
 		%French.text = WordHandler.get_words_string(Vars.original_edit_word.french)
 		%German.text = WordHandler.get_words_string(Vars.original_edit_word.german)
 		%Description.text = Vars.original_edit_word.description

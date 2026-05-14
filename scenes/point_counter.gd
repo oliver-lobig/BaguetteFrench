@@ -97,7 +97,7 @@ func done_challenge(id: int):
 	await get_tree().create_timer(.1).timeout
 	current_completed_challenge_id = id
 	var challenge_data = Vars.challenge_progress[id] 
-	var challenge_name = tr(type_names[challenge_data.type]) % str(challenge_data.amount)
+	var challenge_name = BaguetteTranslationServer.translate(type_names[challenge_data.type]) % str(challenge_data.amount)
 	%DoneChallengeOverlay.show()
 	%DoneChallengeOverlay.set_point_name(challenge_data.reward)
 	%DoneChallengeOverlay.set_challenge_type(challenge_data.type)

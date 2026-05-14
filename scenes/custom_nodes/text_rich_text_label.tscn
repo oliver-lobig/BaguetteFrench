@@ -17,3 +17,4 @@ theme_override_fonts/bold_italics_font = ExtResource("2_leqr1")
 theme_override_fonts/italics_font = ExtResource("3_kpxj0")
 theme_override_fonts/mono_font = ExtResource("1_nd1tb")
 script = ExtResource("1_fomni")
+quickchange_enabled = null

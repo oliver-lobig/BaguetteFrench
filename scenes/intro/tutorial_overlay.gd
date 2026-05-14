@@ -1,3 +1,4 @@
+@tool
 extends Control
 
 var info_count: int = 0
@@ -9,21 +10,25 @@ var current_slide_id: int = 0
 var waiting: bool = false
 
 func _ready() -> void:
-	show()
-	if Vars.skip_tutorial or Vars.finished_tutorial_scenes.has(tutorial_scene_name):
-		queue_free()
-		return
-	if Vars.in_tutorial_screen:
+	if Engine.is_editor_hint():
 		hide()
-		waiting = true
-		return
-	setup_tutorial()
+	else:
+		show()
+		if Vars.skip_tutorial or Vars.finished_tutorial_scenes.has(tutorial_scene_name):
+			queue_free()
+			return
+		if Vars.in_tutorial_screen:
+			hide()
+			waiting = true
+			return
+		setup_tutorial()
 
 func _process(delta: float) -> void:
-	if waiting:
-		if !Vars.in_tutorial_screen:
-			waiting = false
-			setup_tutorial()
+	if !Engine.is_editor_hint():
+		if waiting:
+			if !Vars.in_tutorial_screen:
+				waiting = false
+				setup_tutorial()
 
 func setup_tutorial():
 	show()

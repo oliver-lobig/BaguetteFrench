@@ -29,7 +29,7 @@ func _ready() -> void:
 	var reward = int(floor(amount * randf_range(4.0,7.0)))
 	if type == 3:
 		amount *= 2
-	var title = tr(type_names[type]) % ("[color=orange]" + str(amount)+ "[/color]")
+	var title = BaguetteTranslationServer.translate(type_names[type]) % ("[color=orange]" + str(amount)+ "[/color]")
 	%Title.text = title
 	%Reward.text = str(reward)
 	if not seed_value in Vars.challenge_progress.keys():

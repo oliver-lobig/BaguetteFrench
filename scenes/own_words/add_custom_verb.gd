@@ -21,8 +21,8 @@ func _ready() -> void:
 	if Vars.word_edit_mode == "edit":
 		this_verb = Vars.original_edit_verb
 		%WordButton.hide()
-		%ViewTitle.text = tr("EDIT_VERB")
-		%ActionButton.text = tr("EDIT_VERB")
+		%ViewTitle.text = BaguetteTranslationServer.translate("EDIT_VERB")
+		%ActionButton.text = BaguetteTranslationServer.translate("EDIT_VERB")
 		%Infinitive.get_node("%German").text = WordHandler.get_words_string(Vars.original_edit_verb.infinitive.german)
 		%Infinitive.get_node("%French").text = WordHandler.get_words_string(Vars.original_edit_verb.infinitive.french)
 		%Suffix.get_node("%German").text = WordHandler.get_words_string(Vars.original_edit_verb.suffix["german"])
@@ -58,10 +58,10 @@ func _on_action_button_pressed() -> void:
 func add_verb():
 	for option in %Types.get_children():
 		if option.get_node("%French").text == "":
-			throw_error("Bitte gib " + tr(option.placeholder_french) + " an.")
+			throw_error("Bitte gib " + BaguetteTranslationServer.translate(option.placeholder_french) + " an.")
 			return false
 		if option.get_node("%German").text == "":
-			throw_error("Bitte gib " + tr(option.placeholder_german) + " an.")
+			throw_error("Bitte gib " + BaguetteTranslationServer.translate(option.placeholder_german) + " an.")
 			return false
 	if %SelectCategory.selected == 0:
 		throw_error("Bitte gib die Kategorie des Wortes an.")

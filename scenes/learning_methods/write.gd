@@ -93,8 +93,8 @@ func check():
 		
 		%PointCounter.get_points([5,7,3,1],[2,4,5,11],container_pos + (container_size / 2),container_size.y / 2)
 	
-	%ButtonA.text = tr("CORRECT_BUTTON") if is_correct == false else tr("WRONG_BUTTON")
-	%ButtonB.text = tr("NEXT_BUTTON")
+	%ButtonA.text = BaguetteTranslationServer.translate("CORRECT_BUTTON") if is_correct == false else BaguetteTranslationServer.translate("WRONG_BUTTON")
+	%ButtonB.text = BaguetteTranslationServer.translate("NEXT_BUTTON")
 	
 	await get_tree().create_timer(0.5).timeout
 	
@@ -148,8 +148,8 @@ func next():
 	%Translation.text = ""
 	%TranslationShow.hide()
 	%Translation.show()
-	%ButtonA.text = tr("SHOW_BUTTON")
-	%ButtonB.text = tr("DONE_BUTTON")
+	%ButtonA.text = BaguetteTranslationServer.translate("SHOW_BUTTON")
+	%ButtonB.text = BaguetteTranslationServer.translate("DONE_BUTTON")
 	
 	if Vars.word_selection_type == "single":
 		if Vars.learn_all == false:
@@ -234,8 +234,8 @@ func _on_button_a_pressed() -> void:
 		$%VocabOriginal.text = WordHandler.get_words_string(real_translations)
 		word_shown = true
 		is_correct = false
-		%ButtonA.text = tr("CORRECT_BUTTON")
-		%ButtonB.text = tr("NEXT_BUTTON")
+		%ButtonA.text = BaguetteTranslationServer.translate("CORRECT_BUTTON")
+		%ButtonB.text = BaguetteTranslationServer.translate("NEXT_BUTTON")
 	else:
 		wrong_detection()
 

@@ -2,7 +2,7 @@ extends Control
 
 func flip_language():
 	Vars.to_language_french = !Vars.to_language_french
-	%To.text = "-> " + tr("SETTINGS_LANGUAGE_FRENCH") if Vars.to_language_french == true else "-> " + tr("SETTINGS_LANGUAGE_GERMAN")
+	%To.text = "-> " + BaguetteTranslationServer.translate("SETTINGS_LANGUAGE_FRENCH") if Vars.to_language_french == true else "-> " + BaguetteTranslationServer.translate("SETTINGS_LANGUAGE_GERMAN")
 	var anim_tween = get_tree().create_tween()
 	%To.show()
 	$Icon.show()

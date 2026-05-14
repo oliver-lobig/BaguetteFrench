@@ -72,14 +72,14 @@ func _on_option_button_item_selected(index: int) -> void:
 
 func _on_language_german_pressed() -> void:
 	Vars.settings_data.language = "de"
-	TranslationServer.set_locale(Vars.settings_data.language)
+	BaguetteTranslationServer.set_locale(Vars.settings_data.language)
 	Vars.save_saves("Language set to german")
 	%LanguageGerman.disabled = true
 	%LanguageFrench.disabled = false
 
 func _on_language_french_pressed() -> void:
 	Vars.settings_data.language = "fr"
-	TranslationServer.set_locale(Vars.settings_data.language)
+	BaguetteTranslationServer.set_locale(Vars.settings_data.language)
 	Vars.save_saves("Language set to french")
 	%LanguageGerman.disabled = false
 	%LanguageFrench.disabled = true
