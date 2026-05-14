@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1778754158|2218420580';
+const CACHE_VERSION = '1778755779|1002079662';
 /** @type {string} */
 const CACHE_PREFIX = 'BaguetteFrench-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
