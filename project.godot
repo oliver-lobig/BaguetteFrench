@@ -97,10 +97,6 @@ back={
 
 pointing/emulate_touch_from_mouse=true
 
-[internationalization]
-
-locale/translations=PackedStringArray("res://ui_translation/BaguetteFrench.de.translation", "res://ui_translation/BaguetteFrench.fr.translation")
-
 [rendering]
 
 renderer/rendering_method="mobile"

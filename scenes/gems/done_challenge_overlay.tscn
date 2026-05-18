@@ -1,16 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://bx7g0fdvvolgg"]
+[gd_scene load_steps=16 format=3 uid="uid://bx7g0fdvvolgg"]
 
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_auu21"]
 [ext_resource type="Script" uid="uid://cxb3r2jrbco4v" path="res://scenes/gems/done_challenge_overlay.gd" id="2_5eo38"]
 [ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_dqjbn"]
 [ext_resource type="Texture2D" uid="uid://ds0pdthm3fbtv" path="res://assets/scenes/gems/reward.svg" id="3_dqjbn"]
-[ext_resource type="FontFile" uid="uid://c7wkhl5muf5n1" path="res://assets/fonts/Josefin_Sans/static/JosefinSans-LightItalic.ttf" id="3_q0sj0"]
+[ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="4_shy88"]
 [ext_resource type="Texture2D" uid="uid://lr2u1bso8454" path="res://assets/scenes/learning_path/icons/sentence.png" id="5_5eo38"]
+[ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="5_kj5cg"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="6_shy88"]
 [ext_resource type="Texture2D" uid="uid://tynq8kfgjw6e" path="res://assets/scenes/learning_path/icons/match.png" id="6_yquke"]
 [ext_resource type="Texture2D" uid="uid://ne0ye3sidvcf" path="res://assets/scenes/learning_path/icons/single_vocab.png" id="7_asvfb"]
 [ext_resource type="Texture2D" uid="uid://cgy8062kcq244" path="res://assets/scenes/learning_path/icons/hear.png" id="8_ej4g3"]
 [ext_resource type="Texture2D" uid="uid://dy8tc5344xgkt" path="res://assets/scenes/learning_path/icons/repeat.png" id="9_shy88"]
 [ext_resource type="Texture2D" uid="uid://c4pae02qgv34i" path="res://assets/scenes/learning_path/icons/verbs.png" id="10_kj5cg"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="14_lyumo"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="15_4ru7o"]
 
 [node name="DoneChallengeOverlay" type="Control"]
 layout_mode = 3
@@ -51,18 +55,25 @@ alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
+theme_override_fonts/font = ExtResource("4_shy88")
 theme_override_font_sizes/font_size = 40
 text = "CHALLENGE_COMPLETE"
 horizontal_alignment = 1
+script = ExtResource("5_kj5cg")
+font_type = 2
+font_use = 1
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
 [node name="ChallengeDescription" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
-theme_override_fonts/font = ExtResource("3_q0sj0")
+theme_override_fonts/font = ExtResource("6_shy88")
 theme_override_font_sizes/font_size = 32
 text = "Challengebeschreibung"
 horizontal_alignment = 1
+script = ExtResource("5_kj5cg")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -164,15 +175,21 @@ offset_top = 422.0
 offset_right = 377.0
 offset_bottom = 467.0
 theme_override_colors/font_color = Color(0.023529412, 0.74509805, 0.88235295, 1)
+theme_override_fonts/font = ExtResource("6_shy88")
 theme_override_font_sizes/font_size = 32
 text = "231"
 horizontal_alignment = 1
+script = ExtResource("5_kj5cg")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("14_lyumo")
 text = "COLLECT_REWARD"
+script = ExtResource("15_4ru7o")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

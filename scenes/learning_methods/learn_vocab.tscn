@@ -384,6 +384,7 @@ unique_name_in_owner = true
 layout_mode = 1
 
 [node name="TutorialOverlay" parent="." instance=ExtResource("19_3jbam")]
+visible = false
 layout_mode = 1
 tutorial_scene_name = "learn_vocab"
 

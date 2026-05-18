@@ -36,8 +36,9 @@ func load_word(word_relative_id: int):
 	word = words[clamp(word_relative_id,0,words.size() - 1)]
 	%Flip.show()
 	%VocabOriginal.text = WordHandler.get_words_string(word.french) if Vars.locked_language_french == false else WordHandler.get_words_string(word.german)
-	
-	if word.description:
+
+	if word.description != "":
+		%VocabDescription.show()
 		%VocabDescription.text = word.description
 	else:
 		%VocabDescription.hide()

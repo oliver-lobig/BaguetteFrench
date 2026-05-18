@@ -194,8 +194,9 @@ func next():
 		%VocabOriginal.text = WordHandler.get_words_string(word.german) if !is_verb_mode() else WordHandler.get_verb_full_text(word,from_verb,"german",selected_suffix_id)
 	else:
 		%VocabOriginal.text = WordHandler.get_words_string(word.french) if !is_verb_mode() else WordHandler.get_verb_full_text(word,from_verb,"french",selected_suffix_id)
-	if word.description:
+	if word.description != "":
 		%VocabDescription.text = word.description
+		%VocabDescription.show()
 	else:
 		%VocabDescription.hide()
 	

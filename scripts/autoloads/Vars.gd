@@ -96,6 +96,7 @@ func _ready() -> void:
 			Vars.settings_data.language = TranslationServer.get_locale()
 		else:
 			Vars.settings_data.language = "de"
+	TranslationServer.set_locale("ace") # To see if own Translations Server is actually working
 	BaguetteTranslationServer.set_locale(Vars.settings_data.language)
 	Vars.save_saves("Vars on ready")
 	download_update_check_file()
