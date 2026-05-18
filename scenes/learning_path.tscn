@@ -68,6 +68,7 @@ layout_mode = 2
 mouse_filter = 1
 
 [node name="TutorialOverlay" parent="." instance=ExtResource("5_ra161")]
+visible = false
 layout_mode = 1
 tutorial_scene_name = "path"
 
