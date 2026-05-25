@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://duvn8fsitfxmv"]
+[gd_scene format=3 uid="uid://duvn8fsitfxmv"]
 
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_5x862"]
 [ext_resource type="PackedScene" uid="uid://0xbpf5stixh3" path="res://assets/scenes/theme_switcher.tscn" id="2_6284t"]
@@ -11,8 +11,11 @@
 [ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="7_my345"]
 [ext_resource type="FontFile" uid="uid://c7v0k1jemstg6" path="res://assets/fonts/National_Park/static/NationalPark-SemiBold.ttf" id="9_my345"]
 [ext_resource type="Texture2D" uid="uid://m1j6b8alr38j" path="res://assets/general_ui/add_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="10_c7bbh"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="11_b6nrl"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="12_3fu2s"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="13_jfxbp"]
 
-[node name="WordCategory" type="Control"]
+[node name="WordCategory" type="Control" unique_id=2021639710]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,10 +25,10 @@ grow_vertical = 2
 theme = ExtResource("1_5x862")
 script = ExtResource("2_wpqvi")
 
-[node name="ThemeSwitcher" parent="." instance=ExtResource("2_6284t")]
+[node name="ThemeSwitcher" parent="." unique_id=2089960511 instance=ExtResource("2_6284t")]
 overwrite_theme = ExtResource("1_5x862")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=24288687]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,7 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=57849319]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,20 +48,20 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=64416259]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_iholk")]
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" unique_id=377914095 instance=ExtResource("4_iholk")]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=272668459]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2046858822]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
@@ -70,7 +73,7 @@ texture_focused = ExtResource("3_wpqvi")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1121860451]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -85,7 +88,7 @@ font_type = 3
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="DeleteButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="DeleteButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1423040977]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
@@ -97,18 +100,18 @@ texture_focused = ExtResource("4_6284t")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=1255345119]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=1834533455]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=926883207]
 layout_mode = 2
 
-[node name="WordsTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="WordsTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=913749262]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -119,20 +122,20 @@ script = ExtResource("7_my345")
 font_type = 2
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="AddWord" type="TextureButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="AddWord" type="TextureButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1696494441]
 layout_mode = 2
 texture_normal = ExtResource("10_c7bbh")
 
-[node name="Words" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="Words" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=538244281]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1695982725]
 layout_mode = 2
 
-[node name="VerbsTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="VerbsTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=649102236]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -143,20 +146,20 @@ script = ExtResource("7_my345")
 font_type = 2
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="AddVerb" type="TextureButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="AddVerb" type="TextureButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=740088197]
 layout_mode = 2
 texture_normal = ExtResource("10_c7bbh")
 
-[node name="Verbs" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="Verbs" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1565108693]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_iholk")]
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" unique_id=1221357144 instance=ExtResource("4_iholk")]
 layout_mode = 2
 
-[node name="ReallyDelete" type="PanelContainer" parent="."]
+[node name="ReallyDelete" type="PanelContainer" parent="." unique_id=1106600484]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -173,36 +176,45 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_5x862")
 
-[node name="MarginContainer" type="MarginContainer" parent="ReallyDelete"]
+[node name="MarginContainer" type="MarginContainer" parent="ReallyDelete" unique_id=408938712]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ReallyDelete/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ReallyDelete/MarginContainer" unique_id=914588556]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="Title" type="Label" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="ReallyDelete/MarginContainer/VBoxContainer" unique_id=703579742]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_b6nrl")
 theme_override_font_sizes/font_size = 48
 text = "REALLY_DELETE"
 autowrap_mode = 3
+script = ExtResource("7_my345")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Control" type="Control" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="ReallyDelete/MarginContainer/VBoxContainer" unique_id=729061291]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="DontDelete" type="Button" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+[node name="DontDelete" type="Button" parent="ReallyDelete/MarginContainer/VBoxContainer" unique_id=2112752784]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_3fu2s")
 text = "NO"
+script = ExtResource("13_jfxbp")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
-[node name="Delete" type="Button" parent="ReallyDelete/MarginContainer/VBoxContainer"]
+[node name="Delete" type="Button" parent="ReallyDelete/MarginContainer/VBoxContainer" unique_id=580651581]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_3fu2s")
 text = "YES"
+script = ExtResource("13_jfxbp")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
-[node name="ThemeSwitcher" type="Node" parent="ReallyDelete"]
+[node name="ThemeSwitcher" type="Node" parent="ReallyDelete" unique_id=659414237]
 script = ExtResource("6_wpqvi")
 metadata/_custom_type_script = "uid://ejjs0kfm782h"
 

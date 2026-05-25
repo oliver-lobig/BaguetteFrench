@@ -7,7 +7,14 @@ func _ready() -> void:
 	var this_category = Vars.own_categorys[Vars.current_open_category]
 	%Title.text = this_category["name"]
 	for word in this_category["words"]:
-		var word_text = WordHandler.get_words_string(word.french) + " - " + WordHandler.get_words_string(word.german) + " | " + word.description
+		
+		var word_text = "Error!"
+		
+		if word.description == "":
+			word_text = WordHandler.get_words_string(word.french) + " - " + WordHandler.get_words_string(word.german)
+		else:
+			word_text = WordHandler.get_words_string(word.french) + " - " + WordHandler.get_words_string(word.german) + " | " + word.description
+		
 		var instance = CUSTOM_WORD_ROW.instantiate()
 		instance.text = word_text
 		instance.word = word

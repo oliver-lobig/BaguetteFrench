@@ -78,10 +78,10 @@ func _on_action_button_pressed() -> void:
 					var french = parts[int(%French.text)].split(", ")
 					var german = parts[int(%German.text)].split(", ")
 					var description = ""
-					if %Description.text != "-":
+					if %Description.text != "":
 						description = parts[int(%Description.text)]
 					var grammatical_gender = -1
-					if %GrammaticalGender.text != "-":
+					if %GrammaticalGender.text != "":
 						grammatical_gender = ["UNSET","M","W","KEINE"].find(parts[int(%GrammaticalGender.text)]) if ["UNSET","M","W","KEINE"].find(parts[int(%GrammaticalGender.text)]) != -1 else 0
 					var uid = randi_range(111111111,999999999)
 					var word: Word = Word.new()

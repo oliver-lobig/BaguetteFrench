@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://cks6x73gulqfh"]
+[gd_resource type="VisualShader" format=3 uid="uid://cks6x73gulqfh"]
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_n2ytp"]
 parameter_name = "Texture2DParameter"
@@ -13,12 +13,6 @@ output_port_for_preview = 0
 constant = Color(0, 0, 0, 1)
 
 [resource]
-code = "shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
-
-
-
-"
 nodes/fragment/0/position = Vector2(1000, 240)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_n2ytp")
 nodes/fragment/2/position = Vector2(60, 100)

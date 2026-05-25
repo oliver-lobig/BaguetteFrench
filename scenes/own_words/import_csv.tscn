@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bnku84egchlgf"]
+[gd_scene format=3 uid="uid://bnku84egchlgf"]
 
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_mt3sl"]
 [ext_resource type="Script" uid="uid://v0k5xflo5dyy" path="res://scenes/own_words/import_csv.gd" id="2_8vivl"]
@@ -43,7 +43,7 @@ corner_radius_top_right = 64
 corner_radius_bottom_right = 64
 corner_radius_bottom_left = 64
 
-[node name="ImportCSV" type="Control"]
+[node name="ImportCSV" type="Control" unique_id=547835841]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,9 +53,9 @@ grow_vertical = 2
 theme = ExtResource("1_mt3sl")
 script = ExtResource("2_8vivl")
 
-[node name="ThemeSwitcher" parent="." instance=ExtResource("2_hb81l")]
+[node name="ThemeSwitcher" parent="." unique_id=530597798 instance=ExtResource("2_hb81l")]
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=681066386]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -63,7 +63,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1910561251]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -75,21 +75,21 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1325858355]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_hb81l")]
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" unique_id=819764125 instance=ExtResource("4_hb81l")]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1708836318]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 32
 
-[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=605556263]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
@@ -101,7 +101,7 @@ texture_focused = ExtResource("3_a6c7d")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ViewTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ViewTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=105545461]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
@@ -113,12 +113,12 @@ font_type = 3
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Properties" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Properties" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1217611991]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="LoadCSV" type="Button" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="LoadCSV" type="Button" parent="MarginContainer/VBoxContainer/Properties" unique_id=314993291]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -129,7 +129,7 @@ text = "LOAD_CSV"
 script = ExtResource("9_ad2c8")
 metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
-[node name="SkipFirstLine" type="CheckBox" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="SkipFirstLine" type="CheckBox" parent="MarginContainer/VBoxContainer/Properties" unique_id=1443833829]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_4u1wq")
@@ -139,7 +139,7 @@ script = ExtResource("11_04vjw")
 font_type = 2
 metadata/_custom_type_script = "uid://bv0od7iu1ywhn"
 
-[node name="French" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="French" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties" unique_id=585014353]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -157,7 +157,7 @@ placeholder_text = "FRENCH_ROW_ID"
 script = ExtResource("13_7lwi2")
 metadata/_custom_type_script = "uid://bg81mre3ur8o"
 
-[node name="German" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="German" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties" unique_id=2118635828]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -175,7 +175,7 @@ placeholder_text = "GERMAN_ROW_ID"
 script = ExtResource("13_7lwi2")
 metadata/_custom_type_script = "uid://bg81mre3ur8o"
 
-[node name="Description" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="Description" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties" unique_id=1031844573]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -193,7 +193,7 @@ placeholder_text = "DESCRIPTION_ROW_ID"
 script = ExtResource("13_7lwi2")
 metadata/_custom_type_script = "uid://bg81mre3ur8o"
 
-[node name="GrammaticalGender" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="GrammaticalGender" type="LineEdit" parent="MarginContainer/VBoxContainer/Properties" unique_id=383413641]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -211,7 +211,7 @@ placeholder_text = "GRAMMATICAL_GENDER_ROW_ID"
 script = ExtResource("13_7lwi2")
 metadata/_custom_type_script = "uid://bg81mre3ur8o"
 
-[node name="SelectCategory" type="OptionButton" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="SelectCategory" type="OptionButton" parent="MarginContainer/VBoxContainer/Properties" unique_id=439733589]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_4u1wq")
@@ -223,11 +223,11 @@ script = ExtResource("14_uxln6")
 font_type = 2
 metadata/_custom_type_script = "uid://c1kyqmfeobas5"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Properties" unique_id=677649341]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Error" type="Label" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="Error" type="Label" parent="MarginContainer/VBoxContainer/Properties" unique_id=1759790809]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -236,7 +236,7 @@ theme_override_font_sizes/font_size = 32
 text = "Error"
 autowrap_mode = 3
 
-[node name="ActionButton" type="Button" parent="MarginContainer/VBoxContainer/Properties"]
+[node name="ActionButton" type="Button" parent="MarginContainer/VBoxContainer/Properties" unique_id=2095162436]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -247,12 +247,12 @@ text = "IMPORT_WORDS"
 script = ExtResource("9_ad2c8")
 metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
-[node name="SystemBarSpacerKeyboard" parent="MarginContainer/VBoxContainer" instance=ExtResource("7_a6c7d")]
+[node name="SystemBarSpacerKeyboard" parent="MarginContainer/VBoxContainer" unique_id=904930413 instance=ExtResource("7_a6c7d")]
 layout_mode = 2
 height_offset = 16.0
 standard_size = 32.0
 
-[node name="FileDialog" type="FileDialog" parent="."]
+[node name="FileDialog" type="FileDialog" parent="." unique_id=701179190]
 unique_name_in_owner = true
 title = "Open a File"
 dialog_hide_on_ok = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdjk3deet164h"]
+[gd_scene format=3 uid="uid://bdjk3deet164h"]
 
 [ext_resource type="Script" uid="uid://dklms7f3jfrv8" path="res://scenes/own_words/custom_word_row.gd" id="1_m445p"]
 [ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="2_7k7e6"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="3_xs7hh"]
 [ext_resource type="Texture2D" uid="uid://copq0ko5723nd" path="res://assets/general_ui/close_24dp_FFF9FB_FILL0_wght300_GRAD200_opsz24.svg" id="4_qsbce"]
 
-[node name="CustomWordRow" type="Control"]
+[node name="CustomWordRow" type="Control" unique_id=1814063187]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 3
 anchors_preset = 15
@@ -15,9 +15,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_m445p")
 
-[node name="Main" type="HBoxContainer" parent="."]
+[node name="Main" type="HBoxContainer" parent="." unique_id=1509750348]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 10
@@ -25,19 +26,23 @@ anchor_right = 1.0
 offset_bottom = 53.0
 grow_horizontal = 2
 
-[node name="Button" type="Button" parent="Main"]
+[node name="Button" type="Button" parent="Main" unique_id=1812058631]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("2_7k7e6")
+text_overrun_behavior = 3
+clip_text = true
 script = ExtResource("3_xs7hh")
 metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
-[node name="TextureButton" type="TextureButton" parent="Main"]
+[node name="TextureButton" type="TextureButton" parent="Main" unique_id=1997770461]
 layout_mode = 2
+mouse_filter = 1
 texture_normal = ExtResource("2_tr8l6")
 
-[node name="ReallyDelete" type="HBoxContainer" parent="."]
+[node name="ReallyDelete" type="HBoxContainer" parent="." unique_id=1484232989]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -46,13 +51,14 @@ anchor_right = 1.0
 offset_bottom = 53.0
 grow_horizontal = 2
 
-[node name="Yes" type="TextureButton" parent="ReallyDelete"]
+[node name="Yes" type="TextureButton" parent="ReallyDelete" unique_id=166729948]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
+mouse_filter = 1
 texture_normal = ExtResource("3_tr8l6")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="ReallyDelete"]
+[node name="Label" type="Label" parent="ReallyDelete" unique_id=822511391]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.8862745, 0.8862745, 0.8862745, 1)
@@ -60,9 +66,10 @@ theme_override_font_sizes/font_size = 32
 text = "REALLY_DELETE"
 horizontal_alignment = 1
 
-[node name="No" type="TextureButton" parent="ReallyDelete"]
+[node name="No" type="TextureButton" parent="ReallyDelete" unique_id=1333073015]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
+mouse_filter = 1
 texture_normal = ExtResource("4_qsbce")
 stretch_mode = 5
 

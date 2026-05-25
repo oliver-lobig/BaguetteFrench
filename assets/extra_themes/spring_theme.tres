@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=21 format=3 uid="uid://c5ruyrdwaufgu"]
+[gd_resource type="Theme" format=3 uid="uid://c5ruyrdwaufgu"]
 
 [ext_resource type="FontFile" uid="uid://c1lsc01r86x0" path="res://assets/fonts/Josefin_Sans/static/JosefinSans-BoldItalic.ttf" id="1_rt4na"]
 [ext_resource type="FontFile" uid="uid://diie3pd236cwv" path="res://assets/fonts/Josefin_Sans/static/JosefinSans-Medium.ttf" id="1_wmc5x"]
