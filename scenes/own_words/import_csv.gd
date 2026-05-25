@@ -4,8 +4,10 @@ var file_content: String = ""
 var file_lines: Array = []
 
 func _ready() -> void:
+	print("hi from import")
 	for category in Vars.own_categorys:
 		%SelectCategory.add_item(category)
+
 func _on_load_csv_pressed() -> void:
 	%FileDialog.show()
 
@@ -30,6 +32,7 @@ func split_escaped(string: String):
 	return output
 
 func _on_file_dialog_file_selected(path: String) -> void:
+	print(path, " selected!")
 	var file = FileAccess.open(path, FileAccess.READ)
 	var content = file.get_as_text()
 	file_content = content
@@ -40,11 +43,11 @@ func throw_error(error: String):
 	%Error.show()
 
 func _on_action_button_pressed() -> void:
-	if %SelectCategory.selected == 0:
-		throw_error("Bitte gib die Kategorie des Wortes an.")
-		return
 	if file_content == "":
 		throw_error("Bitte wähle eine CSV-Datei aus!")
+		return
+	if %SelectCategory.selected == 0:
+		throw_error("Bitte gib die Kategorie des Wortes an.")
 		return
 	if %French.text == "":
 		throw_error("Bitte wähle eine Spalten-ID für Französisch aus!")
@@ -72,10 +75,14 @@ func _on_action_button_pressed() -> void:
 				if parts[int(%French.text)] == "":
 					pass
 				else:
-					var french = parts[int(%French.text)].split("; ")
-					var german = parts[int(%German.text)].split("; ")
-					var description = parts[int(%Description.text)]
-					var grammatical_gender = ["UNSET","M","W","KEINE"].find(parts[int(%GrammaticalGender.text)]) if ["UNSET","M","W","KEINE"].find(parts[int(%GrammaticalGender.text)]) != -1 else 0
+					var french = parts[int(%French.text)].split(", ")
+					var german = parts[int(%German.text)].split(", ")
+					var description = ""
+					if %Description.text != "-":
+						description = parts[int(%Description.text)]
+					var grammatical_gender = -1
+					if %GrammaticalGender.text != "-":
+						grammatical_gender = ["UNSET","M","W","KEINE"].find(parts[int(%GrammaticalGender.text)]) if ["UNSET","M","W","KEINE"].find(parts[int(%GrammaticalGender.text)]) != -1 else 0
 					var uid = randi_range(111111111,999999999)
 					var word: Word = Word.new()
 					word.description = description
@@ -91,3 +98,7 @@ func _on_action_button_pressed() -> void:
 
 func _on_back_button_pressed() -> void:
 	View.open_tab("own_words")
+
+
+func _on_file_dialog_confirmed() -> void:
+	print("should select")

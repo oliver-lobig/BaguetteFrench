@@ -226,7 +226,12 @@ func load_saves():
 	max_unit = save_file.max_unit
 	all_learn_words = save_file.all_learn_words
 	all_learn_verbs = save_file.all_learn_verbs
-	settings_data = save_file.settings_data
+	
+	if save_file.settings_data:
+		settings_data = save_file.settings_data
+	else:
+		settings_data = SettingsData.new()
+	
 	to_french = settings_data.to_french
 	to_language_french = settings_data.to_french
 	learn_points = save_file.learn_points

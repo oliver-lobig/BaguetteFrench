@@ -11,6 +11,16 @@ func load_words():
 	await get_tree().process_frame
 	var extra_words = Vars.words if Vars.settings_data.dictionary_from_selection == false else Vars.all_learn_words
 	var words = WordHandler.get_words_in_unit(Vars.current_open_unit) if Vars.whole_dictionary == false else extra_words
+	var verbs = []
+	
+	if Vars.whole_dictionary == false:
+		verbs = WordHandler.get_verbs_in_unit(Vars.current_open_unit)
+	else:
+		verbs = Vars.verbs.values()
+	
+	for verb in verbs:
+		words.append(verb.infinitive)
+	
 	for word in words:
 		var instance = WORD_ROW.instantiate()
 		instance.word = word

@@ -38,5 +38,6 @@ func translate(input: String):
 		return ui_translations.get(input).get(selected_language)
 
 func set_locale(locale: String):
+	#print("Set locale from ", selected_language, " to ", locale)
 	#TranslationServer.set_locale(locale)
 	selected_language = locale

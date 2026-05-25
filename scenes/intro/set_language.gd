@@ -23,25 +23,26 @@ func animate_transition_in():
 
 
 func _on_language_german_pressed() -> void:
+	selected_language = "de"
+	Vars.settings_data.language = selected_language
+	BaguetteTranslationServer.set_locale(Vars.settings_data.language)
 	%LanguageGerman.disabled = true
 	%LanguageFrench.disabled = false
 	%ContinueButton.text = BaguetteTranslationServer.translate("NEXT_BUTTON")
 	%ContinueButton.disabled = false
-	selected_language = "de"
-	Vars.settings_data.language = selected_language
-	BaguetteTranslationServer.set_locale(Vars.settings_data.language)
+	
 	Vars.save_saves("Language set to german")
 
 
 func _on_language_french_pressed() -> void:
+	selected_language = "fr"
+	Vars.settings_data.language = selected_language
+	BaguetteTranslationServer.set_locale(Vars.settings_data.language)
 	%LanguageGerman.disabled = false
 	%LanguageFrench.disabled = true
 	%ContinueButton.text = BaguetteTranslationServer.translate("NEXT_BUTTON")
 	%ContinueButton.disabled = false
-	selected_language = "fr"
-	Vars.settings_data.language = selected_language
-	BaguetteTranslationServer.set_locale(Vars.settings_data.language)
-	Vars.save_saves("Language set to german")
+	Vars.save_saves("Language set to french")
 
 
 func _on_continue_button_pressed() -> void:
