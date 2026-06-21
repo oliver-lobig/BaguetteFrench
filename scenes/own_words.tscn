@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://h8xy43358equ"]
+[gd_scene format=3 uid="uid://h8xy43358equ"]
 
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_2vwfw"]
 [ext_resource type="Script" uid="uid://lcrug8s4rx3f" path="res://scenes/own_words.gd" id="2_kpfun"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0g7ljpdi1e3d" path="res://assets/general_ui/add_circle_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="3_hrpi5"]
 [ext_resource type="Texture2D" uid="uid://cvbueokddxbgn" path="res://assets/general_ui/add_notes_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="4_kpfun"]
 [ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="4_t5gi6"]
-[ext_resource type="Texture2D" uid="uid://b7iibb0v2n0sm" path="res://assets/general_ui/upload_64dp_FFF9FB_FILL1_wght300_GRAD200_opsz48.svg" id="5_t5gi6"]
+[ext_resource type="Texture2D" uid="uid://f4k5a8icjdda" path="res://assets/general_ui/download_small.svg" id="7_qb2l7"]
 [ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="8_qb2l7"]
 [ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="9_c2vx5"]
 [ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="10_q03oh"]
@@ -31,7 +31,7 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="OwnWords" type="Control"]
+[node name="OwnWords" type="Control" unique_id=2140786296]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,10 +41,10 @@ grow_vertical = 2
 theme = ExtResource("1_2vwfw")
 script = ExtResource("2_kpfun")
 
-[node name="ThemeSwitcher" parent="." instance=ExtResource("2_mt3ks")]
+[node name="ThemeSwitcher" parent="." unique_id=1983323504 instance=ExtResource("2_mt3ks")]
 overwrite_theme = ExtResource("1_2vwfw")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1878108745]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,7 +52,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1252562969]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -64,50 +64,50 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1140636257]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_t5gi6")]
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" unique_id=853578578 instance=ExtResource("4_t5gi6")]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=534073661]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 32
 
-[node name="AddWords" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="AddWords" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1340518400]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 icon = ExtResource("3_hrpi5")
 icon_alignment = 1
 
-[node name="AddCategory" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="AddCategory" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=968809177]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 icon = ExtResource("4_kpfun")
 icon_alignment = 1
 
-[node name="ImportWords" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ImportWords" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=710244180]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
-icon = ExtResource("5_t5gi6")
+icon = ExtResource("7_qb2l7")
 icon_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=1552984221]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Categorys" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="Categorys" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=59922773]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="TutorialOverlay" parent="." instance=ExtResource("8_qb2l7")]
+[node name="TutorialOverlay" parent="." unique_id=266019001 instance=ExtResource("8_qb2l7")]
 visible = false
 layout_mode = 1
 tutorial_scene_name = "own_words"
@@ -119,7 +119,7 @@ offset_bottom = -4.0
 [node name="Slide1" parent="TutorialOverlay/Slides" index="0"]
 visible = false
 
-[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0" unique_id=1950194140]
 modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
 layout_mode = 1
 anchors_preset = 1
@@ -133,7 +133,7 @@ grow_horizontal = 0
 texture = ExtResource("9_c2vx5")
 flip_v = true
 
-[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1" unique_id=288762013]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 728.0
@@ -148,7 +148,7 @@ font_type = 2
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2" unique_id=1697635038]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 792.0
@@ -163,7 +163,7 @@ script = ExtResource("11_yn60m")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3" unique_id=1453161920]
 material = SubResource("ShaderMaterial_kxwmk")
 layout_mode = 1
 anchors_preset = 10
@@ -172,7 +172,7 @@ offset_bottom = 315.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_el4fq")
 
-[node name="Slide2" type="Control" parent="TutorialOverlay/Slides" index="1"]
+[node name="Slide2" type="Control" parent="TutorialOverlay/Slides" index="1" unique_id=1690158658]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -181,7 +181,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide2"]
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide2" unique_id=1217301099]
 modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
 layout_mode = 1
 anchors_preset = 1
@@ -195,7 +195,7 @@ grow_horizontal = 0
 texture = ExtResource("9_c2vx5")
 flip_v = true
 
-[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide2"]
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide2" unique_id=1408951530]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 728.0
@@ -210,7 +210,7 @@ font_type = 2
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide2"]
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide2" unique_id=1682824210]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 792.0
@@ -225,7 +225,7 @@ script = ExtResource("11_yn60m")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide2"]
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide2" unique_id=1501874028]
 material = SubResource("ShaderMaterial_kxwmk")
 layout_mode = 1
 anchors_preset = 10
@@ -234,7 +234,7 @@ offset_bottom = 315.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_el4fq")
 
-[node name="Slide3" type="Control" parent="TutorialOverlay/Slides" index="2"]
+[node name="Slide3" type="Control" parent="TutorialOverlay/Slides" index="2" unique_id=188938170]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -243,7 +243,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide3"]
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide3" unique_id=1762839222]
 modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
 layout_mode = 1
 anchors_preset = 1
@@ -257,7 +257,7 @@ grow_horizontal = 0
 texture = ExtResource("9_c2vx5")
 flip_v = true
 
-[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide3"]
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide3" unique_id=1315906217]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 728.0
@@ -272,7 +272,7 @@ font_type = 2
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide3"]
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide3" unique_id=552526201]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 792.0
@@ -287,7 +287,7 @@ script = ExtResource("11_yn60m")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide3"]
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide3" unique_id=1862560397]
 material = SubResource("ShaderMaterial_kxwmk")
 layout_mode = 1
 anchors_preset = 10

@@ -4,7 +4,6 @@ var file_content: String = ""
 var file_lines: Array = []
 
 func _ready() -> void:
-	print("hi from import")
 	for category in Vars.own_categorys:
 		%SelectCategory.add_item(category)
 
@@ -32,7 +31,6 @@ func split_escaped(string: String):
 	return output
 
 func _on_file_dialog_file_selected(path: String) -> void:
-	print(path, " selected!")
 	var file = FileAccess.open(path, FileAccess.READ)
 	var content = file.get_as_text()
 	file_content = content
@@ -54,12 +52,6 @@ func _on_action_button_pressed() -> void:
 		return
 	if %German.text == "":
 		throw_error("Bitte wähle eine Spalten-ID für Deutsch aus!")
-		return
-	if %Description.text == "":
-		throw_error("Bitte wähle eine Spalten-ID für die Beschreibung aus!")
-		return
-	if %GrammaticalGender.text == "":
-		throw_error("Bitte wähle eine Spalten-ID für das Geschlecht aus!")
 		return
 	var category = %SelectCategory.get_item_text(%SelectCategory.selected)
 	var id = 0
@@ -98,7 +90,3 @@ func _on_action_button_pressed() -> void:
 
 func _on_back_button_pressed() -> void:
 	View.open_tab("own_words")
-
-
-func _on_file_dialog_confirmed() -> void:
-	print("should select")

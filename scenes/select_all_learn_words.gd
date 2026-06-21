@@ -34,14 +34,19 @@ func reload_selection(_air: bool):
 		unit_sequence_id += 1
 	unit_sequence_id = 0
 	for unit_node in %OwnUnits.get_children():
+		var own_unit_id = Vars.own_categorys.keys()[unit_sequence_id]
 		if unit_node.button_pressed:
-			selected_own_units.append(Vars.own_categorys.keys()[unit_sequence_id])
+			selected_own_units.append(own_unit_id)
+		else:
+			selected_own_units.erase(own_unit_id)
 		unit_sequence_id += 1
 	var unit_words = Vars.words.filter(word_in_units)
 	var unit_verbs = Vars.verbs.values().filter(verb_in_units)
 	for unit in selected_own_units:
-		unit_words.append_array(Vars.own_categorys[unit]["words"])
-		unit_verbs.append_array(Vars.own_categorys[unit]["verbs"])
+		if Vars.own_categorys[unit].has("words"):
+			unit_words.append_array(Vars.own_categorys[unit]["words"])
+		if Vars.own_categorys[unit].has("verbs"):
+			unit_verbs.append_array(Vars.own_categorys[unit]["verbs"])
 	if %OnlyMarked.button_pressed:
 		var selected_words = unit_words.filter(word_selected)
 		all_selected_words = selected_words

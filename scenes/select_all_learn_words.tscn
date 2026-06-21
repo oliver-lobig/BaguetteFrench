@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://buxqvq1bv0kfj"]
+[gd_scene format=3 uid="uid://buxqvq1bv0kfj"]
 
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_m0qnr"]
 [ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="2_kakea"]
@@ -43,7 +43,7 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="SelectAllLearnWords" type="Control"]
+[node name="SelectAllLearnWords" type="Control" unique_id=1664049343]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,7 +53,7 @@ grow_vertical = 2
 theme = ExtResource("1_m0qnr")
 script = ExtResource("2_o8pi4")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1985315465]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,12 +61,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ThemeSwitcher" type="Node" parent="."]
+[node name="ThemeSwitcher" type="Node" parent="." unique_id=1236149258]
 script = ExtResource("2_kakea")
 overwrite_theme = ExtResource("1_m0qnr")
 metadata/_custom_type_script = "uid://ejjs0kfm782h"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1250532344]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,18 +78,18 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=191619689]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_o8pi4")]
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" unique_id=164488730 instance=ExtResource("4_o8pi4")]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1982758828]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1607008546]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 texture_normal = ExtResource("3_o8pi4")
@@ -100,7 +100,7 @@ texture_focused = ExtResource("3_o8pi4")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=683923379]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -115,7 +115,7 @@ font_type = 3
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="SelectedWords" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="SelectedWords" type="Label" parent="MarginContainer/VBoxContainer" unique_id=629821816]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -130,7 +130,7 @@ script = ExtResource("7_5w3ow")
 font_type = 4
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="OnlyMarked" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+[node name="OnlyMarked" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=478879125]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("11_8ferd")
@@ -139,39 +139,39 @@ script = ExtResource("9_nqu1m")
 font_type = 2
 metadata/_custom_type_script = "uid://bv0od7iu1ywhn"
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=135885607]
 layout_mode = 2
 theme_override_constants/separation = 16
 theme_override_styles/separator = SubResource("StyleBoxEmpty_o8pi4")
 
-[node name="CheckBox2" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="CheckBox2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1166569301]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_wcets")
 text = "ALL_UNTIL_NOW"
 script = ExtResource("10_nqu1m")
 metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=469211153]
 layout_mode = 2
 theme_override_constants/separation = 36
 theme_override_styles/separator = SubResource("StyleBoxLine_167i5")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=603760583]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=252314813]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 32
 
-[node name="ActiveUnits" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="ActiveUnits" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=272089188]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="SelectedWords2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="SelectedWords2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=300582981]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -186,20 +186,21 @@ script = ExtResource("7_5w3ow")
 font_type = 2
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="OwnUnits" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="OwnUnits" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1441731561]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=348829795]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_kakea")
 
-[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_o8pi4")]
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" unique_id=599208379 instance=ExtResource("4_o8pi4")]
 layout_mode = 2
 
-[node name="TutorialOverlay" parent="." instance=ExtResource("13_wy7gi")]
+[node name="TutorialOverlay" parent="." unique_id=1262914665 instance=ExtResource("13_wy7gi")]
+visible = false
 layout_mode = 1
 tutorial_scene_name = "select"
 
@@ -207,7 +208,7 @@ tutorial_scene_name = "select"
 offset_top = -4.0
 offset_bottom = -4.0
 
-[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0" unique_id=951116508]
 modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
 layout_mode = 1
 anchors_preset = 1
@@ -220,7 +221,7 @@ offset_bottom = 104.0
 grow_horizontal = 0
 texture = ExtResource("14_njbls")
 
-[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1" unique_id=1981403331]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 504.0
@@ -235,7 +236,7 @@ font_type = 2
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2" unique_id=1151235677]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 568.0
@@ -250,7 +251,7 @@ script = ExtResource("7_5w3ow")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3" unique_id=140628678]
 material = SubResource("ShaderMaterial_2tl5l")
 layout_mode = 1
 anchors_preset = 10

@@ -33,7 +33,8 @@ var unit_sequence: Array = [
 	Units.ADVENTURES,
 	Units.EN_FAMILLE,
 	Units.MANGER,
-	Units.BREIZH
+	Units.BREIZH,
+	Units.LES_MEDIAS
 ]
 
 var unit_names: Dictionary = {
