@@ -11,8 +11,9 @@ func _ready() -> void:
 		voice_fr = DisplayServer.tts_get_voices_for_language("fr")[0]
 
 func tts_speak(text: String = "", volume: int = 50, pitch: float = 1.0, rate: float = 1.0,language: String = "de",id: int = 0):
+	var better_text = text.replace(" qn", " quelq'un").replace(" qc", " quelque choses")
 	if voice_de if language == "de" else voice_fr:
-		DisplayServer.tts_speak(text,voice_de if language == "de" else voice_fr,volume,pitch,rate,id)
+		DisplayServer.tts_speak(better_text,voice_de if language == "de" else voice_fr,volume,pitch,rate,id)
 
 func set_callback(event: int, callable: Callable):
 	DisplayServer.tts_set_utterance_callback(event,callable)

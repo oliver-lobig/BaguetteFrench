@@ -1,0 +1,9 @@
+description=
+icon=uid://ixx22bl3ch4u
+name=BaguetteFrench
+tags=
+
+[version]
+isMono=false
+repo=/godotengine/godot-builds
+tagName=4.7.2-stable

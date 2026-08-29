@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbc17ib76bxsw"]
+[gd_scene format=3 uid="uid://bbc17ib76bxsw"]
 
 [ext_resource type="Script" uid="uid://qwj2j0tt4sh4" path="res://scenes/learning_methods/matching/vocab_match_card.gd" id="1_5r41q"]
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_8lqda"]
@@ -12,7 +12,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5r41q"]
 
-[node name="VocabMatchCard" type="Control"]
+[node name="VocabMatchCard" type="Control" unique_id=1155034620]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ size_flags_vertical = 3
 theme = ExtResource("1_8lqda")
 script = ExtResource("1_5r41q")
 
-[node name="Selected" type="Panel" parent="." groups=["MatchToSelected"]]
+[node name="Selected" type="Panel" parent="." unique_id=1720560114 groups=["MatchToSelected"]]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -37,7 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("3_r87f0")
 
-[node name="WordContainer" type="PanelContainer" parent="."]
+[node name="WordContainer" type="PanelContainer" parent="." unique_id=368767105]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -46,7 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainerWord" type="MarginContainer" parent="WordContainer"]
+[node name="MarginContainerWord" type="MarginContainer" parent="WordContainer" unique_id=534700770]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/margin_left = 16
@@ -54,10 +54,10 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="WordContainer/MarginContainerWord"]
+[node name="VBoxContainer" type="VBoxContainer" parent="WordContainer/MarginContainerWord" unique_id=1289795945]
 layout_mode = 2
 
-[node name="VocabOriginal" type="Label" parent="WordContainer/MarginContainerWord/VBoxContainer"]
+[node name="VocabOriginal" type="Label" parent="WordContainer/MarginContainerWord/VBoxContainer" unique_id=1545769689]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -71,7 +71,7 @@ script = ExtResource("5_7j33i")
 font_type = 2
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="MatchTo" type="PanelContainer" parent="." groups=["MatchTo"]]
+[node name="MatchTo" type="PanelContainer" parent="." unique_id=116261854 groups=["MatchTo"]]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -83,7 +83,7 @@ grow_vertical = 2
 theme = ExtResource("1_8lqda")
 theme_override_styles/panel = ExtResource("4_r87f0")
 
-[node name="MarginContainerTo" type="MarginContainer" parent="MatchTo"]
+[node name="MarginContainerTo" type="MarginContainer" parent="MatchTo" unique_id=840685226]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/margin_left = 16
@@ -91,10 +91,10 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MatchTo/MarginContainerTo"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MatchTo/MarginContainerTo" unique_id=357198676]
 layout_mode = 2
 
-[node name="VocabOriginalTo" type="Label" parent="MatchTo/MarginContainerTo/VBoxContainer"]
+[node name="VocabOriginalTo" type="Label" parent="MatchTo/MarginContainerTo/VBoxContainer" unique_id=1094215785]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -109,7 +109,7 @@ script = ExtResource("5_7j33i")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="VocabDescriptionTo" type="Label" parent="MatchTo/MarginContainerTo/VBoxContainer"]
+[node name="VocabDescriptionTo" type="Label" parent="MatchTo/MarginContainerTo/VBoxContainer" unique_id=219405389]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -124,9 +124,9 @@ script = ExtResource("5_7j33i")
 font_type = 4
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="ThemeSwitcher" parent="MatchTo" instance=ExtResource("6_c1nie")]
+[node name="ThemeSwitcher" parent="MatchTo" unique_id=860144982 instance=ExtResource("6_c1nie")]
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=158698779]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -136,7 +136,7 @@ grow_vertical = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5r41q")
 flat = true
 
-[node name="ThemeSwitcher" parent="." instance=ExtResource("6_c1nie")]
+[node name="ThemeSwitcher" parent="." unique_id=1568553889 instance=ExtResource("6_c1nie")]
 
 [connection signal="focus_entered" from="Selected" to="." method="_on_panel_focus_entered"]
 [connection signal="focus_exited" from="Selected" to="." method="_on_panel_focus_exited"]

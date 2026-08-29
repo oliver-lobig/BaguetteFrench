@@ -19,6 +19,8 @@ const BG_CROPPED_15 = preload("res://assets/scenes/learning_path/bg_slices/bg_cr
 const BG_CROPPED_17 = preload("res://assets/scenes/learning_path/bg_slices/bg_cropped_17.png")
 const BG_CROPPED_18 = preload("res://assets/scenes/learning_path/bg_slices/bg_cropped_18.png")
 const BG_CROPPED_19 = preload("res://assets/scenes/learning_path/bg_slices/bg_cropped_19.png")
+const BG_CROPPED_20 = preload("res://assets/scenes/learning_path/bg_slices/bg_cropped_20.png")
+const BG_CROPPED_21 = preload("res://assets/scenes/learning_path/bg_slices/bg_cropped_21.png")
 const BG_CROPPED_16 = preload("res://assets/scenes/learning_path/bg_slices/bg_cropped_16.png")
 
 var images = [
@@ -42,8 +44,10 @@ var images = [
 	BG_CROPPED_17,
 	BG_CROPPED_18,
 	BG_CROPPED_19,
+	BG_CROPPED_20,
+	BG_CROPPED_21
 ]
-var image_count = 20
+var image_count = 22
 
 func _ready() -> void:
 	for i in image_count:

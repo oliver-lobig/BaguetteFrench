@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cvi5u7gu00k4j"]
+[gd_scene format=3 uid="uid://cvi5u7gu00k4j"]
 
 [ext_resource type="Theme" uid="uid://c5ruyrdwaufgu" path="res://assets/extra_themes/spring_theme.tres" id="1_3cu4m"]
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="1_5y8p7"]
@@ -185,7 +185,7 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="Hearing" type="Control"]
+[node name="Hearing" type="Control" unique_id=401978369]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -195,10 +195,10 @@ grow_vertical = 2
 theme = ExtResource("1_5y8p7")
 script = ExtResource("1_yxdic")
 
-[node name="Background" type="CanvasLayer" parent="."]
+[node name="Background" type="CanvasLayer" parent="." unique_id=723025820]
 layer = -1
 
-[node name="Control" type="Control" parent="Background"]
+[node name="Control" type="Control" parent="Background" unique_id=1052815785]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,12 +207,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_5y8p7")
 
-[node name="ThemeSwitcher" type="Node" parent="Background/Control"]
+[node name="ThemeSwitcher" type="Node" parent="Background/Control" unique_id=346110386]
 script = ExtResource("3_f11ii")
 overwrite_theme = ExtResource("1_5y8p7")
 metadata/_custom_type_script = "uid://ejjs0kfm782h"
 
-[node name="Panel" type="Panel" parent="Background/Control"]
+[node name="Panel" type="Panel" parent="Background/Control" unique_id=1984349419]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -220,7 +220,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=267636998]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -228,7 +228,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=931512695]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -240,18 +240,18 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1996151834]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_eq3dd")]
+[node name="SystemBarSpacer" parent="MarginContainer/VBoxContainer" unique_id=288722165 instance=ExtResource("2_eq3dd")]
 layout_mode = 2
 
-[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=321709742]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
 
-[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1678034748]
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 texture_normal = ExtResource("3_ebfuh")
@@ -262,7 +262,7 @@ texture_focused = ExtResource("3_ebfuh")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="PointCounter" parent="MarginContainer/VBoxContainer/TopBar" instance=ExtResource("4_p6bjf")]
+[node name="PointCounter" parent="MarginContainer/VBoxContainer/TopBar" unique_id=205525956 instance=ExtResource("4_p6bjf")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -271,7 +271,7 @@ challenge_type = 3
 [node name="Collect" parent="MarginContainer/VBoxContainer/TopBar/PointCounter" index="3"]
 volume_db = -30.0
 
-[node name="MarkButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+[node name="MarkButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1882836790]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
@@ -283,7 +283,7 @@ texture_focused = ExtResource("4_ip2sc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="MarkedButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar"]
+[node name="MarkedButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopBar" unique_id=779629052]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(96, 0)
@@ -296,17 +296,17 @@ texture_focused = ExtResource("5_4uvnm")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ScreenProgressBar" parent="MarginContainer/VBoxContainer" instance=ExtResource("6_1v54s")]
+[node name="ScreenProgressBar" parent="MarginContainer/VBoxContainer" unique_id=75363930 instance=ExtResource("6_1v54s")]
 unique_name_in_owner = true
 layout_mode = 2
 subtract_one = false
 can_skip = true
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=90165352]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="SwipeContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control"]
+[node name="SwipeContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control" unique_id=1665534229]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -317,11 +317,11 @@ grow_vertical = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 32
 
-[node name="Vocab" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer"]
+[node name="Vocab" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer" unique_id=395226776]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="WordContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab"]
+[node name="WordContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab" unique_id=1567512135]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -331,17 +331,17 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(-298, 300)
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer" unique_id=1382502580]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer" unique_id=1312082899]
 layout_mode = 2
 
-[node name="VocabOriginal" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer"]
+[node name="VocabOriginal" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer" unique_id=1156835138]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -355,7 +355,7 @@ script = ExtResource("11_1vsnl")
 font_type = 3
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="VocabDescription" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer"]
+[node name="VocabDescription" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Vocab/WordContainer/MarginContainer/VBoxContainer" unique_id=1483462462]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -370,12 +370,12 @@ script = ExtResource("11_1vsnl")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Controls" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer"]
+[node name="Controls" type="Control" parent="MarginContainer/VBoxContainer/Control/SwipeContainer" unique_id=2002795329]
 texture_filter = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TranslationContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls"]
+[node name="TranslationContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls" unique_id=1054211535]
 unique_name_in_owner = true
 z_index = 2
 layout_mode = 1
@@ -386,14 +386,14 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(-298, 300)
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer" unique_id=2079601003]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Translation" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer"]
+[node name="Translation" type="Label" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer" unique_id=607540607]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -407,7 +407,7 @@ script = ExtResource("11_1vsnl")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="FlipButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer"]
+[node name="FlipButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Control/SwipeContainer/Controls/TranslationContainer/MarginContainer" unique_id=759629674]
 modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -417,16 +417,16 @@ texture_normal = ExtResource("10_kv38a")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="SpeakSpeed" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="SpeakSpeed" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1947381571]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SpeakSpeed"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SpeakSpeed" unique_id=1849058932]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 texture = ExtResource("9_ip2sc")
 
-[node name="SpeakSpeedSlider" type="HSlider" parent="MarginContainer/VBoxContainer/SpeakSpeed"]
+[node name="SpeakSpeedSlider" type="HSlider" parent="MarginContainer/VBoxContainer/SpeakSpeed" unique_id=303301907]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -443,7 +443,7 @@ step = 0.1
 value = 1.0
 exp_edit = true
 
-[node name="SpeakSpeedLabel" type="Label" parent="MarginContainer/VBoxContainer/SpeakSpeed"]
+[node name="SpeakSpeedLabel" type="Label" parent="MarginContainer/VBoxContainer/SpeakSpeed" unique_id=1317258165]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
@@ -455,16 +455,16 @@ horizontal_alignment = 1
 script = ExtResource("11_1vsnl")
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="IntervalTime" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="IntervalTime" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2104321640]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/IntervalTime"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/IntervalTime" unique_id=1252918168]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 texture = ExtResource("12_4uvnm")
 
-[node name="IntervalTimerSlider" type="HSlider" parent="MarginContainer/VBoxContainer/IntervalTime"]
+[node name="IntervalTimerSlider" type="HSlider" parent="MarginContainer/VBoxContainer/IntervalTime" unique_id=1481786669]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -480,7 +480,7 @@ max_value = 10.0
 step = 0.1
 value = 3.0
 
-[node name="IntervalTimeLabel" type="Label" parent="MarginContainer/VBoxContainer/IntervalTime"]
+[node name="IntervalTimeLabel" type="Label" parent="MarginContainer/VBoxContainer/IntervalTime" unique_id=1758320981]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
@@ -492,10 +492,10 @@ horizontal_alignment = 1
 script = ExtResource("11_1vsnl")
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_eq3dd")]
+[node name="SystemBarSpacer2" parent="MarginContainer/VBoxContainer" unique_id=606632006 instance=ExtResource("2_eq3dd")]
 layout_mode = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=490889610]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -508,32 +508,28 @@ offset_bottom = 20.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="BreadRender" parent="Control" instance=ExtResource("10_3cu4m")]
+[node name="BreadRender" parent="Control" unique_id=1934393907 instance=ExtResource("10_3cu4m")]
 unique_name_in_owner = true
 position = Vector2(-31, -13.935)
 rotation = 0.122173056
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=224339482]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_kv38a")
-}
+libraries/ = SubResource("AnimationLibrary_kv38a")
 
-[node name="ThemeSwitcher" parent="." instance=ExtResource("15_5y8p7")]
+[node name="ThemeSwitcher" parent="." unique_id=751129798 instance=ExtResource("15_5y8p7")]
 overwrite_theme = ExtResource("1_3cu4m")
 
 [node name="AnimationPlayer" parent="ThemeSwitcher" index="0"]
-libraries = {
-&"theme_animations": SubResource("AnimationLibrary_vrq5f")
-}
+libraries/theme_animations = SubResource("AnimationLibrary_vrq5f")
 
-[node name="Flip" parent="." instance=ExtResource("18_bb8s5")]
+[node name="Flip" parent="." unique_id=1668640923 instance=ExtResource("18_bb8s5")]
 unique_name_in_owner = true
 layout_mode = 1
 
-[node name="CameraShake" parent="." instance=ExtResource("20_s5pk1")]
+[node name="CameraShake" parent="." unique_id=2081926920 instance=ExtResource("20_s5pk1")]
 
-[node name="TutorialOverlay" parent="." instance=ExtResource("24_ixs6p")]
+[node name="TutorialOverlay" parent="." unique_id=1271158003 instance=ExtResource("24_ixs6p")]
 visible = false
 layout_mode = 1
 tutorial_scene_name = "hearing"
@@ -542,7 +538,7 @@ tutorial_scene_name = "hearing"
 offset_top = -4.0
 offset_bottom = -4.0
 
-[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0"]
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="0" unique_id=33654715]
 modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
 layout_mode = 1
 anchors_preset = 1
@@ -555,7 +551,7 @@ offset_bottom = 252.0
 grow_horizontal = 0
 texture = ExtResource("25_3xsmo")
 
-[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+[node name="Label" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1" unique_id=195309404]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 288.0
@@ -570,7 +566,7 @@ font_type = 2
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2"]
+[node name="Label2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="2" unique_id=680590758]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 352.0
@@ -585,7 +581,7 @@ script = ExtResource("11_1vsnl")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3" unique_id=1807001366]
 material = SubResource("ShaderMaterial_1qwca")
 layout_mode = 1
 anchors_preset = 10

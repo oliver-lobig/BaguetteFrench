@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://2ynv3c560ni3"]
+[gd_scene format=3 uid="uid://2ynv3c560ni3"]
 
 [ext_resource type="PackedScene" uid="uid://mjh32gwx5cl6" path="res://scenes/system_bar.tscn" id="1_tmpr7"]
 [ext_resource type="Script" uid="uid://bexaswh71wgt1" path="res://scenes/tabs.gd" id="1_yk8fv"]
@@ -16,9 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://cnfxv8hg6w5ep" path="res://assets/tabs/school_64dp_9DC384_FILL0_wght300_GRAD200_opsz48.svg" id="9_y8q7g"]
 [ext_resource type="Theme" uid="uid://vvclye42gnen" path="res://assets/learn_scene_theme.tres" id="11_w2tqf"]
 [ext_resource type="Script" uid="uid://ejjs0kfm782h" path="res://scripts/utils/theme_switcher.gd" id="12_3f1e3"]
+[ext_resource type="FontFile" uid="uid://dna6xdacyw8ku" path="res://assets/fonts/National_Park/static/NationalPark-Medium.ttf" id="16_peryp"]
 [ext_resource type="PackedScene" uid="uid://dxjn036juaoou" path="res://scenes/intro/tutorial_overlay.tscn" id="17_1ewda"]
+[ext_resource type="FontFile" uid="uid://bqcfhrj22chhj" path="res://assets/fonts/National_Park/static/NationalPark-Bold.ttf" id="18_1una4"]
 [ext_resource type="Texture2D" uid="uid://c674ovql4e0ub" path="res://assets/general_ui/arrow_downward_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="18_rq2bi"]
 [ext_resource type="FontFile" uid="uid://x3f3cwp0msgk" path="res://assets/fonts/DynaPuff/static/DynaPuff-SemiBold.ttf" id="19_qr62s"]
+[ext_resource type="Script" uid="uid://d3rdxemqa4vby" path="res://scenes/custom_nodes/text_button.gd" id="19_tu5mx"]
 [ext_resource type="Script" uid="uid://d8qdx5kqmxt" path="res://scenes/custom_nodes/title_element.gd" id="20_s6hdr"]
 [ext_resource type="FontFile" uid="uid://bi0vm20b5q20n" path="res://assets/fonts/National_Park/static/NationalPark-Regular.ttf" id="21_lswgw"]
 [ext_resource type="Shader" uid="uid://b1ao1r5r4ckan" path="res://assets/contrast.tres" id="22_s6hdr"]
@@ -41,7 +44,7 @@ border_blend = true
 corner_radius_top_left = 32
 corner_radius_top_right = 32
 
-[node name="Tabs" type="Control"]
+[node name="Tabs" type="Control" unique_id=1476766168]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +54,7 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_yk8fv")
 
-[node name="Scene" type="Control" parent="."]
+[node name="Scene" type="Control" parent="." unique_id=853094941]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -62,7 +65,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 mouse_filter = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1425268700]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,41 +74,41 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Control" type="Control" parent="VBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=881038318]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2050176704]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/MarginContainer" unique_id=1518841508]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_yk8fv")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/PanelContainer" unique_id=1207137689]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=827725295]
 layout_mode = 2
 
-[node name="Content" type="HBoxContainer" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Content" type="HBoxContainer" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=634612]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="Path" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content"]
+[node name="Path" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content" unique_id=1494647109]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -116,7 +119,7 @@ texture_disabled = ExtResource("3_gbblg")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="LearnAll" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content"]
+[node name="LearnAll" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content" unique_id=357496251]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -127,7 +130,7 @@ texture_disabled = ExtResource("9_y8q7g")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="OwnWords" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content"]
+[node name="OwnWords" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content" unique_id=1402103370]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -138,7 +141,7 @@ texture_disabled = ExtResource("7_xx40h")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Gems" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content"]
+[node name="Gems" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content" unique_id=96323266]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -149,7 +152,7 @@ texture_disabled = ExtResource("9_1ewda")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Shop" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content"]
+[node name="Shop" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content" unique_id=950842387]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -160,7 +163,7 @@ texture_disabled = ExtResource("5_xx40h")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Settings" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content"]
+[node name="Settings" type="TextureButton" parent="VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Content" unique_id=997689553]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -171,10 +174,10 @@ texture_disabled = ExtResource("7_j0ta3")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="SystemBarSpacer" parent="VBoxContainer" instance=ExtResource("1_tmpr7")]
+[node name="SystemBarSpacer" parent="VBoxContainer" unique_id=1556643305 instance=ExtResource("1_tmpr7")]
 layout_mode = 2
 
-[node name="NewContent" type="PanelContainer" parent="."]
+[node name="NewContent" type="PanelContainer" parent="." unique_id=1396222689]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -191,40 +194,47 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("11_w2tqf")
 
-[node name="MarginContainer" type="MarginContainer" parent="NewContent"]
+[node name="MarginContainer" type="MarginContainer" parent="NewContent" unique_id=592248190]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="NewContent/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="NewContent/MarginContainer" unique_id=985289435]
 layout_mode = 2
 
-[node name="ContentTitle" type="Label" parent="NewContent/MarginContainer/VBoxContainer"]
+[node name="ContentTitle" type="Label" parent="NewContent/MarginContainer/VBoxContainer" unique_id=565344353]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("16_peryp")
 theme_override_font_sizes/font_size = 48
 text = "NEW_CONTENT"
 autowrap_mode = 3
+script = ExtResource("20_s6hdr")
+metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="Control" type="Control" parent="NewContent/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="NewContent/MarginContainer/VBoxContainer" unique_id=994198326]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="NewContentClose" type="Button" parent="NewContent/MarginContainer/VBoxContainer"]
+[node name="NewContentClose" type="Button" parent="NewContent/MarginContainer/VBoxContainer" unique_id=392798635]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("18_1una4")
 text = "Super!"
+script = ExtResource("19_tu5mx")
+metadata/_custom_type_script = "uid://d3rdxemqa4vby"
 
-[node name="ThemeSwitcher" type="Node" parent="NewContent"]
+[node name="ThemeSwitcher" type="Node" parent="NewContent" unique_id=807548821]
 script = ExtResource("12_3f1e3")
 metadata/_custom_type_script = "uid://ejjs0kfm782h"
 
-[node name="TutorialOverlay" parent="." instance=ExtResource("17_1ewda")]
+[node name="TutorialOverlay" parent="." unique_id=790165136 instance=ExtResource("17_1ewda")]
+visible = false
 layout_mode = 1
 tutorial_scene_name = "tabs"
 
-[node name="TextElement" type="Label" parent="TutorialOverlay/Slides/Slide1" index="0"]
+[node name="TextElement" type="Label" parent="TutorialOverlay/Slides/Slide1" index="0" unique_id=237135408]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -246,7 +256,7 @@ font_type = 2
 font_use = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="TextElement2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1"]
+[node name="TextElement2" type="Label" parent="TutorialOverlay/Slides/Slide1" index="1" unique_id=855704592]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -268,7 +278,7 @@ script = ExtResource("20_s6hdr")
 font_type = 1
 metadata/_custom_type_script = "uid://d8qdx5kqmxt"
 
-[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="2"]
+[node name="TextureRect" type="TextureRect" parent="TutorialOverlay/Slides/Slide1" index="2" unique_id=1633900394]
 modulate = Color(0.2509804, 0.9764706, 0.60784316, 1)
 layout_mode = 0
 offset_left = 281.0
@@ -277,7 +287,7 @@ offset_right = 361.0
 offset_bottom = 1099.0
 texture = ExtResource("18_rq2bi")
 
-[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3"]
+[node name="Panel" type="Panel" parent="TutorialOverlay/Slides/Slide1" index="3" unique_id=1455975897]
 material = SubResource("ShaderMaterial_s6hdr")
 layout_mode = 1
 anchors_preset = 7

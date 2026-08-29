@@ -76,6 +76,8 @@ func add_unit_fields(unit_field_data: Array = []):
 	var spacer = HSeparator.new()
 	spacer.add_theme_constant_override("separation",160)
 	%VBoxContainer.add_child(spacer)
+	spacer.add_theme_stylebox_override("seperator",StyleBoxEmpty.new())
+	await spacer.ready
 	%VBoxContainer.get_children()[-1].add_theme_stylebox_override("seperator",StyleBoxEmpty.new())
 
 func get_unit_color(unit_id: int) -> String:

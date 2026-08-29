@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6co4n1wl2gi7"]
+[gd_scene format=3 uid="uid://b6co4n1wl2gi7"]
 
 [ext_resource type="Script" uid="uid://b3fvl5hn6momr" path="res://addons/baguettefrenchadmin/test_dock.gd" id="1_g6etq"]
 [ext_resource type="Texture2D" uid="uid://b4agcbtmsbir7" path="res://addons/baguettefrenchadmin/web_stories_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" id="2_l622v"]
@@ -15,20 +15,20 @@ keycode = 49
 [sub_resource type="Shortcut" id="Shortcut_1h0sp"]
 events = [SubResource("InputEventKey_b6vg1")]
 
-[node name="TestDock" type="Control"]
+[node name="TestDock" type="Control" unique_id=1370890845]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 28.0
-offset_right = 1280.0
-offset_bottom = -352.0
+offset_top = 32.0
+offset_right = 1055.0
+offset_bottom = -354.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_g6etq")
 
-[node name="Main" type="HBoxContainer" parent="."]
+[node name="Main" type="HBoxContainer" parent="." unique_id=925378565]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -38,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Main"]
+[node name="Button" type="Button" parent="Main" unique_id=1342037412]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -46,7 +46,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_icons/icon = ExtResource("2_l622v")
 text = "Words"
 
-[node name="Button5" type="Button" parent="Main"]
+[node name="Button5" type="Button" parent="Main" unique_id=370936536]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -54,7 +54,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_icons/icon = ExtResource("2_l622v")
 text = "Verbs"
 
-[node name="Button4" type="Button" parent="Main"]
+[node name="Button4" type="Button" parent="Main" unique_id=907724884]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -63,7 +63,7 @@ theme_override_icons/icon = ExtResource("2_l622v")
 text = "Merge Words"
 icon = ExtResource("3_b6vg1")
 
-[node name="Button2" type="Button" parent="Main"]
+[node name="Button2" type="Button" parent="Main" unique_id=2075252977]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -71,7 +71,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_icons/icon = ExtResource("3_oy363")
 text = "Clothing Items"
 
-[node name="Button3" type="Button" parent="Main"]
+[node name="Button3" type="Button" parent="Main" unique_id=454919436]
 custom_minimum_size = Vector2(280, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -81,7 +81,7 @@ text = "Learn Path"
 icon = ExtResource("4_cea0g")
 expand_icon = true
 
-[node name="Words" type="MarginContainer" parent="."]
+[node name="Words" type="MarginContainer" parent="." unique_id=1091152693]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -90,63 +90,63 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Words"]
+[node name="MarginContainer" type="MarginContainer" parent="Words" unique_id=52587427]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Words/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Words/MarginContainer" unique_id=1210274440]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Words" type="VBoxContainer" parent="Words/MarginContainer/ScrollContainer"]
+[node name="Words" type="VBoxContainer" parent="Words/MarginContainer/ScrollContainer" unique_id=1951335202]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Words"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Words" unique_id=753589725]
 layout_mode = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="SearchQuery" type="LineEdit" parent="Words/HBoxContainer"]
+[node name="SearchQuery" type="LineEdit" parent="Words/HBoxContainer" unique_id=1618983169]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 size_flags_vertical = 0
 placeholder_text = "Search for a Word..."
 
-[node name="WordsBackButton" type="Button" parent="Words/HBoxContainer"]
+[node name="WordsBackButton" type="Button" parent="Words/HBoxContainer" unique_id=2116284875]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Back"
 
-[node name="LoadWordsButton" type="Button" parent="Words/HBoxContainer"]
+[node name="LoadWordsButton" type="Button" parent="Words/HBoxContainer" unique_id=1715379103]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Load Words"
 
-[node name="ReloadWords" type="Button" parent="Words/HBoxContainer"]
+[node name="ReloadWords" type="Button" parent="Words/HBoxContainer" unique_id=1956438616]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Reload Words"
 
-[node name="SaveWords" type="Button" parent="Words/HBoxContainer"]
+[node name="SaveWords" type="Button" parent="Words/HBoxContainer" unique_id=1249010491]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Save All"
 
-[node name="AddWord" type="Button" parent="Words/HBoxContainer"]
+[node name="AddWord" type="Button" parent="Words/HBoxContainer" unique_id=2100502419]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -154,14 +154,14 @@ size_flags_vertical = 0
 shortcut = SubResource("Shortcut_1h0sp")
 text = "Add Word"
 
-[node name="ExportWordsJson" type="Button" parent="Words/HBoxContainer"]
+[node name="ExportWordsJson" type="Button" parent="Words/HBoxContainer" unique_id=1729959711]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Export JSON"
 
-[node name="Verbs" type="MarginContainer" parent="."]
+[node name="Verbs" type="MarginContainer" parent="." unique_id=1653244758]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -170,55 +170,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Verbs"]
+[node name="MarginContainer" type="MarginContainer" parent="Verbs" unique_id=1651420690]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Verbs/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Verbs/MarginContainer" unique_id=1264342995]
 layout_mode = 2
 
-[node name="Verbs" type="VBoxContainer" parent="Verbs/MarginContainer/ScrollContainer"]
+[node name="Verbs" type="VBoxContainer" parent="Verbs/MarginContainer/ScrollContainer" unique_id=1654694730]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Verbs"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Verbs" unique_id=478778477]
 layout_mode = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="SearchQuery" type="LineEdit" parent="Verbs/HBoxContainer"]
+[node name="SearchQuery" type="LineEdit" parent="Verbs/HBoxContainer" unique_id=1646605458]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 size_flags_vertical = 0
 placeholder_text = "Search for a Verb..."
 
-[node name="VerbsBackButton" type="Button" parent="Verbs/HBoxContainer"]
+[node name="VerbsBackButton" type="Button" parent="Verbs/HBoxContainer" unique_id=1969897665]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Back"
 
-[node name="LoadVerbsButton" type="Button" parent="Verbs/HBoxContainer"]
+[node name="LoadVerbsButton" type="Button" parent="Verbs/HBoxContainer" unique_id=1749183797]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Reload Verbs"
 
-[node name="SaveWords" type="Button" parent="Verbs/HBoxContainer"]
+[node name="SaveWords" type="Button" parent="Verbs/HBoxContainer" unique_id=449211985]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Save All"
 
-[node name="AddVerb" type="Button" parent="Verbs/HBoxContainer"]
+[node name="AddVerb" type="Button" parent="Verbs/HBoxContainer" unique_id=1530281129]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -226,7 +226,7 @@ size_flags_vertical = 0
 shortcut = SubResource("Shortcut_1h0sp")
 text = "Add Verb"
 
-[node name="Clothes" type="MarginContainer" parent="."]
+[node name="Clothes" type="MarginContainer" parent="." unique_id=730672708]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -234,56 +234,56 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Clothes"]
+[node name="MarginContainer" type="MarginContainer" parent="Clothes" unique_id=2143191005]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Clothes/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Clothes/MarginContainer" unique_id=1115812427]
 layout_mode = 2
 
-[node name="ClothingItems" type="VBoxContainer" parent="Clothes/MarginContainer/ScrollContainer"]
+[node name="ClothingItems" type="VBoxContainer" parent="Clothes/MarginContainer/ScrollContainer" unique_id=101685540]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Clothes"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Clothes" unique_id=951579274]
 layout_mode = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="WordsBackButton" type="Button" parent="Clothes/HBoxContainer"]
+[node name="WordsBackButton" type="Button" parent="Clothes/HBoxContainer" unique_id=821067266]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Back"
 
-[node name="ReloadClothes" type="Button" parent="Clothes/HBoxContainer"]
+[node name="ReloadClothes" type="Button" parent="Clothes/HBoxContainer" unique_id=43956205]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Reload Clothes"
 
-[node name="SaveWords" type="Button" parent="Clothes/HBoxContainer"]
+[node name="SaveWords" type="Button" parent="Clothes/HBoxContainer" unique_id=1628517970]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Save All"
 
-[node name="AddClothes" type="Button" parent="Clothes/HBoxContainer"]
+[node name="AddClothes" type="Button" parent="Clothes/HBoxContainer" unique_id=1901864336]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Add Clothing Item"
 
-[node name="LoadWords" type="MarginContainer" parent="."]
+[node name="LoadWords" type="MarginContainer" parent="." unique_id=1714644870]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -296,30 +296,30 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LoadWords"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LoadWords" unique_id=1061082852]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="LineEdit" type="TextEdit" parent="LoadWords/VBoxContainer"]
+[node name="LineEdit" type="TextEdit" parent="LoadWords/VBoxContainer" unique_id=1759125652]
 layout_mode = 2
 size_flags_vertical = 3
 wrap_mode = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LoadWords/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LoadWords/VBoxContainer" unique_id=807119891]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="LoadWordsBack" type="Button" parent="LoadWords/VBoxContainer/HBoxContainer"]
+[node name="LoadWordsBack" type="Button" parent="LoadWords/VBoxContainer/HBoxContainer" unique_id=1429194006]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Back"
 
-[node name="LoadWords" type="Button" parent="LoadWords/VBoxContainer/HBoxContainer"]
+[node name="LoadWords" type="Button" parent="LoadWords/VBoxContainer/HBoxContainer" unique_id=697729652]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Load Words"
 
-[node name="ChangeClothingPosition" type="MarginContainer" parent="."]
+[node name="ChangeClothingPosition" type="MarginContainer" parent="." unique_id=16431140]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -332,18 +332,18 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="HBoxContainer" parent="ChangeClothingPosition"]
+[node name="VBoxContainer" type="HBoxContainer" parent="ChangeClothingPosition" unique_id=605861222]
 custom_minimum_size = Vector2(800, 600)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 16
 
-[node name="Panel" type="Control" parent="ChangeClothingPosition/VBoxContainer"]
+[node name="Panel" type="Control" parent="ChangeClothingPosition/VBoxContainer" unique_id=1487483006]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Control" type="Control" parent="ChangeClothingPosition/VBoxContainer/Panel"]
+[node name="Control" type="Control" parent="ChangeClothingPosition/VBoxContainer/Panel" unique_id=1917579607]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -357,16 +357,16 @@ offset_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BreadRender" parent="ChangeClothingPosition/VBoxContainer/Panel/Control" instance=ExtResource("4_gyacv")]
+[node name="BreadRender" parent="ChangeClothingPosition/VBoxContainer/Panel/Control" unique_id=1608459085 instance=ExtResource("4_gyacv")]
 unique_name_in_owner = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ChangeClothingPosition/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ChangeClothingPosition/VBoxContainer" unique_id=1387873964]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 alignment = 1
 
-[node name="OffsetX" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer"]
+[node name="OffsetX" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer" unique_id=535552846]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 min_value = -100.0
@@ -374,7 +374,7 @@ allow_greater = true
 allow_lesser = true
 prefix = "X Offset:"
 
-[node name="OffsetY" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer"]
+[node name="OffsetY" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer" unique_id=2014499044]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 min_value = -100.0
@@ -382,7 +382,7 @@ allow_greater = true
 allow_lesser = true
 prefix = "Y Offset:"
 
-[node name="ScaleX" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer"]
+[node name="ScaleX" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer" unique_id=1669270239]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 min_value = 0.05
@@ -391,7 +391,7 @@ step = 0.05
 value = 1.0
 prefix = "X Scale:"
 
-[node name="ScaleY" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer"]
+[node name="ScaleY" type="SpinBox" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer" unique_id=531861376]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 min_value = 0.05
@@ -400,11 +400,11 @@ step = 0.05
 value = 1.0
 prefix = "Y Scale:"
 
-[node name="Done" type="Button" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer"]
+[node name="Done" type="Button" parent="ChangeClothingPosition/VBoxContainer/VBoxContainer" unique_id=1935868986]
 layout_mode = 2
 text = "Done"
 
-[node name="ChangeChapterContent" type="MarginContainer" parent="."]
+[node name="ChangeChapterContent" type="MarginContainer" parent="." unique_id=1213297224]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -417,53 +417,53 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ChangeChapterContent"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ChangeChapterContent" unique_id=1801908661]
 layout_mode = 2
 
-[node name="SmoothScrollContainer" type="ScrollContainer" parent="ChangeChapterContent/HBoxContainer"]
+[node name="SmoothScrollContainer" type="ScrollContainer" parent="ChangeChapterContent/HBoxContainer" unique_id=318477369]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ChapterContent" type="VBoxContainer" parent="ChangeChapterContent/HBoxContainer/SmoothScrollContainer"]
+[node name="ChapterContent" type="VBoxContainer" parent="ChangeChapterContent/HBoxContainer/SmoothScrollContainer" unique_id=1575371987]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="ChangeChapterContent/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="ChangeChapterContent/HBoxContainer" unique_id=1967412924]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="SmoothScrollContainer" type="ScrollContainer" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2"]
+[node name="SmoothScrollContainer" type="ScrollContainer" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2" unique_id=1924410946]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Chapters" type="VBoxContainer" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/SmoothScrollContainer"]
+[node name="Chapters" type="VBoxContainer" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/SmoothScrollContainer" unique_id=2082559793]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2" unique_id=1886137994]
 layout_mode = 2
 
-[node name="AddChapterContent" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="AddChapterContent" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=397888590]
 layout_mode = 2
 text = "Add Content"
 
-[node name="BackContent" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="BackContent" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=5553909]
 layout_mode = 2
 text = "Back"
 
-[node name="Save" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="Save" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=1710248448]
 layout_mode = 2
 text = "Save"
 
-[node name="SaveBasic" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="SaveBasic" type="Button" parent="ChangeChapterContent/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=826618148]
 layout_mode = 2
 text = "Save Overwrite"
 
-[node name="Merge" type="MarginContainer" parent="."]
+[node name="Merge" type="MarginContainer" parent="." unique_id=678580790]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -472,44 +472,44 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Merge"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Merge" unique_id=1089621344]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Merge/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Merge/VBoxContainer" unique_id=1657185176]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 
-[node name="BackMerge" type="Button" parent="Merge/VBoxContainer/HBoxContainer"]
+[node name="BackMerge" type="Button" parent="Merge/VBoxContainer/HBoxContainer" unique_id=492366801]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Back"
 
-[node name="NextMerge" type="Button" parent="Merge/VBoxContainer/HBoxContainer"]
+[node name="NextMerge" type="Button" parent="Merge/VBoxContainer/HBoxContainer" unique_id=1057734760]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Next Merge"
 
-[node name="SaveMerge" type="Button" parent="Merge/VBoxContainer/HBoxContainer"]
+[node name="SaveMerge" type="Button" parent="Merge/VBoxContainer/HBoxContainer" unique_id=1600914892]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Save"
 
-[node name="LanguageMerge" type="LineEdit" parent="Merge/VBoxContainer/HBoxContainer"]
+[node name="LanguageMerge" type="LineEdit" parent="Merge/VBoxContainer/HBoxContainer" unique_id=825276852]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 placeholder_text = "Language"
 
-[node name="Label" type="Label" parent="Merge/VBoxContainer"]
+[node name="Label" type="Label" parent="Merge/VBoxContainer" unique_id=1389209666]
 layout_mode = 2
 text = "[Info]"
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Merge/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Merge/VBoxContainer" unique_id=992760470]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MergeWords" type="VBoxContainer" parent="Merge/VBoxContainer/ScrollContainer"]
+[node name="MergeWords" type="VBoxContainer" parent="Merge/VBoxContainer/ScrollContainer" unique_id=238607689]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

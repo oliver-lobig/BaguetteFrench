@@ -1,9 +1,23 @@
 extends Control
+
+const REPEAT = preload("uid://c1kdw02vmkire")
+const REPEAT_ON = preload("uid://8t21bfl4ehxn")
+
+const SHUFFLE = preload("uid://b38i2lg70da2x")
+const SHUFFLE_ON = preload("uid://d0kyt80p7wqy8")
+
+
 var words: Array = []
 var word: Word
 var current_id: int = 0
 
+var word_history = []
+var history_id: int = 0
+
 var bread_pos: int = 0 # Up | Down
+
+var infinirepeat_on: bool = false
+var shuffle_mode: bool = false
 
 func _ready() -> void:
 	Vars.to_language_french = Vars.to_french
@@ -14,6 +28,9 @@ func _ready() -> void:
 	var screen_width = get_window().get_size_with_decorations().x
 	
 	if Vars.learn_all == false:
+		%Shuffle.hide()
+		%Correct.hide()
+		%Wrong.hide()
 		words = WordHandler.get_words_in_unit(Vars.current_open_unit)
 	else:
 		words = Vars.all_learn_words
@@ -30,10 +47,21 @@ func _ready() -> void:
 		current_id = Vars.field_progress[Vars.current_open_field_id]
 		load_word(Vars.field_progress[Vars.current_open_field_id])
 
-func load_word(word_relative_id: int):
+func load_word(word_relative_id: int, back = false):
 	Vars.locked_language_french = Vars.to_language_french
 	%ScreenProgressBar.value = word_relative_id + 1
-	word = words[clamp(word_relative_id,0,words.size() - 1)]
+	
+	if shuffle_mode == false:
+		word = words[clamp(word_relative_id,0,words.size() - 1)]
+	else:
+		if back == true:
+			if history_id > 0:
+				history_id -= 1
+				word = word_history[history_id]
+		else:
+			word_history.append(word)
+			word = WordHandler.select_next_word_from_words(Vars.all_learn_words)
+	
 	%Flip.show()
 	%VocabOriginal.text = WordHandler.get_words_string(word.french) if Vars.locked_language_french == false else WordHandler.get_words_string(word.german)
 
@@ -54,6 +82,13 @@ func load_word(word_relative_id: int):
 		bread_pos = 1
 	await get_tree().create_timer(0.3).timeout
 	%BreadRender.speek_text(%VocabOriginal.text,"fr" if Vars.locked_language_french != true else "de")
+	SpeakHandler.set_callback(DisplayServer.TTSUtteranceEvent.TTS_UTTERANCE_ENDED, say_word_again)
+
+func say_word_again(air):
+	await get_tree().create_timer(2.5).timeout
+	if infinirepeat_on:
+		if %Translation.visible == false:
+			%BreadRender.speek_text(%VocabOriginal.text,"fr" if Vars.locked_language_french != true else "de")
 
 func show_word():
 	%TranslationContainer.pivot_offset = %TranslationContainer.size / 2
@@ -90,7 +125,7 @@ func interpolate_swipe(direction: Vector2,interpolation: float):
 func _on_swipe_checker_right_swipe_stopped() -> void:
 	stop_swipe()
 
-func _on_swipe_checker_right_swiped() -> void:
+func _on_swipe_checker_right_swiped(switch_side = false) -> void:
 	current_id -= 1
 	if current_id <= -1:
 		current_id = 0
@@ -100,11 +135,11 @@ func _on_swipe_checker_right_swiped() -> void:
 	else:
 		var screen_width = get_window().get_size_with_decorations().x
 		var width = screen_width + %SwipeContainer.size.x / 2 + 50
-		%SwipeContainer.position.x = -width
+		%SwipeContainer.position.x = -width if switch_side == false else width
 		var back_tween = get_tree().create_tween()
 		back_tween.set_trans(Tween.TRANS_CIRC)
 		back_tween.tween_property(%SwipeContainer,"position",Vector2.ZERO,0.3)
-		load_word(current_id)
+		load_word(current_id, shuffle_mode)
 
 
 func _on_swipe_checker_left_swipe_step(interpolation: float) -> void:
@@ -121,7 +156,7 @@ func stop_swipe():
 
 func _on_swipe_checker_left_swiped() -> void:
 	current_id += 1
-	if current_id >= len(words):
+	if current_id >= len(words) and shuffle_mode == false:
 		current_id = (len(words) - 1)
 		var undo = get_tree().create_tween()
 		undo.set_trans(Tween.TRANS_CIRC)
@@ -169,3 +204,36 @@ func _input(event: InputEvent) -> void:
 
 func _on_flip_button_setting_pressed() -> void:
 	%FlipButtonSetting.flip_language()
+
+
+func _on_button_pressed() -> void:
+	infinirepeat_on = !infinirepeat_on
+	if infinirepeat_on:
+		%InfiniRepeat.texture_normal = REPEAT_ON
+	else:
+		%InfiniRepeat.texture_normal = REPEAT
+
+
+func _on_shuffle_pressed() -> void:
+	shuffle_mode = !shuffle_mode
+	if shuffle_mode:
+		load_word(current_id)
+		%Shuffle.texture_normal = SHUFFLE_ON
+	else:
+		current_id = 0
+		load_word(current_id)
+		%Shuffle.texture_normal = SHUFFLE
+
+
+func _on_correct_pressed() -> void:
+	_on_swipe_checker_right_swiped(true)
+	word.trys += 1
+	word.trys_correct += 1 if Vars.word_selection_type != "review" else 3
+	var word_skill_level: float = word.trys_correct / word.trys
+	word.learn_score += 5 + (10 * word_skill_level)
+
+
+func _on_wrong_pressed() -> void:
+	_on_swipe_checker_right_swiped(true)
+	word.trys += 1
+	

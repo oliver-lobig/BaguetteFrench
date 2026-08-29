@@ -14,7 +14,7 @@ func split_escaped(string: String):
 	var is_escaped: bool = false
 	var current_part: String = ""
 	var output = []
-	for id in range(string.length() - 1):
+	for id in range(string.length()):
 		var two_chars = string[id]
 		if two_chars == "\"":
 			is_escaped = !is_escaped
@@ -26,8 +26,7 @@ func split_escaped(string: String):
 				current_part += string[id]
 		else:
 			current_part += string[id]
-	if current_part != "":
-		output.append(current_part)
+	output.append(current_part)
 	return output
 
 func _on_file_dialog_file_selected(path: String) -> void:
