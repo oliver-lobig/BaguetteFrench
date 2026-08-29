@@ -1,0 +1,11 @@
+[config]
+version=1
+
+[launcher]
+version=1.11.1
+
+[editor]
+channel=official
+flavor=gdscript
+base_version=4.7
+version=4.7.2-stable

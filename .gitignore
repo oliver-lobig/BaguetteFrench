@@ -2,5 +2,6 @@
 .godot/
 .vscode/
 /android/
+/android_archive/
 /export/
 .editorconfig
