@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwqpx1n4kuucw"]
+[gd_scene format=3 uid="uid://cwqpx1n4kuucw"]
 
 [ext_resource type="Script" uid="uid://die7ym1uti085" path="res://addons/baguettefrenchadmin/word_row.gd" id="1_m0fu0"]
 [ext_resource type="Texture2D" uid="uid://562oyc3ityog" path="res://addons/baguettefrenchadmin/delete_64dp_FFF9FB_FILL0_wght300_GRAD200_opsz48.svg" id="2_x3u5r"]
 
-[node name="WordRow" type="HBoxContainer"]
+[node name="WordRow" type="HBoxContainer" unique_id=653144677]
 custom_minimum_size = Vector2(0, 32)
 offset_right = 498.0
 offset_bottom = 31.0
@@ -11,18 +11,18 @@ size_flags_vertical = 4
 theme_override_constants/separation = 8
 script = ExtResource("1_m0fu0")
 
-[node name="ID" type="Label" parent="."]
+[node name="ID" type="Label" parent="." unique_id=732252152]
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
 text = "0."
 
-[node name="UID" type="Label" parent="."]
+[node name="UID" type="Label" parent="." unique_id=397900548]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
 text = "0."
 
-[node name="FrenchWord" type="LineEdit" parent="."]
+[node name="FrenchWord" type="LineEdit" parent="." unique_id=1874500633]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
@@ -30,11 +30,11 @@ focus_neighbor_right = NodePath("../GermanWord")
 focus_next = NodePath("../GermanWord")
 placeholder_text = "French"
 
-[node name="FrenchLength" type="Label" parent="."]
+[node name="FrenchLength" type="Label" parent="." unique_id=731697916]
 layout_mode = 2
 text = "0"
 
-[node name="GermanWord" type="LineEdit" parent="."]
+[node name="GermanWord" type="LineEdit" parent="." unique_id=1863969042]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
@@ -44,11 +44,11 @@ focus_next = NodePath("../Description")
 focus_previous = NodePath("../FrenchWord")
 placeholder_text = "German"
 
-[node name="GermanLength" type="Label" parent="."]
+[node name="GermanLength" type="Label" parent="." unique_id=108856738]
 layout_mode = 2
 text = "0"
 
-[node name="Description" type="LineEdit" parent="."]
+[node name="Description" type="LineEdit" parent="." unique_id=1793616962]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
@@ -58,7 +58,7 @@ focus_next = NodePath("../TypeEnum")
 focus_previous = NodePath("../GermanWord")
 placeholder_text = "Description"
 
-[node name="TypeEnum" type="OptionButton" parent="."]
+[node name="TypeEnum" type="OptionButton" parent="." unique_id=1442131435]
 layout_mode = 2
 focus_neighbor_left = NodePath("../Description")
 focus_neighbor_right = NodePath("../UnitEnum")
@@ -81,7 +81,7 @@ popup/item_5/id = 5
 popup/item_6/text = "COMPLETE"
 popup/item_6/id = 6
 
-[node name="UnitEnum" type="OptionButton" parent="."]
+[node name="UnitEnum" type="OptionButton" parent="." unique_id=1417902342]
 layout_mode = 2
 focus_neighbor_left = NodePath("../TypeEnum")
 focus_neighbor_right = NodePath("../GrammaticalGenderEnum")
@@ -128,7 +128,7 @@ popup/item_17/id = 17
 popup/item_18/text = "LA_COULEUR"
 popup/item_18/id = 18
 
-[node name="GrammaticalGenderEnum" type="OptionButton" parent="."]
+[node name="GrammaticalGenderEnum" type="OptionButton" parent="." unique_id=99320185]
 layout_mode = 2
 focus_neighbor_left = NodePath("../UnitEnum")
 focus_neighbor_right = NodePath("../IsPlural")
@@ -145,7 +145,7 @@ popup/item_2/id = 2
 popup/item_3/text = "NONE"
 popup/item_3/id = 3
 
-[node name="IsPlural" type="CheckBox" parent="."]
+[node name="IsPlural" type="CheckBox" parent="." unique_id=594236197]
 layout_mode = 2
 focus_neighbor_left = NodePath("../GrammaticalGenderEnum")
 focus_neighbor_right = NodePath("../IsMarked")
@@ -153,13 +153,13 @@ focus_next = NodePath("../IsMarked")
 focus_previous = NodePath("../GrammaticalGenderEnum")
 text = "Is Plural"
 
-[node name="IsMarked" type="CheckBox" parent="."]
+[node name="IsMarked" type="CheckBox" parent="." unique_id=164083895]
 layout_mode = 2
 focus_neighbor_left = NodePath("../IsPlural")
 focus_previous = NodePath("../IsPlural")
 text = "Is Marked"
 
-[node name="DeleteButton" type="TextureButton" parent="."]
+[node name="DeleteButton" type="TextureButton" parent="." unique_id=453628307]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 texture_normal = ExtResource("2_x3u5r")

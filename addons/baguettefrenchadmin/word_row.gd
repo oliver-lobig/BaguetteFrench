@@ -97,6 +97,12 @@ func reload_id():
 		word_id = word.id
 		$ID.text = str(word_id) + "."
 func _on_french_word_text_changed(new_text: String) -> void:
+	if new_text.begins_with("la") or new_text.begins_with("une"):
+		if $GrammaticalGenderEnum.selected == 0:
+			$GrammaticalGenderEnum.select(1)
+	if new_text.begins_with("le") or new_text.begins_with("un"):
+		if $GrammaticalGenderEnum.selected == 0:
+			$GrammaticalGenderEnum.select(2)
 	change_word()
 	update_search_content()
 
@@ -107,6 +113,12 @@ func _on_german_word_text_changed(new_text: String) -> void:
 
 
 func _on_description_text_changed(new_text: String) -> void:
+	if new_text == "weiblich":
+		if $GrammaticalGenderEnum.selected == 0:
+			$GrammaticalGenderEnum.select(1)
+	if new_text == "männlich":
+		if $GrammaticalGenderEnum.selected == 0:
+			$GrammaticalGenderEnum.select(2)
 	change_word()
 	update_search_content()
 
